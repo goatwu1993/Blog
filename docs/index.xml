@@ -6,9 +6,19 @@
     <description>Recent content on fw1993&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jan 2018 20:19:21 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://francis5566.github.io/fw1993/about/</link>
+      <pubDate>Sat, 27 Jan 2018 20:19:21 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/about/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
