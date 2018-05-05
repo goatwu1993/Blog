@@ -1,4 +1,4 @@
-baseURL = "https://francis5566.github.io/fw1993/"
+baseURL = "https://francis5566.github.io/"
 theme = "beautifulhugo" # set the theme
 publishDir = "docs"
 languageCode = "en-us"
@@ -8,8 +8,8 @@ title = "fw1993"
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/post/"
+    url  = "https://francis5566.github.io/post/"
 [[menu.main]]
     name = "About"
     weight = 2
-    url = "/about/"
+    url = "https://francis5566.github.io/about/"
