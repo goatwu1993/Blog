@@ -8,8 +8,8 @@ title = "fw1993"
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "https://francis5566.github.io/fw1993/post/"
+    url  = "./post/"
 [[menu.main]]
     name = "About"
     weight = 2
-    url = "https://francis5566.github.io/fw1993/about/"
+    url = "./about/"
