@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fw1993</title>
-    <link>./</link>
+    <link>https://francis5566.github.io/fw1993/</link>
     <description>Recent content on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 May 2018 02:42:40 +0800</lastBuildDate>
     
-	<atom:link href="./index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://francis5566.github.io/fw1993/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>./about/</link>
+      <link>https://francis5566.github.io/fw1993/about/</link>
       <pubDate>Sun, 06 May 2018 02:42:40 +0800</pubDate>
       
-      <guid>./about/</guid>
+      <guid>https://francis5566.github.io/fw1993/about/</guid>
       <description>About</description>
     </item>
     
     <item>
       <title>Good to Great</title>
-      <link>./post/good-to-great/</link>
+      <link>https://francis5566.github.io/fw1993/post/good-to-great/</link>
       <pubDate>Sun, 06 May 2018 02:20:42 +0800</pubDate>
       
-      <guid>./post/good-to-great/</guid>
+      <guid>https://francis5566.github.io/fw1993/post/good-to-great/</guid>
       <description>Good to Great</description>
     </item>
     
