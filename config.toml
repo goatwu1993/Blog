@@ -1,5 +1,5 @@
-baseURL = "."
+baseURL = "https://francis5566.github.io/fw1993/"
 languageCode = "en-us"
-title = "fw"
+title = "fw1993's blog"
 theme = "startbootstrap-clean-blog"
 publishDir = "docs"
