@@ -6,10 +6,19 @@
     <description>Recent content on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 02:20:42 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 May 2018 02:42:40 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://francis5566.github.io/fw1993/about/</link>
+      <pubDate>Sun, 06 May 2018 02:42:40 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/about/</guid>
+      <description>About</description>
+    </item>
     
     <item>
       <title>Good to Great</title>
