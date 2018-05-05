@@ -22,7 +22,7 @@ To see the version of vim, and where the vimrc should be place.
 <code>$ vim</code>‌ to open vim
 Next, type :help vimrc in your Vim
 <code>:help vimrc</code>.
-Should something like
+It will shown like:
 <blockquote>A file that contains initialization commands is called a "vimrc" file. Each line in a vimrc file is executed as an Ex command line. It is sometimes also referred to as "exrc" file. They are the same type of file, but "exrc" is what Vi always used, "vimrc" is a Vim specific name. Also see |vimrc-intro|.
 
 Places for your personal initializations:
