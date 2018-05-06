@@ -28,8 +28,25 @@ On the other hand, helding static page on github or other storage will take a lo
 Static page is quicker than dynamic page.
 
 <h3>CLI</h3>
-I have tried the CLI for both Hexo and HUGO, and HUGO's command is more clear to me
+I have tried the CLI for both Hexo and HUGO, and HUGO's command is more clear to me.
 
 <h3>COOL</h3>
-I was considering Hexo cause it is from Taiwan, but Golang seems cool to me...
+I was considering Hexo cause it is from Taiwan, but Golang seems cool to me as well...
 
+<h2>Cons</h2>
+<h3>Need plugins to implement subcribe/leave message</h3>
+That is why dynamic web framework exist...
+
+<h3>Golang's resource is much less than Node.js</h3>
+You can find every answer with questions of Node.js, but for questions of Golang, it is not always that lucky.
+<br>
+<br>
+However, when you are using HUGO, you do not necessary need to learn Golang. In fact, you just need to know a few (maybe 2~3) commands to new a post.
+
+<h3>Themes is much less than WordPress</h3>
+The themes not that much now...
+<br>
+<br>
+But HEY, think about it, you do not want to see some bangin themes that need to pay. All the themes is free on HUGO!
+
+<h2>Conclusion</h2>
