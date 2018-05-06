@@ -1,7 +1,9 @@
 ---
-title: "Setting Up Your Mac OS : Vim & Vimrc"
+title: "Setting Up Your MacOS : Vim & Vimrc"
 date: 2018-05-06T04:51:07+08:00
 draft: true
+categories: [development]
+tags: [Linux, MacOS, Environment, Vim, Shell]
 ---
 
 

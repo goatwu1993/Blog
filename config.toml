@@ -4,6 +4,10 @@ publishDir = "docs"
 languageCode = "en-us"
 title = "fw1993"
 
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
 # Menu links
 [[menu.main]]
     name = "Post"
