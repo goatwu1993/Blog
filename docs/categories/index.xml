@@ -6,9 +6,19 @@
     <description>Recent content in Categories on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 06 May 2018 19:19:34 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog</title>
+      <link>https://francis5566.github.io/fw1993/categories/blog/</link>
+      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/categories/blog/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Development</title>

@@ -6,17 +6,26 @@
     <description>Recent content in Posts on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 04:51:07 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 May 2018 19:19:34 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Why HUGO</title>
+      <link>https://francis5566.github.io/fw1993/post/why-hugo/</link>
+      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/post/why-hugo/</guid>
+      <description>Why HUGO I was using Wordpress.com previously. Then I want to take more controll of my blog. So as, WordPress(LAMP), Hexo(node.js), Ghostand(node.js) and HUGO(golang) is considered. It turns out to be HUGO, and reasons is as below. Pros Opensource Though WordPress is an opensource project, MySQL, part of WordPress, is owned by Oracle. It is known that Oracle is now trying to charge the world with using JAVA, and this does not sound great to me.</description>
+    </item>
+    
+    <item>
       <title>Setting Up Your MacOS : Vim &amp; Vimrc</title>
-      <link>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc.md/</link>
+      <link>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc.md/</guid>
+      <guid>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</guid>
       <description>Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.
 First you may want to edit some file in your terminal like a HACKER-MAN, and Vim is the most use text editor in terminal.
 So let&amp;rsquo;s get started!

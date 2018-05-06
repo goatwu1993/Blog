@@ -10,7 +10,7 @@ title = "fw1993"
 
 # Menu links
 [[menu.main]]
-    name = "Post"
+    name = "Posts"
     weight = 1
     url  = "./post/"
 [[menu.main]]
