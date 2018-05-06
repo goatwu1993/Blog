@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Setting Up Your MacOS : Vim &amp; Vimrc</title>
+  <meta property="og:title" content="Setting Up Your MacOS : Vim &amp; Vimrc" />
+  <meta name="twitter:title" content="Setting Up Your MacOS : Vim &amp; Vimrc" />
+  <meta name="description" content="Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.
+First you may want to edit some file in your terminal like a HACKER-MAN, and Vim is the most use text editor in terminal.
+So let&rsquo;s get started!
+Find and open your terminal.‌ You can found it simply type &ldquo;terminal&rdquo; in your spotlight. (Optional) Open Vim and see what is vimrc.">
+  <meta property="og:description" content="Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.
+First you may want to edit some file in your terminal like a HACKER-MAN, and Vim is the most use text editor in terminal.
+So let&rsquo;s get started!
+Find and open your terminal.‌ You can found it simply type &ldquo;terminal&rdquo; in your spotlight. (Optional) Open Vim and see what is vimrc.">
+  <meta name="twitter:description" content="Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.
+First you may want to edit some file in your terminal like a …">
+  <meta name="author" content=""/>
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="fw1993" />
+
+  <meta name="generator" content="Hugo 0.40.2" />
+  <link rel="canonical" href="https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/" />
+  <link rel="alternate" href="https://francis5566.github.io/fw1993/index.xml" type="application/rss+xml" title="fw1993">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://francis5566.github.io/fw1993/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://francis5566.github.io/fw1993/css/syntax.css" /><link rel="stylesheet" href="https://francis5566.github.io/fw1993/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://francis5566.github.io/fw1993/">fw1993</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/fw1993/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/fw1993/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Setting Up Your MacOS : Vim &amp; Vimrc</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on May 6, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.</p>
+
+<p>First you may want to edit some file in your terminal like a HACKER-MAN, and Vim is the most use text editor in terminal.</p>
+
+<p>So let&rsquo;s get started!</p>
+
+<p><h2>Find and open your terminal.‌</h2>
+You can found it simply type &ldquo;terminal&rdquo; in your spotlight.
+<h2>(Optional) Open Vim and see what is vimrc.</h2>
+In your Mac terminal, either you type vi or vim will both open vim.
+<code>$ vim &ndash;version</code>‌
+To see the version of vim, and where the vimrc should be place.
+<code>$ vi</code> or
+<code>$ vim</code>‌ to open vim
+Next, type :help vimrc in your Vim
+<code>:help vimrc</code>.
+It will shown like:
+<blockquote>A file that contains initialization commands is called a &ldquo;vimrc&rdquo; file. Each line in a vimrc file is executed as an Ex command line. It is sometimes also referred to as &ldquo;exrc&rdquo; file. They are the same type of file, but &ldquo;exrc&rdquo; is what Vi always used, &ldquo;vimrc&rdquo; is a Vim specific name. Also see |vimrc-intro|.</p>
+
+<p>Places for your personal initializations:
+Unix                $HOME/.vimrc
+or $HOME/.vim/vimrc
+OS/2                 $HOME/.vimrc, $HOME/vimfiles/vimrc
+or $VIM/.vimrc (or _vimrc)
+MS-Windows $HOME/_vimrc, $HOME/vimfiles/vimrc
+or $VIM/_vimrc
+Amiga              s:.vimrc, home:.vimrc, home:vimfiles:vimrc
+or $VIM/.vimrc</p>
+
+<p>The files are searched in the order specified above and only the first one that is found is read.
+<p class="p1"><span class="s1">RECOMMENDATION: Put all your Vim configuration stuff in the </span><span class="s1">$HOME/.vim/ directory ($HOME/vimfiles/ for MS-Windows). That makes it</span><span class="s1"><span class="Apple-converted-space"> </span>easy to copy it to another system.</span></p>
+</blockquote>
+You can think vimrc as the config file of your Vim editor. Whenever you open your Vim, it will preload the settings in vimrc.</p>
+
+<p>So let follow it&rsquo;s recommendation.
+Type in :q twice to leave vim. The command always start with &ldquo;:&rdquo; in Vim. q means to quit vim.
+<code>:q</code> then again <code>:q</code>‌</p>
+
+<p><h2> Go to your user home directory(~)</h2>
+Now that we know what vimrc is for, and where to place it, let make our own vimrc. First you should change you location in the terminal from anywhere to your user&rsquo;s home directory with the command below.
+<code>$ cd ~</code>
+&ldquo;cd&rdquo; command stands for change directory and &ldquo;~&rdquo; stands for your user&rsquo;s home directory.‌ You should use ~ directory instead if root directory(/) to avoid disaster happen.
+    <h2>Make a .vim directory in ~/</h2>
+So now since we are at our user&rsquo;s home directory, let&rsquo;s make the &ldquo;.vim&rdquo; directory with &ldquo;mkdir&rdquo; command. The &ldquo;.vim&rdquo; directory should be where you place all Vim relative file in.
+<code>$ mkdir .vim</code>‌
+    <h2>(Optional) Check ~/.vim</h2>
+The &ldquo;.&rdquo; in the beginning means that the file is invisible either in the finder or &ldquo;ls&rdquo; command. To find the file, simply type &ldquo;ls -la&rdquo; to list out all directory &amp; file no matter it start with a &ldquo;.&rdquo; and be invisible.
+<code>$ ls -la</code>
+Or you could use pipe to grep the .vim directory
+<code>$ ls -la | grep .vim
+</code>
+There should be a .vim directory
+<code>drwxr-xr-x   4 network5566 staff 136 Apr 9 14:40 .vim</code>‌
+    <h2>CD to ~/.vim</h2>
+cd into .vim directory
+<code>$ cd .vim</code>
+    <h2>Create and Edit your vimrc file</h2>
+Let&rsquo;s use Vim to edit your vimrc!<code>$ vim vimrc.</code>This will instantly create a vimrc file in the directory and open it with vim.‌ Then just EDIT your vimrc file like a BOSS.Press &ldquo;i&rdquo; botton to enter insert mode in Vim and paste the below
+<code>syntax on
+set nu
+set ruler
+set ic
+set hlsearch</code></p>
+
+<p>syntax on will auto syntax your file when opening it with Vim.
+set ruler will show the number when you move your cursor.
+set ic allow your search to be non-case-sensitive.
+set hlsearch make your search result highlight.‌‌‌‌
+You can find other parameter on the Internet and this is just mine.
+    <h2>Save and quit</h2>
+Press &ldquo;esc&rdquo; to quit insert mode in Vim. Then in Vim type<code>:wq</code>Remember &ldquo;q&rdquo; means quitting Vim? The &ldquo;w&rdquo; parameter means you want to save the file with your change. Together you save the file and quit vim.‌
+    <h2>Restart your terminal</h2>
+Close and reopen your terminal and enjoy the Vim with your vimrc configuration!</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://francis5566.github.io/fw1993//tags/linux/">Linux</a>&nbsp;
+            
+              <a href="https://francis5566.github.io/fw1993//tags/macos/">MacOS</a>&nbsp;
+            
+              <a href="https://francis5566.github.io/fw1993//tags/environment/">Environment</a>&nbsp;
+            
+              <a href="https://francis5566.github.io/fw1993//tags/vim/">Vim</a>&nbsp;
+            
+              <a href="https://francis5566.github.io/fw1993//tags/shell/">Shell</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://francis5566.github.io/fw1993/post/why-hugo/" data-toggle="tooltip" data-placement="top" title="Why HUGO">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://francis5566.github.io/fw1993/">fw1993</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.40.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://francis5566.github.io/fw1993/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://francis5566.github.io/fw1993/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on fw1993</title>
+    <link>https://francis5566.github.io/fw1993/posts/</link>
+    <description>Recent content in Posts on fw1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 May 2018 19:19:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://francis5566.github.io/fw1993/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why HUGO</title>
+      <link>https://francis5566.github.io/fw1993/posts/why-hugo/</link>
+      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/posts/why-hugo/</guid>
+      <description>Why HUGO</description>
+    </item>
+    
+    <item>
+      <title>Setting Up Your MacOS : Vim &amp; Vimrc</title>
+      <link>https://francis5566.github.io/fw1993/posts/setting-up-your-mac-os-vim-and-vimrc/</link>
+      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/posts/setting-up-your-mac-os-vim-and-vimrc/</guid>
+      <description>Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.
+First you may want to edit some file in your terminal like a HACKER-MAN, and Vim is the most use text editor in terminal.
+So let&amp;rsquo;s get started!
+Find and open your terminal.‌ You can found it simply type &amp;ldquo;terminal&amp;rdquo; in your spotlight. (Optional) Open Vim and see what is vimrc.</description>
+    </item>
+    
+  </channel>
+</rss>
