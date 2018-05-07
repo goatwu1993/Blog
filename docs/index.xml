@@ -6,22 +6,10 @@
     <description>Recent content on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 May 2018 10:24:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 May 2018 19:19:34 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Mdtest</title>
-      <link>https://francis5566.github.io/fw1993/post/mdtest/</link>
-      <pubDate>Mon, 07 May 2018 10:24:44 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/post/mdtest/</guid>
-      <description> first title  block quote continued
-nest line
- and nested
-header  item another item     i1 i2  </description>
-    </item>
     
     <item>
       <title>Why HUGO</title>
@@ -29,8 +17,9 @@ header  item another item     i1 i2  </description>
       <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
       
       <guid>https://francis5566.github.io/fw1993/post/why-hugo/</guid>
-      <description>##Why HUGO I was using Wordpress.com previously. Then I want to take more controll of my blog.
-So as, WordPress(LAMP), Hexo(node.js), Ghostand(node.js) and HUGO(golang) is considered. It turns out to be HUGO, and reasons is as below. ##Pros ###Opensource### Though WordPress is an opensource project, MySQL, part of WordPress, is owned by Oracle. It is known that Oracle is now trying to charge the world with using JAVA, which is not cool.</description>
+      <description>Why HUGO I was using Wordpress.com previously. Then I want to take more controll of my blog.
+So as, WordPress(LAMP), Hexo(node.js), Ghostand(node.js) and HUGO(golang) is considered. It turns out to be HUGO, and reasons is as below.
+Pros Opensource Though WordPress is an opensource project, MySQL, part of WordPress, is owned by Oracle. It is known that Oracle is now trying to charge the world with using JAVA, which is not cool.</description>
     </item>
     
     <item>
