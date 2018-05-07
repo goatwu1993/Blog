@@ -40,7 +40,7 @@ Hexo is from Taiwan, but Golang and markdown language is cool as well. This page
 ### Needs plugins to implement subcribe/leave message
 And that is why dynamic web framework exist...
 
-###G olang's resource is much less than Node.js
+### Golang's resource is much less than Node.js
 Almost any questions about Node.js was asked and solved on the Internet. But Golang is not yet that popular.  
 However, when you are using HUGO, you do not necessary need to learn Golang. In fact, three commands(`HUGO new`, `HUGO --buildDrafts` and `HUGO server -D` ) will cover most of your needs.  
 
