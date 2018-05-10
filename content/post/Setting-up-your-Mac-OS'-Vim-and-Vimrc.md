@@ -4,6 +4,8 @@ date: 2018-05-06T04:51:07+08:00
 draft: false
 categories: [Development]
 tags: [Linux, MacOS, Environment, Vim, Shell]
+slug: Setting-Up-Your-Mac-OS-Vim-and-Vimrc
+gitment: true
 ---
 
 
