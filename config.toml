@@ -11,10 +11,14 @@ title = "fw1993"
 
 # Menu links
 [[menu.main]]
-    name = "Posts"
+    name = "Tags"
     weight = 1
+    url  = "./tags/"
+[[menu.main]]
+    name = "Posts"
+    weight = 2
     url  = "./post/"
 [[menu.main]]
     name = "About"
-    weight = 2
+    weight = 3
     url = "./about/"
