@@ -17,7 +17,12 @@
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
       <guid>https://francis5566.github.io/fw1993/post/wireshark-filter/</guid>
-      <description>Wireshark Filter ###Radius</description>
+      <description> Radius  Protocol : UDP
+ Default Port: 1812 &amp;amp; 1813
+ Wireshark Filter:
+ radius
+ udp.port == 1812 || udp.port == 1813
+   </description>
     </item>
     
   </channel>
