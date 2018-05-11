@@ -4,13 +4,15 @@ date: 2018-05-06T02:42:40+08:00
 draft: true
 ---
 
-When using
-<li>MAC</li>
-<li>Linux</li>
-<br>
+## Because
+When using  
 
-It <b>ALWAYS</b> turn out to think that:
-I should have known those <b>SIMPLE TRICKS</b> instead wasting <b>TONS of TIME!</b>
-<br>
+* MAC
+* Linux
 
-Therefore recording these little tricks down seems reasonable, and hope this will save the time of yours.
+It <b>ALWAYS</b> turn out to :  
+Should have known those <b>SIMPLE TRICKS</b> instead wasting <b>TONS of TIME!</b>  
+
+## Therefore
+Recording these little tricks down seems reasonable.  
+And hope this will save the time of yours.
