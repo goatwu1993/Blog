@@ -11,7 +11,7 @@ gitment: true
 ### Radius
 
 * Protocol : UDP  
-* Default Port: 1812 & 1813  
+* Default Port: 1812 (authentication) & 1813(accounting)  
 * Wireshark Filter:  
     * radius  
     * udp.port == 1812 || udp.port == 1813  
