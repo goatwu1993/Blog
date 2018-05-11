@@ -1,7 +1,7 @@
 ---
 title: "Why HUGO"
 date: 2018-05-06T19:19:34+08:00
-draft: false
+draft: true
 categories: [Blog]
 tags: [HUGO, Golang]
 slug: Why-HUGO

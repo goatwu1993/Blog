@@ -1,10 +1,10 @@
 ---
-title: "TCP/IP protocal & Wireshark Filter"
+title: "TCP/IP protocol & Wireshark Filter"
 date: 2018-05-11T11:29:21+08:00
 draft: false
 categories: [Networking]
 tags: [Networking, Wireshark]
-slug: Wireshark-Filter
+slug: TCP-IP-Portocol-and-Wireshark-filter
 gitment: true
 ---
 
