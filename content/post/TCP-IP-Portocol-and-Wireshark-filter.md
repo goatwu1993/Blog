@@ -14,7 +14,18 @@ gitment: true
 * Default Port : 1812 (authentication) & 1813(accounting)  
 * Wireshark Filter:  
     * radius  
-    * udp.port == 1812 || udp.port == 1813  
-  
-* Protocol : DNS  
-* Default Port : 
+    * udp.port == 1812  
+    * udp.port == 1813  
+* Code
+    * Access-Request  
+    * Access-Accept  
+    * Access-Reject  
+    * Access-Challenge  
+
+### DNS
+* Protocol : Usually UDP
+* Default Port : 53
+* Wireshark Filter
+    * dns
+    * udp.port == 53
+    * tcp.port == 53 (Sometimes)
