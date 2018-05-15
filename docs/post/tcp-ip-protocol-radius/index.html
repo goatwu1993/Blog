@@ -5,35 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>TCP/IP protocol &amp; Wireshark Filter</title>
-  <meta property="og:title" content="TCP/IP protocol &amp; Wireshark Filter" />
-  <meta name="twitter:title" content="TCP/IP protocol &amp; Wireshark Filter" />
+  <title>TCP/IP protocol : Radius</title>
+  <meta property="og:title" content="TCP/IP protocol : Radius" />
+  <meta name="twitter:title" content="TCP/IP protocol : Radius" />
   <meta name="description" content=" Radius  Protocol : UDP
- Default Port: 1812 (authentication) &amp; 1813(accounting)
+ Default Port : 1812 (authentication) &amp; 1813(accounting)
  Wireshark Filter:
  radius
- udp.port == 1812 || udp.port == 1813
-   ">
+ udp.port == 1812
+ udp.port == 1813
+  Code  Access-Request
+ Access-Accept
+ Access-Reject
+ Access-Challenge
+   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53   ">
   <meta property="og:description" content=" Radius  Protocol : UDP
- Default Port: 1812 (authentication) &amp; 1813(accounting)
+ Default Port : 1812 (authentication) &amp; 1813(accounting)
  Wireshark Filter:
  radius
- udp.port == 1812 || udp.port == 1813
-   ">
+ udp.port == 1812
+ udp.port == 1813
+  Code  Access-Request
+ Access-Accept
+ Access-Reject
+ Access-Challenge
+   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53   ">
   <meta name="twitter:description" content=" Radius  Protocol : UDP
- Default Port: 1812 (authentication) &amp; 1813(accounting)
+ Default Port : 1812 (authentication) &amp; 1813(accounting)
  Wireshark Filter:
  radius
- udp.port == 1812 || udp.port == 1813
-   ">
+ udp.port == 1812
+ udp.port == 1813
+  Code  Access-Request
+ Access-Accept
+ Access-Reject …">
   <meta name="author" content=""/>
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://francis5566.github.io/fw1993/post/tcp-ip-portocol-and-wireshark-filter/" />
+  <meta property="og:url" content="https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="fw1993" />
 
   <meta name="generator" content="Hugo 0.40.2" />
-  <link rel="canonical" href="https://francis5566.github.io/fw1993/post/tcp-ip-portocol-and-wireshark-filter/" />
+  <link rel="canonical" href="https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/" />
   <link rel="alternate" href="https://francis5566.github.io/fw1993/index.xml" type="application/rss+xml" title="fw1993">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -165,7 +178,7 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>TCP/IP protocol &amp; Wireshark Filter</h1>
+              <h1>TCP/IP protocol : Radius</h1>
                 
                 
                   <span class="post-meta">
@@ -198,12 +211,34 @@
 
 <ul>
 <li>Protocol : UDP<br /></li>
-<li>Default Port: 1812 (authentication) &amp; 1813(accounting)<br /></li>
+<li>Default Port : 1812 (authentication) &amp; 1813(accounting)<br /></li>
 <li>Wireshark Filter:<br />
 
 <ul>
 <li>radius<br /></li>
-<li>udp.port == 1812 || udp.port == 1813<br /></li>
+<li>udp.port == 1812<br /></li>
+<li>udp.port == 1813<br /></li>
+</ul></li>
+<li>Code
+
+<ul>
+<li>Access-Request<br /></li>
+<li>Access-Accept<br /></li>
+<li>Access-Reject<br /></li>
+<li>Access-Challenge<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="dns">DNS</h3>
+
+<ul>
+<li>Protocol : Usually UDP</li>
+<li>Default Port : 53</li>
+<li>Wireshark Filter
+
+<ul>
+<li>dns</li>
+<li>udp.port == 53</li>
 </ul></li>
 </ul>
 
@@ -229,6 +264,10 @@
             </li>
           
           
+            <li class="next">
+              <a href="https://francis5566.github.io/fw1993/post/tcp-ip-portocol-dns/" data-toggle="tooltip" data-placement="top" title="TCP IP Portocol DNS">Next Post &rarr;</a>
+            </li>
+          
         </ul>
       
 
@@ -241,7 +280,7 @@
           <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
           <script>
             var gitment = new Gitment({
-              id: 'TCP-IP-Portocol-and-Wireshark-filter',  
+              id: 'TCP-IP-protocol-Radius',  
               owner: 'Francis5566',
               repo: 'fw1993_gitment',
               oauth: {

@@ -168,8 +168,34 @@
           
           
             <article class="post-preview">
-              <a href="https://francis5566.github.io/fw1993/post/tcp-ip-portocol-and-wireshark-filter/">
-                <h2 class="post-title">TCP/IP protocol &amp; Wireshark Filter</h2>
+              <a href="https://francis5566.github.io/fw1993/post/tcp-ip-portocol-dns/">
+                <h2 class="post-title">TCP IP Portocol DNS</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on May 15, 2018
+  
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  
+                
+              </div>
+
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/">
+                <h2 class="post-title">TCP/IP protocol : Radius</h2>
                 
                 
               </a>
@@ -192,12 +218,34 @@
 
 <ul>
 <li>Protocol : UDP<br /></li>
-<li>Default Port: 1812 (authentication) &amp; 1813(accounting)<br /></li>
+<li>Default Port : 1812 (authentication) &amp; 1813(accounting)<br /></li>
 <li>Wireshark Filter:<br />
 
 <ul>
 <li>radius<br /></li>
-<li>udp.port == 1812 || udp.port == 1813<br /></li>
+<li>udp.port == 1812<br /></li>
+<li>udp.port == 1813<br /></li>
+</ul></li>
+<li>Code
+
+<ul>
+<li>Access-Request<br /></li>
+<li>Access-Accept<br /></li>
+<li>Access-Reject<br /></li>
+<li>Access-Challenge<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="dns">DNS</h3>
+
+<ul>
+<li>Protocol : Usually UDP</li>
+<li>Default Port : 53</li>
+<li>Wireshark Filter
+
+<ul>
+<li>dns</li>
+<li>udp.port == 53</li>
 </ul></li>
 </ul>
 

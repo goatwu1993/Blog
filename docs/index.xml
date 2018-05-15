@@ -6,23 +6,37 @@
     <description>Recent content on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 May 2018 11:29:21 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 May 2018 14:01:09 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>TCP/IP protocol &amp; Wireshark Filter</title>
-      <link>https://francis5566.github.io/fw1993/post/tcp-ip-portocol-and-wireshark-filter/</link>
+      <title>TCP IP Portocol DNS</title>
+      <link>https://francis5566.github.io/fw1993/post/tcp-ip-portocol-dns/</link>
+      <pubDate>Tue, 15 May 2018 14:01:09 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/post/tcp-ip-portocol-dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TCP/IP protocol : Radius</title>
+      <link>https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/</link>
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/tcp-ip-portocol-and-wireshark-filter/</guid>
+      <guid>https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/</guid>
       <description> Radius  Protocol : UDP
- Default Port: 1812 (authentication) &amp;amp; 1813(accounting)
+ Default Port : 1812 (authentication) &amp;amp; 1813(accounting)
  Wireshark Filter:
  radius
- udp.port == 1812 || udp.port == 1813
-   </description>
+ udp.port == 1812
+ udp.port == 1813
+  Code  Access-Request
+ Access-Accept
+ Access-Reject
+ Access-Challenge
+   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53   </description>
     </item>
     
     <item>
