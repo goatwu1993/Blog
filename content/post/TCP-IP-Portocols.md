@@ -1,10 +1,10 @@
 ---
-title: "TCP/IP protocol : Radius"
+title: "TCP/IP protocols"
 date: 2018-05-11T11:29:21+08:00
 draft: false
 categories: [Networking]
 tags: [Networking, Wireshark]
-slug: TCP-IP-protocol-Radius
+slug: TCP-IP-protocols
 gitment: true
 ---
 
@@ -28,3 +28,5 @@ gitment: true
 * Wireshark Filter
     * dns
     * udp.port == 53
+* Some Famous public DNS Server  
+    https://www.lifewire.com/free-and-public-dns-servers-2626062

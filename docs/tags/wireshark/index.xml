@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>TCP/IP protocol : Radius</title>
-      <link>https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/</link>
+      <title>TCP/IP protocols</title>
+      <link>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</link>
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/tcp-ip-protocol-radius/</guid>
+      <guid>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</guid>
       <description> Radius  Protocol : UDP
  Default Port : 1812 (authentication) &amp;amp; 1813(accounting)
  Wireshark Filter:
@@ -27,7 +27,8 @@
  Access-Accept
  Access-Reject
  Access-Challenge
-   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53   </description>
+   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server
+https://www.lifewire.com/free-and-public-dns-servers-2626062  </description>
     </item>
     
   </channel>
