@@ -51,16 +51,17 @@ let session = URLSession.shared
 
 //Task start
 let task = session.dataTask(with: get_request) { (data, response, error) in
+    //Error Handling
     guard error == nil else {
         print("error calling GET URLSession datatask")
         print(error!.localizedDescription)
         return
     }
-
     guard let _ = response else {
         return
     }
 
+    //Get HTML and transfer to String in order to compare and parse
     guard let data_string : String = String(data: data!, encoding: .utf8) else {
         print("Converting Data GET from request to string error")
         return
@@ -171,6 +172,8 @@ let session = URLSession.shared
 //Task start
 let task = session.dataTask(with: post_request) {
     (data, response, error) in
+
+    //Error handling
     guard error == nil else {
         print("error calling POST to this url")
         print(error!)

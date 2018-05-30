@@ -13,12 +13,29 @@
   </url>
   
   <url>
+    <loc>https://francis5566.github.io/fw1993/post/why-hugo/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://francis5566.github.io/fw1993/about/</loc>
+    <lastmod>2018-05-06T02:42:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://francis5566.github.io/fw1993/categories/blog/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://francis5566.github.io/fw1993/categories/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -31,6 +48,18 @@
   <url>
     <loc>https://francis5566.github.io/fw1993/tags/environment/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://francis5566.github.io/fw1993/tags/golang/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://francis5566.github.io/fw1993/tags/hugo/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -47,6 +47,17 @@ https://www.lifewire.com/free-and-public-dns-servers-2626062  </description>
     </item>
     
     <item>
+      <title>Why HUGO</title>
+      <link>https://francis5566.github.io/fw1993/post/why-hugo/</link>
+      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/post/why-hugo/</guid>
+      <description>Why HUGO I was using Wordpress.com previously. Then I want to take more controll of my blog.
+So as, WordPress(LAMP), Hexo(node.js), Ghostand(node.js) and HUGO(golang) is considered. It turns out to be HUGO, and reasons is as below.
+Pros Opensource Though WordPress is an opensource project, MySQL, part of WordPress, is owned by Oracle. It is known that Oracle is now trying to charge the world with using JAVA, which is not cool.</description>
+    </item>
+    
+    <item>
       <title>Setting Up Your MacOS : Vim &amp; Vimrc</title>
       <link>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
@@ -57,6 +68,19 @@ First you may want to edit some file in your terminal like a HACKER-MAN, and Vim
 So let&amp;rsquo;s get started!
 Open your terminal.‌ You can found it simply type &amp;ldquo;terminal&amp;rdquo; in your spotlight.
 (Optional) Open Vim and see what is vimrc.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://francis5566.github.io/fw1993/about/</link>
+      <pubDate>Sun, 06 May 2018 02:42:40 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/about/</guid>
+      <description>Because When using
+ MAC Linux  It ALWAYS turn out to :
+Should have known those SIMPLE TRICKS instead wasting TONS of TIME!
+Therefore Recording these little tricks down seems reasonable.
+And hope this will save the time of yours.</description>
     </item>
     
   </channel>
