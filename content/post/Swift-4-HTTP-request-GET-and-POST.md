@@ -113,29 +113,29 @@ let task = session.dataTask(with: get_request) { (data, response, error) in
                 return
             }
             
-            do {
-                guard let data_json = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject? , let status_code =  data_json["status"] as? NSInteger else {
-                    print("Error: Recieved JSON error")
-                    return
-                }
-                
-                if status_code == -2 {
-                    print("Error: Please try again after 15 min")
-                    return
-                } else if status_code == 0 {
-                    print("Error: Missing key and value")
-                    return
-                } else if status_code == 1 {
-                    print("Success")
-                } else {
-                    print("Unexpected Error")
-                    return
-                }
-            }
-            catch{
-                print(error.localizedDescription)
-                return
-            }
+    do {
+        guard let data_json = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject? , let status_code =  data_json["status"] as? NSInteger else {
+            print("Error: Recieved JSON error")
+            return
+        }
+        
+        if status_code == -2 {
+            print("Error: Please try again after 15 min")
+            return
+        } else if status_code == 0 {
+            print("Error: Missing key and value")
+            return
+        } else if status_code == 1 {
+            print("Success")
+        } else {
+            print("Unexpected Error")
+            return
+        }
+    }
+    catch{
+        print(error.localizedDescription)
+        return
+    }
 }
 task.resume();
 }
