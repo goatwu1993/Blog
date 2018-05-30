@@ -285,21 +285,21 @@ Note  content of is not suggested. It is breif but may have you do not know what
 
 <span class="c1">//Task start</span>
 <span class="kd">let</span> <span class="nv">task</span> <span class="p">=</span> <span class="n">session</span><span class="p">.</span><span class="n">dataTask</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">get_request</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">//Error handling</span>
     <span class="k">guard</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="k">else</span> <span class="p">{</span>
         <span class="bp">print</span><span class="p">(</span><span class="s">&#34;error calling GET URLSession datatask&#34;</span><span class="p">)</span>
         <span class="bp">print</span><span class="p">(</span><span class="n">error</span><span class="o">!</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">)</span>
         <span class="k">return</span>
     <span class="p">}</span>
-
     <span class="k">guard</span> <span class="kd">let</span> <span class="nv">_</span> <span class="p">=</span> <span class="n">response</span> <span class="k">else</span> <span class="p">{</span>
         <span class="k">return</span>
     <span class="p">}</span>
-
     <span class="k">guard</span> <span class="kd">let</span> <span class="nv">responseData</span> <span class="p">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
                 <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Error: did not receive data&#34;</span><span class="p">)</span>
                 <span class="k">return</span>
-            <span class="p">}</span>
-            
+    <span class="p">}</span>
+    
+    <span class="c1">//JSON parsing</span>
     <span class="k">do</span> <span class="p">{</span>
         <span class="k">guard</span> <span class="kd">let</span> <span class="nv">data_json</span> <span class="p">=</span> <span class="k">try</span> <span class="n">JSONSerialization</span><span class="p">.</span><span class="n">jsonObject</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">responseData</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">JSONSerialization</span><span class="p">.</span><span class="n">ReadingOptions</span><span class="p">.</span><span class="n">mutableContainers</span><span class="p">)</span> <span class="k">as</span> <span class="nb">AnyObject</span><span class="p">?</span> <span class="p">,</span> <span class="kd">let</span> <span class="nv">status_code</span> <span class="p">=</span>  <span class="n">data_json</span><span class="p">[</span><span class="s">&#34;status&#34;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="n">NSInteger</span> <span class="k">else</span> <span class="p">{</span>
             <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Error: Recieved JSON error&#34;</span><span class="p">)</span>
