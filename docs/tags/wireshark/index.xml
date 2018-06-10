@@ -17,18 +17,7 @@
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
       <guid>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</guid>
-      <description> Radius  Protocol : UDP
- Default Port : 1812 (authentication) &amp;amp; 1813(accounting)
- Wireshark Filter:
- radius
- udp.port == 1812
- udp.port == 1813
-  Code  Access-Request
- Access-Accept
- Access-Reject
- Access-Challenge
-   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server
-https://www.lifewire.com/free-and-public-dns-servers-2626062  </description>
+      <description>HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server</description>
     </item>
     
   </channel>

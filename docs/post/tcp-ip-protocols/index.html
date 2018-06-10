@@ -8,39 +8,9 @@
   <title>TCP/IP protocols</title>
   <meta property="og:title" content="TCP/IP protocols" />
   <meta name="twitter:title" content="TCP/IP protocols" />
-  <meta name="description" content=" Radius  Protocol : UDP
- Default Port : 1812 (authentication) &amp; 1813(accounting)
- Wireshark Filter:
- radius
- udp.port == 1812
- udp.port == 1813
-  Code  Access-Request
- Access-Accept
- Access-Reject
- Access-Challenge
-   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server
-https://www.lifewire.com/free-and-public-dns-servers-2626062  ">
-  <meta property="og:description" content=" Radius  Protocol : UDP
- Default Port : 1812 (authentication) &amp; 1813(accounting)
- Wireshark Filter:
- radius
- udp.port == 1812
- udp.port == 1813
-  Code  Access-Request
- Access-Accept
- Access-Reject
- Access-Challenge
-   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server
-https://www.lifewire.com/free-and-public-dns-servers-2626062  ">
-  <meta name="twitter:description" content=" Radius  Protocol : UDP
- Default Port : 1812 (authentication) &amp; 1813(accounting)
- Wireshark Filter:
- radius
- udp.port == 1812
- udp.port == 1813
-  Code  Access-Request
- Access-Accept
- Access-Reject …">
+  <meta name="description" content="HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server">
+  <meta property="og:description" content="HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server">
+  <meta name="twitter:description" content="HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP …">
   <meta name="author" content=""/>
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://francis5566.github.io/fw1993/post/tcp-ip-protocols/" />
@@ -209,11 +179,71 @@ https://www.lifewire.com/free-and-public-dns-servers-2626062  ">
       <article role="main" class="blog-post">
         
 
+<h3 id="http">HTTP</h3>
+
+<ul>
+<li>Hyper Text Transport Protocol</li>
+<li>TCP Port 80</li>
+</ul>
+
+<h3 id="https">HTTPS</h3>
+
+<ul>
+<li>Hyper Text Transport Protocol Secure</li>
+<li>TCP Port 443</li>
+</ul>
+
+<h3 id="ftp">FTP</h3>
+
+<ul>
+<li>File Transfer Protocol</li>
+<li>TCP Port 21</li>
+</ul>
+
+<h3 id="telnet">Telnet</h3>
+
+<ul>
+<li>Telecommunication Protocol</li>
+<li>TCP Port 23</li>
+</ul>
+
+<h2 id="smtp">SMTP</h2>
+
+<ul>
+<li>Simple Mail Transfer Protocol</li>
+<li>TCP port 25</li>
+<li>For email</li>
+</ul>
+
+<h3 id="dns">DNS</h3>
+
+<ul>
+<li>Domain Name System</li>
+<li>UDP Port 53</li>
+<li>Wireshark Filter
+
+<ul>
+<li>dns</li>
+<li>udp.port == 53</li>
+</ul></li>
+<li>Some Famous public DNS Server<br />
+<a href="https://www.lifewire.com/free-and-public-dns-servers-2626062">https://www.lifewire.com/free-and-public-dns-servers-2626062</a></li>
+<li>There are many attempt to user either TCP or more secure to protect DNS, however the speed is very critical, and all method will slow down the speed of loading page resource</li>
+</ul>
+
+<h3 id="tftp">TFTP</h3>
+
+<ul>
+<li>Trivial File Transfer Protocol</li>
+<li>UDP port 69</li>
+<li>Not secure. Should only be used in private net.</li>
+</ul>
+
 <h3 id="radius">Radius</h3>
 
 <ul>
-<li>Protocol : UDP<br /></li>
-<li>Default Port : 1812 (authentication) &amp; 1813(accounting)<br /></li>
+<li>Remote Authentication Dial-In User Service</li>
+<li>UDP Port : 1812 (authentication) &amp; 1813(accounting)<br /></li>
 <li>Wireshark Filter:<br />
 
 <ul>
@@ -229,21 +259,6 @@ https://www.lifewire.com/free-and-public-dns-servers-2626062  ">
 <li>Access-Reject<br /></li>
 <li>Access-Challenge<br /></li>
 </ul></li>
-</ul>
-
-<h3 id="dns">DNS</h3>
-
-<ul>
-<li>Protocol : Usually UDP</li>
-<li>Default Port : 53</li>
-<li>Wireshark Filter
-
-<ul>
-<li>dns</li>
-<li>udp.port == 53</li>
-</ul></li>
-<li>Some Famous public DNS Server<br />
-<a href="https://www.lifewire.com/free-and-public-dns-servers-2626062">https://www.lifewire.com/free-and-public-dns-servers-2626062</a></li>
 </ul>
 
 

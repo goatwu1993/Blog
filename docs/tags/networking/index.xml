@@ -6,10 +6,19 @@
     <description>Recent content in Networking on fw1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 May 2018 20:35:56 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 Jun 2018 22:11:56 +0800</lastBuildDate>
     
 	<atom:link href="https://francis5566.github.io/fw1993/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OSI 7 Layer</title>
+      <link>https://francis5566.github.io/fw1993/post/osi-sevenlayer/</link>
+      <pubDate>Sat, 09 Jun 2018 22:11:56 +0800</pubDate>
+      
+      <guid>https://francis5566.github.io/fw1993/post/osi-sevenlayer/</guid>
+      <description> Application Layer (Layer 7)  Protocol, include HTTP, HTTPS, DNS etc.  Presentation Layer (Layer 6)    Session Layer (Layer 5)  Session  Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS  Network Layer (Layer 3)  IP Address ICMP , IGMP , ARP, RARP, IPX, OSPF Router, Layer 3 Switch  Data Link Layer (Layer 2)  Ethernet, 802.11(Wi-Fi), MAC Address ARP, RARP Layer 2 Switch  Physical Layer (Layer 1)  Hub, Wire, Fiber, Radio  </description>
+    </item>
     
     <item>
       <title>Swift 4 HTTP Request GET and POST</title>
@@ -32,18 +41,7 @@ Note  content of is not suggested. It is breif but may have you do not know what
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
       <guid>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</guid>
-      <description> Radius  Protocol : UDP
- Default Port : 1812 (authentication) &amp;amp; 1813(accounting)
- Wireshark Filter:
- radius
- udp.port == 1812
- udp.port == 1813
-  Code  Access-Request
- Access-Accept
- Access-Reject
- Access-Challenge
-   DNS  Protocol : Usually UDP Default Port : 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server
-https://www.lifewire.com/free-and-public-dns-servers-2626062  </description>
+      <description>HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server</description>
     </item>
     
   </channel>
