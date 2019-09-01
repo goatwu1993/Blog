@@ -54,5 +54,17 @@ Static page should be easy enough for a blog. However it does not provide native
  vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
     </item>
     
+    <item>
+      <title>About</title>
+      <link>https://goatwu1993.github.io/Blog/about/</link>
+      <pubDate>Sun, 06 May 2018 02:42:40 +0800</pubDate>
+      
+      <guid>https://goatwu1993.github.io/Blog/about/</guid>
+      <description> About Chao Yang Wu 吳兆洋  Develop and maintain Linux-Based Network Access Gateway(NAC). Self-taught machine learning and Node/Express/MongoDB backend.
+ Linkedin
+ Github
+  </description>
+    </item>
+    
   </channel>
 </rss>
