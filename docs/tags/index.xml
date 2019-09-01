@@ -1,112 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on fw1993</title>
-    <link>https://francis5566.github.io/fw1993/tags/</link>
-    <description>Recent content in Tags on fw1993</description>
+    <title>Tags on goatwu1993</title>
+    <link>https://goatwu1993.github.io/Blog/tags/</link>
+    <description>Recent content in Tags on goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 04:51:07 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jun 2018 17:20:14 +0800</lastBuildDate>
     
-	<atom:link href="https://francis5566.github.io/fw1993/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/Blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Environment</title>
-      <link>https://francis5566.github.io/fw1993/tags/environment/</link>
-      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/tags/environment/</guid>
-      <description></description>
-    </item>
     
     <item>
-      <title>Golang</title>
-      <link>https://francis5566.github.io/fw1993/tags/golang/</link>
-      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://francis5566.github.io/fw1993/tags/hugo/</link>
-      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://francis5566.github.io/fw1993/tags/linux/</link>
+      <title>Shell</title>
+      <link>https://goatwu1993.github.io/Blog/tags/shell/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Macos</title>
-      <link>https://francis5566.github.io/fw1993/tags/macos/</link>
-      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/tags/macos/</guid>
+      <guid>https://goatwu1993.github.io/Blog/tags/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Networking</title>
-      <link>https://francis5566.github.io/fw1993/tags/networking/</link>
-      <pubDate>Sat, 09 Jun 2018 22:11:56 +0800</pubDate>
+      <link>https://goatwu1993.github.io/Blog/tags/networking/</link>
+      <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/tags/networking/</guid>
+      <guid>https://goatwu1993.github.io/Blog/tags/networking/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Restapi</title>
-      <link>https://francis5566.github.io/fw1993/tags/restapi/</link>
-      <pubDate>Thu, 24 May 2018 20:35:56 +0800</pubDate>
+      <title>Web</title>
+      <link>https://goatwu1993.github.io/Blog/tags/web/</link>
+      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/tags/restapi/</guid>
+      <guid>https://goatwu1993.github.io/Blog/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Shell</title>
-      <link>https://francis5566.github.io/fw1993/tags/shell/</link>
+      <title>Linux</title>
+      <link>https://goatwu1993.github.io/Blog/tags/linux/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/tags/shell/</guid>
+      <guid>https://goatwu1993.github.io/Blog/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Swift</title>
-      <link>https://francis5566.github.io/fw1993/tags/swift/</link>
-      <pubDate>Thu, 24 May 2018 20:35:56 +0800</pubDate>
+      <title>MacOS</title>
+      <link>https://goatwu1993.github.io/Blog/tags/macos/</link>
+      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/tags/swift/</guid>
+      <guid>https://goatwu1993.github.io/Blog/tags/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vim</title>
-      <link>https://francis5566.github.io/fw1993/tags/vim/</link>
+      <link>https://goatwu1993.github.io/Blog/tags/vim/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wireshark</title>
-      <link>https://francis5566.github.io/fw1993/tags/wireshark/</link>
-      <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/tags/wireshark/</guid>
+      <guid>https://goatwu1993.github.io/Blog/tags/vim/</guid>
       <description></description>
     </item>
     

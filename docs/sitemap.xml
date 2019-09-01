@@ -3,152 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://francis5566.github.io/fw1993/post/bash-shell-script/</loc>
+    <loc>https://goatwu1993.github.io/Blog/categories/</loc>
     <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://francis5566.github.io/fw1993/post/osi-sevenlayer/</loc>
-    <lastmod>2018-06-09T22:11:56+08:00</lastmod>
+    <loc>https://goatwu1993.github.io/Blog/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://francis5566.github.io/fw1993/post/swift-4-http-request-get-and-post/</loc>
-    <lastmod>2018-05-24T20:35:56+08:00</lastmod>
+    <loc>https://goatwu1993.github.io/Blog/post/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</loc>
+    <loc>https://goatwu1993.github.io/Blog/categories/shell/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/tags/shell/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/tags/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/categories/networking/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://francis5566.github.io/fw1993/post/why-hugo/</loc>
-    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/about/</loc>
-    <lastmod>2018-05-06T02:42:40+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/categories/blog/</loc>
-    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/categories/</loc>
-    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/categories/development/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/environment/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/golang/</loc>
-    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/hugo/</loc>
-    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/linux/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/categories/linux/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/macos/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/networking/</loc>
-    <lastmod>2018-06-09T22:11:56+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/categories/networking/</loc>
-    <lastmod>2018-06-09T22:11:56+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/post/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/restapi/</loc>
-    <lastmod>2018-05-24T20:35:56+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/shell/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/swift/</loc>
-    <lastmod>2018-05-24T20:35:56+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/vim/</loc>
-    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://francis5566.github.io/fw1993/tags/wireshark/</loc>
+    <loc>https://goatwu1993.github.io/Blog/tags/networking/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://francis5566.github.io/fw1993/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://goatwu1993.github.io/Blog/post/networking-cheat-list/</loc>
+    <lastmod>2018-05-11T11:29:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/categories/web/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/tags/web/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/post/why-hugo/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/tags/linux/</loc>
+    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/tags/macos/</loc>
+    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</loc>
+    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/Blog/tags/vim/</loc>
+    <lastmod>2018-05-06T04:51:07+08:00</lastmod>
   </url>
   
 </urlset>

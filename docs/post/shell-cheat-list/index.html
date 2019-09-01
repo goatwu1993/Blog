@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shell Cheat List - goatwu1993</title>
+    <base href="https://goatwu1993.github.io/Blog/">
+    <link rel="stylesheet" href="https://goatwu1993.github.io/Blog/css/styles.css">
+    <link rel="stylesheet" href="https://goatwu1993.github.io/Blog/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/Blog/">goatwu1993</a></h4>
+	<div id="space"></div>
+        
+        <a href="/Blog/tags/">Tags</a>
+        
+        <a href="/Blog/post/">Posts</a>
+        
+        <a href="/Blog/about/">About</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>Shell Cheat List</h1>
+                <time datetime="2018-06-10T17:20:14&#43;0800">2018-06-10</time>
+
+	    </div>
+            <section class="post-content">
+                
+
+<h1 id="shell-cheat-list">Shell Cheat List</h1>
+
+<h2 id="general">General</h2>
+
+<ul>
+<li><code>echo $SHELL</code>
+
+<ul>
+<li>Show the current shell.</li>
+<li><code>echo $SHELL</code> to show the current shell.</li>
+<li><code>$SHELL --version</code> to show the current shell with version.</li>
+</ul></li>
+<li><code>clear</code>
+
+<ul>
+<li>Clear terminal.</li>
+</ul></li>
+<li><code>history</code>
+
+<ul>
+<li>Show the commands history.</li>
+</ul></li>
+<li><code>pwd</code>
+
+<ul>
+<li>Print working directory</li>
+</ul></li>
+<li><code>ls</code>
+
+<ul>
+<li>List the files in working directory.</li>
+<li><code>ls -la</code> to list all files, hidden file included.</li>
+</ul></li>
+<li><code>chown</code>
+
+<ul>
+<li>Change ownership of a file.</li>
+<li><code>chown nobody.nogroup your_file_name</code> to change a ownership of a file.</li>
+<li><code>chown -R nobody.nogroup .</code> to recursively change all file under this directory.</li>
+</ul></li>
+<li><code>chmod</code>
+
+<ul>
+<li>Change the read/write permission of a file</li>
+<li><code>chmod 777 your_file_name</code> to let all group and user read/write your file.</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="network">Network</h2>
+
+<ul>
+<li><code>ifconfig</code>
+
+<ul>
+<li>Show network interface configuration</li>
+</ul></li>
+<li><code>netstat</code>
+
+<ul>
+<li>Show network status, include tcp/udp port.</li>
+</ul></li>
+<li><code>brtcl</code>
+
+<ul>
+<li>Check the bridge Interface</li>
+<li><code>brctl addbr &lt;name&gt;</code></li>
+</ul></li>
+<li><code>ssh</code></li>
+<li><code>ssh-keygen</code>
+
+<ul>
+<li>Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host.</li>
+<li>Error message: <code>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code></li>
+<li><code>ssh-keygen -R 192.168.1.254</code></li>
+</ul></li>
+<li><code>scp</code>
+
+<ul>
+<li>Use ssh to cp a file to remoter server</li>
+<li><code>scp /local_path/locol_file_name remote_account@remote_server_address:/remote_server_path/remoter_server_file_name</code></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="server">Server</h2>
+
+<ul>
+<li><code>ps</code><br />
+List all process.</li>
+<li><code>kill</code><br />
+Kill a process</li>
+<li><code>crontab</code><br />
+
+<ul>
+<li>List cronjib</li>
+<li><code>crontab -l</code> to list all cronjob.</li>
+</ul></li>
+<li><code>top</code></li>
+</ul>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://goatwu1993.github.io/Blog/css/solarized-light.css"/>
+<script src="https://goatwu1993.github.io/Blog/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

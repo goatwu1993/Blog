@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on goatwu1993</title>
+    <link>https://goatwu1993.github.io/Blog/categories/web/</link>
+    <description>Recent content in Web on goatwu1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 May 2018 19:19:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://goatwu1993.github.io/Blog/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Hugo</title>
+      <link>https://goatwu1993.github.io/Blog/post/why-hugo/</link>
+      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+      
+      <guid>https://goatwu1993.github.io/Blog/post/why-hugo/</guid>
+      <description>Why Hugo Blog tools I Googled and these solutions seems most popular &amp;amp; modern.
+ WordPress WordPress.com Hexo Hugo
+  I choose Hugo at last after below considerations.
+Static vs Dynamic  Dynamic
+Takes more time to maintain and debug. Require a server(which is a cost).
+ Static
+Static page should be easy enough for a blog. However it does not provide native comment function. Fortunately, gitment should be an acceptable workaround.</description>
+    </item>
+    
+  </channel>
+</rss>

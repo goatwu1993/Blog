@@ -4,15 +4,12 @@ date: 2018-05-06T02:42:40+08:00
 draft: true
 ---
 
-## Because
-When using  
+# About
 
-* MAC
-* Linux
+## Chao Yang Wu 吳兆洋
 
-It <b>ALWAYS</b> turn out to :  
-Should have known those <b>SIMPLE TRICKS</b> instead wasting <b>TONS of TIME!</b>  
+* Develop and maintain Linux-Based Network Access Gateway(NAC).
+* Self-taught machine learning and Node/Express/MongoDB backend.
 
-## Therefore
-Recording these little tricks down seems reasonable.  
-And hope this will save the time of yours.
+* [Linkedin](https://www.linkedin.com/in/chao-yang-wu-0056a4a7/)
+* [Github](https://github.com/yunwu1993)

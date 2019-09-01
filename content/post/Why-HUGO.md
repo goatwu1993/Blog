@@ -1,53 +1,68 @@
 ---
-title: "Why HUGO"
+title: "Why Hugo"
 date: 2018-05-06T19:19:34+08:00
-draft: true
-categories: [Blog]
-tags: [HUGO, Golang]
-slug: Why-HUGO
+draft: false
+categories: [Web]
+tags: [Web]
+slug: Why-Hugo
 gitment: true
 ---
 
+# Why Hugo
 
+## Blog tools
 
-## Why HUGO
-I was using Wordpress.com previously. Then I want to take more controll of my blog.  
-So as, WordPress(LAMP), Hexo(node.js), Ghostand(node.js) and HUGO(golang) is considered. It turns out to be HUGO, and reasons is as below.
-## Pros
-### Opensource
-Though WordPress is an opensource project, MySQL, part of WordPress, is owned by Oracle. It is known that Oracle is now trying to charge the world with using JAVA, which is not cool.
+I Googled and these solutions seems most popular & modern.
 
-Golang is held by Google, and there is no news that using Golang will need any license or fee so far.
+* WordPress
+* WordPress.com
+* Hexo
+* [Hugo](https://gohugo.io)  
 
-### Static
-Though Dynamic seems cool, it also waste you a lot of time while something go wrong and you will never know why. In fact, static page is good enough for most Blogs.
+I choose Hugo at last after below considerations.
 
-### Hosting
-WordPress(LAMP) or other CMS will need a Server, which usually cost.
+## Static vs Dynamic
 
-I considered Heroku, and found that Heroku support only PostgreSQL. MySQL server should be held at another Site.  
-On the otherhand, integrating WordPress and PostgreSQL is also an effort. It is impossible to held a WordPress with a single Platform, and IaaS usually needs to pay.  
+* Dynamic  
+Takes more time to maintain and debug. Require a server(which is a cost).
 
-On the other hand, helding static page on github or other storage will take a lot less effort, and you can simply `git push` without restarting or running a service down/up script on your remote machine.
+* Static  
+Static page should be easy enough for a blog. However it does not provide native comment function. Fortunately, [gitment](https://github.com/imsun/gitment) should be an acceptable workaround.
 
-### Speed
-Static page is quicker than dynamic page.  
-### CLI
-I have tried the CLI for both Hexo and HUGO, and HUGO's command is more clear to me.  
-### COOL
-Hexo is from Taiwan, but Golang and markdown language is cool as well. This page is also worte in markdown!  
+## Server & Database
 
-## Cons
+* I found no solution to host Wordpress(with source code) at a free server. [Heroku](https://www.heroku.com/) get close to it but support only PostgreSQL.  
+  * Host MySQL on another site
+  * Integrate WordPress and PostgreSQL  
 
-### Needs plugins to implement subcribe/leave message
-And that is why dynamic web framework exist...
+  Either take some efforts.  
 
-### Golang's resource is much less than Node.js
-Almost any questions about Node.js was asked and solved on the Internet. But Golang is not yet that popular.  
-However, when you are using HUGO, you do not necessary need to learn Golang. In fact, three commands(`HUGO new`, `HUGO --buildDrafts` and `HUGO server -D` ) will cover most of your needs.  
+* Meanwhile, github.io just came out and seems wonderful for static page.
 
-### Themes are less than WordPress
-The themes are not that much now.
+## User interface
 
-BUT HEY, All the themes is free on HUGO! Think about it, you do not want to see a bangin theme that needs to pay. 
+* Wordpress  
+Wordpress get a clear and attractive UI. However it is a dynamic framework.
+* Hexo  
+CLI. Take me a while to understand.
+* Hugo  
+CLI. However it seems more comprehesive to me.
 
+## Language
+
+Hugo use Markdown, which I was familiar to.
+
+## Themes
+
+To be honest, Hugo has less themes than the others (while this was written). But HEY, all themes are free!!! I hate to see cool themes cost.
+
+## Conclusion
+
+I choose Hugo. and all I need to do is
+
+* Write feeds with markdown
+* `$ hugo`
+* `$ git add ...`
+* `$ git push`
+
+All seems fine!

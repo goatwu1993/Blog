@@ -1,93 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fw1993</title>
-    <link>https://francis5566.github.io/fw1993/</link>
-    <description>Recent content on fw1993</description>
+    <title>goatwu1993</title>
+    <link>https://goatwu1993.github.io/Blog/</link>
+    <description>Recent content on goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Jun 2018 17:20:14 +0800</lastBuildDate>
     
-	<atom:link href="https://francis5566.github.io/fw1993/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/Blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bash Shell Script</title>
-      <link>https://francis5566.github.io/fw1993/post/bash-shell-script/</link>
+      <title>Shell Cheat List</title>
+      <link>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/bash-shell-script/</guid>
-      <description>General clear  Clear your terminal  history  show the history of commmand used.  ls  List the file in the directory you&amp;rsquo;re at e.g. ls -la to list all file, including hidden file, which file name start with ..  echo $SHELL  Show the current SHELL using. e.g. echo $SHELL. to show the current shell. e.g.$SHELL --version to show the current shell with version.  chown  Change ownership of a file.</description>
+      <guid>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</guid>
+      <description>Shell Cheat List General  echo $SHELL  Show the current shell. echo $SHELL to show the current shell. $SHELL --version to show the current shell with version.  clear  Clear terminal.  history  Show the commands history.  pwd  Print working directory  ls  List the files in working directory. ls -la to list all files, hidden file included.  chown  Change ownership of a file.</description>
     </item>
     
     <item>
-      <title>OSI 7 Layer</title>
-      <link>https://francis5566.github.io/fw1993/post/osi-sevenlayer/</link>
-      <pubDate>Sat, 09 Jun 2018 22:11:56 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/post/osi-sevenlayer/</guid>
-      <description> Application Layer (Layer 7)  Protocol, include HTTP, HTTPS, DNS etc.  Presentation Layer (Layer 6)    Session Layer (Layer 5)  Session  Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS  Network Layer (Layer 3)  IP Address ICMP , IGMP , ARP, RARP, IPX, OSPF Router, Layer 3 Switch  Data Link Layer (Layer 2)  Ethernet, 802.11(Wi-Fi), MAC Address ARP, RARP Layer 2 Switch  Physical Layer (Layer 1)  Hub, Wire, Fiber, Radio  </description>
-    </item>
-    
-    <item>
-      <title>Swift 4 HTTP Request GET and POST</title>
-      <link>https://francis5566.github.io/fw1993/post/swift-4-http-request-get-and-post/</link>
-      <pubDate>Thu, 24 May 2018 20:35:56 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/post/swift-4-http-request-get-and-post/</guid>
-      <description>Some Summury Using  URL
- URLRequest
- URLSession
- URLSession.datatask(with : URLRequest) which take URLRequest and CompletionHandler as input
-  Building your HTTP request step by step really make one know what he is doing.
-Note  content of is not suggested. It is breif but may have you do not know what you are doing. Using URLSession.datatask will make GET and POST more similar.
- URLSession.datatask(with : URL).</description>
-    </item>
-    
-    <item>
-      <title>TCP/IP protocols</title>
-      <link>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</link>
+      <title>Networking Cheat List(TCP/IP)</title>
+      <link>https://goatwu1993.github.io/Blog/post/networking-cheat-list/</link>
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/tcp-ip-protocols/</guid>
-      <description>HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Wireshark Filter  dns udp.port == 53  Some Famous public DNS Server</description>
+      <guid>https://goatwu1993.github.io/Blog/post/networking-cheat-list/</guid>
+      <description>Networking cheat list(TCP/IP) OSI 7 Layres  Application Layer (Layer 7)  HTTP, HTTPS L7 firewall  Presentation Layer (Layer 6) Session Layer (Layer 5)  Sessions  Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS  Network Layer (Layer 3)  IP Address Router, Layer 3 Switch  Data Link Layer (Layer 2)  Ethernet, 802.11(Wi-Fi), MAC Address Layer 2 Switch  Physical Layer (Layer 1)  Hub, Wire, Fiber, Radio   TCP/IP protocols  HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Some famous public DNS servers  TFTP  Trivial File Transfer Protocol UDP port 69 Not secure.</description>
     </item>
     
     <item>
-      <title>Why HUGO</title>
-      <link>https://francis5566.github.io/fw1993/post/why-hugo/</link>
+      <title>Why Hugo</title>
+      <link>https://goatwu1993.github.io/Blog/post/why-hugo/</link>
       <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/why-hugo/</guid>
-      <description>Why HUGO I was using Wordpress.com previously. Then I want to take more controll of my blog.
-So as, WordPress(LAMP), Hexo(node.js), Ghostand(node.js) and HUGO(golang) is considered. It turns out to be HUGO, and reasons is as below.
-Pros Opensource Though WordPress is an opensource project, MySQL, part of WordPress, is owned by Oracle. It is known that Oracle is now trying to charge the world with using JAVA, which is not cool.</description>
+      <guid>https://goatwu1993.github.io/Blog/post/why-hugo/</guid>
+      <description>Why Hugo Blog tools I Googled and these solutions seems most popular &amp;amp; modern.
+ WordPress WordPress.com Hexo Hugo
+  I choose Hugo at last after below considerations.
+Static vs Dynamic  Dynamic
+Takes more time to maintain and debug. Require a server(which is a cost).
+ Static
+Static page should be easy enough for a blog. However it does not provide native comment function. Fortunately, gitment should be an acceptable workaround.</description>
     </item>
     
     <item>
-      <title>Setting Up Your MacOS : Vim &amp; Vimrc</title>
-      <link>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</link>
+      <title>Setting macOS (OSX) Vim</title>
+      <link>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://francis5566.github.io/fw1993/post/setting-up-your-mac-os-vim-and-vimrc/</guid>
-      <description>Things started at one of my friends brought a Macbook Pro (Apple) same as mine, and I will like to set up a environment like mine.
-First you may want to edit some file in your terminal like a HACKER-MAN, and Vim is the most use text editor in terminal.
-So let&amp;rsquo;s get started!
-Open your terminal.‌ You can found it simply type &amp;ldquo;terminal&amp;rdquo; in your spotlight.
-(Optional) Open Vim and see what is vimrc.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://francis5566.github.io/fw1993/about/</link>
-      <pubDate>Sun, 06 May 2018 02:42:40 +0800</pubDate>
-      
-      <guid>https://francis5566.github.io/fw1993/about/</guid>
-      <description>Because When using
- MAC Linux  It ALWAYS turn out to :
-Should have known those SIMPLE TRICKS instead wasting TONS of TIME!
-Therefore Recording these little tricks down seems reasonable.
-And hope this will save the time of yours.</description>
+      <guid>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</guid>
+      <description>Setting macOS (OSX) Vim What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
+ vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
     </item>
     
   </channel>

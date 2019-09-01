@@ -1,8 +1,8 @@
-baseURL = "https://francis5566.github.io/fw1993/"
-theme = "beautifulhugo" # set the theme
+baseURL = "https://goatwu1993.github.io/Blog/"
+theme = "hugo-grapes"
 publishDir = "docs"
 languageCode = "en-us"
-title = "fw1993"
+title = "goatwu1993"
 pygmentsUseClasses = true
 
 [blackfriday]
