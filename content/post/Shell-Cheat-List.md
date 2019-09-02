@@ -12,56 +12,59 @@ gitment: true
 
 ## General
 
-* `echo $SHELL`
-  * Show the current shell.
-  * `echo $SHELL` to show the current shell.
-  * `$SHELL --version` to show the current shell with version.
-* `clear`
+* {{< highlight bash >}}echo $SHELL{{</highlight >}}
+  * Show shell name.
+  * {{< highlight bash >}}$SHELL --version{{</highlight >}}
+  * Show shell version.
+* {{< highlight bash >}}clear{{</highlight >}}
   * Clear terminal.
-* `history`
+* {{< highlight bash >}}history{{</highlight >}}
   * Show the commands history.
-* `pwd`
+* {{< highlight bash >}}pwd{{</highlight >}}
   * Print working directory
-* `ls`
+* {{< highlight bash >}}ls{{</highlight >}}
   * List the files in working directory.
-  * `ls -la` to list all files, hidden file included.
-* `chown`
+  * {{< highlight bash >}}ls -la{{</highlight >}}  
+  * List all files, hidden file included, with detailed information.
+* {{< highlight bash >}}chown{{</highlight>}}
   * Change ownership of a file.
-  * `chown nobody.nogroup your_file_name` to change a ownership of a file.
-  * `chown -R nobody.nogroup .` to recursively change all file under this directory.
-* `chmod`
+  * {{< highlight bash >}}chown nobody.nogroup your_file_name{{</highlight>}}  
+  * Change a ownership of a file.
+  * {{< highlight bash >}}chown -R nobody.nogroup .{{</highlight>}}
+  * Recursively change all file under this directory.
+* {{< highlight bash >}}chmod{{</highlight>}}
   * Change the read/write permission of a file
-  * `chmod 777 your_file_name` to let all group and user read/write your file.
+  * {{< highlight bash >}}chmod 777 file_name{{</highlight>}} 
+  * Make file r/w/e able for all user & group.
 
 ---
 
 ## Network
 
-* `ifconfig`
-  * Show network interface configuration
-* `netstat`
+* {{< highlight bash >}}ifconfig{{</highlight>}}
+  * Show network interface config/info.
+* {{< highlight bash >}}netstat{{</highlight>}}
   * Show network status, include tcp/udp port.
-* `brtcl`
+* {{< highlight bash >}}brtcl{{</highlight>}}
   * Check the bridge Interface
-  * `brctl addbr <name>`
-* `ssh`
-* `ssh-keygen`
+  * {{< highlight bash >}}brctl addbr <name>{{</highlight>}}
+* {{< highlight bash >}}ssh{{</highlight>}}
+* {{< highlight bash >}}ssh-keygen{{</highlight>}}
   * Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host.
-  * Error message: `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!`
-  * `ssh-keygen -R 192.168.1.254`
-* `scp`
-  * Use ssh to cp a file to remoter server
-  * `scp /local_path/locol_file_name remote_account@remote_server_address:/remote_server_path/remoter_server_file_name`
+  * Use this when encounter error message: {{< highlight bash >}}WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!{{</highlight>}}
+  * {{< highlight bash >}}ssh-keygen -R 192.168.1.254{{</highlight>}}
+* {{< highlight bash >}}scp{{</highlight>}}
 
 ---
 
 ## Server
 
-* `ps`  
+* {{< highlight bash >}}ps{{</highlight>}}
 List all process.
-* `kill`  
+* {{< highlight bash >}}kill $pid{{</highlight>}}
 Kill a process
-* `crontab`  
+* {{< highlight bash >}}crontab{{</highlight>}}
   * List cronjib
-  * `crontab -l` to list all cronjob.
-* `top`
+  * {{< highlight bash >}}crontab -l{{</highlight>}}
+  * List all cronjob.
+* {{< highlight bash >}}top{{</highlight>}}

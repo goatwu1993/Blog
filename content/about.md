@@ -12,4 +12,4 @@ draft: false
 * Self-taught machine learning and Node/Express/MongoDB backend.
 
 * [Linkedin](https://www.linkedin.com/in/chao-yang-wu-0056a4a7/)
-* [Github](https://github.com/yunwu1993)
+* [Github](https://github.com/goatwu1993)

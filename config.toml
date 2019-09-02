@@ -1,8 +1,10 @@
 baseURL = "https://goatwu1993.github.io/Blog/"
-theme = "hugo-grapes"
 publishDir = "docs"
 languageCode = "en-us"
 title = "goatwu1993"
+theme = "hugo-grapes"
+googleAnalytics = "UA-1234-6"
+timeout=3000
 pygmentsUseClasses = true
 
 [blackfriday]
@@ -23,3 +25,4 @@ pygmentsUseClasses = true
     name = "About"
     weight = 3
     url = "./about/"
+

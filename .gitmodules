@@ -1,3 +1,9 @@
 [submodule "themes/hugo-grapes"]
 	path = themes/hugo-grapes
 	url = https://github.com/shankar/hugo-grapes.git
+[submodule "themes/hugo-academic"]
+	path = themes/hugo-academic
+	url = https://github.com/gcushen/hugo-academic.git
+[submodule "themes/hello-friend"]
+	path = themes/hello-friend
+	url = https://github.com/panr/hugo-theme-hello-friend.git
