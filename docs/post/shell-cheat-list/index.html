@@ -37,46 +37,50 @@
 <h2 id="general">General</h2>
 
 <ul>
-<li><code>echo $SHELL</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">$SHELL</span></code></pre></div>
 
 <ul>
-<li>Show the current shell.</li>
-<li><code>echo $SHELL</code> to show the current shell.</li>
-<li><code>$SHELL --version</code> to show the current shell with version.</li>
+<li>Show shell name.</li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$SHELL</span> --version</code></pre></div></li>
+<li>Show shell version.</li>
 </ul></li>
-<li><code>clear</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">clear</code></pre></div>
 
 <ul>
 <li>Clear terminal.</li>
 </ul></li>
-<li><code>history</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">history</code></pre></div>
 
 <ul>
 <li>Show the commands history.</li>
 </ul></li>
-<li><code>pwd</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pwd</code></pre></div>
 
 <ul>
 <li>Print working directory</li>
 </ul></li>
-<li><code>ls</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ls</code></pre></div>
 
 <ul>
 <li>List the files in working directory.</li>
-<li><code>ls -la</code> to list all files, hidden file included.</li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ls -la</code></pre></div><br /></li>
+<li>List all files, hidden file included, with detailed information.</li>
 </ul></li>
-<li><code>chown</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">chown</code></pre></div>
 
 <ul>
 <li>Change ownership of a file.</li>
-<li><code>chown nobody.nogroup your_file_name</code> to change a ownership of a file.</li>
-<li><code>chown -R nobody.nogroup .</code> to recursively change all file under this directory.</li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">chown nobody.nogroup your_file_name</code></pre></div><br /></li>
+<li>Change a ownership of a file.</li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">chown -R nobody.nogroup .</code></pre></div></li>
+<li>Recursively change all file under this directory.</li>
 </ul></li>
-<li><code>chmod</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">chmod</code></pre></div>
 
 <ul>
 <li>Change the read/write permission of a file</li>
-<li><code>chmod 777 your_file_name</code> to let all group and user read/write your file.</li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">chmod <span class="m">777</span> file_name</code></pre></div></li>
+<li>Make file r/w/e able for all user &amp; group.</li>
 </ul></li>
 </ul>
 
@@ -85,36 +89,31 @@
 <h2 id="network">Network</h2>
 
 <ul>
-<li><code>ifconfig</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ifconfig</code></pre></div>
 
 <ul>
-<li>Show network interface configuration</li>
+<li>Show network interface config/info.</li>
 </ul></li>
-<li><code>netstat</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">netstat</code></pre></div>
 
 <ul>
 <li>Show network status, include tcp/udp port.</li>
 </ul></li>
-<li><code>brtcl</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">brtcl</code></pre></div>
 
 <ul>
 <li>Check the bridge Interface</li>
-<li><code>brctl addbr &lt;name&gt;</code></li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">brctl addbr &lt;name&gt;</code></pre></div></li>
 </ul></li>
-<li><code>ssh</code></li>
-<li><code>ssh-keygen</code>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh</code></pre></div></li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen</code></pre></div>
 
 <ul>
 <li>Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host.</li>
-<li>Error message: <code>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code></li>
-<li><code>ssh-keygen -R 192.168.1.254</code></li>
+<li>Use this when encounter error message: <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code></pre></div></li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -R <span class="m">192</span>.168.1.254</code></pre></div></li>
 </ul></li>
-<li><code>scp</code>
-
-<ul>
-<li>Use ssh to cp a file to remoter server</li>
-<li><code>scp /local_path/locol_file_name remote_account@remote_server_address:/remote_server_path/remoter_server_file_name</code></li>
-</ul></li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">scp</code></pre></div></li>
 </ul>
 
 <hr />
@@ -122,17 +121,18 @@
 <h2 id="server">Server</h2>
 
 <ul>
-<li><code>ps</code><br />
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ps</code></pre></div>
 List all process.</li>
-<li><code>kill</code><br />
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">kill</span> <span class="nv">$pid</span></code></pre></div>
 Kill a process</li>
-<li><code>crontab</code><br />
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">crontab</code></pre></div>
 
 <ul>
 <li>List cronjib</li>
-<li><code>crontab -l</code> to list all cronjob.</li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">crontab -l</code></pre></div></li>
+<li>List all cronjob.</li>
 </ul></li>
-<li><code>top</code></li>
+<li><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">top</code></pre></div></li>
 </ul>
 
             </section>
