@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shell Cheat List - goatwu1993</title>
+    <base href="https://goatwu1993.github.io/blog/">
+    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/styles.css">
+    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/blog/">goatwu1993</a></h4>
+	<div id="space"></div>
+        
+        <a href="/blog/tags/">Tags</a>
+        
+        <a href="/blog/post/">Posts</a>
+        
+        <a href="/blog/about/">About</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>Shell Cheat List</h1>
+                <time datetime="2018-06-10T17:20:14&#43;0800">2018-06-10</time>
+
+	    </div>
+            <section class="post-content">
+                
+
+<h1 id="shell-cheat-list">Shell Cheat List</h1>
+
+<h2 id="general">General</h2>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# Show shell name.
+echo \$SHELL
+# Show shell version.
+$SHELL --version
+
+# Clear terminal.
+clear
+
+
+# Show the commands history.
+history
+
+# Print working directory
+pwd
+
+# List the files in working directory.
+ls
+# List all files, hidden file included, with detailed information.
+ls -la
+
+# Change ownership of a file.
+chown
+# Change an ownership of a file.
+chown nobody.nogroup your_file_name
+# Recursively change all file under this directory.
+chown -R nobody.nogroup .
+
+# Change the read/write permission of a file
+chmod
+# Make file r/w/e able for all user &amp; group.
+chmod 777 file_name
+</code></pre>
+
+<hr />
+
+<h2 id="network">Network</h2>
+
+<pre><code class="language-bash">#!/bin/bash
+# Show network interface config/info.
+ifconfig
+
+# Show network status, include tcp/udp port.
+netstat
+
+# Check the bridge Interface
+brtcl
+brctl addbr &lt;name&gt;
+
+# ssh
+ssh
+# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+ssh-keygen
+
+# scp
+scp
+</code></pre>
+
+<hr />
+
+<h2 id="cpu-memery-task-process">CPU, memery, task &amp; process</h2>
+
+<pre><code class="language-bash">#!/bin/bash
+# List all process.
+ps
+
+# Kill a process
+kill $pid
+
+# List cronjob
+crontab
+# List all cronjob.
+crontab -l
+
+top
+</code></pre>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/solarized-light.css"/>
+<script src="https://goatwu1993.github.io/blog/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

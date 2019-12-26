@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Vim config - goatwu1993</title>
+    <base href="https://goatwu1993.github.io/blog/">
+    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/styles.css">
+    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/blog/">goatwu1993</a></h4>
+	<div id="space"></div>
+        
+        <a href="/blog/tags/">Tags</a>
+        
+        <a href="/blog/post/">Posts</a>
+        
+        <a href="/blog/about/">About</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>My Vim config</h1>
+                <time datetime="2018-05-06T04:51:07&#43;0800">2018-05-06</time>
+
+	    </div>
+            <section class="post-content">
+                
+
+<h1 id="my-vim-config">My Vim config</h1>
+
+<h2 id="what-is-vimrc">What is vimrc</h2>
+
+<ul>
+<li><p>Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.</p></li>
+
+<li><p>vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</p></li>
+
+<li><p>In Mac terminal, you can check vim version:<br />
+<code>$ vim --version</code>‌</p></li>
+
+<li><p><code>$ vim</code><br />
+In vim terminal type:<br />
+<code>:help vimrc</code><br />
+There is more informations and recommendation about what vimrc.</p></li>
+</ul>
+
+<h2 id="setting-up-vimrc">Setting up vimrc</h2>
+
+<ul>
+<li><code>:help vimrc</code><br />
+It recommended one should use user directory (~) instead if root directory (/) in order to avoid messed-up.</li>
+
+<li><p>Back to terminal</p>
+
+<pre><code class="language-bash">mkdir ~/.vim
+cd ~/.vim
+vim vimrc
+</code></pre></li>
+
+<li><p>Edit(or paste) in vim</p>
+
+<pre><code class="language-bash">syntax on
+set nu
+set ruler
+set ic
+set hlsearch
+</code></pre></li>
+
+<li><p>Save file and quit.</p></li>
+</ul>
+
+<h2 id="multiple-macs">Multiple Macs</h2>
+
+<ul>
+<li>In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized <code>~/Desktop</code> to get vimrc synced.<br />
+<code>ln -s ~/Desktop/Config/VIM/.vim ~/.vim</code></li>
+</ul>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/solarized-light.css"/>
+<script src="https://goatwu1993.github.io/blog/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

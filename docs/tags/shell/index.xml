@@ -13,22 +13,20 @@
     
     <item>
       <title>Shell Cheat List</title>
-      <link>https://goatwu1993.github.io/blog/post/shell-cheat-list/</link>
+      <link>https://goatwu1993.github.io/blog/posts/shell-cheat-list/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/post/shell-cheat-list/</guid>
-      <description>Shell Cheat List General  echo $SHELL  Show shell name. $SHELL --version Show shell version.  clear  Clear terminal.  history  Show the commands history.  pwd  Print working directory  ls  List the files in working directory. ls -la
- List all files, hidden file included, with detailed information.  chown  Change ownership of a file. chown nobody.nogroup your_file_name
- Change a ownership of a file.</description>
+      <guid>https://goatwu1993.github.io/blog/posts/shell-cheat-list/</guid>
+      <description>Shell Cheat List General #!/bin/bash # Show shell name. echo \$SHELL # Show shell version. $SHELL --version # Clear terminal. clear # Show the commands history. history # Print working directory pwd # List the files in working directory. ls # List all files, hidden file included, with detailed information. ls -la # Change ownership of a file. chown # Change an ownership of a file. chown nobody.nogroup your_file_name # Recursively change all file under this directory.</description>
     </item>
     
     <item>
-      <title>Setting macOS (OSX) Vim</title>
-      <link>https://goatwu1993.github.io/blog/post/setting-macos-vim/</link>
+      <title>My Vim config</title>
+      <link>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/post/setting-macos-vim/</guid>
-      <description>Setting macOS (OSX) Vim What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
+      <guid>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</guid>
+      <description>My Vim config What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
  vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
     </item>
     
