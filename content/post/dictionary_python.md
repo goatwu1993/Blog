@@ -10,12 +10,12 @@ gitment: true
 
 ## Dictionary
 
-Python Dictionary 的好大家都知道，但怎麼自己實作一個 Python Dictionary?
+Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary
 
 ## 先開大招
 
-直接偷看答案，看看 [cpython](https://github.com/python/cpython/blob/master/Objects/dictobject.c)怎麼寫準沒錯，用 C 寫看起來很難...  
-還好[這邊](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)有一篇解釋，key-value pair 用 Hash Table 應該是正義，眉眉角角才是重點。
+直接偷看答案，看看 [cpython](https://github.com/python/cpython/blob/master/Objects/dictobject.c)怎麼寫準沒錯，用 C 寫看起來就很難 R  
+還好[這邊](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。
 
 ## Hash table 的好
 
@@ -23,7 +23,9 @@ Python Dictionary 的好大家都知道，但怎麼自己實作一個 Python Dic
 - O(1) get
 - O(1) delete
 
-然而以上 O(1)的時間複雜度，都是在 collision 不常發生的情況下，當 entry 越來越滿，碰撞越來越多，worst case 的時間複雜度就會是 O(n)，worst case 發生的機率和 load factor 有關。
+O(1) 948784 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
+
+當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。
 
 ## load factor & dynamic resizing
 
@@ -34,19 +36,20 @@ load factor = n/k
 - n is the number of entries occupied in the hash table.
 - k is the number of buckets.
 
-k 通常也被叫做 table size，有 n 筆資料，不會只開 n 個 entry，而是稍微大一些的 k 筆，所以總共佔比就是 load factor。
+k 通常也被叫做 table size。有 n 筆資料，不會只開 n 個 entry，而是稍微大一些的 k 筆，所以 n 總共佔 k 的比例就是 load factor。
 
-- 當 load factor 趨近 1，Worst Case 的查找時間趨近 O(n)
-- 當 load factor 趨近 0，Worst Case 的查找時間趨近 O(1)。
+- 當 load factor 趨近 1，Worst Case 機率增加，平均查找時間 O(n)
+- 當 load factor 趨近 0，Worst Case 機率較少，平均查找時間 O(1)。
 
-然而實務上
+實務上
 
-- 開 Dictionary 要預估資料的筆數 n 很不現實
-- load factor 趨近於 0，意味著 k >> n，也很不實際
+- 開 Dictionary 要預估資料的筆數 n 很不實際
+- load factor 趨近於 0，雖然有 O(1)的查找，但 k >> n 表示要開很大的 table size 儲存相對很少的資料，很浪費空間。
+- load factro 趨近於 1，很省空間，但查找時間趨近 O(n)，失去 hash table 的初心。
 
-普遍覺得 load factor 為 0.6~0.7 是 Space 和 Time 之間 Trade off 比較合理，大於這個值的話會變慢，因此大於這個值的話就要把 k 變大了，也就是 dynamic resizing。
+因此一般來說 load factor 為 0.6~0.7 是空間換取時間比較平衡的地帶，根據 n 調整 k 的手段就是 dynamic resizing
 
-## Hands on
+## Code
 
 ### Dictionary Node
 
@@ -66,11 +69,25 @@ class DictionaryNode():
         return (self.key.__repr__() + ": " + self.value.__repr__())
 ```
 
-### me_hash
+#### me_hash
 
-key 跟 value 很好理解，要注意的是 me_hash 是 key 的 hash 值，儲存 me_hash 的原因猜測是 Resize 的時候不需要再對 key 做 hash，看解說是比對的時候無償了比對鍵值還會比對 me_hash 值，不太清楚為什麼。
+me_hash 是 key 的 hash 值，根據 cpython 以及講解，是 get 的時候比對會用到
 
-### collided
+```c
+(ep->me_key == key ||
+(ep->me_hash == hash && unicode_eq(ep->me_key, key)))
+```
+
+感覺是比對
+
+- key 值本身
+- hash+unicode
+
+兩者其中一俄個 True 則認為 key 相同，詳細情形可能要對編碼比較熟才看得懂，這份 code 放著等以免 resize 要重算一次。
+
+#### collided
+
+一個確認有沒有 collide 過的 flag
 
 - insert  
   若 entry 已被佔用，則將此 entry 的 collided 屬性設定為 True，再往後面找。
@@ -108,7 +125,7 @@ key 跟 value 很好理解，要注意的是 me_hash 是 key 的 hash 值，儲�
                 return hash_table[entry].value
 ```
 
-### Dictionary
+### Dictionary Class
 
 ```python
 class Dictionary():
@@ -123,71 +140,88 @@ class Dictionary():
         self.buckets = [None for x in range(0, 8)]
 ```
 
-先開一個大小為 8 的 list，由於沒有實作{}的讀取，因此 KVP 只能一個一個 set，另外由於不想每次要拿 n 的時候都要去做一個 O(k)的 for loop，因此直接開一個欄位來記，因此也要自己 maintain。
+先開一個大小為 8 的 list，由於沒有實作{}的讀取，因此 KVP 只能一個一個 set。
+
+另外由於不想每次要拿長度或是算 load factor 的時候都要去做一個 O(k)的 for loop，因此直接開一個欄位(self.used_entry)來記，insert/del 要記得 maintain。
 
 ### Hash
 
-```python
-    def me_hash(self, key):
-        """
-        I dont know how to use byte in Python
-        Store the hash sum as int instead
-        """
-        hex_int = siphash24(b'0123456789ABCDEF',
-                            (str(key).encode('utf-8'))).hash()
-        return hex_int
+這邊一樣仿照 cpython 用 siphash
+
+```bash
+pip install siphash
 ```
 
-這邊一樣仿(ㄔㄠ ˉ)照(ㄒㄧ ˊ) cpython，使用 siphash，據說是一個相對平均且快速的 hash 方法，和加密用的 hash 要求似乎有點不太一樣，用過 md5 也是很 OK 的，只是轉成 int 相較麻煩，還要 digest 什麼的
+```python
+from siphash import siphash24
+...
+...
+...
+    def me_hash(self, key):
+        """
+        hash of key
+        """
+        return siphash24(b'0123456789ABCDEF',(str(key).encode('utf-8'))).hash()
+```
 
-這邊有另一個要注意的點，這邊 hash 出來的結果 cpython 是存 2 進位的 bytearray，原因是因為在做 hash table 的時候，出來的 hash 需要除以 k(table size)，如果存 bytearray 就可以使用 bitmask 代替除法，bitmask 相比除法省了許多時間。這邊我是直接存 int 起來用除。
+據說是一個相對平均且快速的 hash 方法，和加密用的 hash 要求似乎有點不太一樣(用過 md5 也是很 OK 的，只是轉成 int 相較麻煩，還要 digest 什麼的)，開頭要記得 import。
 
 ### Resize (dynamic resizing)
 
-每次做新增或刪除的時候呼叫，根據 load factor 做不同的事，如果超過界限就需要把 table size 變大。正常來說以 load factor 為 0.7 為合適的值。
-cpython 是直接 table size double up，維持 size 是 2 的次方，原因是 hash 存 byte 就可以直接使用 bitmask 去判斷美個 node 要進入哪個 entry。
-這裡 load factor 我們讓他維持在 1/3 以及 2/3 之間。
+#### proper_size
+
+給定 n 筆 data，根據 load factor 的合理範圍算出合適的 data_size，原則
+
+- 1/3 < n/proper_size < 2/3
+- proper_size 為 2 的任意正整數次方(2^integer)
+
+#### resize
+
+任何牽涉到 len 增加/減少時都應該呼叫，算出 proper_size，若 data_size 改變則把 buckets 裡面的東西全部 dump 到 new_buckets。
+
+#### bitmask (&) 運算
+
+當 table size 是 2 的次方，會發現可以用 hash & bitmask 得到 entry，python 可以用
 
 ```python
+&
+```
 
+運算子得到類似 bitmask 的結果，簡單來說當 size 為 2 的任意正整數次方，則
+
+```python
+hash & (k-1) == hash % k
+```
+
+運算速度還比較快。
+
+```python
     def resize(self):
         """
         Should change the size if load_factor > 2/3 or load_factor < 2/3
         Should do nothing if load_factor between 1/3 and 2/3
         """
-        used = self.used_entry
-        l = proper_size = len(self.buckets)
-        load_factor = used/l
-        if load_factor > 1/3 and load_factor < 2/3:
-            return
-        if load_factor < 1/3 and l == 8:
-            return
-        if load_factor >= 2/3:
-            while load_factor > 2/3:
-                proper_size *= 2
-                load_factor = used/proper_size
-        elif load_factor <= 1/3:
-            while load_factor < 1/3:
-                proper_size /= 2
-                load_factor = used/proper_size
-        else:
-            raise IndexError('load factor:', load_factor, 'out of control')
+        def proper_size(n, k):
+            pro_size = 8 if n <= 2 else 2**(int(n * 1.5)).bit_length()
+            return pro_size
 
-        new_buckets = [None for x in range(0, proper_size)]
-        for i in range(len(self.buckets)):
-            if self.buckets[i]:
+        used = self.used_entry
+        old_size = len(self.buckets)
+        new_size = proper_size(used, old_size)
+        if old_size == new_size:
+            return
+        new_buckets = [None for x in range(0, new_size)]
+        for i in range(old_size):
+            if self.buckets[i] and (self.buckets[i].key is not None):
                 key_me_hash = self.buckets[i].me_hash
-                entry = key_me_hash % proper_size
+                # & for bitwise operation (bitmask)
+                entry = key_me_hash & (new_size-1)
                 while new_buckets[entry]:
                     new_buckets[entry].collided = True
-                    if entry < proper_size - 2:
-                        entry += 1
-                    else:
-                        entry = 0
+                    entry = entry+1 if entry < (new_size-2) else 0
                 new_buckets[entry] = self.buckets[i]
                 new_buckets[entry].collided = False
         self.buckets = new_buckets
-        return
 ```
 
 ### python Magic Methods
@@ -205,7 +239,7 @@ len(a)
 del a[b]
 ```
 
-基本上就是把 key hash 完去找，因為是最簡單的 open addressing，這個滿了就找下一個，比較簡單，但容易有一整排都滿(i~i+j 都被佔據)的情形發生。
+基本上就是把 insert/del/search 用 Magic Method 實作，這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。
 
 ```python
     def __repr__(self):
@@ -213,40 +247,30 @@ del a[b]
         for i in range(len(self.buckets)):
             if self.buckets[i]:
                 s = s + self.buckets[i].__repr__() + ', '
-        if not s:
-            return "{}"
-        else:
-            return "{" + s[:-3] + "}"
+        return {} if not s else "{{{0}}}".format(s[:-3])
 
     def __getitem__(self, key):
         key_me_hash = self.me_hash(key)
         l = len(self.buckets)
-        entry = key_me_hash % l
+        entry = key_me_hash & (l-1)
         while self.buckets[entry]:
             if self.buckets[entry].key == key:
                 return self.buckets[entry].value
-            elif not self.buckets[entry].collided:
+            if not self.buckets[entry].collided:
                 raise KeyError(key)
-            elif entry < l-2:
-                entry += 1
-            else:
-                entry = 0
+            entry = entry+1 if entry < (l-2) else 0
         raise KeyError(key)
 
     def __setitem__(self, key, value):
         self.used_entry += 1
         self.resize()
-        self.used_entry = self.__len__()
 
         l = len(self.buckets)
         key_me_hash = self.me_hash(key)
-        entry = key_me_hash % l
+        entry = key_me_hash & (l-1)
         while self.buckets[entry]:
             self.buckets[entry].collided = True
-            if entry < l-2:
-                entry += 1
-            else:
-                entry = 0
+            entry = entry+1 if entry < (l-2) else 0
         self.buckets[entry] = DictionaryNode(key=key,
                                              value=value,
                                              me_hash=key_me_hash)
@@ -254,19 +278,16 @@ del a[b]
     def __delitem__(self, key):
         key_me_hash = self.me_hash(key)
         l = len(self.buckets)
-        entry = key_me_hash % l
+        entry = key_me_hash & (l-1)
         while self.buckets[entry]:
             if self.buckets[entry].key == key:
                 self.buckets[entry].key = None
                 self.buckets[entry].value = None
                 self.buckets[entry].me_hash = None
                 return
-            elif not self.buckets[entry].collided:
+            if not self.buckets[entry].collided:
                 raise KeyError(key)
-            elif entry < l-2:
-                entry += 1
-            else:
-                entry = 0
+            entry = entry+1 if entry < (l-2) else 0
         raise KeyError(key)
 
     def __len__(self):
@@ -277,15 +298,15 @@ del a[b]
         return counter
 ```
 
-## Github
+## 完整程式碼
 
-完整 Code
+[Github](https://github.com/goatwu1993/data_structure/blob/master/hash_table.py)
 
 ## Reference
 
-最後附上參考，尤其是第一個，講的很清楚，有一些太難的地方我也沒有仔細看懂就寫完了...
+最後附上參考資料，建議看第一個，講的很清楚，有一些太難的地方我也沒有仔細看懂就寫完了...
 
-- [深度解說](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)
+- [大神解說](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)
 - [wiki](https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries)
 - [cpython](https://github.com/python/cpython/blob/master/Objects/dictobject.c)
 - [Magic Method](https://blog.csdn.net/yuan_j_y/article/details/9317817)
