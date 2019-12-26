@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on goatwu1993</title>
-    <link>https://goatwu1993.github.io/Blog/tags/web/</link>
+    <link>https://goatwu1993.github.io/blog/tags/web/</link>
     <description>Recent content in Web on goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 May 2018 19:19:34 +0800</lastBuildDate>
     
-	<atom:link href="https://goatwu1993.github.io/Blog/tags/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/blog/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why Hugo</title>
-      <link>https://goatwu1993.github.io/Blog/post/why-hugo/</link>
+      <link>https://goatwu1993.github.io/blog/post/why-hugo/</link>
       <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/why-hugo/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/why-hugo/</guid>
       <description>Why Hugo Blog tools I Googled and these solutions seems most popular &amp;amp; modern.
  WordPress WordPress.com Hexo Hugo
   I choose Hugo at last after below considerations.

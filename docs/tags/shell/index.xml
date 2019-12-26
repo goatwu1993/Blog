@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on goatwu1993</title>
-    <link>https://goatwu1993.github.io/Blog/tags/shell/</link>
+    <link>https://goatwu1993.github.io/blog/tags/shell/</link>
     <description>Recent content in Shell on goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Jun 2018 17:20:14 +0800</lastBuildDate>
     
-	<atom:link href="https://goatwu1993.github.io/Blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shell Cheat List</title>
-      <link>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</link>
+      <link>https://goatwu1993.github.io/blog/post/shell-cheat-list/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/shell-cheat-list/</guid>
       <description>Shell Cheat List General  echo $SHELL  Show shell name. $SHELL --version Show shell version.  clear  Clear terminal.  history  Show the commands history.  pwd  Print working directory  ls  List the files in working directory. ls -la
  List all files, hidden file included, with detailed information.  chown  Change ownership of a file. chown nobody.nogroup your_file_name
  Change a ownership of a file.</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Setting macOS (OSX) Vim</title>
-      <link>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</link>
+      <link>https://goatwu1993.github.io/blog/post/setting-macos-vim/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/setting-macos-vim/</guid>
       <description>Setting macOS (OSX) Vim What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
  vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
     </item>

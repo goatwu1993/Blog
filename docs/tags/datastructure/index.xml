@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DataStructure on goatwu1993</title>
+    <link>https://goatwu1993.github.io/blog/tags/datastructure/</link>
+    <description>Recent content in DataStructure on goatwu1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://goatwu1993.github.io/blog/tags/datastructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dictionary_python</title>
+      <link>https://goatwu1993.github.io/blog/post/dictionary-python/</link>
+      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+      
+      <guid>https://goatwu1993.github.io/blog/post/dictionary-python/</guid>
+      <description>From hash table to dictionary This post is to use Python, list &amp;amp; class to rebuild a python dictionary.
+The answer is hash table Quick peek at how cpython(python interpreter) implement dictionary.
+Hash table should be the first guess facing KVP.
+Why hash table The pros of using hash table
+ O(1) insertion O(1) get O(1) delete  All above is guranteed only under average case. In worst case scenario, the time complexity will approach O(n).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,21 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>goatwu1993</title>
-    <link>https://goatwu1993.github.io/Blog/</link>
+    <link>https://goatwu1993.github.io/blog/</link>
     <description>Recent content on goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jun 2018 17:20:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
     
-	<atom:link href="https://goatwu1993.github.io/Blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Dictionary_python</title>
+      <link>https://goatwu1993.github.io/blog/post/dictionary-python/</link>
+      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+      
+      <guid>https://goatwu1993.github.io/blog/post/dictionary-python/</guid>
+      <description>From hash table to dictionary This post is to use Python, list &amp;amp; class to rebuild a python dictionary.
+The answer is hash table Quick peek at how cpython(python interpreter) implement dictionary.
+Hash table should be the first guess facing KVP.
+Why hash table The pros of using hash table
+ O(1) insertion O(1) get O(1) delete  All above is guranteed only under average case. In worst case scenario, the time complexity will approach O(n).</description>
+    </item>
+    
+    <item>
       <title>Shell Cheat List</title>
-      <link>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</link>
+      <link>https://goatwu1993.github.io/blog/post/shell-cheat-list/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/shell-cheat-list/</guid>
       <description>Shell Cheat List General  echo $SHELL  Show shell name. $SHELL --version Show shell version.  clear  Clear terminal.  history  Show the commands history.  pwd  Print working directory  ls  List the files in working directory. ls -la
  List all files, hidden file included, with detailed information.  chown  Change ownership of a file. chown nobody.nogroup your_file_name
  Change a ownership of a file.</description>
@@ -24,19 +37,19 @@
     
     <item>
       <title>Networking Cheat List(TCP/IP)</title>
-      <link>https://goatwu1993.github.io/Blog/post/networking-cheat-list/</link>
+      <link>https://goatwu1993.github.io/blog/post/networking-cheat-list/</link>
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/networking-cheat-list/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/networking-cheat-list/</guid>
       <description>Networking cheat list(TCP/IP) OSI 7 Layres  Application Layer (Layer 7)  HTTP, HTTPS L7 firewall  Presentation Layer (Layer 6) Session Layer (Layer 5)  Sessions  Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS  Network Layer (Layer 3)  IP Address Router, Layer 3 Switch  Data Link Layer (Layer 2)  Ethernet, 802.11(Wi-Fi), MAC Address Layer 2 Switch  Physical Layer (Layer 1)  Hub, Wire, Fiber, Radio   TCP/IP protocols  HTTP  Hyper Text Transport Protocol TCP Port 80  HTTPS  Hyper Text Transport Protocol Secure TCP Port 443  FTP  File Transfer Protocol TCP Port 21  Telnet  Telecommunication Protocol TCP Port 23  SMTP  Simple Mail Transfer Protocol TCP port 25 For email  DNS  Domain Name System UDP Port 53 Some famous public DNS servers  TFTP  Trivial File Transfer Protocol UDP port 69 Not secure.</description>
     </item>
     
     <item>
       <title>Why Hugo</title>
-      <link>https://goatwu1993.github.io/Blog/post/why-hugo/</link>
+      <link>https://goatwu1993.github.io/blog/post/why-hugo/</link>
       <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/why-hugo/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/why-hugo/</guid>
       <description>Why Hugo Blog tools I Googled and these solutions seems most popular &amp;amp; modern.
  WordPress WordPress.com Hexo Hugo
   I choose Hugo at last after below considerations.
@@ -48,20 +61,20 @@ Static page should be easy enough for a blog. However it does not provide native
     
     <item>
       <title>Setting macOS (OSX) Vim</title>
-      <link>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</link>
+      <link>https://goatwu1993.github.io/blog/post/setting-macos-vim/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/setting-macos-vim/</guid>
       <description>Setting macOS (OSX) Vim What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
  vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://goatwu1993.github.io/Blog/about/</link>
+      <link>https://goatwu1993.github.io/blog/about/</link>
       <pubDate>Sun, 06 May 2018 02:42:40 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/about/</guid>
+      <guid>https://goatwu1993.github.io/blog/about/</guid>
       <description> About Chao Yang Wu 吳兆洋  Develop and maintain Linux-Based Network Access Gateway(NAC). Self-taught machine learning and Node/Express/MongoDB backend.
  Linkedin
  Github

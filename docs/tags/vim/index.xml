@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on goatwu1993</title>
-    <link>https://goatwu1993.github.io/Blog/tags/vim/</link>
+    <link>https://goatwu1993.github.io/blog/tags/vim/</link>
     <description>Recent content in Vim on goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 May 2018 04:51:07 +0800</lastBuildDate>
     
-	<atom:link href="https://goatwu1993.github.io/Blog/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/blog/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setting macOS (OSX) Vim</title>
-      <link>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</link>
+      <link>https://goatwu1993.github.io/blog/post/setting-macos-vim/</link>
       <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</guid>
+      <guid>https://goatwu1993.github.io/blog/post/setting-macos-vim/</guid>
       <description>Setting macOS (OSX) Vim What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
  vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
     </item>

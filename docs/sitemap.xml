@@ -3,92 +3,112 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/categories/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/datastructure/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/post/dictionary-python/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/post/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/python/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/categories/python/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/categories/shell/</loc>
     <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/shell/</loc>
     <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/post/</loc>
+    <loc>https://goatwu1993.github.io/blog/post/shell-cheat-list/</loc>
     <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/categories/shell/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/shell/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/Blog/post/shell-cheat-list/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/Blog/categories/networking/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/networking/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/networking/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/networking/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/post/networking-cheat-list/</loc>
+    <loc>https://goatwu1993.github.io/blog/post/networking-cheat-list/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/web/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/web/</loc>
     <lastmod>2018-05-06T19:19:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/categories/web/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/web/</loc>
     <lastmod>2018-05-06T19:19:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/post/why-hugo/</loc>
+    <loc>https://goatwu1993.github.io/blog/post/why-hugo/</loc>
     <lastmod>2018-05-06T19:19:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/linux/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/linux/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/macos/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/macos/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/post/setting-macos-vim/</loc>
+    <loc>https://goatwu1993.github.io/blog/post/setting-macos-vim/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/tags/vim/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/vim/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/Blog/about/</loc>
+    <loc>https://goatwu1993.github.io/blog/about/</loc>
     <lastmod>2018-05-06T02:42:40+08:00</lastmod>
   </url>
   
