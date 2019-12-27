@@ -2,8 +2,8 @@
 title: "關於這個blog"
 date: 2018-05-06T19:19:34+08:00
 draft: false
-categories: [Web]
-tags: [Web]
+categories: [hugo]
+tags: [hugo]
 slug: about-this-blog
 gitment: true
 ---
@@ -48,29 +48,4 @@ gitment: true
 
 最後選了 Hugo，但說實話他的 themes 還蠻複雜的，換 theme 或是上手需要一段時間，而且 docs 寫的很爛，但該有的功能都有(Markdown, Syntax Highlighting)，甚至也有一定的討論度，學會之後就可以用 markdown 爽爽寫。
 
-## Hugo 使用
 
-### 第一次使用
-
-```bash
-hugo new site quickstart
-```
-
-### 測試
-
-```bash
-#!/bin/bash
-cd quickstart
-hugo
-hugo server
-```
-
-### 部署
-
-這邊是有個小坑的，content 寫好的 markdown，是不會自動覆蓋到最終的資料夾裡面的，即使打 hugo 也沒有用。
-總之手動刪除以後跑個 hugo 就可以了
-
-```bash
-rm -rf ./docs
-hugo
-```
