@@ -14,8 +14,7 @@ Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個
 
 ## 先開大招
 
-直接偷看答案，看看 [cpython](https://github.com/python/cpython/blob/master/Objects/dictobject.c)怎麼寫準沒錯，用 C 寫看起來就很難 R  
-還好[這邊](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。
+直接偷看答案，看看 [cpython](https://github.com/python/cpython/blob/master/Objects/dictobject.c)怎麼寫準沒錯，用 C 寫看起來就很難，還好[這邊](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。
 
 ## Hash table 的好
 
@@ -23,7 +22,7 @@ Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個
 - O(1) get
 - O(1) delete
 
-O(1) 948784 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
+O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
 
 當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。
 
@@ -47,11 +46,9 @@ k 通常也被叫做 table size。有 n 筆資料，不會只開 n 個 entry，�
 - load factor 趨近於 0，雖然有 O(1)的查找，但 k >> n 表示要開很大的 table size 儲存相對很少的資料，很浪費空間。
 - load factro 趨近於 1，很省空間，但查找時間趨近 O(n)，失去 hash table 的初心。
 
-因此一般來說 load factor 為 0.6~0.7 是空間換取時間比較平衡的地帶，根據 n 調整 k 的手段就是 dynamic resizing
+因此一般來說， load factor 介於 0.6 至 0.7 ，算是空間時間比較平衡，根據 n 調整 k 的手段就是 dynamic resizing
 
-## Code
-
-### Dictionary Node
+## Dictionary Node
 
 ```python
 class DictionaryNode():
@@ -69,7 +66,7 @@ class DictionaryNode():
         return (self.key.__repr__() + ": " + self.value.__repr__())
 ```
 
-#### me_hash
+### me_hash
 
 me_hash 是 key 的 hash 值，根據 cpython 以及講解，是 get 的時候比對會用到
 
@@ -83,9 +80,9 @@ me_hash 是 key 的 hash 值，根據 cpython 以及講解，是 get 的時候�
 - key 值本身
 - hash+unicode
 
-兩者其中一俄個 True 則認為 key 相同，詳細情形可能要對編碼比較熟才看得懂，這份 code 放著等以免 resize 要重算一次。
+兩者其中一個為 True 則判斷為 key 相同，詳細情形可能要對編碼比較熟才看得懂，這份 code 只有存起來放著等以， resize 就不需要重算一次。
 
-#### collided
+### collided
 
 一個確認有沒有 collide 過的 flag
 
@@ -125,7 +122,7 @@ me_hash 是 key 的 hash 值，根據 cpython 以及講解，是 get 的時候�
                 return hash_table[entry].value
 ```
 
-### Dictionary Class
+## Dictionary Class
 
 ```python
 class Dictionary():
@@ -144,9 +141,9 @@ class Dictionary():
 
 另外由於不想每次要拿長度或是算 load factor 的時候都要去做一個 O(k)的 for loop，因此直接開一個欄位(self.used_entry)來記，insert/del 要記得 maintain。
 
-### Hash
+## Hash
 
-這邊一樣仿照 cpython 用 siphash
+仿照 cpython 用 siphash，據作者所述是一個相對平均且快速的 hash ，用過 md5 也是很 OK 的，只是轉成 int 相較麻煩，還要 digest 什麼的)，開頭要記得 import。
 
 ```bash
 pip install siphash
@@ -154,9 +151,11 @@ pip install siphash
 
 ```python
 from siphash import siphash24
-...
-...
-...
+```
+
+### Dictionary 的 me_hash()
+
+```python
     def me_hash(self, key):
         """
         hash of key
@@ -164,36 +163,47 @@ from siphash import siphash24
         return siphash24(b'0123456789ABCDEF',(str(key).encode('utf-8'))).hash()
 ```
 
-據說是一個相對平均且快速的 hash 方法，和加密用的 hash 要求似乎有點不太一樣(用過 md5 也是很 OK 的，只是轉成 int 相較麻煩，還要 digest 什麼的)，開頭要記得 import。
+## Resize (dynamic resizing)
 
-### Resize (dynamic resizing)
-
-#### proper_size
+### proper_size()
 
 給定 n 筆 data，根據 load factor 的合理範圍算出合適的 data_size，原則
 
 - 1/3 < n/proper_size < 2/3
 - proper_size 為 2 的任意正整數次方(2^integer)
 
-#### resize
+### resize()
 
 任何牽涉到 len 增加/減少時都應該呼叫，算出 proper_size，若 data_size 改變則把 buckets 裡面的東西全部 dump 到 new_buckets。
 
-#### bitmask (&) 運算
+### bitmask (&) 運算
 
-當 table size 是 2 的次方，會發現可以用 hash & bitmask 得到 entry，python 可以用
+當 k (table size) 是 2 的 m 次方，則 hash(n) mod k 可以用 hash(n) & bitmask 取代，其中 bitmask 為 m 個 1 組成。
 
-```python
-&
-```
-
-運算子得到類似 bitmask 的結果，簡單來說當 size 為 2 的任意正整數次方，則
+Python 命令列 demo
 
 ```python
-hash & (k-1) == hash % k
+>>> def hash(key): return siphash24(b'0123456789ABCDEF',(str(key).encode('utf-8'))).hash()
+...
+>>> n = 'key_string'
+>>>
+>>> # m = 3, k = 8
+...
+>>> hash(n) & 0b111 == hash(n) & 7
+True
+>>> hash(n) & 0b111 == hash(n) % 8
+True
+>>>
+>>> # m = 4, k = 16
+...
+>>> hash(n) & 0b1111 == hash(n) & 15
+True
+>>> hash(n) & 0b1111 == hash(n) % 16
+True
+>>>
 ```
 
-運算速度還比較快。
+### resize 程式碼
 
 ```python
     def resize(self):
@@ -224,6 +234,8 @@ hash & (k-1) == hash % k
         self.buckets = new_buckets
 ```
 
+## 實作 insert/find/delete
+
 ### python Magic Methods
 
 為了讓這個 class 更像內建的 dictionary，需要實作幾個 python 內建的 Magic Methods
@@ -239,7 +251,13 @@ len(a)
 del a[b]
 ```
 
-基本上就是把 insert/del/search 用 Magic Method 實作，這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。
+總的來說就是需要把以上幾個 Magic Methods 實作。
+
+### Open Addressing
+
+這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。
+
+### Magic Methods 程式碼
 
 ```python
     def __repr__(self):
