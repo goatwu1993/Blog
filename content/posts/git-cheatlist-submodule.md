@@ -21,13 +21,13 @@ git rm --cached [欲移除的目錄]
 rm -rf [欲移除的目錄]
 ```
 
-## 再修改 .gitmodules
+## 修改 .gitmodules
 
 ```bash
 vim .gitmodules
 ```
 
-## 再修改 .git/config
+## 修改 .git/config
 
 ```bash
 vim .git/config
@@ -48,4 +48,4 @@ git submodule sync
 
 ### 參考資料
 
-- [網站一](https://biang.io/blog/development/tools/revision-control/git/submod)
+[網站一](https://biang.io/blog/development/tools/revision-control/git/submod)

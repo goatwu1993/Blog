@@ -29,7 +29,7 @@ O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
 
 ## load factor & dynamic resizing
 
-[wiki](https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries)
+### [wiki](https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries)
 
 load factor = n/k
 
