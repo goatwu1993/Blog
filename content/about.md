@@ -1,13 +1,18 @@
----
-title: "About"
-date: 2018-05-06T02:42:40+08:00
-draft: false
----
++++
+title = "About Hugo"
+date = "2014-04-09"
+menu = "main"
+weight = "20"
+meta = "false"
++++
 
-## Chao Yang Wu 吳兆洋
+Hugo is a static site engine written in Go. <i class="far fa-clipboard"></i>
 
-- Develop and maintain Linux-Based Network Access Gateway(NAC).
-- Self-taught machine learning and Node/Express/MongoDB backend.
+It makes use of a variety of open source projects including:
 
-- [Linkedin](https://www.linkedin.com/in/chao-yang-wu-0056a4a7/)
-- [Github](https://github.com/goatwu1993)
+* [Cobra](https://github.com/spf13/cobra)
+* [Viper](https://github.com/spf13/viper)
+* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
+* [Cast](https://github.com/spf13/cast)
+
+Learn more and contribute on [GitHub](https://github.com/gohugoio).

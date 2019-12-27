@@ -1,51 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on goatwu1993</title>
-    <link>https://goatwu1993.github.io/blog/categories/</link>
-    <description>Recent content in Categories on goatwu1993</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
-    
-	<atom:link href="https://goatwu1993.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Python</title>
-      <link>https://goatwu1993.github.io/blog/categories/python/</link>
-      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shell</title>
-      <link>https://goatwu1993.github.io/blog/categories/shell/</link>
-      <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/categories/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>https://goatwu1993.github.io/blog/categories/networking/</link>
-      <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/categories/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://goatwu1993.github.io/blog/categories/web/</link>
-      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/categories/web/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
+
+   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+     <channel>
+       <title>Categories on goatwu1993</title>
+       <link>https://goatwu1993.github.io/blog/categories/</link>
+       <description>Recent content in Categories on goatwu1993</description>
+       <generator>Hugo -- gohugo.io</generator>
+       <copyright>Copyright &amp;copy; 2019 - Author Name</copyright>
+       <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
+       
+           <atom:link href="https://goatwu1993.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+       
+       
+       <item>
+         <title>datastructure</title>
+         <link>https://goatwu1993.github.io/blog/categories/datastructure/</link>
+         <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/categories/datastructure/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>shell</title>
+         <link>https://goatwu1993.github.io/blog/categories/shell/</link>
+         <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/categories/shell/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>Networking</title>
+         <link>https://goatwu1993.github.io/blog/categories/networking/</link>
+         <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/categories/networking/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>Web</title>
+         <link>https://goatwu1993.github.io/blog/categories/web/</link>
+         <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/categories/web/</guid>
+         <description></description>
+       </item>
+       
+     </channel>
+   </rss>

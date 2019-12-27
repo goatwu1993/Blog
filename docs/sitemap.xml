@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/categories/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
@@ -13,12 +23,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/datastructure/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/post/</loc>
+    <loc>https://goatwu1993.github.io/blog/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
@@ -28,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/python/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/dict-python-implementation/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
@@ -38,8 +48,13 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/dictionary-python-implemetation/</loc>
-    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+    <loc>https://goatwu1993.github.io/blog/tags/bash/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
@@ -49,11 +64,6 @@
   
   <url>
     <loc>https://goatwu1993.github.io/blog/tags/shell/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/shell-cheat-list/</loc>
     <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
@@ -73,17 +83,17 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/web/</loc>
-    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/categories/web/</loc>
     <lastmod>2018-05-06T19:19:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/why-hugo/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/web/</loc>
+    <lastmod>2018-05-06T19:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/about-this-blog/</loc>
     <lastmod>2018-05-06T19:19:34+08:00</lastmod>
   </url>
   
@@ -105,11 +115,6 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/tags/vim/</loc>
     <lastmod>2018-05-06T04:51:07+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/about/</loc>
-    <lastmod>2018-05-06T02:42:40+08:00</lastmod>
   </url>
   
 </urlset>

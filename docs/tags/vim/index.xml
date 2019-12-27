@@ -1,25 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vim on goatwu1993</title>
-    <link>https://goatwu1993.github.io/blog/tags/vim/</link>
-    <description>Recent content in Vim on goatwu1993</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 04:51:07 +0800</lastBuildDate>
-    
-	<atom:link href="https://goatwu1993.github.io/blog/tags/vim/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>My Vim config</title>
-      <link>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</link>
-      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</guid>
-      <description>My Vim config What is vimrc  Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
- vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</description>
-    </item>
-    
-  </channel>
-</rss>
+
+   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+     <channel>
+       <title>vim on goatwu1993</title>
+       <link>https://goatwu1993.github.io/blog/tags/vim/</link>
+       <description>Recent content in vim on goatwu1993</description>
+       <generator>Hugo -- gohugo.io</generator>
+       <copyright>Copyright &amp;copy; 2019 - Author Name</copyright>
+       <lastBuildDate>Sun, 06 May 2018 04:51:07 +0800</lastBuildDate>
+       
+           <atom:link href="https://goatwu1993.github.io/blog/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+       
+       
+       <item>
+         <title>My Vim config</title>
+         <link>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</link>
+         <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</guid>
+         <description>
+
+&lt;h2 id=&#34;what-is-vimrc&#34;&gt;What is vimrc&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In Mac terminal, you can check vim version:&lt;br /&gt;
+&lt;code&gt;$ vim --version&lt;/code&gt;‌&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$ vim&lt;/code&gt;&lt;br /&gt;
+In vim terminal type:&lt;br /&gt;
+&lt;code&gt;:help vimrc&lt;/code&gt;&lt;br /&gt;
+There is more informations and recommendation about what vimrc.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;setting-up-vimrc&#34;&gt;Setting up vimrc&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:help vimrc&lt;/code&gt;&lt;br /&gt;
+It recommended one should use user directory (~) instead if root directory (/) in order to avoid messed-up.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Back to terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir ~/.vim
+cd ~/.vim
+vim vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit(or paste) in vim&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;syntax on
+set nu
+set ruler
+set ic
+set hlsearch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Save file and quit.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;multiple-macs&#34;&gt;Multiple Macs&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized &lt;code&gt;~/Desktop&lt;/code&gt; to get vimrc synced.&lt;br /&gt;
+&lt;code&gt;ln -s ~/Desktop/Config/VIM/.vim ~/.vim&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+       </item>
+       
+     </channel>
+   </rss>

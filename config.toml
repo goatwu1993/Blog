@@ -1,34 +1,25 @@
-baseURL = "https://goatwu1993.github.io/blog/"
-publishDir = "docs"
-languageCode = "en-us"
+baseurl = "https://goatwu1993.github.io/blog/"
 title = "goatwu1993"
-theme = "hugo-grapes"
-googleAnalytics = "UA-1234-6"
-timeout=3000
-pygmentsUseClasses = true
+copyright = "Copyright &copy; 2019 - Author Name"
+canonifyurls = true
+theme = "kiera"
+themesDir = "themes"
+publishDir = "docs"
 
-[permalinks]
-  post = "/posts/:slug/"
+paginate = 3
 
-[blackfriday]
-[taxonomies]
-   tag = "tags"
-   category = "categories"
+summaryLength = 30
+enableEmoji = true
+pygmentsCodeFences = true
 
-# Menu links
-[[menu.main]]
-    name = "Tags"
-    weight = 1
-    url  = "./tags/"
-[[menu.main]]
-    name = "Posts"
-    weight = 2
-    url  = "./post/"
-[[menu.main]]
-    name = "About"
-    weight = 3
-    url = "./about/"
+[author]
+    name = ""
+    github = "goatwu1993"
+    gitlab = ""
+    linkedin = ""
+    facebook = ""
+    twitter = ""
+    instagram = ""
 
 [params]
-avatar = "img/grapes.svg"
-
+    tagline = "A note of work & study problems"

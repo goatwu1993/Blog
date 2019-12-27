@@ -1,87 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on goatwu1993</title>
-    <link>https://goatwu1993.github.io/blog/tags/</link>
-    <description>Recent content in Tags on goatwu1993</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
-    
-	<atom:link href="https://goatwu1993.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>DataStructure</title>
-      <link>https://goatwu1993.github.io/blog/tags/datastructure/</link>
-      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/datastructure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://goatwu1993.github.io/blog/tags/python/</link>
-      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shell</title>
-      <link>https://goatwu1993.github.io/blog/tags/shell/</link>
-      <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>https://goatwu1993.github.io/blog/tags/networking/</link>
-      <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://goatwu1993.github.io/blog/tags/web/</link>
-      <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://goatwu1993.github.io/blog/tags/linux/</link>
-      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MacOS</title>
-      <link>https://goatwu1993.github.io/blog/tags/macos/</link>
-      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://goatwu1993.github.io/blog/tags/vim/</link>
-      <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-      
-      <guid>https://goatwu1993.github.io/blog/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
+
+   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+     <channel>
+       <title>Tags on goatwu1993</title>
+       <link>https://goatwu1993.github.io/blog/tags/</link>
+       <description>Recent content in Tags on goatwu1993</description>
+       <generator>Hugo -- gohugo.io</generator>
+       <copyright>Copyright &amp;copy; 2019 - Author Name</copyright>
+       <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
+       
+           <atom:link href="https://goatwu1993.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+       
+       
+       <item>
+         <title>datastructure</title>
+         <link>https://goatwu1993.github.io/blog/tags/datastructure/</link>
+         <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/datastructure/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>python</title>
+         <link>https://goatwu1993.github.io/blog/tags/python/</link>
+         <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/python/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>bash</title>
+         <link>https://goatwu1993.github.io/blog/tags/bash/</link>
+         <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/bash/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>shell</title>
+         <link>https://goatwu1993.github.io/blog/tags/shell/</link>
+         <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/shell/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>Networking</title>
+         <link>https://goatwu1993.github.io/blog/tags/networking/</link>
+         <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/networking/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>Web</title>
+         <link>https://goatwu1993.github.io/blog/tags/web/</link>
+         <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/web/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>linux</title>
+         <link>https://goatwu1993.github.io/blog/tags/linux/</link>
+         <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/linux/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>macos</title>
+         <link>https://goatwu1993.github.io/blog/tags/macos/</link>
+         <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/macos/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>vim</title>
+         <link>https://goatwu1993.github.io/blog/tags/vim/</link>
+         <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/vim/</guid>
+         <description></description>
+       </item>
+       
+     </channel>
+   </rss>
