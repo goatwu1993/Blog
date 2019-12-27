@@ -5,11 +5,29 @@
        <link>https://goatwu1993.github.io/blog/tags/</link>
        <description>Recent content in Tags on goatwu1993</description>
        <generator>Hugo -- gohugo.io</generator>
-       <copyright>Copyright &amp;copy; 2019 - Author Name</copyright>
-       <lastBuildDate>Thu, 26 Dec 2019 19:17:18 +0800</lastBuildDate>
+       <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
+       <lastBuildDate>Fri, 27 Dec 2019 21:32:52 +0800</lastBuildDate>
        
            <atom:link href="https://goatwu1993.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
        
+       
+       <item>
+         <title>git</title>
+         <link>https://goatwu1993.github.io/blog/tags/git/</link>
+         <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/git/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>hugo</title>
+         <link>https://goatwu1993.github.io/blog/tags/hugo/</link>
+         <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/hugo/</guid>
+         <description></description>
+       </item>
        
        <item>
          <title>datastructure</title>
@@ -48,20 +66,11 @@
        </item>
        
        <item>
-         <title>Networking</title>
+         <title>networking</title>
          <link>https://goatwu1993.github.io/blog/tags/networking/</link>
          <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/tags/networking/</guid>
-         <description></description>
-       </item>
-       
-       <item>
-         <title>Web</title>
-         <link>https://goatwu1993.github.io/blog/tags/web/</link>
-         <pubDate>Sun, 06 May 2018 19:19:34 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/tags/web/</guid>
          <description></description>
        </item>
        

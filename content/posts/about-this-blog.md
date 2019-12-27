@@ -1,14 +1,17 @@
 ---
 title: "關於這個blog"
-date: 2018-05-06T19:19:34+08:00
+date: 2018-04-06T19:19:34+08:00
 draft: false
 categories: [hugo]
 tags: [hugo]
 slug: about-this-blog
 gitment: true
+weight: 0
 ---
 
-## Blog 到底怎麼寫，架在哪?
+## Blog 到底怎麼寫，架在哪
+
+常見的選擇
 
 - 自己架站  
   掌握度最高，但除非是公司，基本上對個人來說算 overkill，花時間花錢。
@@ -47,5 +50,3 @@ gitment: true
 ## 結論
 
 最後選了 Hugo，但說實話他的 themes 還蠻複雜的，換 theme 或是上手需要一段時間，而且 docs 寫的很爛，但該有的功能都有(Markdown, Syntax Highlighting)，甚至也有一定的討論度，學會之後就可以用 markdown 爽爽寫。
-
-

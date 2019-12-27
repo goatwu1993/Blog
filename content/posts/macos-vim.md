@@ -1,8 +1,8 @@
 ---
-title: "My Vim config"
+title: "macOS Configs - vim"
 date: 2018-05-06T04:51:07+08:00
 draft: false
-categories: [shell]
+categories: [shell, macos]
 tags: [linux, macos, vim, shell]
 slug: setting-macos-vim
 gitment: true

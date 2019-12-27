@@ -1,10 +1,10 @@
 ---
-title: "TCP/IP cheat list"
+title: "TCP/IP cheatlist"
 date: 2018-05-11T11:29:21+08:00
 draft: false
-categories: [Networking]
-tags: [Networking]
-slug: Networking-Cheat-List
+categories: [networking]
+tags: [networking]
+slug: networking-cheatlist
 gitment: true
 ---
 

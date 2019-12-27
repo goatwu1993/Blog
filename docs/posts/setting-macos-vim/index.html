@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -58,7 +58,7 @@
 
 <article>
 
-    <h1>My Vim config</h1>
+    <h1>macOS Configs - vim</h1>
 
     
         <aside>
@@ -73,6 +73,9 @@
                 
                     
                     <a href="https://goatwu1993.github.io/blog/categories/shell">shell</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/categories/macos">macos</a>
                 
             </em>
         </li>
@@ -104,49 +107,50 @@
 
     
 
-    
-
-<h2 id="what-is-vimrc">What is vimrc</h2>
-
+    <h2 id="what-is-vimrc">What is vimrc</h2>
 <ul>
-<li><p>Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.</p></li>
-
-<li><p>vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</p></li>
-
-<li><p>In Mac terminal, you can check vim version:<br />
-<code>$ vim --version</code>‌</p></li>
-
-<li><p><code>$ vim</code><br />
-In vim terminal type:<br />
-<code>:help vimrc</code><br />
-There is more informations and recommendation about what vimrc.</p></li>
+<li>
+<p>Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.</p>
+</li>
+<li>
+<p>vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</p>
+</li>
+<li>
+<p>In Mac terminal, you can check vim version:<br>
+<code>$ vim --version</code>‌</p>
+</li>
+<li>
+<p><code>$ vim</code><br>
+In vim terminal type:<br>
+<code>:help vimrc</code><br>
+There is more informations and recommendation about what vimrc.</p>
+</li>
 </ul>
-
 <h2 id="setting-up-vimrc">Setting up vimrc</h2>
-
 <ul>
-<li><code>:help vimrc</code><br />
+<li><code>:help vimrc</code><br>
 It recommended one should use user directory (~) instead if root directory (/) in order to avoid messed-up.</li>
-
-<li><p>Back to terminal</p>
+<li>Back to terminal</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/.vim
 cd ~/.vim
-vim vimrc</code></pre></div></li>
-
-<li><p>Edit(or paste) in vim</p>
+vim vimrc
+</code></pre></div><ul>
+<li>
+<p>Edit(or paste) in vim</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">syntax on
 set nu
 set ruler
 set ic
-set hlsearch</code></pre></div></li>
-
-<li><p>Save file and quit.</p></li>
+set hlsearch
+</code></pre></div></li>
+<li>
+<p>Save file and quit.</p>
+</li>
 </ul>
-
 <h2 id="multiple-macs">Multiple Macs</h2>
-
 <ul>
-<li>In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized <code>~/Desktop</code> to get vimrc synced.<br />
+<li>In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized <code>~/Desktop</code> to get vimrc synced.<br>
 <code>ln -s ~/Desktop/Config/VIM/.vim ~/.vim</code></li>
 </ul>
 
@@ -157,9 +161,13 @@ set hlsearch</code></pre></div></li>
 <section class="post-nav">
     <ul>
         
+        <li>
+            <a href="https://goatwu1993.github.io/blog/posts/about-this-blog/"><i class="fa fa-chevron-circle-left"></i> 關於這個blog</a>
+        </li>
+        
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/about-this-blog/">關於這個blog <i class="fa fa-chevron-circle-right"></i> </a>
+            <a href="https://goatwu1993.github.io/blog/posts/networking-cheatlist/">TCP/IP cheatlist <i class="fa fa-chevron-circle-right"></i> </a>
         </li>
         
     </ul>
@@ -172,7 +180,7 @@ set hlsearch</code></pre></div></li>
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - Author Name |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

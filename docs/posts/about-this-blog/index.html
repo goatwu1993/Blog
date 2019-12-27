@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -64,7 +64,7 @@
         <aside>
     <ul>
         <li>
-            <time class="post-date" datetime="2018-05-06T19:19:34&#43;08:00">May 6, 2018</time>
+            <time class="post-date" datetime="2018-04-06T19:19:34&#43;08:00">Apr 6, 2018</time>
         </li>
         
         <li>
@@ -72,7 +72,7 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/categories/web">Web</a>
+                    <a href="https://goatwu1993.github.io/blog/categories/hugo">hugo</a>
                 
             </em>
         </li>
@@ -83,7 +83,7 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/tags/web">#Web</a>
+                    <a href="https://goatwu1993.github.io/blog/tags/hugo">#hugo</a>
                 
             </em>
         </li>
@@ -95,69 +95,47 @@
 
     
 
-    
-
-<h2 id="blog-到底怎麼寫-架在哪">Blog 到底怎麼寫，架在哪?</h2>
-
+    <h2 id="blog-">Blog 到底怎麼寫，架在哪</h2>
+<p>常見的選擇</p>
 <ul>
-<li><p>自己架站<br />
-掌握度最高，但除非是公司，基本上對個人來說算 overkill，花時間花錢。</p></li>
-
-<li><p>靜態網頁<br />
-可以部署在 github 或 google docs 等地方，可以透過靜態網頁生成器產生。</p></li>
-
-<li><p>平台<br />
-Wordpress.com, Medium 等等，wordpress 有點太大，而且有些漂亮的主題要花錢，會很不開心。</p></li>
+<li>
+<p>自己架站<br>
+掌握度最高，但除非是公司，基本上對個人來說算 overkill，花時間花錢。</p>
+</li>
+<li>
+<p>靜態網頁<br>
+可以部署在 github 或 google docs 等地方，可以透過靜態網頁生成器產生。</p>
+</li>
+<li>
+<p>平台<br>
+Wordpress.com, Medium 等等，wordpress 有點太大，而且有些漂亮的主題要花錢，會很不開心。</p>
+</li>
 </ul>
-
-<h2 id="靜態網頁生成器-static-site-generator">靜態網頁生成器(static site generator)</h2>
-
-<p> 網頁是透過工具，直接生成/render 好成 html 放在雲端。而不是靠後端去動態即時生成/render。<br />
+<h2 id="static-site-generator">靜態網頁生成器(static site generator)</h2>
+<p> 網頁是透過工具，直接生成/render 好成 html 放在雲端。而不是靠後端去動態即時生成/render。<br>
 另外注意靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。</p>
-
 <p>現在流行的靜態網頁生成器</p>
-
 <ul>
-<li>Jekyll<br />
+<li>Jekyll<br>
 老字號，有 Github 支持，但網頁資源億多速度慢的缺點就會跑出來。</li>
-<li>Hexo<br />
+<li>Hexo<br>
 台灣人寫的，如果熟悉 node 可以試試看，用的渲染引擎似乎是 swig，沒有用過。</li>
-<li>Hugo<br />
+<li>Hugo<br>
 用 golang 寫的，但實際上不太需要 golang 語法，號稱生成文件很快。</li>
 </ul>
-
-<h2 id="我看的重點">我看的重點</h2>
-
+<h2 id="heading">我看的重點</h2>
 <ul>
-<li>Markdown<br />
+<li>Markdown<br>
 寫過就回不去了</li>
-<li>Syntax Highlighting<br />
+<li>Syntax Highlighting<br>
 寫的 code 會比較好看</li>
 <li>主題</li>
 <li>documents &amp; 線上討論</li>
 </ul>
-
 <p>圖片我反而很少上傳所以不考慮</p>
-
-<h2 id="結論">結論</h2>
-
+<h2 id="heading-1">結論</h2>
 <p>最後選了 Hugo，但說實話他的 themes 還蠻複雜的，換 theme 或是上手需要一段時間，而且 docs 寫的很爛，但該有的功能都有(Markdown, Syntax Highlighting)，甚至也有一定的討論度，學會之後就可以用 markdown 爽爽寫。</p>
 
-<h2 id="hugo-使用">Hugo 使用</h2>
-
-<h3 id="第一次使用">第一次使用</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart</code></pre></div>
-<h3 id="測試">測試</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>cd quickstart
-hugo
-hugo server</code></pre></div>
-<h3 id="部署">部署</h3>
-
-<p>這邊是有個小坑的，content 寫好的 markdown，是不會自動覆蓋到最終的資料夾裡面的，即使打 hugo 也沒有用。
-總之手動刪除以後跑個 hugo 就可以了</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf ./docs
-hugo</code></pre></div>
 
 </article>
 
@@ -165,13 +143,9 @@ hugo</code></pre></div>
 <section class="post-nav">
     <ul>
         
-        <li>
-            <a href="https://goatwu1993.github.io/blog/posts/setting-macos-vim/"><i class="fa fa-chevron-circle-left"></i> My Vim config</a>
-        </li>
-        
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/networking-cheat-list/">TCP/IP cheat list <i class="fa fa-chevron-circle-right"></i> </a>
+            <a href="https://goatwu1993.github.io/blog/posts/setting-macos-vim/">macOS Configs - vim <i class="fa fa-chevron-circle-right"></i> </a>
         </li>
         
     </ul>
@@ -184,7 +158,7 @@ hugo</code></pre></div>
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - Author Name |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

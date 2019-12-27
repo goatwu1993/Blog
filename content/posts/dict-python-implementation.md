@@ -6,6 +6,7 @@ categories: [datastructure]
 tags: [python, datastructure]
 slug: dict-python-implementation
 gitment: true
+weight: 40
 ---
 
 ## Dictionary

@@ -1,5 +1,5 @@
 ---
-title: "Git Cheatlist"
+title: "git cheatlist"
 date: 2019-12-27T21:32:52+08:00
 draft: false
 tags: [git]
@@ -23,13 +23,13 @@ rm -rf [欲移除的目錄]
 
 ## 再修改 .gitmodules
 
-```
+```bash
 vim .gitmodules
 ```
 
 ## 再修改 .git/config
 
-```
+```bash
 vim .git/config
 ```
 

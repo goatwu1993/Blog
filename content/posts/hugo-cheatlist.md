@@ -1,5 +1,5 @@
 ---
-title: "Hugo Cheatlist"
+title: "Hugo cheatlist"
 date: 2019-12-27T21:32:52+08:00
 draft: false
 tags: [hugo]

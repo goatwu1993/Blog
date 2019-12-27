@@ -1,6 +1,4 @@
-# My Blog
-
-## [Blog](https://goatwu1993.github.io/blog/)
+# [Blog](https://goatwu1993.github.io/blog/)
 
 ## Change History
 

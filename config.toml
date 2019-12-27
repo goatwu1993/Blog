@@ -1,6 +1,6 @@
 baseurl = "https://goatwu1993.github.io/blog/"
 title = "goatwu1993"
-copyright = "Copyright &copy; 2019 - Author Name"
+copyright = "Copyright &copy; 2019 - goatwu1993"
 canonifyurls = true
 theme = "kiera"
 themesDir = "themes"
@@ -13,7 +13,7 @@ enableEmoji = true
 pygmentsCodeFences = true
 
 [author]
-    name = ""
+    name = "Chao Yang Wu"
     github = "goatwu1993"
     gitlab = ""
     linkedin = ""

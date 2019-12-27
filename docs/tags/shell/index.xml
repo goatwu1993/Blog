@@ -5,21 +5,19 @@
        <link>https://goatwu1993.github.io/blog/tags/shell/</link>
        <description>Recent content in shell on goatwu1993</description>
        <generator>Hugo -- gohugo.io</generator>
-       <copyright>Copyright &amp;copy; 2019 - Author Name</copyright>
+       <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
        <lastBuildDate>Sun, 10 Jun 2018 17:20:14 +0800</lastBuildDate>
        
            <atom:link href="https://goatwu1993.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
        
        
        <item>
-         <title>bash cheat list</title>
+         <title>bash cheatlist</title>
          <link>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</link>
          <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
-         <description>
-
-&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
+         <description>&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;# Show shell name.&lt;/span&gt;
@@ -52,9 +50,8 @@ chown -R nobody.nogroup .
 &lt;span style=&#34;color:#75715e&#34;&gt;# Change the read/write permission of a file&lt;/span&gt;
 chmod
 &lt;span style=&#34;color:#75715e&#34;&gt;# Make file r/w/e able for all user &amp;amp; group.&lt;/span&gt;
-chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; file_name&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
+chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; file_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;network&#34;&gt;Network&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Show network interface config/info.&lt;/span&gt;
@@ -73,10 +70,9 @@ ssh
 ssh-keygen
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# scp&lt;/span&gt;
-scp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;cpu-memery-task-process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
+scp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;cpu-memery-task--process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# List all process.&lt;/span&gt;
 ps
@@ -89,58 +85,60 @@ crontab
 &lt;span style=&#34;color:#75715e&#34;&gt;# List all cronjob.&lt;/span&gt;
 crontab -l
 
-top&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+top
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
        </item>
        
        <item>
-         <title>My Vim config</title>
+         <title>macOS Configs - vim</title>
          <link>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</link>
          <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</guid>
-         <description>
-
-&lt;h2 id=&#34;what-is-vimrc&#34;&gt;What is vimrc&lt;/h2&gt;
-
+         <description>&lt;h2 id=&#34;what-is-vimrc&#34;&gt;What is vimrc&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In Mac terminal, you can check vim version:&lt;br /&gt;
-&lt;code&gt;$ vim --version&lt;/code&gt;‌&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;$ vim&lt;/code&gt;&lt;br /&gt;
-In vim terminal type:&lt;br /&gt;
-&lt;code&gt;:help vimrc&lt;/code&gt;&lt;br /&gt;
-There is more informations and recommendation about what vimrc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Mac terminal, you can check vim version:&lt;br&gt;
+&lt;code&gt;$ vim --version&lt;/code&gt;‌&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$ vim&lt;/code&gt;&lt;br&gt;
+In vim terminal type:&lt;br&gt;
+&lt;code&gt;:help vimrc&lt;/code&gt;&lt;br&gt;
+There is more informations and recommendation about what vimrc.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;setting-up-vimrc&#34;&gt;Setting up vimrc&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;:help vimrc&lt;/code&gt;&lt;br /&gt;
+&lt;li&gt;&lt;code&gt;:help vimrc&lt;/code&gt;&lt;br&gt;
 It recommended one should use user directory (~) instead if root directory (/) in order to avoid messed-up.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Back to terminal&lt;/p&gt;
+&lt;li&gt;Back to terminal&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir ~/.vim
 cd ~/.vim
-vim vimrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Edit(or paste) in vim&lt;/p&gt;
+vim vimrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Edit(or paste) in vim&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;syntax on
 set nu
 set ruler
 set ic
-set hlsearch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Save file and quit.&lt;/p&gt;&lt;/li&gt;
+set hlsearch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Save file and quit.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;multiple-macs&#34;&gt;Multiple Macs&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized &lt;code&gt;~/Desktop&lt;/code&gt; to get vimrc synced.&lt;br /&gt;
+&lt;li&gt;In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized &lt;code&gt;~/Desktop&lt;/code&gt; to get vimrc synced.&lt;br&gt;
 &lt;code&gt;ln -s ~/Desktop/Config/VIM/.vim ~/.vim&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
