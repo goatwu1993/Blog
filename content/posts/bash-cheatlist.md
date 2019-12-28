@@ -1,5 +1,5 @@
 ---
-title: "bash cheatlist"
+title: "bash cheatsheet"
 date: 2018-06-10T17:20:14+08:00
 draft: false
 categories: [shell]

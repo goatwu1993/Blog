@@ -1,10 +1,10 @@
 ---
-title: "git cheatlist"
+title: "git cheatsheet"
 date: 2019-12-27T21:32:52+08:00
 draft: false
 tags: [git]
 categories: [git]
-slug: git-cheatlist-submodule
+slug: git-cheatsheet-submodule
 gitment: true
 ---
 

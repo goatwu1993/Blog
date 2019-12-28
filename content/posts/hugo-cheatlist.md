@@ -1,10 +1,10 @@
 ---
-title: "Hugo cheatlist"
+title: "Hugo cheatsheet"
 date: 2019-12-27T21:32:52+08:00
 draft: false
 tags: [hugo]
 categories: [hugo]
-slug: hugo-cheatlist
+slug: hugo-cheatsheet
 gitment: true
 ---
 
