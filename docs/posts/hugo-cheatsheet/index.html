@@ -58,7 +58,7 @@
 
 <article>
 
-    <h1>Hugo themes</h1>
+    <h1>Hugo cheatsheet</h1>
 
     
         <aside>
@@ -85,9 +85,6 @@
                     
                     <a href="https://goatwu1993.github.io/blog/tags/hugo">#hugo</a>
                 
-                    , 
-                    <a href="https://goatwu1993.github.io/blog/tags/git">#git</a>
-                
             </em>
         </li>
         
@@ -98,24 +95,27 @@
 
     
 
-    <p>本篇記錄如何使用 hugo 線上的 themes</p>
-<h2 id="hugo-themes">Hugo themes</h2>
-<p><a href="https://themes.gohugo.io/">Hugo 官方線上 themes</a></p>
-<h2 id="-themes">下載 themes</h2>
-<p>到他們的 github 上面，有兩種方式</p>
-<h3 id="-a-submodule">方案 a. submodule</h3>
-<p>完全不動到 themes 裡面的話可以用 submodule。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># submodule</span>
-cd ./themes
-git submodule add https://github.com/avianto/hugo-kiera.git kiera
-</code></pre></div><h3 id="-b-fork">方案 b. fork</h3>
-<p>適合你覺得下載 themes 之後會想要更改的情形。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># fork</span>
-cd ./themes
-git clone https://github.com/$你的Id/hugo-kiera.git kiera
-</code></pre></div><h2 id="-configtoml">修改 config.toml</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;kiera&#34;</span>
-</code></pre></div>
+    <h2 id="hugo-">Hugo 使用</h2>
+<h3 id="heading">安裝</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
+</code></pre></div><h3 id="heading-1">第一次使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart
+</code></pre></div><h3 id="heading-2">測試</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>cd quickstart
+hugo
+hugo server
+</code></pre></div><h3 id="heading-3">部署</h3>
+<p>這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf ./docs
+hugo
+</code></pre></div><h3 id="heading-4">新增文章</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md
+</code></pre></div><h3 id="heading-5">參考資料</h3>
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">Hugo 官網</a></li>
+</ul>
+
 
 </article>
 
@@ -124,12 +124,12 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
     <ul>
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/bash-cheat-list/"><i class="fa fa-chevron-circle-left"></i> bash cheatsheet</a>
+            <a href="https://goatwu1993.github.io/blog/posts/hugo-themes/"><i class="fa fa-chevron-circle-left"></i> Hugo themes</a>
         </li>
         
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/">Hugo cheatsheet <i class="fa fa-chevron-circle-right"></i> </a>
+            <a href="https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/">git cheatsheet <i class="fa fa-chevron-circle-right"></i> </a>
         </li>
         
     </ul>

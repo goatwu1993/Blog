@@ -58,7 +58,7 @@
 
 <article>
 
-    <h1>macOS Configs - vim</h1>
+    <h1>macOS configs - vim</h1>
 
     
         <aside>
@@ -107,52 +107,40 @@
 
     
 
-    <h2 id="what-is-vimrc">What is vimrc</h2>
+    <h2 id="rc-">*rc 檔</h2>
 <ul>
-<li>
-<p>Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.</p>
-</li>
-<li>
-<p>vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.</p>
-</li>
-<li>
-<p>In Mac terminal, you can check vim version:<br>
-<code>$ vim --version</code>‌</p>
-</li>
-<li>
-<p><code>$ vim</code><br>
-In vim terminal type:<br>
-<code>:help vimrc</code><br>
-There is more informations and recommendation about what vimrc.</p>
-</li>
-</ul>
-<h2 id="setting-up-vimrc">Setting up vimrc</h2>
+<li>當一支程式跑起來，會去讀設定擋以更改設定</li>
+<li>rc 檔案就是的設定檔，儲存字體、顏色等，Linux 的 command line 程式，大部分都以 rc 結尾，rc = run commands</li>
+<li>常見的 rc
 <ul>
-<li><code>:help vimrc</code><br>
-It recommended one should use user directory (~) instead if root directory (/) in order to avoid messed-up.</li>
-<li>Back to terminal</li>
+<li>bashrc</li>
+<li>vimrc</li>
+<li>zshrc</li>
 </ul>
+</li>
+<li>根據程式不同， rc 檔會在不同的位置，不同的名字，但大部分為以下兩個</li>
+</ul>
+<ul>
+<li>~/.{program_name}rc</li>
+<li>~/.{program_name}/{program_name}rc</li>
+</ul>
+<h2 id="vimrc">vimrc</h2>
+<p>打開 Mac terminal 輸入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># check vim version</span>
+vim --version
+<span style="color:#75715e"># open vim</span>
+vim
+</code></pre></div><p>打開 vim</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">:<span style="color:#a6e22e">help</span> <span style="color:#a6e22e">vimrc</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>可以看到 vimrc 的相關介紹</p>
+<h3 id="heading">自己設定</h3>
+<p>根據 vim 的說明，各使用者應該分別在 $HOME (~) 設定 vimrc。
+。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/.vim
 cd ~/.vim
 vim vimrc
-</code></pre></div><ul>
-<li>
-<p>Edit(or paste) in vim</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">syntax on
-set nu
-set ruler
-set ic
-set hlsearch
-</code></pre></div></li>
-<li>
-<p>Save file and quit.</p>
-</li>
-</ul>
-<h2 id="multiple-macs">Multiple Macs</h2>
-<ul>
-<li>In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized <code>~/Desktop</code> to get vimrc synced.<br>
-<code>ln -s ~/Desktop/Config/VIM/.vim ~/.vim</code></li>
-</ul>
+</code></pre></div><p>最後直接參考大神</p>
+<p><a href="https://github.com/amix/vimrc">https://github.com/amix/vimrc</a></p>
 
 
 </article>
@@ -167,7 +155,7 @@ set hlsearch
         
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/networking-cheatlist/">TCP/IP cheatlist <i class="fa fa-chevron-circle-right"></i> </a>
+            <a href="https://goatwu1993.github.io/blog/posts/networking-cheatsheet/">TCP/IP cheatsheet <i class="fa fa-chevron-circle-right"></i> </a>
         </li>
         
     </ul>

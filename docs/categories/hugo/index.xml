@@ -12,11 +12,11 @@
        
        
        <item>
-         <title>Hugo cheatlist</title>
-         <link>https://goatwu1993.github.io/blog/posts/hugo-cheatlist/</link>
+         <title>Hugo cheatsheet</title>
+         <link>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</link>
          <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
          
-         <guid>https://goatwu1993.github.io/blog/posts/hugo-cheatlist/</guid>
+         <guid>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</guid>
          <description>&lt;h2 id=&#34;hugo-&#34;&gt;Hugo 使用&lt;/h2&gt;
 &lt;h3 id=&#34;heading&#34;&gt;安裝&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install hugo

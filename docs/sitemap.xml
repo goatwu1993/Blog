@@ -23,17 +23,17 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
-    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/tags/git/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/git-cheatlist-submodule/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
+    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -43,17 +43,17 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/hugo/</loc>
-    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/tags/hugo/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/hugo-cheatlist/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/hugo/</loc>
+    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -68,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/datastructure/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/datastructure/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/datastructure/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/datastructure/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
@@ -113,7 +113,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/networking-cheatlist/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/networking-cheatsheet/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   

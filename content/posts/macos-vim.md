@@ -1,30 +1,50 @@
 ---
-title: "macOS Configs - vim"
+title: "macOS configs - vim"
 date: 2018-05-06T04:51:07+08:00
 draft: false
 categories: [shell, macos]
 tags: [linux, macos, vim, shell]
 slug: setting-macos-vim
 gitment: true
+toc: true
 ---
 
-## What is vimrc
+## \*rc 檔
 
-- Recently, a friend of mine bought a Macbook. He though it would be cool to use vim, which allows edit files in terminals, even though I know he is going to use MS word few days later.
+- 當一支程式跑起來，會去讀設定擋以更改設定
+- rc 檔案就是的設定檔，儲存字體、顏色等，Linux 的 command line 程式，大部分都以 rc 結尾，rc = run commands
+- 常見的 rc
+  - bashrc
+  - vimrc
+  - zshrc
+- 根據程式不同， rc 檔會在不同的位置，不同的名字，但大部分為以下兩個
 
-- vimrc is the config of vim. Each time one open vim, vim will load the settings written in vimrc. As a result, a nice vimrc leads to a more easy-to-use vim settings.
-- In Mac terminal, you can check vim version:  
-  `$ vim --version`‌
-- `$ vim`  
-  In vim terminal type:  
-  `:help vimrc`  
-  There is more informations and recommendation about what vimrc.
+* ~/.{program_name}rc
+* ~/.{program_name}/{program_name}rc
 
-## Setting up vimrc
+## vimrc
 
-- `:help vimrc`  
-  It recommended one should use user directory (~) instead if root directory (/) in order to avoid messed-up.
-- Back to terminal
+打開 Mac terminal 輸入
+
+```bash
+# check vim version
+vim --version
+# open vim
+vim
+```
+
+打開 vim
+
+```vim
+:help vimrc
+```
+
+可以看到 vimrc 的相關介紹
+
+### 自己設定
+
+根據 vim 的說明，各使用者應該分別在 \$HOME (~) 設定 vimrc。
+。
 
 ```bash
 mkdir ~/.vim
@@ -32,19 +52,6 @@ cd ~/.vim
 vim vimrc
 ```
 
-- Edit(or paste) in vim
+最後直接參考大神
 
-  ```bash
-  syntax on
-  set nu
-  set ruler
-  set ic
-  set hlsearch
-  ```
-
-- Save file and quit.
-
-## Multiple Macs
-
-- In case you are rich and have multiple Macs with same iCloud account, you can also place your vimrc (and other settings) at iCloud syncronized `~/Desktop` to get vimrc synced.  
-  `ln -s ~/Desktop/Config/VIM/.vim ~/.vim`
+https://github.com/amix/vimrc
