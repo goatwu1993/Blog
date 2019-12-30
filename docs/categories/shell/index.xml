@@ -6,10 +6,45 @@
        <description>Recent content in shell on goatwu1993</description>
        <generator>Hugo -- gohugo.io</generator>
        <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
-       <lastBuildDate>Sun, 10 Jun 2018 17:20:14 +0800</lastBuildDate>
+       <lastBuildDate>Sat, 28 Dec 2019 19:17:18 +0800</lastBuildDate>
        
            <atom:link href="https://goatwu1993.github.io/blog/categories/shell/index.xml" rel="self" type="application/rss+xml" />
        
+       
+       <item>
+         <title>macOS Configs - environments</title>
+         <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
+         <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/posts/setting-macos-env/</guid>
+         <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+&lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
+&lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zsh&lt;/li&gt;
+&lt;li&gt;oh-my-zsh&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://antigen.sharats.me/&#34;&gt;Antigen&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zsh-users/antigen/wiki/Installation&#34;&gt;Antigen install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
+&lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;vimrc&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundlevim&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vim package manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6-autojump-or-wdzsh&#34;&gt;6. autojump or wd(zsh)&lt;/h2&gt;
+</description>
+       </item>
        
        <item>
          <title>bash cheatsheet</title>

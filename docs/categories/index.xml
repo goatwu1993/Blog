@@ -6,10 +6,28 @@
        <description>Recent content in Categories on goatwu1993</description>
        <generator>Hugo -- gohugo.io</generator>
        <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
-       <lastBuildDate>Fri, 27 Dec 2019 21:32:52 +0800</lastBuildDate>
+       <lastBuildDate>Sat, 28 Dec 2019 19:17:18 +0800</lastBuildDate>
        
            <atom:link href="https://goatwu1993.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
        
+       
+       <item>
+         <title>macos</title>
+         <link>https://goatwu1993.github.io/blog/categories/macos/</link>
+         <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/categories/macos/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>shell</title>
+         <link>https://goatwu1993.github.io/blog/categories/shell/</link>
+         <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/categories/shell/</guid>
+         <description></description>
+       </item>
        
        <item>
          <title>git</title>
@@ -39,29 +57,11 @@
        </item>
        
        <item>
-         <title>shell</title>
-         <link>https://goatwu1993.github.io/blog/categories/shell/</link>
-         <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/categories/shell/</guid>
-         <description></description>
-       </item>
-       
-       <item>
          <title>networking</title>
          <link>https://goatwu1993.github.io/blog/categories/networking/</link>
          <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/categories/networking/</guid>
-         <description></description>
-       </item>
-       
-       <item>
-         <title>macos</title>
-         <link>https://goatwu1993.github.io/blog/categories/macos/</link>
-         <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/categories/macos/</guid>
          <description></description>
        </item>
        

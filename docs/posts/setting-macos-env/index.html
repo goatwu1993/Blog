@@ -58,13 +58,13 @@
 
 <article>
 
-    <h1>git cheatsheet</h1>
+    <h1>macOS Configs - environments</h1>
 
     
         <aside>
     <ul>
         <li>
-            <time class="post-date" datetime="2019-12-27T21:32:52&#43;08:00">Dec 27, 2019</time>
+            <time class="post-date" datetime="2019-12-28T19:17:18&#43;08:00">Dec 28, 2019</time>
         </li>
         
         <li>
@@ -72,7 +72,10 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/categories/git">git</a>
+                    <a href="https://goatwu1993.github.io/blog/categories/shell">shell</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/categories/macos">macos</a>
                 
             </em>
         </li>
@@ -83,7 +86,16 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/tags/git">#git</a>
+                    <a href="https://goatwu1993.github.io/blog/tags/linux">#linux</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/tags/macos">#macos</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/tags/vim">#vim</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/tags/shell">#shell</a>
                 
             </em>
         </li>
@@ -95,22 +107,32 @@
 
     
 
-    <h2 id="-submodule">新增 submodule</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add git@github.com:xxx dir_name
-</code></pre></div><h2 id="-submodule-1">移除 submodule</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rm --cached <span style="color:#f92672">[</span>欲移除的目錄<span style="color:#f92672">]</span>
-rm -rf <span style="color:#f92672">[</span>欲移除的目錄<span style="color:#f92672">]</span>
-</code></pre></div><h2 id="-gitmodules">修改 .gitmodules</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim .gitmodules
-</code></pre></div><h2 id="-gitconfig">修改 .git/config</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim .git/config
-</code></pre></div><p>最後再 commit，改變整個 Repository。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .gitmodules
-$ git commit -m <span style="color:#e6db74">&#34;Remove a submodule&#34;</span>
-</code></pre></div><h2 id="-sync">安全起見再做個 sync</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule sync
-</code></pre></div><h3 id="heading">參考資料</h3>
-<p><a href="https://biang.io/blog/development/tools/revision-control/git/submod">網站一</a></p>
+    <h2 id="1-homebrew">1. Homebrew</h2>
+<h2 id="2-iterm2">2. iTerm2</h2>
+<h2 id="3-zsh">3. zsh</h2>
+<ul>
+<li>zsh</li>
+<li>oh-my-zsh</li>
+<li><a href="http://antigen.sharats.me/">Antigen</a>
+<ul>
+<li><a href="https://github.com/zsh-users/antigen/wiki/Installation">Antigen install</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-vscode">4. vscode</h2>
+<h2 id="5-vim">5. vim</h2>
+<ul>
+<li>
+<p><a href="https://github.com/amix/vimrc">vimrc</a></p>
+</li>
+<li>
+<p><a href="https://github.com/VundleVim/Vundle.vim">Vundlevim</a></p>
+<ul>
+<li>Vim package manager</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-autojump-or-wdzsh">6. autojump or wd(zsh)</h2>
 
 
 </article>
@@ -120,12 +142,12 @@ $ git commit -m <span style="color:#e6db74">&#34;Remove a submodule&#34;</span>
     <ul>
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/"><i class="fa fa-chevron-circle-left"></i> Hugo cheatsheet</a>
+            <a href="https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/"><i class="fa fa-chevron-circle-left"></i> git cheatsheet</a>
         </li>
         
         
         <li>
-            <a href="https://goatwu1993.github.io/blog/posts/setting-macos-env/">macOS Configs - environments <i class="fa fa-chevron-circle-right"></i> </a>
+            <a href="https://goatwu1993.github.io/blog/posts/dict-python-implementation/">Python 實作 Dictionary <i class="fa fa-chevron-circle-right"></i> </a>
         </li>
         
     </ul>
