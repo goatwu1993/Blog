@@ -10,22 +10,36 @@ gitment: true
 
 ## 1. Homebrew
 
+- The missing package manager for macOS (or Linux)
+- [Website](https://brew.sh/)
+
 ## 2. iTerm2
+
+## 3. stow
+
+- Symlink farm manager. Perfect for dotfiles
+- [Website](https://www.gnu.org/software/stow/)
 
 ## 3. zsh
 
-- zsh
-- oh-my-zsh
-- [Antigen](http://antigen.sharats.me/)
-  - [Antigen install](https://github.com/zsh-users/antigen/wiki/Installation)
+- install
+
+  ```bash
+  brew install zsh
+  ```
+
+- [zsh-quickstart-kit](https://github.com/unixorn/zsh-quickstart-kit)
 
 ## 4. vscode
 
+- [viatsko/awesome-vscode](https://github.com/viatsko/awesome-vscode)
+
 ## 5. vim
 
-- [vimrc](https://github.com/amix/vimrc)
+- [amix/vimrc](https://github.com/amix/vimrc)
+
+  Lazy setup
 
 - [Vundlevim](https://github.com/VundleVim/Vundle.vim)
-  - Vim package manager
 
-## 6. autojump or wd(zsh)
+  Vundle, the plug-in manager for Vim
