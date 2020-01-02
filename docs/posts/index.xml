@@ -276,7 +276,7 @@ len(a)
        </item>
        
        <item>
-         <title>macOS Configs - environments</title>
+         <title>macOS develop environments</title>
          <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
          <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
          
@@ -406,19 +406,26 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
          <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
-         <description>&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
+         <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# manual&lt;/span&gt;
+man anything
+info anything
+&lt;span style=&#34;color:#75715e&#34;&gt;# call for help&lt;/span&gt;
+anything --help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;# Show shell name.&lt;/span&gt;
 echo &lt;span style=&#34;color:#ae81ff&#34;&gt;\$&lt;/span&gt;SHELL
+echo $0
 &lt;span style=&#34;color:#75715e&#34;&gt;# Show shell version.&lt;/span&gt;
 $SHELL --version
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# Clear terminal.&lt;/span&gt;
 clear
 
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show the commands history.&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# Show command history.&lt;/span&gt;
 history
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# Print working directory&lt;/span&gt;
@@ -446,8 +453,17 @@ chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; file_name
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Show network interface config/info.&lt;/span&gt;
 ifconfig
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show network status, include tcp/udp port.&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# get public ip&lt;/span&gt;
+curl icanhazip.com
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Show network status&lt;/span&gt;
 netstat
+&lt;span style=&#34;color:#75715e&#34;&gt;# Show all, include tcp/udp port.&lt;/span&gt;
+netstat -an
+&lt;span style=&#34;color:#75715e&#34;&gt;# Show established connection&lt;/span&gt;
+netstat -antu | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ESTABLISHED&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# Show kernel routing information&lt;/span&gt;
+netstat -r
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# Check the bridge Interface&lt;/span&gt;
 brtcl
@@ -463,7 +479,14 @@ scp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;cpu-memery-task--process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# List all process.&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+top
+&lt;span style=&#34;color:#75715e&#34;&gt;# cpu&lt;/span&gt;
+top -o cpu
+&lt;span style=&#34;color:#75715e&#34;&gt;# memery&lt;/span&gt;
+top -o rsize
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# List all process.&lt;/span&gt;
 ps
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# Kill a process&lt;/span&gt;
@@ -473,9 +496,11 @@ kill $pid
 crontab
 &lt;span style=&#34;color:#75715e&#34;&gt;# List all cronjob.&lt;/span&gt;
 crontab -l
-
-top
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;heading&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;https://geekflare.com/netstat/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
        </item>
        
        <item>
@@ -583,49 +608,6 @@ top
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-       </item>
-       
-       <item>
-         <title>macOS configs - vim</title>
-         <link>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</link>
-         <pubDate>Sun, 06 May 2018 04:51:07 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/setting-macos-vim/</guid>
-         <description>&lt;h2 id=&#34;rc-&#34;&gt;*rc 檔&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;當一支程式跑起來，會去讀設定擋以更改設定&lt;/li&gt;
-&lt;li&gt;rc 檔案就是的設定檔，儲存字體、顏色等，Linux 的 command line 程式，大部分都以 rc 結尾，rc = run commands&lt;/li&gt;
-&lt;li&gt;常見的 rc
-&lt;ul&gt;
-&lt;li&gt;bashrc&lt;/li&gt;
-&lt;li&gt;vimrc&lt;/li&gt;
-&lt;li&gt;zshrc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;根據程式不同， rc 檔會在不同的位置，不同的名字，但大部分為以下兩個&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;~/.{program_name}rc&lt;/li&gt;
-&lt;li&gt;~/.{program_name}/{program_name}rc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;vimrc&#34;&gt;vimrc&lt;/h2&gt;
-&lt;p&gt;打開 Mac terminal 輸入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# check vim version&lt;/span&gt;
-vim --version
-&lt;span style=&#34;color:#75715e&#34;&gt;# open vim&lt;/span&gt;
-vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打開 vim&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;help&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;vimrc&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到 vimrc 的相關介紹&lt;/p&gt;
-&lt;h3 id=&#34;heading&#34;&gt;自己設定&lt;/h3&gt;
-&lt;p&gt;根據 vim 的說明，各使用者應該分別在 $HOME (~) 設定 vimrc。
-。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir ~/.vim
-cd ~/.vim
-vim vimrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最後直接參考大神&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;https://github.com/amix/vimrc&lt;/a&gt;&lt;/p&gt;
 </description>
        </item>
        

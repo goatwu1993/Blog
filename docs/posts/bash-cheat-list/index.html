@@ -92,25 +92,32 @@
         </li>
         
 
-        <li>One minute read</li>
+        <li>2 minutes read</li>
     </ul>
 </aside>
 
     
 
-    <h2 id="general">General</h2>
+    <h2 id="greatest-command-of-all-time">Greatest command of all time</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e"># manual</span>
+man anything
+info anything
+<span style="color:#75715e"># call for help</span>
+anything --help
+</code></pre></div><h2 id="general">General</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># Show shell name.</span>
 echo <span style="color:#ae81ff">\$</span>SHELL
+echo $0
 <span style="color:#75715e"># Show shell version.</span>
 $SHELL --version
 
 <span style="color:#75715e"># Clear terminal.</span>
 clear
 
-
-<span style="color:#75715e"># Show the commands history.</span>
+<span style="color:#75715e"># Show command history.</span>
 history
 
 <span style="color:#75715e"># Print working directory</span>
@@ -138,8 +145,17 @@ chmod <span style="color:#ae81ff">777</span> file_name
 </span><span style="color:#75715e"></span><span style="color:#75715e"># Show network interface config/info.</span>
 ifconfig
 
-<span style="color:#75715e"># Show network status, include tcp/udp port.</span>
+<span style="color:#75715e"># get public ip</span>
+curl icanhazip.com
+
+<span style="color:#75715e"># Show network status</span>
 netstat
+<span style="color:#75715e"># Show all, include tcp/udp port.</span>
+netstat -an
+<span style="color:#75715e"># Show established connection</span>
+netstat -antu | grep <span style="color:#e6db74">&#39;ESTABLISHED&#39;</span>
+<span style="color:#75715e"># Show kernel routing information</span>
+netstat -r
 
 <span style="color:#75715e"># Check the bridge Interface</span>
 brtcl
@@ -155,7 +171,14 @@ scp
 </code></pre></div><hr>
 <h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span><span style="color:#75715e"># List all process.</span>
+</span><span style="color:#75715e"></span>
+top
+<span style="color:#75715e"># cpu</span>
+top -o cpu
+<span style="color:#75715e"># memery</span>
+top -o rsize
+
+<span style="color:#75715e"># List all process.</span>
 ps
 
 <span style="color:#75715e"># Kill a process</span>
@@ -165,9 +188,11 @@ kill $pid
 crontab
 <span style="color:#75715e"># List all cronjob.</span>
 crontab -l
+</code></pre></div><h2 id="heading">參考資料</h2>
+<ul>
+<li><a href="https://geekflare.com/netstat/">https://geekflare.com/netstat/</a></li>
+</ul>
 
-top
-</code></pre></div>
 
 </article>
 

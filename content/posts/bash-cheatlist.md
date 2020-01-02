@@ -8,6 +8,17 @@ slug: bash-cheat-list
 gitment: true
 ---
 
+## Greatest command of all time
+
+```bash
+#!/bin/bash
+# manual
+man anything
+info anything
+# call for help
+anything --help
+```
+
 ## General
 
 ```bash
@@ -15,14 +26,14 @@ gitment: true
 
 # Show shell name.
 echo \$SHELL
+echo $0
 # Show shell version.
 $SHELL --version
 
 # Clear terminal.
 clear
 
-
-# Show the commands history.
+# Show command history.
 history
 
 # Print working directory
@@ -55,8 +66,17 @@ chmod 777 file_name
 # Show network interface config/info.
 ifconfig
 
-# Show network status, include tcp/udp port.
+# get public ip
+curl icanhazip.com
+
+# Show network status
 netstat
+# Show all, include tcp/udp port.
+netstat -an
+# Show established connection
+netstat -antu | grep 'ESTABLISHED'
+# Show kernel routing information
+netstat -r
 
 # Check the bridge Interface
 brtcl
@@ -77,6 +97,13 @@ scp
 
 ```bash
 #!/bin/bash
+
+top
+# cpu
+top -o cpu
+# memery
+top -o rsize
+
 # List all process.
 ps
 
@@ -87,6 +114,8 @@ kill $pid
 crontab
 # List all cronjob.
 crontab -l
-
-top
 ```
+
+## 參考資料
+
+- https://geekflare.com/netstat/
