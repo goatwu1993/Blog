@@ -6,10 +6,28 @@
        <description>Recent content in Tags on goatwu1993</description>
        <generator>Hugo -- gohugo.io</generator>
        <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
-       <lastBuildDate>Sat, 28 Dec 2019 19:17:18 +0800</lastBuildDate>
+       <lastBuildDate>Thu, 09 Jan 2020 19:53:34 +0800</lastBuildDate>
        
            <atom:link href="https://goatwu1993.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
        
+       
+       <item>
+         <title>BigData</title>
+         <link>https://goatwu1993.github.io/blog/tags/bigdata/</link>
+         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/bigdata/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>scala</title>
+         <link>https://goatwu1993.github.io/blog/tags/scala/</link>
+         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/scala/</guid>
+         <description></description>
+       </item>
        
        <item>
          <title>linux</title>

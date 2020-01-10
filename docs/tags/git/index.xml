@@ -17,21 +17,24 @@
          <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/</guid>
-         <description>&lt;h2 id=&#34;-submodule&#34;&gt;新增 submodule&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add git@github.com:xxx dir_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-submodule-1&#34;&gt;移除 submodule&lt;/h2&gt;
+         <description>
+
+&lt;h2 id=&#34;新增-submodule&#34;&gt;新增 submodule&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add git@github.com:xxx dir_name&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;移除-submodule&#34;&gt;移除 submodule&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git rm --cached &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;欲移除的目錄&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-rm -rf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;欲移除的目錄&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-gitmodules&#34;&gt;修改 .gitmodules&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim .gitmodules
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-gitconfig&#34;&gt;修改 .git/config&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim .git/config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
+rm -rf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;欲移除的目錄&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;修改-gitmodules&#34;&gt;修改 .gitmodules&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim .gitmodules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;修改-git-config&#34;&gt;修改 .git/config&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim .git/config&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git add .gitmodules
-$ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Remove a submodule&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule sync
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;heading&#34;&gt;參考資料&lt;/h3&gt;
+$ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Remove a submodule&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+
 &lt;p&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;網站一&lt;/a&gt;&lt;/p&gt;
 </description>
        </item>
@@ -42,24 +45,32 @@ $ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Remove a subm
          <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/posts/hugo-themes/</guid>
-         <description>&lt;p&gt;本篇記錄如何使用 hugo 線上的 themes&lt;/p&gt;
+         <description>
+
+&lt;p&gt;本篇記錄如何使用 hugo 線上的 themes&lt;/p&gt;
+
 &lt;h2 id=&#34;hugo-themes&#34;&gt;Hugo themes&lt;/h2&gt;
+
 &lt;p&gt;&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Hugo 官方線上 themes&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;-themes&#34;&gt;下載 themes&lt;/h2&gt;
+
+&lt;h2 id=&#34;下載-themes&#34;&gt;下載 themes&lt;/h2&gt;
+
 &lt;p&gt;到他們的 github 上面，有兩種方式&lt;/p&gt;
-&lt;h3 id=&#34;-a-submodule&#34;&gt;方案 a. submodule&lt;/h3&gt;
+
+&lt;h3 id=&#34;方案-a-submodule&#34;&gt;方案 a. submodule&lt;/h3&gt;
+
 &lt;p&gt;完全不動到 themes 裡面的話可以用 submodule。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# submodule&lt;/span&gt;
 cd ./themes
-git submodule add https://github.com/avianto/hugo-kiera.git kiera
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-b-fork&#34;&gt;方案 b. fork&lt;/h3&gt;
+git submodule add https://github.com/avianto/hugo-kiera.git kiera&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;方案-b-fork&#34;&gt;方案 b. fork&lt;/h3&gt;
+
 &lt;p&gt;適合你覺得下載 themes 之後會想要更改的情形。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fork&lt;/span&gt;
 cd ./themes
-git clone https://github.com/$你的Id/hugo-kiera.git kiera
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-configtoml&#34;&gt;修改 config.toml&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;theme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;kiera&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+git clone https://github.com/$你的Id/hugo-kiera.git kiera&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;修改-config-toml&#34;&gt;修改 config.toml&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;theme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;kiera&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
        </item>
        
      </channel>

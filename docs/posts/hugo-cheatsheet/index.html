@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.0" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.57.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -95,23 +95,28 @@
 
     
 
-    <h2 id="hugo-">Hugo 使用</h2>
-<h3 id="heading">安裝</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
-</code></pre></div><h3 id="heading-1">第一次使用</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart
-</code></pre></div><h3 id="heading-2">測試</h3>
+    
+
+<h2 id="hugo-使用">Hugo 使用</h2>
+
+<h3 id="安裝">安裝</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo</code></pre></div>
+<h3 id="第一次使用">第一次使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart</code></pre></div>
+<h3 id="測試">測試</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>cd quickstart
 hugo
-hugo server
-</code></pre></div><h3 id="heading-3">部署</h3>
+hugo server</code></pre></div>
+<h3 id="部署">部署</h3>
+
 <p>這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf ./docs
-hugo
-</code></pre></div><h3 id="heading-4">新增文章</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md
-</code></pre></div><h3 id="heading-5">參考資料</h3>
+hugo</code></pre></div>
+<h3 id="新增文章">新增文章</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md</code></pre></div>
+<h3 id="參考資料">參考資料</h3>
+
 <ul>
 <li><a href="https://gohugo.io/getting-started/quick-start/">Hugo 官網</a></li>
 </ul>
@@ -142,7 +147,7 @@ hugo
 
 </main>
     <footer>
-        <h6>Copyright © 2019 - goatwu1993 |
+        <h6>Copyright &copy; 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

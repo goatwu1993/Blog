@@ -12,47 +12,57 @@
        
        
        <item>
-         <title>macOS develop environments</title>
+         <title>macOS developer environments</title>
          <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
          <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
          
          <guid>https://goatwu1993.github.io/blog/posts/setting-macos-env/</guid>
-         <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+         <description>
+
+&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;The missing package manager for macOS (or Linux)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://brew.sh/&#34;&gt;Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
+
 &lt;h2 id=&#34;3-stow&#34;&gt;3. stow&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Symlink farm manager. Perfect for dotfiles&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;install&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install zsh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;zsh-quickstart-kit&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;install&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install zsh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;zsh-quickstart-kit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;amix/vimrc&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lazy setup&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundlevim&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Vundle, the plug-in manager for Vim&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;amix/vimrc&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Lazy setup&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundlevim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vundle, the plug-in manager for Vim&lt;/p&gt;
 </description>
        </item>
        
