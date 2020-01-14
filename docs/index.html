@@ -73,7 +73,10 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/tags/scala">#scala</a>
+                    <a href="https://goatwu1993.github.io/blog/tags/hadoop">#Hadoop</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/tags/kafka">#Kafka</a>
                 
                     , 
                     <a href="https://goatwu1993.github.io/blog/tags/bigdata">#BigData</a>
@@ -86,7 +89,9 @@
     </ul>
 </aside>
 
-            <p>What is Kafka Kafka 是什麼  Kafka 是一個流 /訊息處理平台(stream processing platform)，作為一個單一平台，可以處理 Real-Time 的資料流  Kafka 特點  架構簡化  Producers 只需要傳送訊息給 topic，consumer 可以選擇任何 message system 來接收訊息。 Kafka 提供 pub-sub 及 queue based messaging system Kafka 基於 commit log，使用者可以 subscribec 或 publish data 到多個系統或是 App  網路傳輸優化</p>
+            <p>What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
+Kafka 特點  提供 pub-sub 及 point-to-point 兩種 queue mode
+ 優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/apache-kafka-part1/">Read more…</a>
             
@@ -106,7 +111,10 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/tags/scala">#scala</a>
+                    <a href="https://goatwu1993.github.io/blog/tags/hadoop">#Hadoop</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/tags/kafka">#Kafka</a>
                 
                     , 
                     <a href="https://goatwu1993.github.io/blog/tags/bigdata">#BigData</a>
@@ -115,12 +123,16 @@
         </li>
         
 
-        <li>4 minutes read</li>
+        <li>2 minutes read</li>
     </ul>
 </aside>
 
-            <p>Kafka 名詞 Kafka 可以被分為多個 Topics，每個 topic 可以再分為多個 partitions，partition 是一個 message queue，其中 message 按照 index/offset 排序。
-All the data in a Kafka cluster is the disjointed union of partitions. Incoming messages are written at the end of a partition and messages are sequentially read by consumers.</p>
+            <p>Kafka Architecture Picture from wiki
+Producers  Producers 將發送資料流到一至多個 Topics
+ Producer 使用 push(推)模式將訊息釋出到 Broker
+ 實作 Kafka 提供的 Producer API
+  Consumers  Consumers 會訂閱一或多個 Topics
+ Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/apache-kafka-2/">Read more…</a>
             
@@ -389,7 +401,7 @@ Hugo themes Hugo 官方線上 themes
     </ul>
 </aside>
 
-            <p>Greatest command of all time #!/bin/bash # manual man anything info anything # call for help anything --help General #!/bin/bash  # Show shell name. echo \$SHELL echo $0 # Show shell version.</p>
+            <p>Greatest command of all time #!/bin/bash  # manual man anything info anything anything --help General commands Getting information #!/bin/bash  # Show shell name. echo $SHELL echo $0 # Show shell version.</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/bash-cheat-list/">Read more…</a>
             

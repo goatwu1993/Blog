@@ -2,7 +2,7 @@
 title = "Apache Kafka - Part2"
 date = 2020-01-09T19:53:34+08:00
 draft = false
-tags = ["scala", "BigData"]
+tags = ["Hadoop", "Kafka","BigData"]
 slug = "apache-kafka-2"
 gitment = true
 toc= true
@@ -10,101 +10,127 @@ categories = []
 weight= 40
 +++
 
-## Kafka 名詞
+## Kafka Architecture
 
-Kafka 可以被分為多個 Topics，每個 topic 可以再分為多個 partitions，partition 是一個 message queue，其中 message 按照 index/offset 排序。
-
-All the data in a Kafka cluster is the disjointed union of partitions. Incoming messages are written at the end of a partition and messages are sequentially read by consumers. Durability is provided by replicating messages to different brokers.
+![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png)
+Picture from wiki
 
 ## Producers
 
-- Producers are the publisher of messages
-- Producer can publish message to one or more Kafka topics.
-- Messages are pushed to brokers.
-- When new broker is started, all the producer search it and automatically send a message to the new broker. Producer does not wait for ack from broker and send messages as fast as broker can handle.
+- Producers 將發送資料流到一至多個 Topics
 
-## Topics
+- Producer 使用 push(推)模式將訊息釋出到 Broker
 
-- A stream of messages belonging to a particular category is called a topic. Data is stored in topics.
-- 每個 topic 可以再分為多個 partitions，partition 是一個 message queue，其中 message 按照 index/offset 排序。
-- For each topic, Kafka keeps a mini-mum of one partition.
-- Each such partition contains messages in an immutable ordered sequence. A partition is implemented as a set of segment files of equal sizes.
-
-### 1. Regular Topics
-
-Regular topics can be configured with a retention time or a space bound. If there are records that are older than the specified retentio time of if the space bouund is exceeded for a partition, Kafka is alllowed to delete old data to free storage space.
-
-By default, topics are configured with a retention time of 7 days, but it's also possible to sotre data indefinitely.
-
-### 2. Compacted topics
-
-For compacted topics, records do not expire based on time or space bounds.
-Instead, Kafka treats later messages as update to older message with the same key and guarantees never to delete the latest message per key. Users can delete messages entirely by writing a so called tombstone message with null value for a specific key.
-
-## Partitions
-
-### Partitions 定義
-
-Topics may have many partitions, so it can handle an arbitrary amount of data.
-
-### Partition offset
-
-Each partitioned message has a unique sequence id called as offset.
-
-### Replicas of partition
-
-Replicas are nothing but backups of a partition. Replicas are never read or write data. They are used to prevent data loss.
-
-## Brokers
-
-### Brokers 定義
-
-Brokers are simple system responsible for maintaining the pub-lished data. Each broker may have zero or more partitions per topic. Assume, if there are N partitions in a topic and N number of brokers, each broker will have one partition.
-
-- Assume if there are N partitions in a topic and more than N brokers (n + m), the first N broker will have one partition and the next M broker will not have any partition for that particular topic.
-- Assume if there are N partitions in a topic and less than N brokers (n-m), each broker will have one or more partition sharing among them. This scenario is not recommended due to unequal load distri-bution among the broker.
-
-### Stateless
-
-- 透過 Zookeeper 來維持 Cluster State，Kafka broker instance 每秒需要處理上千個 read/write，每個 broker 可以處理 TB 級別的訊息並不影響 performance。
-
-## Kafka Cluster
-
-- 資料流可被分為多個不同的 partition 以及 topics
-- Within a partition 裡面，訊息根據 offset (位置) 嚴格排序，並和 timestamp 一同存放。
-- Kafka’s having more than one broker are called as Kafka cluster. A Kafka cluster can be expanded without downtime. These clusters are used to manage the persistence and replication of message data.
-- 通常都會有多個 Broker 做 Load Balancing
+- 實作 Kafka 提供的 Producer API
 
 ## Consumers
 
-- 從 partition 讀取訊息
-- Consumers read data from brokers. Consumers subscribes to one or more topics and consume published messages by pulling data from the brokers.
-- Since Kafka brokers are stateless, which means that the consumer has to maintain how many messages have been consumed by using partition offset. If the consumer acknowledges a particular message offset, it implies that the consumer has consumed all prior messages. The consumer issues an asynchronous pull request to the broker to have a buffer of bytes ready to consume. The consumers can rewind or skip to any point in a partition simply by supplying an offset value. Consumer offset value is notified by ZooKeeper.
+- Consumers 會訂閱一或多個 Topics
 
-## Leader
+- Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息
 
-- Leader is the node responsible for all reads and writes for the given partition. Every partition has one server acting as a leader.
-- Broker Leader election 可透過 Zookeeper 完成
+- 實作 Kafka 提供的 Consumer API
 
-## Follower
+## Consumer Group
 
-- Node which follows leader instructions are called as follower. If the leader fails, one of the follower will automatically become the new leader. A follower acts as normal consumer, pulls messages and up-dates its own data store.
+- 每個 Consumer 屬於一個特定的 Consumer Group
+
+- 一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息
+
+## Brokers
+
+- 仲介處理 Consumer 以及 Producers 的訊息
+
+- 訊息會被分到不同的抽象類別，這種抽象類別稱為 Topic
+
+- 一個 Topic 又被分為多個 Partition，Partition 物理意義上為磁碟的一塊連續區域，但 Topics 的每個 Partition 通常會在不同的節點上
+
+- 一個 Partition 可能又會有多個副本，副本也分散在不同的節點
+
+- 通常要求 Topics 的 Partition 的數量超過 Broker 的數量，否則達不到 Load distribution 的效果
+
+- Broker 是 Stateless 的
+
+### Broker controller
+
+其中一個 Broker 會被推選為 Controller，Controller 會負責偵測 Broker 級別的 Failure，並幫忙所有受影響的 Partition 更換 Partition leader
+
+## Topics
+
+- ### Topics 定義
+
+  - Topics 為訊息的抽象分類
+  - Producers 將發送資料流到一至多個 Topics，Consumers 則會訂閱一或多個 Topics
+  - Topic 根據設定分為多個 Partitions(最少一個)
+  - Topic 的 Partitions 通常分佈在不同的 Broker 節點
+  - Topics 分為 Regular Topics 及 Compacted topics
+
+- ### Regular Topics
+
+  - 可以被設定一定的留存時間，若超國時間則 Kafka 可以刪除就資料已釋出硬碟空間，Default 留存時間為 7 天
+
+- ### Compacted topics
+
+  - 沒有有效期限
+  - 新訊息若 Key 重複，則會覆蓋舊的鍵值對
+  - Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message
+
+## Partitions
+
+- ### Partitions 定義
+
+  - 一個 Topic 可以被分為多個 partitions(最少一個)，通常會設定多個 Partition 以處理任意大小的資料
+  - Partition 是一個 Queue 的實作，訊息在裡面依據 index/offset 排序，順序不可變動
+  - Partition 物理上是磁碟的連續區域，新訊息會被 append 到 partition 尾端，由於是順序寫磁碟，因此效率非常高
+
+- ### Partition offset
+
+  - Message 在 partition 裡面會有唯一的 index，稱作 offset
+  - Offset 為 Long 型態
+
+- ### Replica
+
+  - 各個 Topics 可設定 Replication Factor 通常為 2 ~ 3，下面的所有 Partition 都會產生這麼多的副本
+  - 只要 Cluster，所有的 Partition 皆有一個副本在線，則服務不會中斷
+
+- ### Partition Leader
+
+  - Partition Leader 由 Broker Controller 決定，每個 Partition 會有一個 Leader
+  - Partition Leader 負責所有 partition/replica 的讀/寫
+
+- ### Partition Follower
+
+  - 當 Leader 更新時，Follower 也需要跟著更新
+  - Follower 平時是 Consumer，當 Leader 收到新的信息時 pull 並且寫入到自己的資料上
+  - 當 Leader 掛掉，Broker Controller 會選出其中一個 Follower 當作該 Partition 的 Leader
+
+- ### ISR
+
+  - 當 Leader 收到訊息時，所有 Follower 都需要寫入，已經和 Leader 同步的 Replica 稱為 ISRs(in-sync replica)
+  - Record 只有在全部的 ISR 都同步時，才被視為成功 Commited
+  - Consumer 只能從已經 Commit 成功的 Record 讀取紀錄
+
+## Kafka Cluster
+
+- 超過一個以上的 Broker 稱作 Kafka Cluster
+- Kafka cluster 可以 zero downtime 擴展
+- Clusters are used to manage the persistence and replication of message data.
+- 通常都會做 Cluster 以實現 Load Balancing
 
 ## ZooKeeper
 
-- 負責管理及協調 Kafka broker
-- 通知 Producer 及 consumer
-  - 新的 broker 出現
-  - broker failure
-- 當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 broker
-
-## Cluster
-
-- Kafka 叢集可運行在一個或多個 Server
-- Partitions of all topics are distributed across the cluster nodes.
-- This architecture allows Kafka to deliver massice streams of message in a fault-tolerant fashion and has allowed it to replace some of the conventional messaging systems like Java Message Service, Advanced Message Queuing Protocol.
-- Offers trancactional writes, which provide stream processing using the streams API.
+- 管理叢集配置
+- 負責管理及協調 Broker
+- 通知 Producer 及 Consumer
+  - 新的 Broker 出現
+  - Broker failure
+- 當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker
+- [https://zookeeper.apache.org/](https://zookeeper.apache.org/)
 
 ## Reference
 
-- https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm
+- <https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm>
+- <https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)>
+- <https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab>
+- <https://stackoverflow.com/questions/50227472/how-kafka-guarantees-zero-downtime-and-zero-data-loss>
+- <http://cloudurable.com/blog/kafka-architecture-topics/index.html>

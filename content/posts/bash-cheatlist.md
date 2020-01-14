@@ -12,20 +12,22 @@ gitment: true
 
 ```bash
 #!/bin/bash
+
 # manual
 man anything
 info anything
-# call for help
 anything --help
 ```
 
-## General
+## General commands
+
+### Getting information
 
 ```bash
 #!/bin/bash
 
 # Show shell name.
-echo \$SHELL
+echo $SHELL
 echo $0
 # Show shell version.
 $SHELL --version
@@ -38,6 +40,18 @@ history
 
 # Print working directory
 pwd
+
+# Show system info
+uname -a
+
+# uptime
+uptime
+```
+
+### File managing
+
+```bash
+#!/bin/bash
 
 # List the files in working directory.
 ls
@@ -63,6 +77,7 @@ chmod 777 file_name
 
 ```bash
 #!/bin/bash
+
 # Show network interface config/info.
 ifconfig
 
@@ -77,6 +92,7 @@ netstat -an
 netstat -antu | grep 'ESTABLISHED'
 # Show kernel routing information
 netstat -r
+netstat -tulnp
 
 # Check the bridge Interface
 brtcl
@@ -95,20 +111,24 @@ scp
 
 ## CPU, memery, task & process
 
+### Check and monitor process
+
 ```bash
 #!/bin/bash
 
+# List all process run by user shell
+ps
+# List all process, even by status
+ps aux
+# pstree
+pstree
+
+# Monitor the process status
 top
 # cpu
 top -o cpu
 # memery
 top -o rsize
-
-# List all process.
-ps
-
-# Kill a process
-kill $pid
 
 # List cronjob
 crontab
@@ -116,6 +136,33 @@ crontab
 crontab -l
 ```
 
+### Sending signal or kill process
+
+```bash
+#!/bin/bash
+
+# Send a signal to a process
+kill -signal PID
+# Send 15 SIGTERM to a process
+kill $pid
+
+# killall allow you to kill app with name instead of pid
+killall -9 $processname
+# Ask before terminate
+killall -i -9 $processname
+```
+
+### Memory usage
+
+```bash
+#!/bin/bash
+
+# Show recent memory usage
+free -m
+
+```
+
 ## 參考資料
 
-- https://geekflare.com/netstat/
+- [geekflare](https://geekflare.com/netstat/)
+- [鳥哥第十六章、程序管理與 SELinux 初探](http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l)

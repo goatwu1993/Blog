@@ -2,11 +2,11 @@
 title = "Apache Kafka P3"
 date = 2020-01-10T17:14:42+08:00
 draft = true
-tags = []
+tags = ["Hadoop", "Kafka","BigData"]
 categories = []
 +++
 
-## Four Major APIs in Kafka.
+## Four Major APIs in Kafka
 
 ### Producer API
 
@@ -44,7 +44,7 @@ For Streams API, full compatiblity starts with version 0.10.1.0
 
 Latest version 2.4
 
-Github: https://github.com/apache/kafka
+[Github](https://github.com/apache/kafka)
 
 ## Kafka performance
 

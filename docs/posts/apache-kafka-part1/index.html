@@ -73,7 +73,10 @@
             <em>
                 
                     
-                    <a href="https://goatwu1993.github.io/blog/tags/scala">#scala</a>
+                    <a href="https://goatwu1993.github.io/blog/tags/hadoop">#Hadoop</a>
+                
+                    , 
+                    <a href="https://goatwu1993.github.io/blog/tags/kafka">#Kafka</a>
                 
                     , 
                     <a href="https://goatwu1993.github.io/blog/tags/bigdata">#BigData</a>
@@ -92,75 +95,51 @@
 
 <h2 id="what-is-kafka">What is Kafka</h2>
 
-<h3 id="kafka-是什麼">Kafka 是什麼</h3>
-
-<ul>
-<li>Kafka 是一個流 /訊息處理平台(stream processing platform)，作為一個單一平台，可以處理 Real-Time 的資料流</li>
-</ul>
+<p>Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。</p>
 
 <h3 id="kafka-特點">Kafka 特點</h3>
 
 <ul>
-<li>架構簡化
+<li><p>提供 pub-sub 及 point-to-point 兩種 queue mode</p></li>
 
-<ul>
-<li>Producers 只需要傳送訊息給 topic，consumer 可以選擇任何 message system 來接收訊息。</li>
-<li>Kafka 提供 pub-sub 及 queue based messaging system</li>
-<li>Kafka 基於 commit log，使用者可以 subscribec 或 publish data 到多個系統或是 App</li>
-</ul></li>
+<li><p>優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。</p></li>
 
-<li><p>網路傳輸優化</p>
+<li><p>對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。</p></li>
 
-<ul>
-<li>效率優化過的 binary TCP-based protocol</li>
-<li>記憶體緩衝機制，訊息會先寫入一個記憶體緩衝中，然後直到多條訊息組成了一個 Batch，才會一次網路通訊把 Batch 傳送過去，可以減少網路封包的 Overhead。</li>
-</ul></li>
-
-<li><p>I/O 優化</p>
-
-<ul>
-<li>Kafka 可提供 2 million writes/sec</li>
-<li>Kafka 將 data 保存在硬碟上，意味著寫入會經過 RAM，所以 data 傳送到 network socket 效率很高</li>
-</ul></li>
-
-<li><p>Zookeeper</p>
-
-<ul>
-<li>Kafka 需要 ZooKeeper 提供同步服務</li>
-</ul></li>
-
-<li><p>API</p>
-
-<ul>
-<li>Kafka 提供 Kafka Connect 連接外部系統(用於資料輸入/輸出)</li>
-<li>Kafka 提供 Kafka Streams: 一個 java stream processing 庫，Java application that consume data from Kafka and write results back to Kafka.</li>
-<li>Also works with external stream processing systems such as Apache Spark.</li>
-</ul></li>
+<li><p>因為可以直接處理檔案資料，直接用 OS 的 page cache，不需要額外 Applicaion Cache 來競爭珍貴的記憶體空間。</p></li>
 </ul>
 
-<h3 id="kafka-優點">Kafka 優點</h3>
+<h2 id="kafka-優點">Kafka 優點</h2>
 
-<ul>
-<li><p>分散式的 publish-subscribe 訊息系統加上可靠的 queue 讓 Kafka 能夠處理巨量的資料流</p></li>
+<h3 id="reliability-可靠">Reliability 可靠</h3>
 
-<li><p>Reliability 可靠性<br />
-Kafka is distributed, partitioned, replicated and fault tolerance.</p></li>
+<p>Kafka is distributed, partitioned, replicated and fault tolerance.</p>
 
-<li><p>Scalability 可擴展性<br />
-Kafka 可以 Zero downtime 輕鬆擴展</p></li>
+<h3 id="scalability-可擴展性">Scalability 可擴展性</h3>
 
-<li><p>Durability 耐用性<br />
-Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。</p></li>
+<p>Kafka 為分散式架構，可以 Zero downtime 輕鬆擴展</p>
 
-<li><p>Performance<br />
-Kafka has high throughput for both publishing and subscribing messages. It maintains stable performance even many TB of messages are stored.</p></li>
+<h3 id="durability-耐用性">Durability 耐用性</h3>
 
-<li><p>zero downtime</p></li>
+<p>Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。</p>
 
-<li><p>zero data loss</p></li>
-</ul>
+<h3 id="performance">Performance</h3>
 
-<h3 id="kafka-example-applications">Kafka Example applications</h3>
+<p>Publish/subscribe 皆可以提供很高的 throughput</p>
+
+<h3 id="decoupling">Decoupling</h3>
+
+<p>Producer/Consumer 只需要對 Topics 傳送訊息，可以降低系統間的耦合度。</p>
+
+<h3 id="fault-tolerance">Fault Tolerance</h3>
+
+<p>Partition 的 replicating 容許些許 Broker 離線時服務仍正常運作。</p>
+
+<h3 id="zero-downtime">Zero downtime</h3>
+
+<h3 id="zero-data-loss">Zero data loss</h3>
+
+<h2 id="kafka-example-applications">Kafka Example applications</h2>
 
 <ul>
 <li>managing passenger and driver matching at Uber</li>

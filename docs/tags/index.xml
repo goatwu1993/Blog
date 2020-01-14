@@ -21,11 +21,20 @@
        </item>
        
        <item>
-         <title>scala</title>
-         <link>https://goatwu1993.github.io/blog/tags/scala/</link>
+         <title>Hadoop</title>
+         <link>https://goatwu1993.github.io/blog/tags/hadoop/</link>
          <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
          
-         <guid>https://goatwu1993.github.io/blog/tags/scala/</guid>
+         <guid>https://goatwu1993.github.io/blog/tags/hadoop/</guid>
+         <description></description>
+       </item>
+       
+       <item>
+         <title>Kafka</title>
+         <link>https://goatwu1993.github.io/blog/tags/kafka/</link>
+         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+         
+         <guid>https://goatwu1993.github.io/blog/tags/kafka/</guid>
          <description></description>
        </item>
        
