@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -91,164 +91,161 @@
 
     
 
-    
-
-<h2 id="kafka-architecture">Kafka Architecture</h2>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png" alt="This is an image" />
+    <h2 id="kafka-architecture">Kafka Architecture</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png" alt="This is an image">
 Picture from wiki</p>
-
 <h2 id="producers">Producers</h2>
-
 <ul>
-<li><p>Producers 將發送資料流到一至多個 Topics</p></li>
-
-<li><p>Producer 使用 push(推)模式將訊息釋出到 Broker</p></li>
-
-<li><p>實作 Kafka 提供的 Producer API</p></li>
+<li>
+<p>Producers 將發送資料流到一至多個 Topics</p>
+</li>
+<li>
+<p>Producer 使用 push(推)模式將訊息釋出到 Broker</p>
+</li>
+<li>
+<p>實作 Kafka 提供的 Producer API</p>
+</li>
 </ul>
-
 <h2 id="consumers">Consumers</h2>
-
 <ul>
-<li><p>Consumers 會訂閱一或多個 Topics</p></li>
-
-<li><p>Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息</p></li>
-
-<li><p>實作 Kafka 提供的 Consumer API</p></li>
+<li>
+<p>Consumers 會訂閱一或多個 Topics</p>
+</li>
+<li>
+<p>Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息</p>
+</li>
+<li>
+<p>實作 Kafka 提供的 Consumer API</p>
+</li>
 </ul>
-
 <h2 id="consumer-group">Consumer Group</h2>
-
 <ul>
-<li><p>每個 Consumer 屬於一個特定的 Consumer Group</p></li>
-
-<li><p>一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息</p></li>
+<li>
+<p>每個 Consumer 屬於一個特定的 Consumer Group</p>
+</li>
+<li>
+<p>一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息</p>
+</li>
 </ul>
-
 <h2 id="brokers">Brokers</h2>
-
 <ul>
-<li><p>仲介處理 Consumer 以及 Producers 的訊息</p></li>
-
-<li><p>訊息會被分到不同的抽象類別，這種抽象類別稱為 Topic</p></li>
-
-<li><p>一個 Topic 又被分為多個 Partition，Partition 物理意義上為磁碟的一塊連續區域，但 Topics 的每個 Partition 通常會在不同的節點上</p></li>
-
-<li><p>一個 Partition 可能又會有多個副本，副本也分散在不同的節點</p></li>
-
-<li><p>通常要求 Topics 的 Partition 的數量超過 Broker 的數量，否則達不到 Load distribution 的效果</p></li>
-
-<li><p>Broker 是 Stateless 的</p></li>
+<li>
+<p>仲介處理 Consumer 以及 Producers 的訊息</p>
+</li>
+<li>
+<p>訊息會被分到不同的抽象類別，這種抽象類別稱為 Topic</p>
+</li>
+<li>
+<p>一個 Topic 又被分為多個 Partition，Partition 物理意義上為磁碟的一塊連續區域，但 Topics 的每個 Partition 通常會在不同的節點上</p>
+</li>
+<li>
+<p>一個 Partition 可能又會有多個副本，副本也分散在不同的節點</p>
+</li>
+<li>
+<p>通常要求 Topics 的 Partition 的數量超過 Broker 的數量，否則達不到 Load distribution 的效果</p>
+</li>
+<li>
+<p>Broker 是 Stateless 的</p>
+</li>
 </ul>
-
 <h3 id="broker-controller">Broker controller</h3>
-
 <p>其中一個 Broker 會被推選為 Controller，Controller 會負責偵測 Broker 級別的 Failure，並幫忙所有受影響的 Partition 更換 Partition leader</p>
-
 <h2 id="topics">Topics</h2>
-
 <ul>
-<li><h3 id="topics-定義">Topics 定義</h3>
-
+<li>
+<h3 id="topics-定義">Topics 定義</h3>
 <ul>
 <li>Topics 為訊息的抽象分類</li>
 <li>Producers 將發送資料流到一至多個 Topics，Consumers 則會訂閱一或多個 Topics</li>
 <li>Topic 根據設定分為多個 Partitions(最少一個)</li>
 <li>Topic 的 Partitions 通常分佈在不同的 Broker 節點</li>
 <li>Topics 分為 Regular Topics 及 Compacted topics</li>
-</ul></li>
-
-<li><h3 id="regular-topics">Regular Topics</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="regular-topics">Regular Topics</h3>
 <ul>
 <li>可以被設定一定的留存時間，若超國時間則 Kafka 可以刪除就資料已釋出硬碟空間，Default 留存時間為 7 天</li>
-</ul></li>
-
-<li><h3 id="compacted-topics">Compacted topics</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="compacted-topics">Compacted topics</h3>
 <ul>
 <li>沒有有效期限</li>
 <li>新訊息若 Key 重複，則會覆蓋舊的鍵值對</li>
 <li>Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="partitions">Partitions</h2>
-
 <ul>
-<li><h3 id="partitions-定義">Partitions 定義</h3>
-
+<li>
+<h3 id="partitions-定義">Partitions 定義</h3>
 <ul>
 <li>一個 Topic 可以被分為多個 partitions(最少一個)，通常會設定多個 Partition 以處理任意大小的資料</li>
 <li>Partition 是一個 Queue 的實作，訊息在裡面依據 index/offset 排序，順序不可變動</li>
 <li>Partition 物理上是磁碟的連續區域，新訊息會被 append 到 partition 尾端，由於是順序寫磁碟，因此效率非常高</li>
-</ul></li>
-
-<li><h3 id="partition-offset">Partition offset</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="partition-offset">Partition offset</h3>
 <ul>
 <li>Message 在 partition 裡面會有唯一的 index，稱作 offset</li>
 <li>Offset 為 Long 型態</li>
-</ul></li>
-
-<li><h3 id="replica">Replica</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="replica">Replica</h3>
 <ul>
 <li>各個 Topics 可設定 Replication Factor 通常為 2 ~ 3，下面的所有 Partition 都會產生這麼多的副本</li>
 <li>只要 Cluster，所有的 Partition 皆有一個副本在線，則服務不會中斷</li>
-</ul></li>
-
-<li><h3 id="partition-leader">Partition Leader</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="partition-leader">Partition Leader</h3>
 <ul>
 <li>Partition Leader 由 Broker Controller 決定，每個 Partition 會有一個 Leader</li>
 <li>Partition Leader 負責所有 partition/replica 的讀/寫</li>
-</ul></li>
-
-<li><h3 id="partition-follower">Partition Follower</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="partition-follower">Partition Follower</h3>
 <ul>
 <li>當 Leader 更新時，Follower 也需要跟著更新</li>
 <li>Follower 平時是 Consumer，當 Leader 收到新的信息時 pull 並且寫入到自己的資料上</li>
 <li>當 Leader 掛掉，Broker Controller 會選出其中一個 Follower 當作該 Partition 的 Leader</li>
-</ul></li>
-
-<li><h3 id="isr">ISR</h3>
-
+</ul>
+</li>
+<li>
+<h3 id="isr">ISR</h3>
 <ul>
 <li>當 Leader 收到訊息時，所有 Follower 都需要寫入，已經和 Leader 同步的 Replica 稱為 ISRs(in-sync replica)</li>
 <li>Record 只有在全部的 ISR 都同步時，才被視為成功 Commited</li>
 <li>Consumer 只能從已經 Commit 成功的 Record 讀取紀錄</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="kafka-cluster">Kafka Cluster</h2>
-
 <ul>
 <li>超過一個以上的 Broker 稱作 Kafka Cluster</li>
 <li>Kafka cluster 可以 zero downtime 擴展</li>
 <li>Clusters are used to manage the persistence and replication of message data.</li>
 <li>通常都會做 Cluster 以實現 Load Balancing</li>
 </ul>
-
 <h2 id="zookeeper">ZooKeeper</h2>
-
 <ul>
 <li>管理叢集配置</li>
 <li>負責管理及協調 Broker</li>
 <li>通知 Producer 及 Consumer
-
 <ul>
 <li>新的 Broker 出現</li>
 <li>Broker failure</li>
-</ul></li>
+</ul>
+</li>
 <li>當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker</li>
 <li><a href="https://zookeeper.apache.org/">https://zookeeper.apache.org/</a></li>
 </ul>
-
 <h2 id="reference">Reference</h2>
-
 <ul>
 <li><a href="https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm">https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm</a></li>
 <li><a href="https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)">https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)</a></li>
@@ -283,7 +280,7 @@ Picture from wiki</p>
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - goatwu1993 |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

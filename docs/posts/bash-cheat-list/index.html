@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -98,17 +98,14 @@
 
     
 
-    
-
-<h2 id="greatest-command-of-all-time">Greatest command of all time</h2>
+    <h2 id="greatest-command-of-all-time">Greatest command of all time</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># manual</span>
 man anything
 info anything
-anything --help</code></pre></div>
-<h2 id="general-commands">General commands</h2>
-
+anything --help
+</code></pre></div><h2 id="general-commands">General commands</h2>
 <h3 id="getting-information">Getting information</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
@@ -131,8 +128,8 @@ pwd
 uname -a
 
 <span style="color:#75715e"># uptime</span>
-uptime</code></pre></div>
-<h3 id="file-managing">File managing</h3>
+uptime
+</code></pre></div><h3 id="file-managing">File managing</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># List the files in working directory.</span>
@@ -150,9 +147,8 @@ chown -R nobody.nogroup .
 <span style="color:#75715e"># Change the read/write permission of a file</span>
 chmod
 <span style="color:#75715e"># Make file r/w/e able for all user &amp; group.</span>
-chmod <span style="color:#ae81ff">777</span> file_name</code></pre></div>
-<hr />
-
+chmod <span style="color:#ae81ff">777</span> file_name
+</code></pre></div><hr>
 <h2 id="network">Network</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
@@ -182,11 +178,9 @@ ssh
 ssh-keygen
 
 <span style="color:#75715e"># scp</span>
-scp</code></pre></div>
-<hr />
-
-<h2 id="cpu-memery-task-process">CPU, memery, task &amp; process</h2>
-
+scp
+</code></pre></div><hr>
+<h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
 <h3 id="check-and-monitor-process">Check and monitor process</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
@@ -207,8 +201,8 @@ top -o rsize
 <span style="color:#75715e"># List cronjob</span>
 crontab
 <span style="color:#75715e"># List all cronjob.</span>
-crontab -l</code></pre></div>
-<h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
+crontab -l
+</code></pre></div><h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># Send a signal to a process</span>
@@ -219,14 +213,14 @@ kill $pid
 <span style="color:#75715e"># killall allow you to kill app with name instead of pid</span>
 killall -9 $processname
 <span style="color:#75715e"># Ask before terminate</span>
-killall -i -9 $processname</code></pre></div>
-<h3 id="memory-usage">Memory usage</h3>
+killall -i -9 $processname
+</code></pre></div><h3 id="memory-usage">Memory usage</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># Show recent memory usage</span>
-free -m</code></pre></div>
-<h2 id="參考資料">參考資料</h2>
+free -m
 
+</code></pre></div><h2 id="參考資料">參考資料</h2>
 <ul>
 <li><a href="https://geekflare.com/netstat/">geekflare</a></li>
 <li><a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l">鳥哥第十六章、程序管理與 SELinux 初探</a></li>
@@ -258,7 +252,7 @@ free -m</code></pre></div>
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - goatwu1993 |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

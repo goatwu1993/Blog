@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -91,56 +91,39 @@
 
     
 
-    
-
-<h2 id="what-is-kafka">What is Kafka</h2>
-
+    <h2 id="what-is-kafka">What is Kafka</h2>
 <p>Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。</p>
-
 <h3 id="kafka-特點">Kafka 特點</h3>
-
 <ul>
-<li><p>提供 pub-sub 及 point-to-point 兩種 queue mode</p></li>
-
-<li><p>優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。</p></li>
-
-<li><p>對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。</p></li>
-
-<li><p>因為可以直接處理檔案資料，直接用 OS 的 page cache，不需要額外 Applicaion Cache 來競爭珍貴的記憶體空間。</p></li>
+<li>
+<p>提供 pub-sub 及 point-to-point 兩種 queue mode</p>
+</li>
+<li>
+<p>優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。</p>
+</li>
+<li>
+<p>對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。</p>
+</li>
+<li>
+<p>因為可以直接處理檔案資料，直接用 OS 的 page cache，不需要額外 Applicaion Cache 來競爭珍貴的記憶體空間。</p>
+</li>
 </ul>
-
 <h2 id="kafka-優點">Kafka 優點</h2>
-
 <h3 id="reliability-可靠">Reliability 可靠</h3>
-
 <p>Kafka is distributed, partitioned, replicated and fault tolerance.</p>
-
 <h3 id="scalability-可擴展性">Scalability 可擴展性</h3>
-
 <p>Kafka 為分散式架構，可以 Zero downtime 輕鬆擴展</p>
-
 <h3 id="durability-耐用性">Durability 耐用性</h3>
-
 <p>Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。</p>
-
 <h3 id="performance">Performance</h3>
-
 <p>Publish/subscribe 皆可以提供很高的 throughput</p>
-
 <h3 id="decoupling">Decoupling</h3>
-
 <p>Producer/Consumer 只需要對 Topics 傳送訊息，可以降低系統間的耦合度。</p>
-
 <h3 id="fault-tolerance">Fault Tolerance</h3>
-
 <p>Partition 的 replicating 容許些許 Broker 離線時服務仍正常運作。</p>
-
 <h3 id="zero-downtime">Zero downtime</h3>
-
 <h3 id="zero-data-loss">Zero data loss</h3>
-
 <h2 id="kafka-example-applications">Kafka Example applications</h2>
-
 <ul>
 <li>managing passenger and driver matching at Uber</li>
 <li>providing real-time analytics and predictive maintenance for British Gas’ smart home,</li>
@@ -169,7 +152,7 @@
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - goatwu1993 |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

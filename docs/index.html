@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Chao Yang Wu" /><link rel="alternate" type="application/rss+xml+xml" href="https://goatwu1993.github.io/blog/index.xml" title="goatwu1993" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><link rel="alternate" type="application/rss+xml+xml" href="https://goatwu1993.github.io/blog/index.xml" title="goatwu1993" /><meta name="generator" content="Hugo 0.62.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -90,8 +90,8 @@
 </aside>
 
             <p>What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
-Kafka 特點  提供 pub-sub 及 point-to-point 兩種 queue mode
- 優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。</p>
+Kafka 特點   提供 pub-sub 及 point-to-point 兩種 queue mode
+  優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/apache-kafka-part1/">Read more…</a>
             
@@ -128,11 +128,10 @@ Kafka 特點  提供 pub-sub 及 point-to-point 兩種 queue mode
 </aside>
 
             <p>Kafka Architecture Picture from wiki
-Producers  Producers 將發送資料流到一至多個 Topics
- Producer 使用 push(推)模式將訊息釋出到 Broker
- 實作 Kafka 提供的 Producer API
-  Consumers  Consumers 會訂閱一或多個 Topics
- Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息</p>
+Producers   Producers 將發送資料流到一至多個 Topics
+  Producer 使用 push(推)模式將訊息釋出到 Broker
+  實作 Kafka 提供的 Producer API
+  Consumers   Consumers 會訂閱一或多個 Topics</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/apache-kafka-2/">Read more…</a>
             
@@ -229,7 +228,7 @@ Hash table 的好  O(1) insertion O(1) get O(1) delete  O(1) 94 狂，然而以�
     </ul>
 </aside>
 
-            <p>1. Homebrew  The missing package manager for macOS (or Linux) Website  2. iTerm2 3. stow  Symlink farm manager. Perfect for dotfiles Website  3. zsh  install</p>
+            <p>1. Homebrew  macOS 包管理器 官方網站 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2 3. GNU Stow  GNU Stow 是個 Symlink farm manager 可以幫忙管理你的 dotfiles，將各個 App 的 dotfiles 整包上傳 Github Stow 官方網頁</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/setting-macos-env/">Read more…</a>
             
@@ -441,7 +440,7 @@ Hugo themes Hugo 官方線上 themes
     </ul>
 </aside>
 
-            <p>OSI 7 Layres  Application Layer (Layer 7)  HTTP, HTTPS L7 firewall  Presentation Layer (Layer 6) Session Layer (Layer 5)  Sessions  Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS  Network Layer (Layer 3)  IP Address Router, Layer 3 Switch  Data Link Layer (Layer 2)  Ethernet, 802.</p>
+            <p>OSI 7 Layres  Application Layer (Layer 7)  HTTP, HTTPS L7 firewall   Presentation Layer (Layer 6) Session Layer (Layer 5)  Sessions   Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS   Network Layer (Layer 3)  IP Address Router, Layer 3 Switch   Data Link Layer (Layer 2)  Ethernet, 802.</p>
             
             <a href="https://goatwu1993.github.io/blog/posts/networking-cheatsheet/">Read more…</a>
             
@@ -482,11 +481,11 @@ Hugo themes Hugo 官方線上 themes
 </aside>
 
             <p>Blog 到底怎麼寫，架在哪 常見的選擇
- 自己架站
+  自己架站
 掌握度最高，但除非是公司，基本上對個人來說算 overkill，花時間花錢。
- 靜態網頁
+  靜態網頁
 可以部署在 github 或 google docs 等地方，可以透過靜態網頁生成器產生。
- 平台
+  平台
 Wordpress.com, Medium 等等，wordpress 有點太大，而且有些漂亮的主題要花錢，會很不開心。
   靜態網頁生成器(static site generator)  網頁是透過工具，直接生成/render 好成 html 放在雲端。而不是靠後端去動態即時生成/render。</p>
             
@@ -501,7 +500,7 @@ Wordpress.com, Medium 等等，wordpress 有點太大，而且有些漂亮的主
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - goatwu1993 |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>

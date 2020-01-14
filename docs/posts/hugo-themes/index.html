@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The HTML5 Herald" />
-  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.57.2" />
+  <meta name="author" content="Chao Yang Wu" /><meta name="generator" content="Hugo 0.62.2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
@@ -98,32 +98,24 @@
 
     
 
-    
-
-<p>本篇記錄如何使用 hugo 線上的 themes</p>
-
+    <p>本篇記錄如何使用 hugo 線上的 themes</p>
 <h2 id="hugo-themes">Hugo themes</h2>
-
 <p><a href="https://themes.gohugo.io/">Hugo 官方線上 themes</a></p>
-
 <h2 id="下載-themes">下載 themes</h2>
-
 <p>到他們的 github 上面，有兩種方式</p>
-
 <h3 id="方案-a-submodule">方案 a. submodule</h3>
-
 <p>完全不動到 themes 裡面的話可以用 submodule。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># submodule</span>
 cd ./themes
-git submodule add https://github.com/avianto/hugo-kiera.git kiera</code></pre></div>
-<h3 id="方案-b-fork">方案 b. fork</h3>
-
+git submodule add https://github.com/avianto/hugo-kiera.git kiera
+</code></pre></div><h3 id="方案-b-fork">方案 b. fork</h3>
 <p>適合你覺得下載 themes 之後會想要更改的情形。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># fork</span>
 cd ./themes
-git clone https://github.com/$你的Id/hugo-kiera.git kiera</code></pre></div>
-<h2 id="修改-config-toml">修改 config.toml</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;kiera&#34;</span></code></pre></div>
+git clone https://github.com/$你的Id/hugo-kiera.git kiera
+</code></pre></div><h2 id="修改-configtoml">修改 config.toml</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;kiera&#34;</span>
+</code></pre></div>
 
 </article>
 
@@ -150,7 +142,7 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera</code></pre></div>
 
 </main>
     <footer>
-        <h6>Copyright &copy; 2019 - goatwu1993 |
+        <h6>Copyright © 2019 - goatwu1993 |
             Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="https://goatwu1993.github.io/blog/index.xml">Subscribe</a></h6>
     </footer>
