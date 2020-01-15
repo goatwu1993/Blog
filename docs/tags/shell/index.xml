@@ -1,23 +1,23 @@
-
-   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-     <channel>
-       <title>shell on goatwu1993</title>
-       <link>https://goatwu1993.github.io/blog/tags/shell/</link>
-       <description>Recent content in shell on goatwu1993</description>
-       <generator>Hugo -- gohugo.io</generator>
-       <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
-       <lastBuildDate>Sat, 28 Dec 2019 19:17:18 +0800</lastBuildDate>
-       
-           <atom:link href="https://goatwu1993.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
-       
-       
-       <item>
-         <title>macOS developer environments</title>
-         <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
-         <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/setting-macos-env/</guid>
-         <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell | Academic</title>
+    <link>https://goatwu1993.github.io/blog/tags/shell/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <description>shell</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 28 Dec 2019 19:17:18 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>shell</title>
+      <link>https://goatwu1993.github.io/blog/tags/shell/</link>
+    </image>
+    
+    <item>
+      <title>macOS developer environments</title>
+      <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
+      <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/setting-macos-env/</guid>
+      <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS 包管理器&lt;/li&gt;
 &lt;li&gt;官方網站
@@ -31,165 +31,185 @@
 &lt;li&gt;GNU Stow 是個 Symlink farm manager&lt;/li&gt;
 &lt;li&gt;可以幫忙管理你的 dotfiles，將各個 App 的 dotfiles 整包上傳 Github&lt;/li&gt;
 &lt;li&gt;Stow 官方網頁&lt;br&gt;
-&lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU Stow&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://www.gnu.org/software/stow/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GNU Stow&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Z shell 是一個支援許多互動方式的 Shell，支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
 &lt;li&gt;支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
 &lt;li&gt;zshrc 懶人包&lt;br&gt;
-&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;zsh-quickstart-kit&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zsh-quickstart-kit&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;VSCODE 插件推薦
-&lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;viatsko/awesome-vscode&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vimrc 懶人包&lt;br&gt;
-&lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;amix/vimrc&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/amix/vimrc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;amix/vimrc&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;vim 插件管理器 Vundle&lt;br&gt;
-&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundlevim&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vundlevim&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>bash cheatsheet</title>
-         <link>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</link>
-         <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
-         <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# manual&lt;/span&gt;
+    </item>
+    
+    <item>
+      <title>bash cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</link>
+      <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
+      <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# manual
 man anything
 info anything
 anything --help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;general-commands&#34;&gt;General commands&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;general-commands&#34;&gt;General commands&lt;/h2&gt;
 &lt;h3 id=&#34;getting-information&#34;&gt;Getting information&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show shell name.&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show shell name.
 echo $SHELL
 echo $0
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show shell version.&lt;/span&gt;
+# Show shell version.
 $SHELL --version
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Clear terminal.&lt;/span&gt;
+# Clear terminal.
 clear
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show command history.&lt;/span&gt;
+# Show command history.
 history
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Print working directory&lt;/span&gt;
+# Print working directory
 pwd
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show system info&lt;/span&gt;
+# Show system info
 uname -a
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# uptime&lt;/span&gt;
+# uptime
 uptime
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;file-managing&#34;&gt;File managing&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# List the files in working directory.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;file-managing&#34;&gt;File managing&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# List the files in working directory.
 ls
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all files, hidden file included, with detailed information.&lt;/span&gt;
+# List all files, hidden file included, with detailed information.
 ls -la
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Change ownership of a file.&lt;/span&gt;
+# Change ownership of a file.
 chown
-&lt;span style=&#34;color:#75715e&#34;&gt;# Change an ownership of a file.&lt;/span&gt;
+# Change an ownership of a file.
 chown nobody.nogroup your_file_name
-&lt;span style=&#34;color:#75715e&#34;&gt;# Recursively change all file under this directory.&lt;/span&gt;
+# Recursively change all file under this directory.
 chown -R nobody.nogroup .
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Change the read/write permission of a file&lt;/span&gt;
+# Change the read/write permission of a file
 chmod
-&lt;span style=&#34;color:#75715e&#34;&gt;# Make file r/w/e able for all user &amp;amp; group.&lt;/span&gt;
-chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; file_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+# Make file r/w/e able for all user &amp;amp; group.
+chmod 777 file_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;network&#34;&gt;Network&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show network interface config/info.&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show network interface config/info.
 ifconfig
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# get public ip&lt;/span&gt;
+# get public ip
 curl icanhazip.com
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show network status&lt;/span&gt;
+# Show network status
 netstat
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show all, include tcp/udp port.&lt;/span&gt;
+# Show all, include tcp/udp port.
 netstat -an
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show established connection&lt;/span&gt;
-netstat -antu | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ESTABLISHED&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show kernel routing information&lt;/span&gt;
+# Show established connection
+netstat -antu | grep &#39;ESTABLISHED&#39;
+# Show kernel routing information
 netstat -r
 netstat -tulnp
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Check the bridge Interface&lt;/span&gt;
+# Check the bridge Interface
 brtcl
 brctl addbr &amp;lt;name&amp;gt;
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# ssh&lt;/span&gt;
+# ssh
 ssh
-&lt;span style=&#34;color:#75715e&#34;&gt;# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!&lt;/span&gt;
+# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 ssh-keygen
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# scp&lt;/span&gt;
+# scp
 scp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;cpu-memery-task--process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
 &lt;h3 id=&#34;check-and-monitor-process&#34;&gt;Check and monitor process&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all process run by user shell&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# List all process run by user shell
 ps
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all process, even by status&lt;/span&gt;
+# List all process, even by status
 ps aux
-&lt;span style=&#34;color:#75715e&#34;&gt;# pstree&lt;/span&gt;
+# pstree
 pstree
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Monitor the process status&lt;/span&gt;
+# Monitor the process status
 top
-&lt;span style=&#34;color:#75715e&#34;&gt;# cpu&lt;/span&gt;
+# cpu
 top -o cpu
-&lt;span style=&#34;color:#75715e&#34;&gt;# memery&lt;/span&gt;
+# memery
 top -o rsize
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# List cronjob&lt;/span&gt;
+# List cronjob
 crontab
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all cronjob.&lt;/span&gt;
+# List all cronjob.
 crontab -l
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sending-signal-or-kill-process&#34;&gt;Sending signal or kill process&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Send a signal to a process&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;sending-signal-or-kill-process&#34;&gt;Sending signal or kill process&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Send a signal to a process
 kill -signal PID
-&lt;span style=&#34;color:#75715e&#34;&gt;# Send 15 SIGTERM to a process&lt;/span&gt;
+# Send 15 SIGTERM to a process
 kill $pid
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# killall allow you to kill app with name instead of pid&lt;/span&gt;
+# killall allow you to kill app with name instead of pid
 killall -9 $processname
-&lt;span style=&#34;color:#75715e&#34;&gt;# Ask before terminate&lt;/span&gt;
+# Ask before terminate
 killall -i -9 $processname
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;memory-usage&#34;&gt;Memory usage&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show recent memory usage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;memory-usage&#34;&gt;Memory usage&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show recent memory usage
 free -m
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;geekflare&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34;&gt;鳥哥第十六章、程序管理與 SELinux 初探&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://geekflare.com/netstat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;geekflare&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;鳥哥第十六章、程序管理與 SELinux 初探&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-     </channel>
-   </rss>
+    </item>
+    
+  </channel>
+</rss>

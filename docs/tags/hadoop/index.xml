@@ -1,23 +1,23 @@
-
-   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-     <channel>
-       <title>Hadoop on goatwu1993</title>
-       <link>https://goatwu1993.github.io/blog/tags/hadoop/</link>
-       <description>Recent content in Hadoop on goatwu1993</description>
-       <generator>Hugo -- gohugo.io</generator>
-       <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
-       <lastBuildDate>Thu, 09 Jan 2020 19:53:34 +0800</lastBuildDate>
-       
-           <atom:link href="https://goatwu1993.github.io/blog/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
-       
-       
-       <item>
-         <title>Apache Kafka - Part1</title>
-         <link>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</link>
-         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</guid>
-         <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hadoop | Academic</title>
+    <link>https://goatwu1993.github.io/blog/tags/hadoop/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hadoop</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2020 19:53:34 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Hadoop</title>
+      <link>https://goatwu1993.github.io/blog/tags/hadoop/</link>
+    </image>
+    
+    <item>
+      <title>Apache Kafka - Part1</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</guid>
+      <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
 &lt;p&gt;Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。&lt;/p&gt;
 &lt;h3 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h3&gt;
 &lt;ul&gt;
@@ -56,15 +56,14 @@
 &lt;li&gt;performing numerous real-time services across all of LinkedIn.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>Apache Kafka - Part2</title>
-         <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
-         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
-         <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>Apache Kafka - Part2</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;This is an image&#34;&gt;
 Picture from wiki&lt;/p&gt;
 &lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
@@ -216,7 +215,9 @@ Picture from wiki&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zookeeper.apache.org/&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://zookeeper.apache.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -227,7 +228,7 @@ Picture from wiki&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-     </channel>
-   </rss>
+    </item>
+    
+  </channel>
+</rss>

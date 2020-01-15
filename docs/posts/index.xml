@@ -1,23 +1,23 @@
-
-   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-     <channel>
-       <title>Posts on goatwu1993</title>
-       <link>https://goatwu1993.github.io/blog/posts/</link>
-       <description>Recent content in Posts on goatwu1993</description>
-       <generator>Hugo -- gohugo.io</generator>
-       <copyright>Copyright &amp;copy; 2019 - goatwu1993</copyright>
-       <lastBuildDate>Thu, 09 Jan 2020 19:53:34 +0800</lastBuildDate>
-       
-           <atom:link href="https://goatwu1993.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
-       
-       
-       <item>
-         <title>Apache Kafka - Part1</title>
-         <link>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</link>
-         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</guid>
-         <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Academic</title>
+    <link>https://goatwu1993.github.io/blog/posts/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2020 19:53:34 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Posts</title>
+      <link>https://goatwu1993.github.io/blog/posts/</link>
+    </image>
+    
+    <item>
+      <title>Apache Kafka - Part1</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-part1/</guid>
+      <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
 &lt;p&gt;Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。&lt;/p&gt;
 &lt;h3 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h3&gt;
 &lt;ul&gt;
@@ -56,15 +56,14 @@
 &lt;li&gt;performing numerous real-time services across all of LinkedIn.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>Apache Kafka - Part2</title>
-         <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
-         <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
-         <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>Apache Kafka - Part2</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;This is an image&#34;&gt;
 Picture from wiki&lt;/p&gt;
 &lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
@@ -216,7 +215,9 @@ Picture from wiki&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zookeeper.apache.org/&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://zookeeper.apache.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -227,18 +228,21 @@ Picture from wiki&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>Python 實作 Dictionary</title>
-         <link>https://goatwu1993.github.io/blog/posts/dict-python-implementation/</link>
-         <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/dict-python-implementation/</guid>
-         <description>&lt;h2 id=&#34;dictionary&#34;&gt;Dictionary&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>Python 實作 Dictionary</title>
+      <link>https://goatwu1993.github.io/blog/posts/dict-python-implementation/</link>
+      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/dict-python-implementation/</guid>
+      <description>&lt;h2 id=&#34;dictionary&#34;&gt;Dictionary&lt;/h2&gt;
 &lt;p&gt;Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary&lt;/p&gt;
 &lt;h2 id=&#34;先開大招&#34;&gt;先開大招&lt;/h2&gt;
-&lt;p&gt;直接偷看答案，看看 &lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34;&gt;cpython&lt;/a&gt;怎麼寫準沒錯，用 C 寫看起來就很難，還好&lt;a href=&#34;https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY&#34;&gt;這邊&lt;/a&gt;有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。&lt;/p&gt;
+&lt;p&gt;直接偷看答案，看看 
+&lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cpython&lt;/a&gt;
+怎麼寫準沒錯，用 C 寫看起來就很難，還好
+&lt;a href=&#34;https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;這邊&lt;/a&gt;
+有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。&lt;/p&gt;
 &lt;h2 id=&#34;hash-table-的好&#34;&gt;Hash table 的好&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;O(1) insertion&lt;/li&gt;
@@ -248,7 +252,9 @@ Picture from wiki&lt;/p&gt;
 &lt;p&gt;O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。&lt;/p&gt;
 &lt;p&gt;當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。&lt;/p&gt;
 &lt;h2 id=&#34;load-factor--dynamic-resizing&#34;&gt;load factor &amp;amp; dynamic resizing&lt;/h2&gt;
-&lt;h3 id=&#34;wikihttpsenwikipediaorgwikihash_tableresizing_by_copying_all_entries&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&#34;&gt;wiki&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;wikihttpsenwikipediaorgwikihash_tableresizing_by_copying_all_entries&#34;&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wiki&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;load factor = n/k&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;n is the number of entries occupied in the hash table.&lt;/li&gt;
@@ -267,24 +273,26 @@ Picture from wiki&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;因此一般來說， load factor 介於 0.6 至 0.7 ，算是空間時間比較平衡，根據 n 調整 k 的手段就是 dynamic resizing&lt;/p&gt;
 &lt;h2 id=&#34;dictionary-node&#34;&gt;Dictionary Node&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;DictionaryNode&lt;/span&gt;():
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Node of a DictionaryLinkedList.&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class DictionaryNode():
+    &amp;quot;&amp;quot;&amp;quot;
+    Node of a DictionaryLinkedList.
+    &amp;quot;&amp;quot;&amp;quot;
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, key, value, me_hash):
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; value
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; me_hash
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False
+    def __init__(self, key, value, me_hash):
+        self.key = key
+        self.value = value
+        self.me_hash = me_hash
+        self.collided = False
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __repr__(self):
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__repr__() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;value&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__repr__())
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;me_hash&#34;&gt;me_hash&lt;/h3&gt;
+    def __repr__(self):
+        return (self.key.__repr__() + &amp;quot;: &amp;quot; + self.value.__repr__())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;me_hash&#34;&gt;me_hash&lt;/h3&gt;
 &lt;p&gt;me_hash 是 key 的 hash 值，根據 cpython 以及講解，是 get 的時候比對會用到&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;(ep&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;me_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;
-(ep&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; hash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; unicode_eq(ep&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;me_key, key)))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;感覺是比對&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;(ep-&amp;gt;me_key == key ||
+(ep-&amp;gt;me_hash == hash &amp;amp;&amp;amp; unicode_eq(ep-&amp;gt;me_key, key)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;感覺是比對&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;key 值本身&lt;/li&gt;
 &lt;li&gt;hash+unicode&lt;/li&gt;
@@ -305,56 +313,61 @@ Picture from wiki&lt;/p&gt;
 &lt;p&gt;get 的 pseudo code&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(key):
-        entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; me_hash(key)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; is_valid(entry):
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; hash_table[entry] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; None:
-                &lt;span style=&#34;color:#75715e&#34;&gt;# 這個Entry從來沒有被使用過&lt;/span&gt;
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;IndexError&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;key not exist&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; hash_table[entry] &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; \
-                    hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; \
-                    &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided:
-                &lt;span style=&#34;color:#75715e&#34;&gt;# 此entry已經有值，但key不對，但沒有發生過collided=&amp;gt;&lt;/span&gt;
-                &lt;span style=&#34;color:#75715e&#34;&gt;# 只是剛好entry相同，且沒發生collide，直接返回indexError即可&lt;/span&gt;
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;IndexError&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;key not exist&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; hash_table[entry] &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; \
-                    hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; \
-                    hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided:
-                &lt;span style=&#34;color:#75715e&#34;&gt;# 此entry已經有值，但key不對，但有發生過collided =&amp;gt;&lt;/span&gt;
-                &lt;span style=&#34;color:#75715e&#34;&gt;# 往下查找&lt;/span&gt;
-                entry &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; hash_table[entry] &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; \
-                &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; \
-                &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;value &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt;
-            hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided:
-                &lt;span style=&#34;color:#75715e&#34;&gt;# 此Node被del，但為了提示之後要往後查找，流下 collided 屬性。&lt;/span&gt;
-                entry &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; hash_table[entry] &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; key:
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; hash_table[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;value
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dictionary-class&#34;&gt;Dictionary Class&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Dictionary&lt;/span&gt;():
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Dictionary are implemented by HashTable&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Using open addressing method.&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Hash using siphash. I can not find siphash&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def get(key):
+        entry = me_hash(key)
+        while is_valid(entry):
+            if hash_table[entry] == None:
+                # 這個Entry從來沒有被使用過
+                raise IndexError(&#39;key not exist&#39;)
+            elif hash_table[entry] and \
+                    hash_table[entry].key != key and \
+                    not hash_table[entry].collided:
+                # 此entry已經有值，但key不對，但沒有發生過collided=&amp;gt;
+                # 只是剛好entry相同，且沒發生collide，直接返回indexError即可
+                raise IndexError(&#39;key not exist&#39;)
+            elif hash_table[entry] and \
+                    hash_table[entry].key != key and \
+                    hash_table[entry].collided:
+                # 此entry已經有值，但key不對，但有發生過collided =&amp;gt;
+                # 往下查找
+                entry += 1
+            elif hash_table[entry] and \
+                not hash_table[entry].key and \
+                not hash_table[entry].value and
+            hash_table[entry].collided:
+                # 此Node被del，但為了提示之後要往後查找，流下 collided 屬性。
+                entry += 1
+            elif hash_table[entry] and hash_table[entry].key == key:
+                return hash_table[entry].value
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;dictionary-class&#34;&gt;Dictionary Class&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Dictionary():
+    &amp;quot;&amp;quot;&amp;quot;
+    Dictionary are implemented by HashTable
+    Using open addressing method.
+    Hash using siphash. I can not find siphash
+    &amp;quot;&amp;quot;&amp;quot;
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self):
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;used_entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [None &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;)]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;先開一個大小為 8 的 list，由於沒有實作{}的讀取，因此 KVP 只能一個一個 set。&lt;/p&gt;
+    def __init__(self):
+        self.used_entry = 0
+        self.buckets = [None for x in range(0, 8)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;先開一個大小為 8 的 list，由於沒有實作{}的讀取，因此 KVP 只能一個一個 set。&lt;/p&gt;
 &lt;p&gt;另外由於不想每次要拿長度或是算 load factor 的時候都要去做一個 O(k)的 for loop，因此直接開一個欄位(self.used_entry)來記，insert/del 要記得 maintain。&lt;/p&gt;
 &lt;h2 id=&#34;hash&#34;&gt;Hash&lt;/h2&gt;
 &lt;p&gt;仿照 cpython 用 siphash，據作者所述是一個相對平均且快速的 hash ，用過 md5 也是很 OK 的，只是轉成 int 相較麻煩，還要 digest 什麼的)，開頭要記得 import。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip install siphash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; siphash &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; siphash24
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dictionary-的-me_hash&#34;&gt;Dictionary 的 me_hash()&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;me_hash&lt;/span&gt;(self, key):
-        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        hash of key&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; siphash24(&lt;span style=&#34;color:#e6db74&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0123456789ABCDEF&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;,(str(key)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;encode(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;utf-8&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)))&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;hash()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resize-dynamic-resizing&#34;&gt;Resize (dynamic resizing)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install siphash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from siphash import siphash24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;dictionary-的-me_hash&#34;&gt;Dictionary 的 me_hash()&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def me_hash(self, key):
+        &amp;quot;&amp;quot;&amp;quot;
+        hash of key
+        &amp;quot;&amp;quot;&amp;quot;
+        return siphash24(b&#39;0123456789ABCDEF&#39;,(str(key).encode(&#39;utf-8&#39;))).hash()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;resize-dynamic-resizing&#34;&gt;Resize (dynamic resizing)&lt;/h2&gt;
 &lt;h3 id=&#34;proper_size&#34;&gt;proper_size()&lt;/h3&gt;
 &lt;p&gt;給定 n 筆 data，根據 load factor 的合理範圍算出合適的 data_size，原則&lt;/p&gt;
 &lt;ul&gt;
@@ -366,140 +379,153 @@ Picture from wiki&lt;/p&gt;
 &lt;h3 id=&#34;bitmask--運算&#34;&gt;bitmask (&amp;amp;) 運算&lt;/h3&gt;
 &lt;p&gt;當 k (table size) 是 2 的 m 次方，則 hash(n) mod k 可以用 hash(n) &amp;amp; bitmask 取代，其中 bitmask 為 m 個 1 組成。&lt;/p&gt;
 &lt;p&gt;Python 命令列 demo&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hash&lt;/span&gt;(key): &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; siphash24(&lt;span style=&#34;color:#e6db74&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0123456789ABCDEF&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;,(str(key)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;encode(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;utf-8&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)))&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;hash()
-&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;key_string&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# m = 3, k = 8&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0b111&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; def hash(key): return siphash24(b&#39;0123456789ABCDEF&#39;,(str(key).encode(&#39;utf-8&#39;))).hash()
+...
+&amp;gt;&amp;gt;&amp;gt; n = &#39;key_string&#39;
+&amp;gt;&amp;gt;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; # m = 3, k = 8
+...
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b111 == hash(n) &amp;amp; 7
 True
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0b111&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b111 == hash(n) % 8
 True
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# m = 4, k = 16&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0b1111&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; # m = 4, k = 16
+...
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b1111 == hash(n) &amp;amp; 15
 True
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0b1111&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; hash(n) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b1111 == hash(n) % 16
 True
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;resize-程式碼&#34;&gt;resize 程式碼&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resize&lt;/span&gt;(self):
-        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        Should change the size if load_factor &amp;gt; 2/3 or load_factor &amp;lt; 2/3&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        Should do nothing if load_factor between 1/3 and 2/3&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;proper_size&lt;/span&gt;(n, k):
-            pro_size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(int(n &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.5&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;bit_length()
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; pro_size
+&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;resize-程式碼&#34;&gt;resize 程式碼&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def resize(self):
+        &amp;quot;&amp;quot;&amp;quot;
+        Should change the size if load_factor &amp;gt; 2/3 or load_factor &amp;lt; 2/3
+        Should do nothing if load_factor between 1/3 and 2/3
+        &amp;quot;&amp;quot;&amp;quot;
+        def proper_size(n, k):
+            pro_size = 8 if n &amp;lt;= 2 else 2**(int(n * 1.5)).bit_length()
+            return pro_size
 
-        used &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;used_entry
-        old_size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets)
-        new_size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; proper_size(used, old_size)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; old_size &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; new_size:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
-        new_buckets &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [None &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, new_size)]
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(old_size):
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i] &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; (self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; None):
-                key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;me_hash
-                &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;amp; for bitwise operation (bitmask)&lt;/span&gt;
-                entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; (new_size&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; new_buckets[entry]:
-                    new_buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True
-                    entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; entry&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; entry &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; (new_size&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-                new_buckets[entry] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i]
-                new_buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; new_buckets
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;實作-insertfinddelete&#34;&gt;實作 insert/find/delete&lt;/h2&gt;
+        used = self.used_entry
+        old_size = len(self.buckets)
+        new_size = proper_size(used, old_size)
+        if old_size == new_size:
+            return
+        new_buckets = [None for x in range(0, new_size)]
+        for i in range(old_size):
+            if self.buckets[i] and (self.buckets[i].key is not None):
+                key_me_hash = self.buckets[i].me_hash
+                # &amp;amp; for bitwise operation (bitmask)
+                entry = key_me_hash &amp;amp; (new_size-1)
+                while new_buckets[entry]:
+                    new_buckets[entry].collided = True
+                    entry = entry+1 if entry &amp;lt; (new_size-2) else 0
+                new_buckets[entry] = self.buckets[i]
+                new_buckets[entry].collided = False
+        self.buckets = new_buckets
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;實作-insertfinddelete&#34;&gt;實作 insert/find/delete&lt;/h2&gt;
 &lt;h3 id=&#34;python-magic-methods&#34;&gt;python Magic Methods&lt;/h3&gt;
 &lt;p&gt;為了讓這個 class 更像內建的 dictionary，需要實作幾個 python 內建的 Magic Methods&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# __setitem__&lt;/span&gt;
-a[b] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; c
-&lt;span style=&#34;color:#75715e&#34;&gt;# __getitem__&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# __setitem__
+a[b] = c
+# __getitem__
 a[b]
-&lt;span style=&#34;color:#75715e&#34;&gt;# __len__&lt;/span&gt;
+# __len__
 len(a)
-&lt;span style=&#34;color:#75715e&#34;&gt;# __delitem__&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;del&lt;/span&gt; a[b]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;總的來說就是需要把以上幾個 Magic Methods 實作。&lt;/p&gt;
+# __delitem__
+del a[b]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;總的來說就是需要把以上幾個 Magic Methods 實作。&lt;/p&gt;
 &lt;h3 id=&#34;open-addressing&#34;&gt;Open Addressing&lt;/h3&gt;
 &lt;p&gt;這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。&lt;/p&gt;
 &lt;h3 id=&#34;magic-methods-程式碼&#34;&gt;Magic Methods 程式碼&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __repr__(self):
-        s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets)):
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i]:
-                s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__repr__() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; {} &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; s &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{{{0}}}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(s[:&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def __repr__(self):
+        s = &#39;&#39;
+        for i in range(len(self.buckets)):
+            if self.buckets[i]:
+                s = s + self.buckets[i].__repr__() + &#39;, &#39;
+        return {} if not s else &amp;quot;{{{0}}}&amp;quot;.format(s[:-3])
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __getitem__(self, key):
-        key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;me_hash(key)
-        l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets)
-        entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; key:
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;value
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided:
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;KeyError&lt;/span&gt;(key)
-            entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; entry&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; entry &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;KeyError&lt;/span&gt;(key)
+    def __getitem__(self, key):
+        key_me_hash = self.me_hash(key)
+        l = len(self.buckets)
+        entry = key_me_hash &amp;amp; (l-1)
+        while self.buckets[entry]:
+            if self.buckets[entry].key == key:
+                return self.buckets[entry].value
+            if not self.buckets[entry].collided:
+                raise KeyError(key)
+            entry = entry+1 if entry &amp;lt; (l-2) else 0
+        raise KeyError(key)
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __setitem__(self, key, value):
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;used_entry &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;resize()
+    def __setitem__(self, key, value):
+        self.used_entry += 1
+        self.resize()
 
-        l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets)
-        key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;me_hash(key)
-        entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]:
-            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True
-            entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; entry&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; entry &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; DictionaryNode(key&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;key,
-                                             value&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value,
-                                             me_hash&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;key_me_hash)
+        l = len(self.buckets)
+        key_me_hash = self.me_hash(key)
+        entry = key_me_hash &amp;amp; (l-1)
+        while self.buckets[entry]:
+            self.buckets[entry].collided = True
+            entry = entry+1 if entry &amp;lt; (l-2) else 0
+        self.buckets[entry] = DictionaryNode(key=key,
+                                             value=value,
+                                             me_hash=key_me_hash)
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __delitem__(self, key):
-        key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;me_hash(key)
-        l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets)
-        entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_me_hash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; key:
-                self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; None
-                self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; None
-                self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;me_hash &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; None
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[entry]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collided:
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;KeyError&lt;/span&gt;(key)
-            entry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; entry&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; entry &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;KeyError&lt;/span&gt;(key)
+    def __delitem__(self, key):
+        key_me_hash = self.me_hash(key)
+        l = len(self.buckets)
+        entry = key_me_hash &amp;amp; (l-1)
+        while self.buckets[entry]:
+            if self.buckets[entry].key == key:
+                self.buckets[entry].key = None
+                self.buckets[entry].value = None
+                self.buckets[entry].me_hash = None
+                return
+            if not self.buckets[entry].collided:
+                raise KeyError(key)
+            entry = entry+1 if entry &amp;lt; (l-2) else 0
+        raise KeyError(key)
 
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __len__(self):
-        counter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets)):
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;buckets[i]:
-                counter &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; counter
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;完整程式碼&#34;&gt;完整程式碼&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/goatwu1993/data_structure/blob/master/hash_table.py&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+    def __len__(self):
+        counter = 0
+        for i in range(len(self.buckets)):
+            if self.buckets[i]:
+                counter += 1
+        return counter
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;完整程式碼&#34;&gt;完整程式碼&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/goatwu1993/data_structure/blob/master/hash_table.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;最後附上參考資料，建議看第一個，講的很清楚，有一些太難的地方我也沒有仔細看懂就寫完了&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY&#34;&gt;大神解說&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&#34;&gt;wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34;&gt;cpython&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/yuan_j_y/article/details/9317817&#34;&gt;Magic Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;大神解說&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wiki&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cpython&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://blog.csdn.net/yuan_j_y/article/details/9317817&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Magic Method&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>macOS developer environments</title>
-         <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
-         <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/setting-macos-env/</guid>
-         <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>macOS developer environments</title>
+      <link>https://goatwu1993.github.io/blog/posts/setting-macos-env/</link>
+      <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/setting-macos-env/</guid>
+      <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS 包管理器&lt;/li&gt;
 &lt;li&gt;官方網站
@@ -513,253 +539,562 @@ len(a)
 &lt;li&gt;GNU Stow 是個 Symlink farm manager&lt;/li&gt;
 &lt;li&gt;可以幫忙管理你的 dotfiles，將各個 App 的 dotfiles 整包上傳 Github&lt;/li&gt;
 &lt;li&gt;Stow 官方網頁&lt;br&gt;
-&lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU Stow&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://www.gnu.org/software/stow/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GNU Stow&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Z shell 是一個支援許多互動方式的 Shell，支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
 &lt;li&gt;支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
 &lt;li&gt;zshrc 懶人包&lt;br&gt;
-&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;zsh-quickstart-kit&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zsh-quickstart-kit&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;VSCODE 插件推薦
-&lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;viatsko/awesome-vscode&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vimrc 懶人包&lt;br&gt;
-&lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;amix/vimrc&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/amix/vimrc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;amix/vimrc&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;vim 插件管理器 Vundle&lt;br&gt;
-&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundlevim&lt;/a&gt;&lt;/li&gt;
+
+&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vundlevim&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>git cheatsheet</title>
-         <link>https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/</link>
-         <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/</guid>
-         <description>&lt;h2 id=&#34;新增-submodule&#34;&gt;新增 submodule&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add git@github.com:xxx dir_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;移除-submodule&#34;&gt;移除 submodule&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git rm --cached &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;欲移除的目錄&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-rm -rf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;欲移除的目錄&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改-gitmodules&#34;&gt;修改 .gitmodules&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim .gitmodules
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改-gitconfig&#34;&gt;修改 .git/config&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim .git/config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git add .gitmodules
-$ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Remove a submodule&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule sync
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;網站一&lt;/a&gt;&lt;/p&gt;
+    </item>
+    
+    <item>
+      <title>git cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/git-cheatsheet-submodule/</guid>
+      <description>&lt;h2 id=&#34;新增-submodule&#34;&gt;新增 submodule&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add git@github.com:xxx dir_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;移除-submodule&#34;&gt;移除 submodule&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rm --cached [欲移除的目錄]
+rm -rf [欲移除的目錄]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-gitmodules&#34;&gt;修改 .gitmodules&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .gitmodules
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-gitconfig&#34;&gt;修改 .git/config&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .git/config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git add .gitmodules
+$ git commit -m &amp;quot;Remove a submodule&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;網站一&lt;/a&gt;
+&lt;/p&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>Hugo cheatsheet</title>
-         <link>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</link>
-         <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</guid>
-         <description>&lt;h2 id=&#34;hugo-使用&#34;&gt;Hugo 使用&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>Hugo cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/</guid>
+      <description>&lt;h2 id=&#34;hugo-使用&#34;&gt;Hugo 使用&lt;/h2&gt;
 &lt;h3 id=&#34;安裝&#34;&gt;安裝&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install hugo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;第一次使用&#34;&gt;第一次使用&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new site quickstart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;測試&#34;&gt;測試&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;cd quickstart
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;第一次使用&#34;&gt;第一次使用&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new site quickstart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;測試&#34;&gt;測試&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+cd quickstart
 hugo
 hugo server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;部署&#34;&gt;部署&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;部署&#34;&gt;部署&lt;/h3&gt;
 &lt;p&gt;這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf ./docs
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf ./docs
 hugo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;新增文章&#34;&gt;新增文章&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new posts/my-first-post.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;新增文章&#34;&gt;新增文章&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new posts/my-first-post.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo 官網&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官網&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>Hugo themes</title>
-         <link>https://goatwu1993.github.io/blog/posts/hugo-themes/</link>
-         <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/hugo-themes/</guid>
-         <description>&lt;p&gt;本篇記錄如何使用 hugo 線上的 themes&lt;/p&gt;
+    </item>
+    
+    <item>
+      <title>Hugo themes</title>
+      <link>https://goatwu1993.github.io/blog/posts/hugo-themes/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hugo-themes/</guid>
+      <description>&lt;p&gt;本篇記錄如何使用 hugo 線上的 themes&lt;/p&gt;
 &lt;h2 id=&#34;hugo-themes&#34;&gt;Hugo themes&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Hugo 官方線上 themes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官方線上 themes&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;下載-themes&#34;&gt;下載 themes&lt;/h2&gt;
 &lt;p&gt;到他們的 github 上面，有兩種方式&lt;/p&gt;
 &lt;h3 id=&#34;方案-a-submodule&#34;&gt;方案 a. submodule&lt;/h3&gt;
 &lt;p&gt;完全不動到 themes 裡面的話可以用 submodule。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# submodule&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# submodule
 cd ./themes
 git submodule add https://github.com/avianto/hugo-kiera.git kiera
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;方案-b-fork&#34;&gt;方案 b. fork&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;方案-b-fork&#34;&gt;方案 b. fork&lt;/h3&gt;
 &lt;p&gt;適合你覺得下載 themes 之後會想要更改的情形。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fork&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# fork
 cd ./themes
 git clone https://github.com/$你的Id/hugo-kiera.git kiera
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改-configtoml&#34;&gt;修改 config.toml&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;theme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;kiera&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-       </item>
-       
-       <item>
-         <title>bash cheatsheet</title>
-         <link>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</link>
-         <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
-         <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# manual&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-configtoml&#34;&gt;修改 config.toml&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;theme = &amp;quot;kiera&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing technical content in Academic</title>
+      <link>https://goatwu1993.github.io/blog/posts/writing-technical-content/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/writing-technical-content/</guid>
+      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&#39;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```python
+import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\&lt;/code&gt; math linebreak:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \&lt;br&gt;
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
+&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
+&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
+&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write math example&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write diagram example&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Do something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
+&lt;p&gt;Represent your data in tables:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
+&lt;p&gt;Academic supports a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for asides&lt;/a&gt;
+, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>https://goatwu1993.github.io/blog/posts/jupyter/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/jupyter/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
+Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Welcome to Academic!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt;
+ which includes Python 3 and JupyterLab.&lt;/p&gt;
+&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+jupyter lab index.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
+&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
+&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;
+).&lt;/p&gt;
+&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: My post&#39;s title
+date: 2019-09-01
+
+# Put any other Academic metadata here...
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Edit the metadata of your post, using the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;
+ as a guide to the available options.&lt;/p&gt;
+&lt;p&gt;To set a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;
+, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&#39;s folder.&lt;/p&gt;
+&lt;p&gt;For other tips, such as using math, see the guide on 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;
+.&lt;/p&gt;
+&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>bash cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</link>
+      <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
+      <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# manual
 man anything
 info anything
 anything --help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;general-commands&#34;&gt;General commands&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;general-commands&#34;&gt;General commands&lt;/h2&gt;
 &lt;h3 id=&#34;getting-information&#34;&gt;Getting information&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show shell name.&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show shell name.
 echo $SHELL
 echo $0
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show shell version.&lt;/span&gt;
+# Show shell version.
 $SHELL --version
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Clear terminal.&lt;/span&gt;
+# Clear terminal.
 clear
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show command history.&lt;/span&gt;
+# Show command history.
 history
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Print working directory&lt;/span&gt;
+# Print working directory
 pwd
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show system info&lt;/span&gt;
+# Show system info
 uname -a
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# uptime&lt;/span&gt;
+# uptime
 uptime
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;file-managing&#34;&gt;File managing&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# List the files in working directory.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;file-managing&#34;&gt;File managing&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# List the files in working directory.
 ls
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all files, hidden file included, with detailed information.&lt;/span&gt;
+# List all files, hidden file included, with detailed information.
 ls -la
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Change ownership of a file.&lt;/span&gt;
+# Change ownership of a file.
 chown
-&lt;span style=&#34;color:#75715e&#34;&gt;# Change an ownership of a file.&lt;/span&gt;
+# Change an ownership of a file.
 chown nobody.nogroup your_file_name
-&lt;span style=&#34;color:#75715e&#34;&gt;# Recursively change all file under this directory.&lt;/span&gt;
+# Recursively change all file under this directory.
 chown -R nobody.nogroup .
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Change the read/write permission of a file&lt;/span&gt;
+# Change the read/write permission of a file
 chmod
-&lt;span style=&#34;color:#75715e&#34;&gt;# Make file r/w/e able for all user &amp;amp; group.&lt;/span&gt;
-chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; file_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+# Make file r/w/e able for all user &amp;amp; group.
+chmod 777 file_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;network&#34;&gt;Network&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show network interface config/info.&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show network interface config/info.
 ifconfig
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# get public ip&lt;/span&gt;
+# get public ip
 curl icanhazip.com
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show network status&lt;/span&gt;
+# Show network status
 netstat
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show all, include tcp/udp port.&lt;/span&gt;
+# Show all, include tcp/udp port.
 netstat -an
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show established connection&lt;/span&gt;
-netstat -antu | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ESTABLISHED&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show kernel routing information&lt;/span&gt;
+# Show established connection
+netstat -antu | grep &#39;ESTABLISHED&#39;
+# Show kernel routing information
 netstat -r
 netstat -tulnp
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Check the bridge Interface&lt;/span&gt;
+# Check the bridge Interface
 brtcl
 brctl addbr &amp;lt;name&amp;gt;
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# ssh&lt;/span&gt;
+# ssh
 ssh
-&lt;span style=&#34;color:#75715e&#34;&gt;# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!&lt;/span&gt;
+# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 ssh-keygen
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# scp&lt;/span&gt;
+# scp
 scp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;cpu-memery-task--process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
 &lt;h3 id=&#34;check-and-monitor-process&#34;&gt;Check and monitor process&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all process run by user shell&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# List all process run by user shell
 ps
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all process, even by status&lt;/span&gt;
+# List all process, even by status
 ps aux
-&lt;span style=&#34;color:#75715e&#34;&gt;# pstree&lt;/span&gt;
+# pstree
 pstree
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# Monitor the process status&lt;/span&gt;
+# Monitor the process status
 top
-&lt;span style=&#34;color:#75715e&#34;&gt;# cpu&lt;/span&gt;
+# cpu
 top -o cpu
-&lt;span style=&#34;color:#75715e&#34;&gt;# memery&lt;/span&gt;
+# memery
 top -o rsize
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# List cronjob&lt;/span&gt;
+# List cronjob
 crontab
-&lt;span style=&#34;color:#75715e&#34;&gt;# List all cronjob.&lt;/span&gt;
+# List all cronjob.
 crontab -l
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sending-signal-or-kill-process&#34;&gt;Sending signal or kill process&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Send a signal to a process&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;sending-signal-or-kill-process&#34;&gt;Sending signal or kill process&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Send a signal to a process
 kill -signal PID
-&lt;span style=&#34;color:#75715e&#34;&gt;# Send 15 SIGTERM to a process&lt;/span&gt;
+# Send 15 SIGTERM to a process
 kill $pid
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# killall allow you to kill app with name instead of pid&lt;/span&gt;
+# killall allow you to kill app with name instead of pid
 killall -9 $processname
-&lt;span style=&#34;color:#75715e&#34;&gt;# Ask before terminate&lt;/span&gt;
+# Ask before terminate
 killall -i -9 $processname
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;memory-usage&#34;&gt;Memory usage&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# Show recent memory usage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;memory-usage&#34;&gt;Memory usage&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show recent memory usage
 free -m
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;geekflare&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34;&gt;鳥哥第十六章、程序管理與 SELinux 初探&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://geekflare.com/netstat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;geekflare&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;鳥哥第十六章、程序管理與 SELinux 初探&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>TCP/IP cheatsheet</title>
-         <link>https://goatwu1993.github.io/blog/posts/networking-cheatsheet/</link>
-         <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/networking-cheatsheet/</guid>
-         <description>&lt;h2 id=&#34;osi-7-layres&#34;&gt;OSI 7 Layres&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>TCP/IP cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/networking-cheatsheet/</link>
+      <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/networking-cheatsheet/</guid>
+      <description>&lt;h2 id=&#34;osi-7-layres&#34;&gt;OSI 7 Layres&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Application Layer (Layer 7)
 &lt;ul&gt;
@@ -833,7 +1168,9 @@ free -m
 &lt;ul&gt;
 &lt;li&gt;Domain Name System&lt;/li&gt;
 &lt;li&gt;UDP Port 53&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.lifewire.com/free-and-public-dns-servers-2626062&#34;&gt;Some famous public DNS servers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.lifewire.com/free-and-public-dns-servers-2626062&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Some famous public DNS servers&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;TFTP
@@ -859,15 +1196,14 @@ free -m
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-       </item>
-       
-       <item>
-         <title>關於這個blog</title>
-         <link>https://goatwu1993.github.io/blog/posts/about-this-blog/</link>
-         <pubDate>Fri, 06 Apr 2018 19:19:34 +0800</pubDate>
-         
-         <guid>https://goatwu1993.github.io/blog/posts/about-this-blog/</guid>
-         <description>&lt;h2 id=&#34;blog-到底怎麼寫架在哪&#34;&gt;Blog 到底怎麼寫，架在哪&lt;/h2&gt;
+    </item>
+    
+    <item>
+      <title>關於這個blog</title>
+      <link>https://goatwu1993.github.io/blog/posts/about-this-blog/</link>
+      <pubDate>Fri, 06 Apr 2018 19:19:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/about-this-blog/</guid>
+      <description>&lt;h2 id=&#34;blog-到底怎麼寫架在哪&#34;&gt;Blog 到底怎麼寫，架在哪&lt;/h2&gt;
 &lt;p&gt;常見的選擇&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -908,7 +1244,187 @@ Wordpress.com, Medium 等等，wordpress 有點太大，而且有些漂亮的主
 &lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;
 &lt;p&gt;最後選了 Hugo，但說實話他的 themes 還蠻複雜的，換 theme 或是上手需要一段時間，而且 docs 寫的很爛，但該有的功能都有(Markdown, Syntax Highlighting)，甚至也有一定的討論度，學會之後就可以用 markdown 爽爽寫。&lt;/p&gt;
 </description>
-       </item>
-       
-     </channel>
-   </rss>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>https://goatwu1993.github.io/blog/posts/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt;
+ of what you&#39;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt;
+ of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 
+&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;📚 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;💬 
+&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;👥 
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: 
+&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt;
+ 
+&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt;
+ 
+&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;💡 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt;
+ and 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;❤ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ 
+&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;💵 
+&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;🖼️ 
+&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;👕 
+&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;👩‍💻 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+&lt;img data-src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt;
+ and 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;
+, 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;
+, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
+&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt;
+ supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
+&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;
+, 
+&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;
+, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt;
+ to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt;
+ for your site. Themes are fully 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;
+.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;
+:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;
+:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;
+.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt;
+ to help keep track of 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;
+.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present 
+&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt;
+ license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
