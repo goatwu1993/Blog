@@ -233,9 +233,9 @@ Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resi
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Academic">
+  <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/dict-python-implementation/">
-  <meta property="og:title" content="Python 實作 Dictionary | Academic">
+  <meta property="og:title" content="Python 實作 Dictionary | goatwu1993">
   <meta property="og:description" content="Dictionary Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。
 瞄一下 瞄一下 cpython 怎麼寫， 這邊 有詳細解釋。
 Hash table 優點  O(1) insertion O(1) get O(1) delete  但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。
@@ -266,7 +266,7 @@ Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resi
 
 
 
-  <title>Python 實作 Dictionary | Academic</title>
+  <title>Python 實作 Dictionary | goatwu1993</title>
 
 </head>
 
@@ -317,7 +317,7 @@ Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resi
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -330,7 +330,7 @@ Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resi
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -456,9 +456,56 @@ Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resi
 </nav>
 
 
-  <article class="article">
-
   
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#dictionary">Dictionary</a></li>
+    <li><a href="#瞄一下">瞄一下</a></li>
+    <li><a href="#hash-table-優點">Hash table 優點</a></li>
+    <li><a href="#load-factor--dynamic-resizing">Load Factor & dynamic resizing</a></li>
+    <li><a href="#dictionary-node">Dictionary Node</a>
+      <ul>
+        <li><a href="#me_hash">me_hash</a></li>
+        <li><a href="#collided">collided</a></li>
+      </ul>
+    </li>
+    <li><a href="#dictionary-class">Dictionary Class</a></li>
+    <li><a href="#hash">Hash</a>
+      <ul>
+        <li><a href="#dictionary-的-me_hash">Dictionary 的 me_hash()</a></li>
+      </ul>
+    </li>
+    <li><a href="#dynamic-resizing">Dynamic Resizing</a>
+      <ul>
+        <li><a href="#bitmask--運算">bitmask (&) 運算</a></li>
+        <li><a href="#bitmask--in-python-terminal">bitmask (&) in Python terminal</a></li>
+        <li><a href="#resizing-程式碼">Resizing 程式碼</a></li>
+      </ul>
+    </li>
+    <li><a href="#magic-methods">Magic Methods</a>
+      <ul>
+        <li><a href="#實作-python-內建的-magic-methods">實作 python 內建的 Magic Methods</a></li>
+        <li><a href="#open-addressing">Open Addressing</a></li>
+        <li><a href="#magic-methods-程式碼">Magic Methods 程式碼</a></li>
+      </ul>
+    </li>
+    <li><a href="#完整程式碼">完整程式碼</a></li>
+    <li><a href="#結論">結論</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+            
+            <article class="article">
+                
 
 
 
@@ -536,11 +583,9 @@ Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resi
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <h2 id="dictionary">Dictionary</h2>
+                <div class="article-container">
+                    <div class="article-style">
+                        <h2 id="dictionary">Dictionary</h2>
 <p>Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。</p>
 <h2 id="瞄一下">瞄一下</h2>
 <p>瞄一下
@@ -756,9 +801,8 @@ del a[b]
 </li>
 </ul>
 
-    </div>
-
-    
+                    </div>
+                    
 
 
 
@@ -944,9 +988,13 @@ del a[b]
   
 
 
+                </div>
+            </article>
+            
+        </main>
+    </div>
+</div>
 
-  </div>
-</article>
 
       
 

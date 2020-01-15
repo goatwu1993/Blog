@@ -15,4 +15,3 @@ weight: 40
 <https://github.com/wurstmeister/kafka-dockers>
 
 ## docker-compose.yml
-

@@ -235,9 +235,9 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Academic">
+  <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka-part1/">
-  <meta property="og:title" content="Apache Kafka - Part1 | Academic">
+  <meta property="og:title" content="Apache Kafka - Part1 | goatwu1993">
   <meta property="og:description" content="What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
 Kafka 特點   提供 pub-sub 及 point-to-point 兩種 queue mode
   優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。
@@ -270,7 +270,7 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
 
 
 
-  <title>Apache Kafka - Part1 | Academic</title>
+  <title>Apache Kafka - Part1 | goatwu1993</title>
 
 </head>
 
@@ -321,7 +321,7 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -334,7 +334,7 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -460,9 +460,41 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
 </nav>
 
 
-  <article class="article">
-
   
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-kafka">What is Kafka</a>
+      <ul>
+        <li><a href="#kafka-特點">Kafka 特點</a></li>
+      </ul>
+    </li>
+    <li><a href="#kafka-優點">Kafka 優點</a>
+      <ul>
+        <li><a href="#reliability-可靠">Reliability 可靠</a></li>
+        <li><a href="#scalability-可擴展性">Scalability 可擴展性</a></li>
+        <li><a href="#durability-耐用性">Durability 耐用性</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#decoupling">Decoupling</a></li>
+        <li><a href="#fault-tolerance">Fault Tolerance</a></li>
+        <li><a href="#zero-downtime">Zero downtime</a></li>
+        <li><a href="#zero-data-loss">Zero data loss</a></li>
+      </ul>
+    </li>
+    <li><a href="#kafka-example-applications">Kafka Example applications</a></li>
+  </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+            
+            <article class="article">
+                
 
 
 
@@ -536,11 +568,9 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <h2 id="what-is-kafka">What is Kafka</h2>
+                <div class="article-container">
+                    <div class="article-style">
+                        <h2 id="what-is-kafka">What is Kafka</h2>
 <p>Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。</p>
 <h3 id="kafka-特點">Kafka 特點</h3>
 <ul>
@@ -579,9 +609,8 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
 <li>performing numerous real-time services across all of LinkedIn.</li>
 </ul>
 
-    </div>
-
-    
+                    </div>
+                    
 
 
 
@@ -778,9 +807,13 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
   
 
 
+                </div>
+            </article>
+            
+        </main>
+    </div>
+</div>
 
-  </div>
-</article>
 
       
 

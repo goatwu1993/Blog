@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo | Academic</title>
+    <title>hugo | goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/hugo/</link>
       <atom:link href="https://goatwu1993.github.io/blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <description>hugo</description>
@@ -85,11 +85,11 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
 &lt;ul&gt;
 &lt;li&gt;自己架站，例如 aws, vps, heroku&lt;/li&gt;
 &lt;li&gt;靜態網頁，例如 github / google docs 等&lt;/li&gt;
-&lt;li&gt;平台，例如Wordpress, Medium, HackMD&lt;/li&gt;
+&lt;li&gt;平台，例如 Wordpress, Medium, HackMD&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;靜態網頁生成器static-site-generator&#34;&gt;靜態網頁生成器(static site generator)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。&lt;/li&gt;
+&lt;li&gt;某些文件存放服務支援存放 html 可自動變成網站，如 github, google docs 等等。&lt;/li&gt;
 &lt;li&gt;靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站&lt;/li&gt;
 &lt;li&gt;現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo&lt;/li&gt;
 &lt;li&gt;注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。
@@ -100,17 +100,17 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
 &lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;很快&lt;/li&gt;
-&lt;li&gt;很多theme可選&lt;/li&gt;
-&lt;li&gt;可寫Markdown&lt;/li&gt;
-&lt;li&gt;支援Syntax高光&lt;/li&gt;
-&lt;li&gt;可上傳Github&lt;/li&gt;
+&lt;li&gt;很多 theme 可選&lt;/li&gt;
+&lt;li&gt;可寫 Markdown&lt;/li&gt;
+&lt;li&gt;支援 Syntax 高光&lt;/li&gt;
+&lt;li&gt;可上傳 Github&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;各theme之間差異過大，沒辦法說換就換&lt;/li&gt;
+&lt;li&gt;各 theme 之間差異過大，沒辦法說換就換&lt;/li&gt;
 &lt;li&gt;難上手&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果不在意主題或是Github的話可以考慮Hackmd。&lt;/p&gt;
+&lt;p&gt;如果不在意主題或是 Github 的話可以考慮 Hackmd。&lt;/p&gt;
 </description>
     </item>
     

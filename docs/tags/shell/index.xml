@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shell | Academic</title>
+    <title>shell | goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/shell/</link>
       <atom:link href="https://goatwu1993.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <description>shell</description>
@@ -27,7 +27,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;選取優化，選取即複製&lt;/li&gt;
+&lt;li&gt;相比內建的 Terminal，支援點選選取優化，選取即複製等功能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;3-gnu-stow&#34;&gt;3. GNU Stow&lt;/h2&gt;
 &lt;ul&gt;

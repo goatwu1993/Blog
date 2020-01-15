@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Greatest command of all time #!/bin/bash # manual man anything info anything anything --help  General commands Getting information #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information.">
+  <meta name="description" content="docker-compose docker-compose ps docker-compose ps -a docker-compose down docker-compose scale kafka=3  ">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/bash-cheatsheet/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/docker-cheatsheet/">
 
   
 
@@ -215,7 +215,7 @@
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/bash-cheatsheet/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/docker-cheatsheet/">
 
   
   
@@ -228,16 +228,16 @@
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Academic">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/bash-cheatsheet/">
-  <meta property="og:title" content="bash cheatsheet | Academic">
-  <meta property="og:description" content="Greatest command of all time #!/bin/bash # manual man anything info anything anything --help  General commands Getting information #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:site_name" content="goatwu1993">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/docker-cheatsheet/">
+  <meta property="og:title" content="Docker Cheatsheet | goatwu1993">
+  <meta property="og:description" content="docker-compose docker-compose ps docker-compose ps -a docker-compose down docker-compose scale kafka=3  "><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2018-06-10T17:20:14&#43;08:00">
+      <meta property="article:published_time" content="2020-01-15T20:36:03&#43;08:00">
     
-    <meta property="article:modified_time" content="2018-06-10T17:20:14&#43;08:00">
+    <meta property="article:modified_time" content="2020-01-15T20:36:03&#43;08:00">
   
 
   
@@ -256,7 +256,7 @@
 
 
 
-  <title>bash cheatsheet | Academic</title>
+  <title>Docker Cheatsheet | goatwu1993</title>
 
 </head>
 
@@ -307,7 +307,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -320,7 +320,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -446,9 +446,9 @@
 </nav>
 
 
-  <article class="article">
-
   
+            <article class="article">
+                
 
 
 
@@ -467,7 +467,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>bash cheatsheet</h1>
+  <h1>Docker Cheatsheet</h1>
 
   
 
@@ -486,7 +486,7 @@
     
       
     
-    Jun 10, 2018
+    Jan 15, 2020
   </span>
   
 
@@ -500,10 +500,6 @@
 
   
   
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/blog/categories/shell/">shell</a></span>
-  
 
 </div>
 
@@ -526,152 +522,18 @@
 </div>
 
 
+                <div class="article-container">
+                    <div class="article-style">
+                        <h2 id="docker-compose">docker-compose</h2>
+<pre><code class="language-bash">docker-compose ps
+docker-compose ps -a
 
-  <div class="article-container">
-
-    <div class="article-style">
-      <h2 id="greatest-command-of-all-time">Greatest command of all time</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# manual
-man anything
-info anything
-anything --help
+docker-compose down
+docker-compose scale kafka=3
 </code></pre>
-<h2 id="general-commands">General commands</h2>
-<h3 id="getting-information">Getting information</h3>
-<pre><code class="language-bash">#!/bin/bash
 
-# Show shell name.
-echo $SHELL
-echo $0
-# Show shell version.
-$SHELL --version
-
-# Clear terminal.
-clear
-
-# Show command history.
-history
-
-# Print working directory
-pwd
-
-# Show system info
-uname -a
-
-# uptime
-uptime
-</code></pre>
-<h3 id="file-managing">File managing</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# List the files in working directory.
-ls
-# List all files, hidden file included, with detailed information.
-ls -la
-
-# Change ownership of a file.
-chown
-# Change an ownership of a file.
-chown nobody.nogroup your_file_name
-# Recursively change all file under this directory.
-chown -R nobody.nogroup .
-
-# Change the read/write permission of a file
-chmod
-# Make file r/w/e able for all user &amp; group.
-chmod 777 file_name
-</code></pre>
-<hr>
-<h2 id="network">Network</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show network interface config/info.
-ifconfig
-
-# get public ip
-curl icanhazip.com
-
-# Show network status
-netstat
-# Show all, include tcp/udp port.
-netstat -an
-# Show established connection
-netstat -antu | grep 'ESTABLISHED'
-# Show kernel routing information
-netstat -r
-netstat -tulnp
-
-# Check the bridge Interface
-brtcl
-brctl addbr &lt;name&gt;
-
-# ssh
-ssh
-# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
-ssh-keygen
-
-# scp
-scp
-</code></pre>
-<hr>
-<h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
-<h3 id="check-and-monitor-process">Check and monitor process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# List all process run by user shell
-ps
-# List all process, even by status
-ps aux
-# pstree
-pstree
-
-# Monitor the process status
-top
-# cpu
-top -o cpu
-# memery
-top -o rsize
-
-# List cronjob
-crontab
-# List all cronjob.
-crontab -l
-</code></pre>
-<h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Send a signal to a process
-kill -signal PID
-# Send 15 SIGTERM to a process
-kill $pid
-
-# killall allow you to kill app with name instead of pid
-killall -9 $processname
-# Ask before terminate
-killall -i -9 $processname
-</code></pre>
-<h3 id="memory-usage">Memory usage</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show recent memory usage
-free -m
-
-</code></pre>
-<h2 id="參考資料">參考資料</h2>
-<ul>
-<li>
-<a href="https://geekflare.com/netstat/" target="_blank" rel="noopener">geekflare</a>
-</li>
-<li>
-<a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l" target="_blank" rel="noopener">鳥哥第十六章、程序管理與 SELinux 初探</a>
-</li>
-</ul>
-
-    </div>
-
-    
+                    </div>
+                    
 
 
 
@@ -679,9 +541,7 @@ free -m
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/blog/tags/shell/">shell</a>
-  
-  <a class="badge badge-light" href="/blog/tags/bash/">bash</a>
+  <a class="badge badge-light" href="/blog/tags/docker/">Docker</a>
   
 </div>
 
@@ -698,7 +558,7 @@ free -m
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/bash-cheatsheet/&amp;text=bash%20cheatsheet" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/docker-cheatsheet/&amp;text=Docker%20Cheatsheet" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -711,7 +571,7 @@ free -m
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/bash-cheatsheet/&amp;t=bash%20cheatsheet" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/docker-cheatsheet/&amp;t=Docker%20Cheatsheet" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -724,7 +584,7 @@ free -m
       
       
       <li>
-        <a href="mailto:?subject=bash%20cheatsheet&amp;body=https://goatwu1993.github.io/blog/posts/bash-cheatsheet/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Docker%20Cheatsheet&amp;body=https://goatwu1993.github.io/blog/posts/docker-cheatsheet/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -737,7 +597,7 @@ free -m
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/bash-cheatsheet/&amp;title=bash%20cheatsheet" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/docker-cheatsheet/&amp;title=Docker%20Cheatsheet" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -750,7 +610,7 @@ free -m
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=bash%20cheatsheet%20https://goatwu1993.github.io/blog/posts/bash-cheatsheet/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Docker%20Cheatsheet%20https://goatwu1993.github.io/blog/posts/docker-cheatsheet/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -763,7 +623,7 @@ free -m
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/bash-cheatsheet/&amp;title=bash%20cheatsheet" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/docker-cheatsheet/&amp;title=Docker%20Cheatsheet" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -857,9 +717,9 @@ free -m
   
 
 
-
-  </div>
-</article>
+                </div>
+            </article>
+            
 
       
 

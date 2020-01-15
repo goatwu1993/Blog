@@ -28,10 +28,16 @@
   
     
   
-  <meta name="description" content="Table of Contents  Kafka Architecture Producers Consumers Consumer Group Brokers  Broker controller   Topics  Topics 定義 Regular Topics Compacted topics   Partitions  Partitions 定義 Partition offset Replica Partition Leader Partition Follower ISR   Kafka Cluster ZooKeeper Reference   Kafka Architecture Picture from wiki
+  <meta name="description" content="Kafka Architecture Picture from wiki
 Producers   Producers 將發送資料流到一至多個 Topics
   Producer 使用 push(推)模式將訊息釋出到 Broker
-  實作 Kafka 提供的 Producer API">
+  實作 Kafka 提供的 Producer API
+  Consumers   Consumers 會訂閱一或多個 Topics
+  Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息
+  實作 Kafka 提供的 Consumer API
+  Consumer Group   每個 Consumer 屬於一個特定的 Consumer Group
+  一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息
+  Brokers   仲介處理 Consumer 以及 Producers 的訊息">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka-2/">
@@ -231,13 +237,19 @@ Producers   Producers 將發送資料流到一至多個 Topics
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Academic">
+  <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka-2/">
-  <meta property="og:title" content="Apache Kafka - Part2 | Academic">
-  <meta property="og:description" content="Table of Contents  Kafka Architecture Producers Consumers Consumer Group Brokers  Broker controller   Topics  Topics 定義 Regular Topics Compacted topics   Partitions  Partitions 定義 Partition offset Replica Partition Leader Partition Follower ISR   Kafka Cluster ZooKeeper Reference   Kafka Architecture Picture from wiki
+  <meta property="og:title" content="Apache Kafka - Part2 | goatwu1993">
+  <meta property="og:description" content="Kafka Architecture Picture from wiki
 Producers   Producers 將發送資料流到一至多個 Topics
   Producer 使用 push(推)模式將訊息釋出到 Broker
-  實作 Kafka 提供的 Producer API"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  實作 Kafka 提供的 Producer API
+  Consumers   Consumers 會訂閱一或多個 Topics
+  Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息
+  實作 Kafka 提供的 Consumer API
+  Consumer Group   每個 Consumer 屬於一個特定的 Consumer Group
+  一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息
+  Brokers   仲介處理 Consumer 以及 Producers 的訊息"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -262,7 +274,7 @@ Producers   Producers 將發送資料流到一至多個 Topics
 
 
 
-  <title>Apache Kafka - Part2 | Academic</title>
+  <title>Apache Kafka - Part2 | goatwu1993</title>
 
 </head>
 
@@ -313,7 +325,7 @@ Producers   Producers 將發送資料流到一至多個 Topics
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -326,7 +338,7 @@ Producers   Producers 將發送資料流到一至多個 Topics
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -452,9 +464,9 @@ Producers   Producers 將發送資料流到一至多個 Topics
 </nav>
 
 
-  <article class="article">
-
   
+            <article class="article">
+                
 
 
 
@@ -528,45 +540,9 @@ Producers   Producers 將發送資料流到一至多個 Topics
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <h2>Table of Contents</h2>
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#kafka-architecture">Kafka Architecture</a></li>
-    <li><a href="#producers">Producers</a></li>
-    <li><a href="#consumers">Consumers</a></li>
-    <li><a href="#consumer-group">Consumer Group</a></li>
-    <li><a href="#brokers">Brokers</a>
-      <ul>
-        <li><a href="#broker-controller">Broker controller</a></li>
-      </ul>
-    </li>
-    <li><a href="#topics">Topics</a>
-      <ul>
-        <li><a href="#topics-定義">Topics 定義</a></li>
-        <li><a href="#regular-topics">Regular Topics</a></li>
-        <li><a href="#compacted-topics">Compacted topics</a></li>
-      </ul>
-    </li>
-    <li><a href="#partitions">Partitions</a>
-      <ul>
-        <li><a href="#partitions-定義">Partitions 定義</a></li>
-        <li><a href="#partition-offset">Partition offset</a></li>
-        <li><a href="#replica">Replica</a></li>
-        <li><a href="#partition-leader">Partition Leader</a></li>
-        <li><a href="#partition-follower">Partition Follower</a></li>
-        <li><a href="#isr">ISR</a></li>
-      </ul>
-    </li>
-    <li><a href="#kafka-cluster">Kafka Cluster</a></li>
-    <li><a href="#zookeeper">ZooKeeper</a></li>
-    <li><a href="#reference">Reference</a></li>
-  </ul>
-</nav>
-<h2 id="kafka-architecture">Kafka Architecture</h2>
+                <div class="article-container">
+                    <div class="article-style">
+                        <h2 id="kafka-architecture">Kafka Architecture</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png" alt="This is an image">
 Picture from wiki</p>
 <h2 id="producers">Producers</h2>
@@ -731,9 +707,8 @@ Picture from wiki</p>
 <li><a href="http://cloudurable.com/blog/kafka-architecture-topics/index.html">http://cloudurable.com/blog/kafka-architecture-topics/index.html</a></li>
 </ul>
 
-    </div>
-
-    
+                    </div>
+                    
 
 
 
@@ -930,9 +905,9 @@ Picture from wiki</p>
   
 
 
-
-  </div>
-</article>
+                </div>
+            </article>
+            
 
       
 

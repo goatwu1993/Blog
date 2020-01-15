@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
+    <title>goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/</link>
       <atom:link href="https://goatwu1993.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
+    <description>goatwu1993</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Academic</title>
+      <title>goatwu1993</title>
       <link>https://goatwu1993.github.io/blog/</link>
     </image>
+    
+    <item>
+      <title>Docker P1</title>
+      <link>https://goatwu1993.github.io/blog/posts/docker-p1/</link>
+      <pubDate>Wed, 15 Jan 2020 20:45:49 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/docker-p1/</guid>
+      <description>&lt;h2 id=&#34;container&#34;&gt;Container&lt;/h2&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
+&lt;h3 id=&#34;image&#34;&gt;Image&lt;/h3&gt;
+&lt;h3 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h3&gt;
+&lt;p&gt;描述單一映像檔的文件&lt;/p&gt;
+&lt;h2 id=&#34;docker-engine&#34;&gt;Docker Engine&lt;/h2&gt;
+&lt;h2 id=&#34;docker-machine&#34;&gt;Docker Machine&lt;/h2&gt;
+&lt;h2 id=&#34;docker-compose&#34;&gt;Docker Compose&lt;/h2&gt;
+&lt;p&gt;docker-compose.yml 定義同時跑多容器 Docker App 的方法，例如：ZK + Kafka&lt;/p&gt;
+&lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&#34;&gt;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker Cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/docker-cheatsheet/</link>
+      <pubDate>Wed, 15 Jan 2020 20:36:03 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/docker-cheatsheet/</guid>
+      <description>&lt;h2 id=&#34;docker-compose&#34;&gt;docker-compose&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker-compose ps
+docker-compose ps -a
+
+docker-compose down
+docker-compose scale kafka=3
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Apache Kafka - Part1</title>
@@ -63,41 +100,7 @@
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
       <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
-      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#kafka-architecture&#34;&gt;Kafka Architecture&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#producers&#34;&gt;Producers&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#consumers&#34;&gt;Consumers&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#consumer-group&#34;&gt;Consumer Group&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#brokers&#34;&gt;Brokers&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#broker-controller&#34;&gt;Broker controller&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#topics&#34;&gt;Topics&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#topics-定義&#34;&gt;Topics 定義&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#regular-topics&#34;&gt;Regular Topics&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#compacted-topics&#34;&gt;Compacted topics&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#partitions&#34;&gt;Partitions&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#partitions-定義&#34;&gt;Partitions 定義&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#partition-offset&#34;&gt;Partition offset&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#replica&#34;&gt;Replica&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#partition-leader&#34;&gt;Partition Leader&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#partition-follower&#34;&gt;Partition Follower&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#isr&#34;&gt;ISR&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#kafka-cluster&#34;&gt;Kafka Cluster&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#zookeeper&#34;&gt;ZooKeeper&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#reference&#34;&gt;Reference&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;This is an image&#34;&gt;
 Picture from wiki&lt;/p&gt;
 &lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
@@ -526,7 +529,7 @@ del a[b]
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;選取優化，選取即複製&lt;/li&gt;
+&lt;li&gt;相比內建的 Terminal，支援點選選取優化，選取即複製等功能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;3-gnu-stow&#34;&gt;3. GNU Stow&lt;/h2&gt;
 &lt;ul&gt;
@@ -1070,11 +1073,11 @@ free -m
 &lt;ul&gt;
 &lt;li&gt;自己架站，例如 aws, vps, heroku&lt;/li&gt;
 &lt;li&gt;靜態網頁，例如 github / google docs 等&lt;/li&gt;
-&lt;li&gt;平台，例如Wordpress, Medium, HackMD&lt;/li&gt;
+&lt;li&gt;平台，例如 Wordpress, Medium, HackMD&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;靜態網頁生成器static-site-generator&#34;&gt;靜態網頁生成器(static site generator)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。&lt;/li&gt;
+&lt;li&gt;某些文件存放服務支援存放 html 可自動變成網站，如 github, google docs 等等。&lt;/li&gt;
 &lt;li&gt;靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站&lt;/li&gt;
 &lt;li&gt;現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo&lt;/li&gt;
 &lt;li&gt;注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。
@@ -1085,17 +1088,17 @@ free -m
 &lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;很快&lt;/li&gt;
-&lt;li&gt;很多theme可選&lt;/li&gt;
-&lt;li&gt;可寫Markdown&lt;/li&gt;
-&lt;li&gt;支援Syntax高光&lt;/li&gt;
-&lt;li&gt;可上傳Github&lt;/li&gt;
+&lt;li&gt;很多 theme 可選&lt;/li&gt;
+&lt;li&gt;可寫 Markdown&lt;/li&gt;
+&lt;li&gt;支援 Syntax 高光&lt;/li&gt;
+&lt;li&gt;可上傳 Github&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;各theme之間差異過大，沒辦法說換就換&lt;/li&gt;
+&lt;li&gt;各 theme 之間差異過大，沒辦法說換就換&lt;/li&gt;
 &lt;li&gt;難上手&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果不在意主題或是Github的話可以考慮Hackmd。&lt;/p&gt;
+&lt;p&gt;如果不在意主題或是 Github 的話可以考慮 Hackmd。&lt;/p&gt;
 </description>
     </item>
     

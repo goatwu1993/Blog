@@ -210,7 +210,7 @@
 
 
   
-  <link rel="alternate" href="/blog/tags/hadoop/index.xml" type="application/rss+xml" title="Academic">
+  <link rel="alternate" href="/blog/tags/hadoop/index.xml" type="application/rss+xml" title="goatwu1993">
   
 
   <link rel="manifest" href="/blog/index.webmanifest">
@@ -230,9 +230,9 @@
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Academic">
+  <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/tags/hadoop/">
-  <meta property="og:title" content="Hadoop | Academic">
+  <meta property="og:title" content="Hadoop | goatwu1993">
   <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
@@ -253,7 +253,7 @@
 
 
 
-  <title>Hadoop | Academic</title>
+  <title>Hadoop | goatwu1993</title>
 
 </head>
 
@@ -304,7 +304,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -317,7 +317,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/blog/">Academic</a>
+      <a class="navbar-brand" href="/blog/">goatwu1993</a>
     </div>
     
 
@@ -498,10 +498,16 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
     <h2><a href="/blog/posts/apache-kafka-2/">Apache Kafka - Part2</a></h2>
     <div class="article-style">
       
-      Table of Contents  Kafka Architecture Producers Consumers Consumer Group Brokers  Broker controller   Topics  Topics 定義 Regular Topics Compacted topics   Partitions  Partitions 定義 Partition offset Replica Partition Leader Partition Follower ISR   Kafka Cluster ZooKeeper Reference   Kafka Architecture Picture from wiki
+      Kafka Architecture Picture from wiki
 Producers   Producers 將發送資料流到一至多個 Topics
   Producer 使用 push(推)模式將訊息釋出到 Broker
   實作 Kafka 提供的 Producer API
+  Consumers   Consumers 會訂閱一或多個 Topics
+  Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息
+  實作 Kafka 提供的 Consumer API
+  Consumer Group   每個 Consumer 屬於一個特定的 Consumer Group
+  一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息
+  Brokers   仲介處理 Consumer 以及 Producers 的訊息
       
     </div>
   </div>

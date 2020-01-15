@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BigData | Academic</title>
+    <title>BigData | goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/bigdata/</link>
       <atom:link href="https://goatwu1993.github.io/blog/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
     <description>BigData</description>
@@ -63,41 +63,7 @@
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
       <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
-      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#kafka-architecture&#34;&gt;Kafka Architecture&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#producers&#34;&gt;Producers&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#consumers&#34;&gt;Consumers&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#consumer-group&#34;&gt;Consumer Group&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#brokers&#34;&gt;Brokers&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#broker-controller&#34;&gt;Broker controller&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#topics&#34;&gt;Topics&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#topics-定義&#34;&gt;Topics 定義&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#regular-topics&#34;&gt;Regular Topics&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#compacted-topics&#34;&gt;Compacted topics&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#partitions&#34;&gt;Partitions&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#partitions-定義&#34;&gt;Partitions 定義&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#partition-offset&#34;&gt;Partition offset&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#replica&#34;&gt;Replica&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#partition-leader&#34;&gt;Partition Leader&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#partition-follower&#34;&gt;Partition Follower&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#isr&#34;&gt;ISR&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#kafka-cluster&#34;&gt;Kafka Cluster&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#zookeeper&#34;&gt;ZooKeeper&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#reference&#34;&gt;Reference&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;This is an image&#34;&gt;
 Picture from wiki&lt;/p&gt;
 &lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
