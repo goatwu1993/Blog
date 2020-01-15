@@ -29,11 +29,11 @@
     
   
   <meta name="description" content="Dictionary Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary
-先開大招 直接偷看答案，看看 cpython 怎麼寫準沒錯，用 C 寫看起來就很難，還好 這邊 有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。
-Hash table 的好  O(1) insertion O(1) get O(1) delete  O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
-當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。
-load factor &amp; dynamic resizing wiki  load factor = n/k
- n is the number of entries occupied in the hash table.">
+瞄一下 瞄一下 cpython 怎麼寫， 這邊 有詳細解釋。
+Hash table 優點  O(1) insertion O(1) get O(1) delete  但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。
+Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries
+ Load Factor = n/k n is the number of entries occupied in the hash table. k is the number of buckets.  k 也叫做 table size， n 為資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。
+實務上控制 Load factor 介於 0.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/dict-python-implementation/">
@@ -237,11 +237,11 @@ load factor &amp; dynamic resizing wiki  load factor = n/k
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/dict-python-implementation/">
   <meta property="og:title" content="Python 實作 Dictionary | Academic">
   <meta property="og:description" content="Dictionary Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary
-先開大招 直接偷看答案，看看 cpython 怎麼寫準沒錯，用 C 寫看起來就很難，還好 這邊 有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。
-Hash table 的好  O(1) insertion O(1) get O(1) delete  O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
-當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。
-load factor &amp; dynamic resizing wiki  load factor = n/k
- n is the number of entries occupied in the hash table."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+瞄一下 瞄一下 cpython 怎麼寫， 這邊 有詳細解釋。
+Hash table 優點  O(1) insertion O(1) get O(1) delete  但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。
+Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries
+ Load Factor = n/k n is the number of entries occupied in the hash table. k is the number of buckets.  k 也叫做 table size， n 為資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。
+實務上控制 Load factor 介於 0."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -542,41 +542,28 @@ load factor &amp; dynamic resizing wiki  load factor = n/k
     <div class="article-style">
       <h2 id="dictionary">Dictionary</h2>
 <p>Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary</p>
-<h2 id="先開大招">先開大招</h2>
-<p>直接偷看答案，看看 
+<h2 id="瞄一下">瞄一下</h2>
+<p>瞄一下
 <a href="https://github.com/python/cpython/blob/master/Objects/dictobject.c" target="_blank" rel="noopener">cpython</a>
-怎麼寫準沒錯，用 C 寫看起來就很難，還好
+怎麼寫，
 <a href="https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY" target="_blank" rel="noopener">這邊</a>
-有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。</p>
-<h2 id="hash-table-的好">Hash table 的好</h2>
+有詳細解釋。</p>
+<h2 id="hash-table-優點">Hash table 優點</h2>
 <ul>
 <li>O(1) insertion</li>
 <li>O(1) get</li>
 <li>O(1) delete</li>
 </ul>
-<p>O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。</p>
-<p>當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。</p>
-<h2 id="load-factor--dynamic-resizing">load factor &amp; dynamic resizing</h2>
-<h3 id="wikihttpsenwikipediaorgwikihash_tableresizing_by_copying_all_entries">
-<a href="https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries" target="_blank" rel="noopener">wiki</a>
-</h3>
-<p>load factor = n/k</p>
+<p>但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。</p>
+<h2 id="load-factor--dynamic-resizing">Load Factor &amp; dynamic resizing</h2>
+<p><a href="https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries">https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries</a></p>
 <ul>
+<li>Load Factor = n/k</li>
 <li>n is the number of entries occupied in the hash table.</li>
 <li>k is the number of buckets.</li>
 </ul>
-<p>k 通常也被叫做 table size。有 n 筆資料，不會只開 n 個 entry，而是稍微大一些的 k 筆，所以 n 總共佔 k 的比例就是 load factor。</p>
-<ul>
-<li>當 load factor 趨近 1，Worst Case 機率增加，平均查找時間 O(n)</li>
-<li>當 load factor 趨近 0，Worst Case 機率較少，平均查找時間 O(1)。</li>
-</ul>
-<p>實務上</p>
-<ul>
-<li>開 Dictionary 要預估資料的筆數 n 很不實際</li>
-<li>load factor 趨近於 0，雖然有 O(1)的查找，但 k &raquo; n 表示要開很大的 table size 儲存相對很少的資料，很浪費空間。</li>
-<li>load factro 趨近於 1，很省空間，但查找時間趨近 O(n)，失去 hash table 的初心。</li>
-</ul>
-<p>因此一般來說， load factor 介於 0.6 至 0.7 ，算是空間時間比較平衡，根據 n 調整 k 的手段就是 dynamic resizing</p>
+<p>k 也叫做 table size， n 為資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。</p>
+<p>實務上控制 Load factor 介於 0.3 至 0.7 ，時間 O(1)的同時 k 還小。</p>
 <h2 id="dictionary-node">Dictionary Node</h2>
 <pre><code class="language-python">class DictionaryNode():
     &quot;&quot;&quot;
@@ -593,58 +580,13 @@ load factor &amp; dynamic resizing wiki  load factor = n/k
         return (self.key.__repr__() + &quot;: &quot; + self.value.__repr__())
 </code></pre>
 <h3 id="me_hash">me_hash</h3>
-<p>me_hash 是 key 的 hash 值，根據 cpython 以及講解，是 get 的時候比對會用到</p>
+<p>key 的 hash 值，cpython get 的時候比對會用到</p>
 <pre><code class="language-c">(ep-&gt;me_key == key ||
 (ep-&gt;me_hash == hash &amp;&amp; unicode_eq(ep-&gt;me_key, key)))
 </code></pre>
-<p>感覺是比對</p>
-<ul>
-<li>key 值本身</li>
-<li>hash+unicode</li>
-</ul>
-<p>兩者其中一個為 True 則判斷為 key 相同，詳細情形可能要對編碼比較熟才看得懂，這份 code 只有存起來放著等以， resize 就不需要重算一次。</p>
+<p>詳細原因可能要對編碼比較熟才看得懂，我存著 resize 就不需要重算一次。</p>
 <h3 id="collided">collided</h3>
-<p>一個確認有沒有 collide 過的 flag</p>
-<ul>
-<li>
-<p>insert<br>
-若 entry 已被佔用，則將此 entry 的 collided 屬性設定為 True，再往後面找。</p>
-</li>
-<li>
-<p>delete<br>
-若 collide 為 True，應該將 key, value 設定為 None 或是整個 node 換成另一種 class，告訴大家這 node 已經被刪除了，但你還是應該往後尋找。</p>
-</li>
-<li>
-<p>get 的 pseudo code</p>
-</li>
-</ul>
-<pre><code class="language-python">    def get(key):
-        entry = me_hash(key)
-        while is_valid(entry):
-            if hash_table[entry] == None:
-                # 這個Entry從來沒有被使用過
-                raise IndexError('key not exist')
-            elif hash_table[entry] and \
-                    hash_table[entry].key != key and \
-                    not hash_table[entry].collided:
-                # 此entry已經有值，但key不對，但沒有發生過collided=&gt;
-                # 只是剛好entry相同，且沒發生collide，直接返回indexError即可
-                raise IndexError('key not exist')
-            elif hash_table[entry] and \
-                    hash_table[entry].key != key and \
-                    hash_table[entry].collided:
-                # 此entry已經有值，但key不對，但有發生過collided =&gt;
-                # 往下查找
-                entry += 1
-            elif hash_table[entry] and \
-                not hash_table[entry].key and \
-                not hash_table[entry].value and
-            hash_table[entry].collided:
-                # 此Node被del，但為了提示之後要往後查找，流下 collided 屬性。
-                entry += 1
-            elif hash_table[entry] and hash_table[entry].key == key:
-                return hash_table[entry].value
-</code></pre>
+<p>判斷是否 collide 過的 flag，若 delete 時 collided 為 True，告訴大家這 node 沒有值但需要往後尋找，若沒有 collide 過則代表沒有 collide 過，返回 indexError。</p>
 <h2 id="dictionary-class">Dictionary Class</h2>
 <pre><code class="language-python">class Dictionary():
     &quot;&quot;&quot;
@@ -657,10 +599,10 @@ load factor &amp; dynamic resizing wiki  load factor = n/k
         self.used_entry = 0
         self.buckets = [None for x in range(0, 8)]
 </code></pre>
-<p>先開一個大小為 8 的 list，由於沒有實作{}的讀取，因此 KVP 只能一個一個 set。</p>
-<p>另外由於不想每次要拿長度或是算 load factor 的時候都要去做一個 O(k)的 for loop，因此直接開一個欄位(self.used_entry)來記，insert/del 要記得 maintain。</p>
+<p>初始大小為 8 ，python 沒有辦法 override {} 的讀取， KVP 只能慢慢塞。</p>
+<p>另外存取 used_entry 以免 len()需要跑 O(n)的 loop，insert/del 要記得 maintain。</p>
 <h2 id="hash">Hash</h2>
-<p>仿照 cpython 用 siphash，據作者所述是一個相對平均且快速的 hash ，用過 md5 也是很 OK 的，只是轉成 int 相較麻煩，還要 digest 什麼的)，開頭要記得 import。</p>
+<p>仿照 cpython 用 siphash，據作者所述是一個快速的 hash ，用過 md5 也是可以的。</p>
 <pre><code class="language-bash">pip install siphash
 </code></pre>
 <pre><code class="language-python">from siphash import siphash24
@@ -672,18 +614,10 @@ load factor &amp; dynamic resizing wiki  load factor = n/k
         &quot;&quot;&quot;
         return siphash24(b'0123456789ABCDEF',(str(key).encode('utf-8'))).hash()
 </code></pre>
-<h2 id="resize-dynamic-resizing">Resize (dynamic resizing)</h2>
-<h3 id="proper_size">proper_size()</h3>
-<p>給定 n 筆 data，根據 load factor 的合理範圍算出合適的 data_size，原則</p>
-<ul>
-<li>1/3 &lt; n/proper_size &lt; 2/3</li>
-<li>proper_size 為 2 的任意正整數次方(2^integer)</li>
-</ul>
-<h3 id="resize">resize()</h3>
-<p>任何牽涉到 len 增加/減少時都應該呼叫，算出 proper_size，若 data_size 改變則把 buckets 裡面的東西全部 dump 到 new_buckets。</p>
+<h2 id="dynamic-resizing">Dynamic Resizing</h2>
 <h3 id="bitmask--運算">bitmask (&amp;) 運算</h3>
 <p>當 k (table size) 是 2 的 m 次方，則 hash(n) mod k 可以用 hash(n) &amp; bitmask 取代，其中 bitmask 為 m 個 1 組成。</p>
-<p>Python 命令列 demo</p>
+<h3 id="bitmask--in-python-terminal">bitmask (&amp;) in Python terminal</h3>
 <pre><code class="language-python">&gt;&gt;&gt; def hash(key): return siphash24(b'0123456789ABCDEF',(str(key).encode('utf-8'))).hash()
 ...
 &gt;&gt;&gt; n = 'key_string'
@@ -703,7 +637,7 @@ True
 True
 &gt;&gt;&gt;
 </code></pre>
-<h3 id="resize-程式碼">resize 程式碼</h3>
+<h3 id="程式碼">程式碼</h3>
 <pre><code class="language-python">    def resize(self):
         &quot;&quot;&quot;
         Should change the size if load_factor &gt; 2/3 or load_factor &lt; 2/3
@@ -733,7 +667,7 @@ True
 </code></pre>
 <h2 id="實作-insertfinddelete">實作 insert/find/delete</h2>
 <h3 id="python-magic-methods">python Magic Methods</h3>
-<p>為了讓這個 class 更像內建的 dictionary，需要實作幾個 python 內建的 Magic Methods</p>
+<p>實作 python 內建的 Magic Methods</p>
 <pre><code class="language-python"># __setitem__
 a[b] = c
 # __getitem__
@@ -743,10 +677,9 @@ len(a)
 # __delitem__
 del a[b]
 </code></pre>
-<p>總的來說就是需要把以上幾個 Magic Methods 實作。</p>
 <h3 id="open-addressing">Open Addressing</h3>
 <p>這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。</p>
-<h3 id="magic-methods-程式碼">Magic Methods 程式碼</h3>
+<h3 id="程式碼-1">程式碼</h3>
 <pre><code class="language-python">    def __repr__(self):
         s = ''
         for i in range(len(self.buckets)):
@@ -807,7 +740,6 @@ del a[b]
 <a href="https://github.com/goatwu1993/data_structure/blob/master/hash_table.py" target="_blank" rel="noopener">Github</a>
 </p>
 <h2 id="reference">Reference</h2>
-<p>最後附上參考資料，建議看第一個，講的很清楚，有一些太難的地方我也沒有仔細看懂就寫完了&hellip;</p>
 <ul>
 <li>
 <a href="https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY" target="_blank" rel="noopener">大神解說</a>

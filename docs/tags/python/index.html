@@ -483,11 +483,11 @@
     <div class="article-style">
       
       Dictionary Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary
-先開大招 直接偷看答案，看看 cpython 怎麼寫準沒錯，用 C 寫看起來就很難，還好 這邊 有一篇解釋，總之，key-value pair 用 hash table 是正義，實作上的眉眉角角才是重點。
-Hash table 的好  O(1) insertion O(1) get O(1) delete  O(1) 94 狂，然而以上 O(1)的時間複雜度，都是指 average case 。
-當 entry 越來越滿，worst case 就容易發生，worst case 發生的機率和下面要講的 load factor 正相關。
-load factor &amp; dynamic resizing wiki  load factor = n/k
- n is the number of entries occupied in the hash table.
+瞄一下 瞄一下 cpython 怎麼寫， 這邊 有詳細解釋。
+Hash table 優點  O(1) insertion O(1) get O(1) delete  但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。
+Load Factor &amp; dynamic resizing https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries
+ Load Factor = n/k n is the number of entries occupied in the hash table. k is the number of buckets.  k 也叫做 table size， n 為資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。
+實務上控制 Load factor 介於 0.
       
     </div>
   </div>
