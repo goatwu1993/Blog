@@ -11,35 +11,36 @@ gitment: true
 ## 1. Homebrew
 
 - macOS 包管理器
-- 官方網站
+- 官網
   <https://brew.sh/>
 - 包列表
   <https://formulae.brew.sh/>
 
 ## 2. iTerm2
 
+- 選取優化，選取即複製
+
 ## 3. GNU Stow
 
-- GNU Stow 是個 Symlink farm manager
-- 可以幫忙管理你的 dotfiles，將各個 App 的 dotfiles 整包上傳 Github
-- Stow 官方網頁  
-  [GNU Stow](https://www.gnu.org/software/stow/)
+- Symlink 管理器。
+- 用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github
+- 官網 <https://www.gnu.org/software/stow>
 
 ## 3. zsh
 
-- Z shell 是一個支援許多互動方式的 Shell，支援部分 bash, ksh 及 tcsh 語法
-- 支援 autosuggestion, autocompletion 及 syntax highlighting
-- zshrc 懶人包  
-  [zsh-quickstart-kit](https://github.com/unixorn/zsh-quickstart-kit)
+- Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting
+- 支援部分 bash, ksh 及 tcsh 語法
+- zshrc 懶人包 <https://github.com/unixorn/zsh-quickstart-kit>
 
 ## 4. vscode
 
-- VSCODE 插件推薦
-  [viatsko/awesome-vscode](https://github.com/viatsko/awesome-vscode)
+- VSCODE 插件懶人包 <https://github.com/viatsko/awesome-vscode>
 
 ## 5. vim
 
-- vimrc 懶人包  
-   [amix/vimrc](https://github.com/amix/vimrc)
-- vim 插件管理器 Vundle  
-  [Vundlevim](https://github.com/VundleVim/Vundle.vim)
+- vimrc 懶人包 <https://github.com/amix/vimrc>
+- vim 插件管理器 Vundle <https://github.com/VundleVim/Vundle.vim>
+
+## Reference
+
+- <https://www.zhihu.com/question/27447370>

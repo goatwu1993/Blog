@@ -21,17 +21,19 @@
   
   
 
-  <meta name="author" content="Nelson Bighetti">
+  <meta name="author" content="Chao Yang Wu">
 
   
   
   
     
   
-  <meta name="description" content="Professor of Artificial Intelligence">
+  <meta name="description" content="個人網頁怎麼建立 大概可分為
+ 自己架站，例如 aws, vps, heroku 靜態網頁，例如 github / google docs 等 平台，例如Wordpress, Medium, HackMD  靜態網頁生成器(static site generator)  某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。 靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站 現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo 注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。   結論 最後選了 Hugo
+優點  很快 很多theme可選 可寫Markdown 支援Syntax高光 可上傳Github  缺點  各theme之間差異過大，沒辦法說換就換 難上手  如果不在意主題或是Github的話可以考慮Hackmd。">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/categories/demo/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/hugo/">
 
   
 
@@ -210,14 +212,12 @@
 
 
   
-  <link rel="alternate" href="/blog/categories/demo/index.xml" type="application/rss+xml" title="Academic">
-  
 
   <link rel="manifest" href="/blog/index.webmanifest">
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/categories/demo/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/hugo/">
 
   
   
@@ -231,29 +231,36 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Academic">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/categories/demo/">
-  <meta property="og:title" content="Demo | Academic">
-  <meta property="og:description" content="Professor of Artificial Intelligence"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/hugo/">
+  <meta property="og:title" content="Hugo | Academic">
+  <meta property="og:description" content="個人網頁怎麼建立 大概可分為
+ 自己架站，例如 aws, vps, heroku 靜態網頁，例如 github / google docs 等 平台，例如Wordpress, Medium, HackMD  靜態網頁生成器(static site generator)  某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。 靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站 現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo 注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。   結論 最後選了 Hugo
+優點  很快 很多theme可選 可寫Markdown 支援Syntax高光 可上傳Github  缺點  各theme之間差異過大，沒辦法說換就換 難上手  如果不在意主題或是Github的話可以考慮Hackmd。"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2016-04-20T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2018-04-06T19:19:34&#43;08:00">
+    
+    <meta property="article:modified_time" content="2018-04-06T19:19:34&#43;08:00">
   
 
   
 
 
 
-
   
 
 
   
 
 
+  
 
 
 
-  <title>Demo | Academic</title>
+
+
+  <title>Hugo | Academic</title>
 
 </head>
 
@@ -443,54 +450,311 @@
 </nav>
 
 
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Hugo</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 6, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/blog/categories/hugo/">hugo</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="個人網頁怎麼建立">個人網頁怎麼建立</h2>
+<p>大概可分為</p>
+<ul>
+<li>自己架站，例如 aws, vps, heroku</li>
+<li>靜態網頁，例如 github / google docs 等</li>
+<li>平台，例如Wordpress, Medium, HackMD</li>
+</ul>
+<h2 id="靜態網頁生成器static-site-generator">靜態網頁生成器(static site generator)</h2>
+<ul>
+<li>某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。</li>
+<li>靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站</li>
+<li>現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo</li>
+<li>注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。
+</li>
+</ul>
+<h2 id="結論">結論</h2>
+<p>最後選了 Hugo</p>
+<h3 id="優點">優點</h3>
+<ul>
+<li>很快</li>
+<li>很多theme可選</li>
+<li>可寫Markdown</li>
+<li>支援Syntax高光</li>
+<li>可上傳Github</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>各theme之間差異過大，沒辦法說換就換</li>
+<li>難上手</li>
+</ul>
+<p>如果不在意主題或是Github的話可以考慮Hackmd。</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/blog/tags/hugo/">hugo</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/hugo/&amp;text=Hugo" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/hugo/&amp;t=Hugo" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Hugo&amp;body=https://goatwu1993.github.io/blog/posts/hugo/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/hugo/&amp;title=Hugo" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Hugo%20https://goatwu1993.github.io/blog/posts/hugo/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/hugo/&amp;title=Hugo" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
 
 
 
-
-
-
-
-
-
-
-  
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Demo</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
   
   
-  <div>
-    <h2><a href="/blog/posts/getting-started/">Academic: the website builder for Hugo</a></h2>
-    <div class="article-style">
+  <div class="media author-card content-widget-hr">
+    
       
-      Create a beautifully simple website in under 10 minutes.
+      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
       
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:peteeelol@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
   </div>
-  
+
+
+
+
+
+
+
+
 
   
+  
 
-</div>
+
+
+  </div>
+</article>
 
       
 

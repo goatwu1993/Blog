@@ -21,14 +21,14 @@
   
   
 
-  <meta name="author" content="Nelson Bighetti">
+  <meta name="author" content="Chao Yang Wu">
 
   
   
   
     
   
-  <meta name="description" content="Professor of Artificial Intelligence">
+  <meta name="description" content="Software Engineer">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/tags/git/">
@@ -233,7 +233,7 @@
   <meta property="og:site_name" content="Academic">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/tags/git/">
   <meta property="og:title" content="git | Academic">
-  <meta property="og:description" content="Professor of Artificial Intelligence"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2019-12-27T21:32:52&#43;08:00">
@@ -493,9 +493,8 @@ $ git add .gitmodules $ git commit -m &quot;Remove a submodule&quot;  安全起�
     <div class="article-style">
       
       本篇記錄如何使用 hugo 線上的 themes
-Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面，有兩種方式
-方案 a. submodule 完全不動到 themes 裡面的話可以用 submodule。
-# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  方案 b. fork 適合你覺得下載 themes 之後會想要更改的情形。
+Hugo themes  Hugo 官方線上 themes a. 直接 submodule 不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
+# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  b. fork 再 submodule 如果需要更改 partial/layout/css 的話請選擇 fork
 # fork cd ./themes git clone https://github.com/$你的Id/hugo-kiera.git kiera  修改 config.toml theme = &quot;kiera&quot;  
       
     </div>

@@ -21,14 +21,14 @@
   
   
 
-  <meta name="author" content="Nelson Bighetti">
+  <meta name="author" content="Chao Yang Wu">
 
   
   
   
     
   
-  <meta name="description" content="Professor of Artificial Intelligence">
+  <meta name="description" content="Software Engineer">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/tags/hugo/">
@@ -233,7 +233,7 @@
   <meta property="og:site_name" content="Academic">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/tags/hugo/">
   <meta property="og:title" content="hugo | Academic">
-  <meta property="og:description" content="Professor of Artificial Intelligence"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2019-12-27T21:32:52&#43;08:00">
@@ -482,7 +482,7 @@
     <h2><a href="/blog/posts/hugo-cheatsheet/">Hugo cheatsheet</a></h2>
     <div class="article-style">
       
-      Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。
+      Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。
 rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料   Hugo 官網   
       
     </div>
@@ -493,34 +493,20 @@ rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料  
     <div class="article-style">
       
       本篇記錄如何使用 hugo 線上的 themes
-Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面，有兩種方式
-方案 a. submodule 完全不動到 themes 裡面的話可以用 submodule。
-# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  方案 b. fork 適合你覺得下載 themes 之後會想要更改的情形。
+Hugo themes  Hugo 官方線上 themes a. 直接 submodule 不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
+# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  b. fork 再 submodule 如果需要更改 partial/layout/css 的話請選擇 fork
 # fork cd ./themes git clone https://github.com/$你的Id/hugo-kiera.git kiera  修改 config.toml theme = &quot;kiera&quot;  
       
     </div>
   </div>
   
   <div>
-    <h2><a href="/blog/posts/about-this-blog/">關於這個blog</a></h2>
+    <h2><a href="/blog/posts/hugo/">Hugo</a></h2>
     <div class="article-style">
       
-      Blog 到底怎麼寫，架在哪 常見的選擇
-  自己架站
-掌握度最高，但除非是公司，基本上對個人來說算 overkill，花時間花錢。
-  靜態網頁
-可以部署在 github 或 google docs 等地方，可以透過靜態網頁生成器產生。
-  平台
-Wordpress.com, Medium 等等，wordpress 有點太大，而且有些漂亮的主題要花錢，會很不開心。
-  靜態網頁生成器(static site generator)  網頁是透過工具，直接生成/render 好成 html 放在雲端。而不是靠後端去動態即時生成/render。
-另外注意靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。
-現在流行的靜態網頁生成器
- Jekyll
-老字號，有 Github 支持，但網頁資源億多速度慢的缺點就會跑出來。 Hexo
-台灣人寫的，如果熟悉 node 可以試試看，用的渲染引擎似乎是 swig，沒有用過。 Hugo
-用 golang 寫的，但實際上不太需要 golang 語法，號稱生成文件很快。  我看的重點  Markdown
-寫過就回不去了 Syntax Highlighting
-寫的 code 會比較好看 主題 documents &amp; 線上討論  圖片我反而很少上傳所以不考慮
+      個人網頁怎麼建立 大概可分為
+ 自己架站，例如 aws, vps, heroku 靜態網頁，例如 github / google docs 等 平台，例如Wordpress, Medium, HackMD  靜態網頁生成器(static site generator)  某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。 靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站 現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo 注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。   結論 最後選了 Hugo
+優點  很快 很多theme可選 可寫Markdown 支援Syntax高光 可上傳Github  缺點  各theme之間差異過大，沒辦法說換就換 難上手  如果不在意主題或是Github的話可以考慮Hackmd。
       
     </div>
   </div>

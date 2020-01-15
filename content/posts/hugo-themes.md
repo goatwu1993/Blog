@@ -14,13 +14,9 @@ gitment: true
 
 [Hugo 官方線上 themes](https://themes.gohugo.io/)
 
-## 下載 themes
+### a. 直接 submodule
 
-到他們的 github 上面，有兩種方式
-
-### 方案 a. submodule
-
-完全不動到 themes 裡面的話可以用 submodule。
+不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
 
 ```bash
 # submodule
@@ -28,9 +24,9 @@ cd ./themes
 git submodule add https://github.com/avianto/hugo-kiera.git kiera
 ```
 
-### 方案 b. fork
+### b. fork 再 submodule
 
-適合你覺得下載 themes 之後會想要更改的情形。
+如果需要更改 partial/layout/css 的話請選擇 fork
 
 ```bash
 # fork

@@ -54,16 +54,14 @@ $ git commit -m &amp;quot;Remove a submodule&amp;quot;
 &lt;p&gt;
 &lt;a href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官方線上 themes&lt;/a&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;下載-themes&#34;&gt;下載 themes&lt;/h2&gt;
-&lt;p&gt;到他們的 github 上面，有兩種方式&lt;/p&gt;
-&lt;h3 id=&#34;方案-a-submodule&#34;&gt;方案 a. submodule&lt;/h3&gt;
-&lt;p&gt;完全不動到 themes 裡面的話可以用 submodule。&lt;/p&gt;
+&lt;h3 id=&#34;a-直接-submodule&#34;&gt;a. 直接 submodule&lt;/h3&gt;
+&lt;p&gt;不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# submodule
 cd ./themes
 git submodule add https://github.com/avianto/hugo-kiera.git kiera
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;方案-b-fork&#34;&gt;方案 b. fork&lt;/h3&gt;
-&lt;p&gt;適合你覺得下載 themes 之後會想要更改的情形。&lt;/p&gt;
+&lt;h3 id=&#34;b-fork-再-submodule&#34;&gt;b. fork 再 submodule&lt;/h3&gt;
+&lt;p&gt;如果需要更改 partial/layout/css 的話請選擇 fork&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# fork
 cd ./themes
 git clone https://github.com/$你的Id/hugo-kiera.git kiera

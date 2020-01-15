@@ -33,7 +33,7 @@ hugo server
 
 ### 部署
 
-這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。
+注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。
 
 ```bash
 rm -rf ./docs

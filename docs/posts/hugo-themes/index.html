@@ -21,7 +21,7 @@
   
   
 
-  <meta name="author" content="Nelson Bighetti">
+  <meta name="author" content="Chao Yang Wu">
 
   
   
@@ -29,9 +29,8 @@
     
   
   <meta name="description" content="本篇記錄如何使用 hugo 線上的 themes
-Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面，有兩種方式
-方案 a. submodule 完全不動到 themes 裡面的話可以用 submodule。
-# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  方案 b. fork 適合你覺得下載 themes 之後會想要更改的情形。
+Hugo themes  Hugo 官方線上 themes a. 直接 submodule 不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
+# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  b. fork 再 submodule 如果需要更改 partial/layout/css 的話請選擇 fork
 # fork cd ./themes git clone https://github.com/$你的Id/hugo-kiera.git kiera  修改 config.toml theme = &quot;kiera&quot;  ">
 
   
@@ -236,9 +235,8 @@ Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面�
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/hugo-themes/">
   <meta property="og:title" content="Hugo themes | Academic">
   <meta property="og:description" content="本篇記錄如何使用 hugo 線上的 themes
-Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面，有兩種方式
-方案 a. submodule 完全不動到 themes 裡面的話可以用 submodule。
-# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  方案 b. fork 適合你覺得下載 themes 之後會想要更改的情形。
+Hugo themes  Hugo 官方線上 themes a. 直接 submodule 不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
+# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  b. fork 再 submodule 如果需要更改 partial/layout/css 的話請選擇 fork
 # fork cd ./themes git clone https://github.com/$你的Id/hugo-kiera.git kiera  修改 config.toml theme = &quot;kiera&quot;  "><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
@@ -543,16 +541,14 @@ Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面�
 <p>
 <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo 官方線上 themes</a>
 </p>
-<h2 id="下載-themes">下載 themes</h2>
-<p>到他們的 github 上面，有兩種方式</p>
-<h3 id="方案-a-submodule">方案 a. submodule</h3>
-<p>完全不動到 themes 裡面的話可以用 submodule。</p>
+<h3 id="a-直接-submodule">a. 直接 submodule</h3>
+<p>不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好</p>
 <pre><code class="language-bash"># submodule
 cd ./themes
 git submodule add https://github.com/avianto/hugo-kiera.git kiera
 </code></pre>
-<h3 id="方案-b-fork">方案 b. fork</h3>
-<p>適合你覺得下載 themes 之後會想要更改的情形。</p>
+<h3 id="b-fork-再-submodule">b. fork 再 submodule</h3>
+<p>如果需要更改 partial/layout/css 的話請選擇 fork</p>
 <pre><code class="language-bash"># fork
 cd ./themes
 git clone https://github.com/$你的Id/hugo-kiera.git kiera
@@ -695,9 +691,9 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Nelson Bighetti</a></h5>
-      <h6 class="card-subtitle">Professor of Artificial Intelligence</h6>
-      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -709,10 +705,8 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
     
     
     
-      
-    
     <li>
-      <a href="/blog/#contact" >
+      <a href="mailto:peteeelol@gmail.com" >
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -729,39 +723,7 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
       
     
     <li>
-      <a href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/gcushen" target="_blank" rel="noopener">
+      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
     </li>
@@ -789,7 +751,7 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
       
       <li><a href="/blog/posts/git-cheatsheet-submodule/">git cheatsheet</a></li>
       
-      <li><a href="/blog/posts/about-this-blog/">關於這個blog</a></li>
+      <li><a href="/blog/posts/hugo/">Hugo</a></li>
       
     </ul>
   </div>

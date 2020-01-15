@@ -20,47 +20,39 @@
       <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS 包管理器&lt;/li&gt;
-&lt;li&gt;官方網站
+&lt;li&gt;官網
 &lt;a href=&#34;https://brew.sh/&#34;&gt;https://brew.sh/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;包列表
 &lt;a href=&#34;https://formulae.brew.sh/&#34;&gt;https://formulae.brew.sh/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;選取優化，選取即複製&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;3-gnu-stow&#34;&gt;3. GNU Stow&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;GNU Stow 是個 Symlink farm manager&lt;/li&gt;
-&lt;li&gt;可以幫忙管理你的 dotfiles，將各個 App 的 dotfiles 整包上傳 Github&lt;/li&gt;
-&lt;li&gt;Stow 官方網頁&lt;br&gt;
-
-&lt;a href=&#34;https://www.gnu.org/software/stow/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GNU Stow&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;Symlink 管理器。&lt;/li&gt;
+&lt;li&gt;用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github&lt;/li&gt;
+&lt;li&gt;官網 &lt;a href=&#34;https://www.gnu.org/software/stow&#34;&gt;https://www.gnu.org/software/stow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Z shell 是一個支援許多互動方式的 Shell，支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
-&lt;li&gt;支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
-&lt;li&gt;zshrc 懶人包&lt;br&gt;
-
-&lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zsh-quickstart-kit&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
+&lt;li&gt;支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
+&lt;li&gt;zshrc 懶人包 &lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;https://github.com/unixorn/zsh-quickstart-kit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;VSCODE 插件推薦
-
-&lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;viatsko/awesome-vscode&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;VSCODE 插件懶人包 &lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;https://github.com/viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;vimrc 懶人包&lt;br&gt;
-
-&lt;a href=&#34;https://github.com/amix/vimrc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;amix/vimrc&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;vim 插件管理器 Vundle&lt;br&gt;
-
-&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vundlevim&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;vimrc 懶人包 &lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;https://github.com/amix/vimrc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;vim 插件管理器 Vundle &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;https://github.com/VundleVim/Vundle.vim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/27447370&#34;&gt;https://www.zhihu.com/question/27447370&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -21,14 +21,14 @@
   
   
 
-  <meta name="author" content="Nelson Bighetti">
+  <meta name="author" content="Chao Yang Wu">
 
   
   
   
     
   
-  <meta name="description" content="Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。
+  <meta name="description" content="Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。
 rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料   Hugo 官網   ">
 
   
@@ -232,7 +232,7 @@ rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料  
   <meta property="og:site_name" content="Academic">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/hugo-cheatsheet/">
   <meta property="og:title" content="Hugo cheatsheet | Academic">
-  <meta property="og:description" content="Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。
+  <meta property="og:description" content="Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。
 rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料   Hugo 官網   "><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
@@ -546,7 +546,7 @@ hugo
 hugo server
 </code></pre>
 <h3 id="部署">部署</h3>
-<p>這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。</p>
+<p>注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。</p>
 <pre><code class="language-bash">rm -rf ./docs
 hugo
 </code></pre>
@@ -692,9 +692,9 @@ hugo
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Nelson Bighetti</a></h5>
-      <h6 class="card-subtitle">Professor of Artificial Intelligence</h6>
-      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -706,10 +706,8 @@ hugo
     
     
     
-      
-    
     <li>
-      <a href="/blog/#contact" >
+      <a href="mailto:peteeelol@gmail.com" >
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -726,39 +724,7 @@ hugo
       
     
     <li>
-      <a href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/gcushen" target="_blank" rel="noopener">
+      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
     </li>
@@ -784,7 +750,7 @@ hugo
       
       <li><a href="/blog/posts/hugo-themes/">Hugo themes</a></li>
       
-      <li><a href="/blog/posts/about-this-blog/">關於這個blog</a></li>
+      <li><a href="/blog/posts/hugo/">Hugo</a></li>
       
     </ul>
   </div>

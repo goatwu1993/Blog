@@ -21,14 +21,14 @@
   
   
 
-  <meta name="author" content="Nelson Bighetti">
+  <meta name="author" content="Chao Yang Wu">
 
   
   
   
     
   
-  <meta name="description" content="Professor of Artificial Intelligence">
+  <meta name="description" content="Software Engineer">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/">
@@ -233,7 +233,7 @@
   <meta property="og:site_name" content="Academic">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/">
   <meta property="og:title" content="Posts | Academic">
-  <meta property="og:description" content="Professor of Artificial Intelligence"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2020-01-09T19:53:34&#43;08:00">
@@ -530,9 +530,7 @@ load factor &amp; dynamic resizing wiki  load factor = n/k
     <h2><a href="/blog/posts/setting-macos-env/">macOS developer environments</a></h2>
     <div class="article-style">
       
-      1. Homebrew  macOS 包管理器 官方網站 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2 3. GNU Stow  GNU Stow 是個 Symlink farm manager 可以幫忙管理你的 dotfiles，將各個 App 的 dotfiles 整包上傳 Github Stow 官方網頁
-GNU Stow   3. zsh  Z shell 是一個支援許多互動方式的 Shell，支援部分 bash, ksh 及 tcsh 語法 支援 autosuggestion, autocompletion 及 syntax highlighting zshrc 懶人包
-zsh-quickstart-kit   4. vscode  VSCODE 插件推薦 viatsko/awesome-vscode   5. vim  vimrc 懶人包
+      1. Homebrew  macOS 包管理器 官網 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2  選取優化，選取即複製  3. GNU Stow  Symlink 管理器。 用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github 官網 https://www.gnu.org/software/stow  3. zsh  Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting 支援部分 bash, ksh 及 tcsh 語法 zshrc 懶人包 https://github.com/unixorn/zsh-quickstart-kit  4. vscode  VSCODE 插件懶人包 https://github.com/viatsko/awesome-vscode  5. vim  vimrc 懶人包 https://github.com/amix/vimrc vim 插件管理器 Vundle https://github.com/VundleVim/Vundle.vim  Reference  https://www.
       
     </div>
   </div>
@@ -551,7 +549,7 @@ $ git add .gitmodules $ git commit -m &quot;Remove a submodule&quot;  安全起�
     <h2><a href="/blog/posts/hugo-cheatsheet/">Hugo cheatsheet</a></h2>
     <div class="article-style">
       
-      Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 這邊有個小坑，content 寫好 markdown，指令下 hugo 不會自動覆蓋到最終的資料夾裡面，需要手動刪除再跑一次 hugo 。
+      Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。
 rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料   Hugo 官網   
       
     </div>
@@ -562,31 +560,9 @@ rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料  
     <div class="article-style">
       
       本篇記錄如何使用 hugo 線上的 themes
-Hugo themes  Hugo 官方線上 themes 下載 themes 到他們的 github 上面，有兩種方式
-方案 a. submodule 完全不動到 themes 裡面的話可以用 submodule。
-# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  方案 b. fork 適合你覺得下載 themes 之後會想要更改的情形。
+Hugo themes  Hugo 官方線上 themes a. 直接 submodule 不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
+# submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  b. fork 再 submodule 如果需要更改 partial/layout/css 的話請選擇 fork
 # fork cd ./themes git clone https://github.com/$你的Id/hugo-kiera.git kiera  修改 config.toml theme = &quot;kiera&quot;  
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/blog/posts/writing-technical-content/">Writing technical content in Academic</a></h2>
-    <div class="article-style">
-      
-      Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.
-Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.
-On this page, you'll find some examples of the types of technical content that can be rendered with Academic.
-Examples Code Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the highlight option in your config/_default/params.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/blog/posts/jupyter/">Display Jupyter Notebooks with Academic</a></h2>
-    <div class="article-style">
-      
-      Learn how to blog in Academic using Jupyter notebooks
       
     </div>
   </div>
@@ -600,17 +576,28 @@ Examples Code Academic supports a Markdown extension for highlighting code synta
     </div>
   </div>
   
+  <div>
+    <h2><a href="/blog/posts/networking-cheatsheet/">TCP/IP cheatsheet</a></h2>
+    <div class="article-style">
+      
+      OSI 7 Layres  Application Layer (Layer 7)  HTTP, HTTPS L7 firewall   Presentation Layer (Layer 6) Session Layer (Layer 5)  Sessions   Transport Layer (Layer 4)  TCP, UDP, SCTP, TLS   Network Layer (Layer 3)  IP Address Router, Layer 3 Switch   Data Link Layer (Layer 2)  Ethernet, 802.11(Wi-Fi), MAC Address Layer 2 Switch   Physical Layer (Layer 1)  Hub, Wire, Fiber, Radio    TCP/IP protocols  HTTP  Hyper Text Transport Protocol TCP Port 80   HTTPS  Hyper Text Transport Protocol Secure TCP Port 443   FTP  File Transfer Protocol TCP Port 21   Telnet  Telecommunication Protocol TCP Port 23   SMTP  Simple Mail Transfer Protocol TCP port 25 For email   DNS  Domain Name System UDP Port 53  Some famous public DNS servers    TFTP  Trivial File Transfer Protocol UDP port 69 Not secure.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/blog/posts/hugo/">Hugo</a></h2>
+    <div class="article-style">
+      
+      個人網頁怎麼建立 大概可分為
+ 自己架站，例如 aws, vps, heroku 靜態網頁，例如 github / google docs 等 平台，例如Wordpress, Medium, HackMD  靜態網頁生成器(static site generator)  某些文件存放服務支援存放html可自動變成網站，如github, google docs等等。 靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站 現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo 注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。   結論 最後選了 Hugo
+優點  很快 很多theme可選 可寫Markdown 支援Syntax高光 可上傳Github  缺點  各theme之間差異過大，沒辦法說換就換 難上手  如果不在意主題或是Github的話可以考慮Hackmd。
+      
+    </div>
+  </div>
+  
 
   
-<nav>
-  <ul class="pagination justify-content-center">
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/posts/page/2/">&raquo;</a></li>
-    
-  </ul>
-</nav>
-
 
 </div>
 

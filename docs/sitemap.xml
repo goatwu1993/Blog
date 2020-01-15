@@ -68,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/macos/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/macos/</loc>
     <lastmod>2019-12-28T19:17:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/macos/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/macos/</loc>
     <lastmod>2019-12-28T19:17:18+08:00</lastmod>
   </url>
   
@@ -98,12 +98,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/git/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/git/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -133,28 +133,18 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/datastructure/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/datastructure/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/datastructure/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/datastructure/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://goatwu1993.github.io/blog/tags/python/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/writing-technical-content/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/authors/admin/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -169,7 +159,7 @@
   
   <url>
     <loc>https://goatwu1993.github.io/blog/authors/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -188,8 +178,8 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/jupyter/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>https://goatwu1993.github.io/blog/authors/admin/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -213,12 +203,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/networking/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/networking/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/networking/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/networking/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
   
@@ -228,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/about-this-blog/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/hugo/</loc>
     <lastmod>2018-04-06T19:19:34+08:00</lastmod>
   </url>
   
@@ -255,21 +245,6 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/tags/academic/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/getting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/demo/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
