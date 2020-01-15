@@ -31,16 +31,16 @@ rm -rf [欲移除的目錄]
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .git/config
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git add .gitmodules
-$ git commit -m &amp;quot;Remove a submodule&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .gitmodules
+git commit -m &amp;quot;Remove a submodule&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule sync
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;網站一&lt;/a&gt;
-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;https://biang.io/blog/development/tools/revision-control/git/submod&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

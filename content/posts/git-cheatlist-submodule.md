@@ -36,8 +36,8 @@ vim .git/config
 最後再 commit，改變整個 Repository。
 
 ```bash
-$ git add .gitmodules
-$ git commit -m "Remove a submodule"
+git add .gitmodules
+git commit -m "Remove a submodule"
 ```
 
 ## 安全起見再做個 sync
@@ -48,4 +48,4 @@ git submodule sync
 
 ### 參考資料
 
-[網站一](https://biang.io/blog/development/tools/revision-control/git/submod)
+- <https://biang.io/blog/development/tools/revision-control/git/submod>

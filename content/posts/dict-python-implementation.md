@@ -12,7 +12,7 @@ weight: 40
 
 ## Dictionary
 
-Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary
+Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。
 
 ## 瞄一下
 
@@ -141,7 +141,7 @@ True
 >>>
 ```
 
-### 程式碼
+### Resizing 程式碼
 
 ```python
     def resize(self):
@@ -172,11 +172,9 @@ True
         self.buckets = new_buckets
 ```
 
-## 實作 insert/find/delete
+## Magic Methods
 
-### python Magic Methods
-
-實作 python 內建的 Magic Methods
+### 實作 python 內建的 Magic Methods
 
 ```python
 # __setitem__
@@ -193,7 +191,7 @@ del a[b]
 
 這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。
 
-### 程式碼
+### Magic Methods 程式碼
 
 ```python
     def __repr__(self):
@@ -255,6 +253,10 @@ del a[b]
 ## 完整程式碼
 
 [Github](https://github.com/goatwu1993/data_structure/blob/master/hash_table.py)
+
+## 結論
+
+Python 自己內建的資料結構，很多都是直接用 c 寫的，速度上快很多，如果沒必要，還是直接用就好了...
 
 ## Reference
 

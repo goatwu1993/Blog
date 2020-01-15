@@ -63,7 +63,41 @@
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</link>
       <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka-2/</guid>
-      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#kafka-architecture&#34;&gt;Kafka Architecture&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#producers&#34;&gt;Producers&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#consumers&#34;&gt;Consumers&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#consumer-group&#34;&gt;Consumer Group&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#brokers&#34;&gt;Brokers&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#broker-controller&#34;&gt;Broker controller&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#topics&#34;&gt;Topics&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#topics-定義&#34;&gt;Topics 定義&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#regular-topics&#34;&gt;Regular Topics&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#compacted-topics&#34;&gt;Compacted topics&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#partitions&#34;&gt;Partitions&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#partitions-定義&#34;&gt;Partitions 定義&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#partition-offset&#34;&gt;Partition offset&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#replica&#34;&gt;Replica&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#partition-leader&#34;&gt;Partition Leader&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#partition-follower&#34;&gt;Partition Follower&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#isr&#34;&gt;ISR&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#kafka-cluster&#34;&gt;Kafka Cluster&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#zookeeper&#34;&gt;ZooKeeper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#reference&#34;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;This is an image&#34;&gt;
 Picture from wiki&lt;/p&gt;
 &lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
@@ -236,7 +270,7 @@ Picture from wiki&lt;/p&gt;
       <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/dict-python-implementation/</guid>
       <description>&lt;h2 id=&#34;dictionary&#34;&gt;Dictionary&lt;/h2&gt;
-&lt;p&gt;Python Dictionary 的好大家都知道，這篇反過來用 Python 實作一個 Dictionary&lt;/p&gt;
+&lt;p&gt;Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。&lt;/p&gt;
 &lt;h2 id=&#34;瞄一下&#34;&gt;瞄一下&lt;/h2&gt;
 &lt;p&gt;瞄一下
 &lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cpython&lt;/a&gt;
@@ -332,7 +366,7 @@ True
 True
 &amp;gt;&amp;gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;程式碼&#34;&gt;程式碼&lt;/h3&gt;
+&lt;h3 id=&#34;resizing-程式碼&#34;&gt;Resizing 程式碼&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def resize(self):
         &amp;quot;&amp;quot;&amp;quot;
         Should change the size if load_factor &amp;gt; 2/3 or load_factor &amp;lt; 2/3
@@ -360,9 +394,8 @@ True
                 new_buckets[entry].collided = False
         self.buckets = new_buckets
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;實作-insertfinddelete&#34;&gt;實作 insert/find/delete&lt;/h2&gt;
-&lt;h3 id=&#34;python-magic-methods&#34;&gt;python Magic Methods&lt;/h3&gt;
-&lt;p&gt;實作 python 內建的 Magic Methods&lt;/p&gt;
+&lt;h2 id=&#34;magic-methods&#34;&gt;Magic Methods&lt;/h2&gt;
+&lt;h3 id=&#34;實作-python-內建的-magic-methods&#34;&gt;實作 python 內建的 Magic Methods&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# __setitem__
 a[b] = c
 # __getitem__
@@ -374,7 +407,7 @@ del a[b]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;open-addressing&#34;&gt;Open Addressing&lt;/h3&gt;
 &lt;p&gt;這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。&lt;/p&gt;
-&lt;h3 id=&#34;程式碼-1&#34;&gt;程式碼&lt;/h3&gt;
+&lt;h3 id=&#34;magic-methods-程式碼&#34;&gt;Magic Methods 程式碼&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def __repr__(self):
         s = &#39;&#39;
         for i in range(len(self.buckets)):
@@ -434,6 +467,8 @@ del a[b]
 &lt;p&gt;
 &lt;a href=&#34;https://github.com/goatwu1993/data_structure/blob/master/hash_table.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt;
 &lt;/p&gt;
+&lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;
+&lt;p&gt;Python 自己內建的資料結構，很多都是直接用 c 寫的，速度上快很多，如果沒必要，還是直接用就好了&amp;hellip;&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -540,16 +575,16 @@ rm -rf [欲移除的目錄]
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .git/config
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git add .gitmodules
-$ git commit -m &amp;quot;Remove a submodule&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .gitmodules
+git commit -m &amp;quot;Remove a submodule&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule sync
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;網站一&lt;/a&gt;
-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;https://biang.io/blog/development/tools/revision-control/git/submod&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

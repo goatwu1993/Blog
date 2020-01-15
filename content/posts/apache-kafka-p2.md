@@ -5,10 +5,12 @@ draft = false
 tags = ["Hadoop", "Kafka","BigData"]
 slug = "apache-kafka-2"
 gitment = true
-toc= true
+toc = true
 categories = []
-weight= 40
+weight = 40
 +++
+
+{{% toc %}}
 
 ## Kafka Architecture
 
