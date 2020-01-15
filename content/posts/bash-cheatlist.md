@@ -4,7 +4,7 @@ date: 2018-06-10T17:20:14+08:00
 draft: false
 categories: [shell]
 tags: [shell, bash]
-slug: bash-cheat-list
+slug: bash-cheatsheet
 gitment: true
 ---
 

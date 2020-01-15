@@ -18,7 +18,7 @@ gitment: true
 
 ## 2. iTerm2
 
-- 選取優化，選取即複製
+- 相比內建的 Terminal，支援點選選取優化，選取即複製等功能
 
 ## 3. GNU Stow
 

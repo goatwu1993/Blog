@@ -629,9 +629,9 @@ git clone https://github.com/$你的Id/hugo-kiera.git kiera
     
     <item>
       <title>bash cheatsheet</title>
-      <link>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</link>
+      <link>https://goatwu1993.github.io/blog/posts/bash-cheatsheet/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/bash-cheat-list/</guid>
+      <guid>https://goatwu1993.github.io/blog/posts/bash-cheatsheet/</guid>
       <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 

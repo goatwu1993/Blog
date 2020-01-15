@@ -1,14 +1,14 @@
-+++
-title = "Apache Kafka P3"
-date = 2020-01-10T17:14:42+08:00
-draft = true
-tags = ["Hadoop", "Kafka","BigData"]
-slug = "apache-kafka-3"
-gitment = true
-toc= true
-categories = []
-weight= 40
-+++
+---
+title: "Apache Kafka P3"
+date: 2020-01-10T17:14:42+08:00
+draft: true
+tags: ["Hadoop", "Kafka", "BigData"]
+slug: "apache-kafka-3"
+gitment: true
+toc: true
+categories: []
+weight: 40
+---
 
 ## Four Major APIs in Kafka
 

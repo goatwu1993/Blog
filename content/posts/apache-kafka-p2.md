@@ -1,16 +1,14 @@
-+++
-title = "Apache Kafka - Part2"
-date = 2020-01-09T19:53:34+08:00
-draft = false
-tags = ["Hadoop", "Kafka","BigData"]
-slug = "apache-kafka-2"
-gitment = true
-toc = true
-categories = []
-weight = 40
-+++
-
-{{% toc %}}
+---
+title: "Apache Kafka - Part2"
+date: 2020-01-09T19:53:34+08:00
+draft: false
+tags: ["Hadoop", "Kafka", "BigData"]
+slug: "apache-kafka-2"
+gitment: true
+toc: true
+categories: []
+weight: 40
+---
 
 ## Kafka Architecture
 
