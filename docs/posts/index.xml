@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | goatwu1993</title>
+    <link>https://goatwu1993.github.io/blog/posts/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 20:24:05 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Posts</title>
+      <link>https://goatwu1993.github.io/blog/posts/</link>
+    </image>
+    
+    <item>
+      <title>Docker P1</title>
+      <link>https://goatwu1993.github.io/blog/posts/docker/docker-p1/</link>
+      <pubDate>Wed, 15 Jan 2020 20:45:49 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/docker/docker-p1/</guid>
+      <description>&lt;h2 id=&#34;container&#34;&gt;Container&lt;/h2&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
+&lt;h3 id=&#34;image&#34;&gt;Image&lt;/h3&gt;
+&lt;h3 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h3&gt;
+&lt;p&gt;描述單一映像檔的文件&lt;/p&gt;
+&lt;h2 id=&#34;docker-engine&#34;&gt;Docker Engine&lt;/h2&gt;
+&lt;h2 id=&#34;docker-machine&#34;&gt;Docker Machine&lt;/h2&gt;
+&lt;h2 id=&#34;docker-compose&#34;&gt;Docker Compose&lt;/h2&gt;
+&lt;p&gt;docker-compose.yml 定義同時跑多容器 Docker App 的方法，例如：ZK + Kafka&lt;/p&gt;
+&lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&#34;&gt;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/docker/docker-commands/</link>
+      <pubDate>Wed, 15 Jan 2020 20:36:03 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/docker/docker-commands/</guid>
+      <description>&lt;h2 id=&#34;container&#34;&gt;container&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;docker-compose&#34;&gt;docker-compose&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker-compose ps
+docker-compose ps -a
+
+docker-compose down
+docker-compose scale kafka=3
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apache Kafka - Part1</title>
+      <link>https://goatwu1993.github.io/blog/posts/hadoop/kafka-p1/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hadoop/kafka-p1/</guid>
+      <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
+&lt;p&gt;Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。&lt;/p&gt;
+&lt;h3 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提供 pub-sub 及 point-to-point 兩種 queue mode&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因為可以直接處理檔案資料，直接用 OS 的 page cache，不需要額外 Applicaion Cache 來競爭珍貴的記憶體空間。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-優點&#34;&gt;Kafka 優點&lt;/h2&gt;
+&lt;h3 id=&#34;reliability-可靠&#34;&gt;Reliability 可靠&lt;/h3&gt;
+&lt;p&gt;Kafka is distributed, partitioned, replicated and fault tolerance.&lt;/p&gt;
+&lt;h3 id=&#34;scalability-可擴展性&#34;&gt;Scalability 可擴展性&lt;/h3&gt;
+&lt;p&gt;Kafka 為分散式架構，可以 Zero downtime 輕鬆擴展&lt;/p&gt;
+&lt;h3 id=&#34;durability-耐用性&#34;&gt;Durability 耐用性&lt;/h3&gt;
+&lt;p&gt;Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。&lt;/p&gt;
+&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
+&lt;p&gt;Publish/subscribe 皆可以提供很高的 throughput&lt;/p&gt;
+&lt;h3 id=&#34;decoupling&#34;&gt;Decoupling&lt;/h3&gt;
+&lt;p&gt;Producer/Consumer 只需要對 Topics 傳送訊息，可以降低系統間的耦合度。&lt;/p&gt;
+&lt;h3 id=&#34;fault-tolerance&#34;&gt;Fault Tolerance&lt;/h3&gt;
+&lt;p&gt;Partition 的 replicating 容許些許 Broker 離線時服務仍正常運作。&lt;/p&gt;
+&lt;h3 id=&#34;zero-downtime&#34;&gt;Zero downtime&lt;/h3&gt;
+&lt;h3 id=&#34;zero-data-loss&#34;&gt;Zero data loss&lt;/h3&gt;
+&lt;h2 id=&#34;kafka-example-applications&#34;&gt;Kafka Example applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;managing passenger and driver matching at Uber&lt;/li&gt;
+&lt;li&gt;providing real-time analytics and predictive maintenance for British Gas’ smart home,&lt;/li&gt;
+&lt;li&gt;performing numerous real-time services across all of LinkedIn.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apache Kafka - Part2</title>
+      <link>https://goatwu1993.github.io/blog/posts/hadoop/kafka-2/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hadoop/kafka-2/</guid>
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;This is an image&#34;&gt;
+Picture from wiki&lt;/p&gt;
+&lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Producers 將發送資料流到一至多個 Topics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Producer 使用 push(推)模式將訊息釋出到 Broker&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;實作 Kafka 提供的 Producer API&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;consumers&#34;&gt;Consumers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Consumers 會訂閱一或多個 Topics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Consumer 使用 pull(拉)模式從 Broker 訂閱並消費訊息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;實作 Kafka 提供的 Consumer API&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;consumer-group&#34;&gt;Consumer Group&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;每個 Consumer 屬於一個特定的 Consumer Group&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;brokers&#34;&gt;Brokers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;仲介處理 Consumer 以及 Producers 的訊息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;訊息會被分到不同的抽象類別，這種抽象類別稱為 Topic&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一個 Topic 又被分為多個 Partition，Partition 物理意義上為磁碟的一塊連續區域，但 Topics 的每個 Partition 通常會在不同的節點上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一個 Partition 可能又會有多個副本，副本也分散在不同的節點&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通常要求 Topics 的 Partition 的數量超過 Broker 的數量，否則達不到 Load distribution 的效果&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Broker 是 Stateless 的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;broker-controller&#34;&gt;Broker controller&lt;/h3&gt;
+&lt;p&gt;其中一個 Broker 會被推選為 Controller，Controller 會負責偵測 Broker 級別的 Failure，並幫忙所有受影響的 Partition 更換 Partition leader&lt;/p&gt;
+&lt;h2 id=&#34;topics&#34;&gt;Topics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;topics-定義&#34;&gt;Topics 定義&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics 為訊息的抽象分類&lt;/li&gt;
+&lt;li&gt;Producers 將發送資料流到一至多個 Topics，Consumers 則會訂閱一或多個 Topics&lt;/li&gt;
+&lt;li&gt;Topic 根據設定分為多個 Partitions(最少一個)&lt;/li&gt;
+&lt;li&gt;Topic 的 Partitions 通常分佈在不同的 Broker 節點&lt;/li&gt;
+&lt;li&gt;Topics 分為 Regular Topics 及 Compacted topics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;regular-topics&#34;&gt;Regular Topics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以被設定一定的留存時間，若超國時間則 Kafka 可以刪除就資料已釋出硬碟空間，Default 留存時間為 7 天&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;compacted-topics&#34;&gt;Compacted topics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;沒有有效期限&lt;/li&gt;
+&lt;li&gt;新訊息若 Key 重複，則會覆蓋舊的鍵值對&lt;/li&gt;
+&lt;li&gt;Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;partitions&#34;&gt;Partitions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;partitions-定義&#34;&gt;Partitions 定義&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;一個 Topic 可以被分為多個 partitions(最少一個)，通常會設定多個 Partition 以處理任意大小的資料&lt;/li&gt;
+&lt;li&gt;Partition 是一個 Queue 的實作，訊息在裡面依據 index/offset 排序，順序不可變動&lt;/li&gt;
+&lt;li&gt;Partition 物理上是磁碟的連續區域，新訊息會被 append 到 partition 尾端，由於是順序寫磁碟，因此效率非常高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;partition-offset&#34;&gt;Partition offset&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Message 在 partition 裡面會有唯一的 index，稱作 offset&lt;/li&gt;
+&lt;li&gt;Offset 為 Long 型態&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;replica&#34;&gt;Replica&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;各個 Topics 可設定 Replication Factor 通常為 2 ~ 3，下面的所有 Partition 都會產生這麼多的副本&lt;/li&gt;
+&lt;li&gt;只要 Cluster，所有的 Partition 皆有一個副本在線，則服務不會中斷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;partition-leader&#34;&gt;Partition Leader&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Partition Leader 由 Broker Controller 決定，每個 Partition 會有一個 Leader&lt;/li&gt;
+&lt;li&gt;Partition Leader 負責所有 partition/replica 的讀/寫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;partition-follower&#34;&gt;Partition Follower&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當 Leader 更新時，Follower 也需要跟著更新&lt;/li&gt;
+&lt;li&gt;Follower 平時是 Consumer，當 Leader 收到新的信息時 pull 並且寫入到自己的資料上&lt;/li&gt;
+&lt;li&gt;當 Leader 掛掉，Broker Controller 會選出其中一個 Follower 當作該 Partition 的 Leader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;isr&#34;&gt;ISR&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當 Leader 收到訊息時，所有 Follower 都需要寫入，已經和 Leader 同步的 Replica 稱為 ISRs(in-sync replica)&lt;/li&gt;
+&lt;li&gt;Record 只有在全部的 ISR 都同步時，才被視為成功 Commited&lt;/li&gt;
+&lt;li&gt;Consumer 只能從已經 Commit 成功的 Record 讀取紀錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-cluster&#34;&gt;Kafka Cluster&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;超過一個以上的 Broker 稱作 Kafka Cluster&lt;/li&gt;
+&lt;li&gt;Kafka cluster 可以 zero downtime 擴展&lt;/li&gt;
+&lt;li&gt;Clusters are used to manage the persistence and replication of message data.&lt;/li&gt;
+&lt;li&gt;通常都會做 Cluster 以實現 Load Balancing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zookeeper&#34;&gt;ZooKeeper&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;管理叢集配置&lt;/li&gt;
+&lt;li&gt;負責管理及協調 Broker&lt;/li&gt;
+&lt;li&gt;通知 Producer 及 Consumer
+&lt;ul&gt;
+&lt;li&gt;新的 Broker 出現&lt;/li&gt;
+&lt;li&gt;Broker failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://zookeeper.apache.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm&#34;&gt;https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&#34;&gt;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/50227472/how-kafka-guarantees-zero-downtime-and-zero-data-loss&#34;&gt;https://stackoverflow.com/questions/50227472/how-kafka-guarantees-zero-downtime-and-zero-data-loss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python 實作 Dictionary</title>
+      <link>https://goatwu1993.github.io/blog/posts/datastructure/dict-python-implementation/</link>
+      <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/datastructure/dict-python-implementation/</guid>
+      <description>&lt;h2 id=&#34;dictionary&#34;&gt;Dictionary&lt;/h2&gt;
+&lt;p&gt;Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。&lt;/p&gt;
+&lt;h2 id=&#34;瞄一下&#34;&gt;瞄一下&lt;/h2&gt;
+&lt;p&gt;瞄一下
+&lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cpython&lt;/a&gt;
+怎麼寫，
+&lt;a href=&#34;https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;這邊&lt;/a&gt;
+有詳細解釋。&lt;/p&gt;
+&lt;h2 id=&#34;hash-table-優點&#34;&gt;Hash table 優點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;O(1) insertion&lt;/li&gt;
+&lt;li&gt;O(1) get&lt;/li&gt;
+&lt;li&gt;O(1) delete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。&lt;/p&gt;
+&lt;h2 id=&#34;load-factor--dynamic-resizing&#34;&gt;Load Factor &amp;amp; dynamic resizing&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&#34;&gt;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$$Load Factor = n/k $$&lt;/p&gt;
+&lt;p&gt;$$ k : bucket 數目，也叫 table size$$
+$$ n : 資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。$$&lt;/p&gt;
+&lt;p&gt;實務上控制 Load factor 介於 0.3 至 0.7 ，時間 O(1)的同時 k 還小。&lt;/p&gt;
+&lt;h2 id=&#34;dictionary-node&#34;&gt;Dictionary Node&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class DictionaryNode():
+    &amp;quot;&amp;quot;&amp;quot;
+    Node of a DictionaryLinkedList.
+    &amp;quot;&amp;quot;&amp;quot;
+
+    def __init__(self, key, value, me_hash):
+        self.key = key
+        self.value = value
+        self.me_hash = me_hash
+        self.collided = False
+
+    def __repr__(self):
+        return (self.key.__repr__() + &amp;quot;: &amp;quot; + self.value.__repr__())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;me_hash&#34;&gt;me_hash&lt;/h3&gt;
+&lt;p&gt;key 的 hash 值，cpython get 的時候比對會用到&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;(ep-&amp;gt;me_key == key ||
+(ep-&amp;gt;me_hash == hash &amp;amp;&amp;amp; unicode_eq(ep-&amp;gt;me_key, key)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;詳細原因可能要對編碼比較熟才看得懂，我存著 resize 就不需要重算一次。&lt;/p&gt;
+&lt;h3 id=&#34;collided&#34;&gt;collided&lt;/h3&gt;
+&lt;p&gt;判斷是否 collide 過的 flag，若 delete 時 collided 為 True，告訴大家這 node 沒有值但需要往後尋找，若沒有 collide 過則代表沒有 collide 過，返回 indexError。&lt;/p&gt;
+&lt;h2 id=&#34;dictionary-class&#34;&gt;Dictionary Class&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Dictionary():
+    &amp;quot;&amp;quot;&amp;quot;
+    Dictionary are implemented by HashTable
+    Using open addressing method.
+    Hash using siphash. I can not find siphash
+    &amp;quot;&amp;quot;&amp;quot;
+
+    def __init__(self):
+        self.used_entry = 0
+        self.buckets = [None for x in range(0, 8)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;初始大小為 8 ，python 沒有辦法 override {} 的讀取， KVP 只能慢慢塞。&lt;/p&gt;
+&lt;p&gt;另外存取 used_entry 以免 len()需要跑 O(n)的 loop，insert/del 要記得 maintain。&lt;/p&gt;
+&lt;h2 id=&#34;hash&#34;&gt;Hash&lt;/h2&gt;
+&lt;p&gt;仿照 cpython 用 siphash，據作者所述是一個快速的 hash ，用過 md5 也是可以的。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install siphash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from siphash import siphash24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;dictionary-的-me_hash&#34;&gt;Dictionary 的 me_hash()&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def me_hash(self, key):
+        &amp;quot;&amp;quot;&amp;quot;
+        hash of key
+        &amp;quot;&amp;quot;&amp;quot;
+        return siphash24(b&#39;0123456789ABCDEF&#39;,(str(key).encode(&#39;utf-8&#39;))).hash()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;dynamic-resizing&#34;&gt;Dynamic Resizing&lt;/h2&gt;
+&lt;h3 id=&#34;bitmask--運算&#34;&gt;bitmask (&amp;amp;) 運算&lt;/h3&gt;
+&lt;p&gt;當 k (table size) 是 2 的 m 次方，則 hash(n) mod k 可以用 hash(n) &amp;amp; bitmask 取代，其中 bitmask 為 m 個 1 組成。&lt;/p&gt;
+&lt;h3 id=&#34;bitmask--in-python-terminal&#34;&gt;bitmask (&amp;amp;) in Python terminal&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; def hash(key): return siphash24(b&#39;0123456789ABCDEF&#39;,(str(key).encode(&#39;utf-8&#39;))).hash()
+...
+&amp;gt;&amp;gt;&amp;gt; n = &#39;key_string&#39;
+&amp;gt;&amp;gt;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; # m = 3, k = 8
+...
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b111 == hash(n) &amp;amp; 7
+True
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b111 == hash(n) % 8
+True
+&amp;gt;&amp;gt;&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; # m = 4, k = 16
+...
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b1111 == hash(n) &amp;amp; 15
+True
+&amp;gt;&amp;gt;&amp;gt; hash(n) &amp;amp; 0b1111 == hash(n) % 16
+True
+&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;resizing-程式碼&#34;&gt;Resizing 程式碼&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def resize(self):
+        &amp;quot;&amp;quot;&amp;quot;
+        Should change the size if load_factor &amp;gt; 2/3 or load_factor &amp;lt; 2/3
+        Should do nothing if load_factor between 1/3 and 2/3
+        &amp;quot;&amp;quot;&amp;quot;
+        def proper_size(n, k):
+            pro_size = 8 if n &amp;lt;= 2 else 2**(int(n * 1.5)).bit_length()
+            return pro_size
+
+        used = self.used_entry
+        old_size = len(self.buckets)
+        new_size = proper_size(used, old_size)
+        if old_size == new_size:
+            return
+        new_buckets = [None for x in range(0, new_size)]
+        for i in range(old_size):
+            if self.buckets[i] and (self.buckets[i].key is not None):
+                key_me_hash = self.buckets[i].me_hash
+                # &amp;amp; for bitwise operation (bitmask)
+                entry = key_me_hash &amp;amp; (new_size-1)
+                while new_buckets[entry]:
+                    new_buckets[entry].collided = True
+                    entry = entry+1 if entry &amp;lt; (new_size-2) else 0
+                new_buckets[entry] = self.buckets[i]
+                new_buckets[entry].collided = False
+        self.buckets = new_buckets
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;magic-methods&#34;&gt;Magic Methods&lt;/h2&gt;
+&lt;h3 id=&#34;實作-python-內建的-magic-methods&#34;&gt;實作 python 內建的 Magic Methods&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# __setitem__
+a[b] = c
+# __getitem__
+a[b]
+# __len__
+len(a)
+# __delitem__
+del a[b]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;open-addressing&#34;&gt;Open Addressing&lt;/h3&gt;
+&lt;p&gt;這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。&lt;/p&gt;
+&lt;h3 id=&#34;magic-methods-程式碼&#34;&gt;Magic Methods 程式碼&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def __repr__(self):
+        s = &#39;&#39;
+        for i in range(len(self.buckets)):
+            if self.buckets[i]:
+                s = s + self.buckets[i].__repr__() + &#39;, &#39;
+        return {} if not s else &amp;quot;{{{0}}}&amp;quot;.format(s[:-3])
+
+    def __getitem__(self, key):
+        key_me_hash = self.me_hash(key)
+        l = len(self.buckets)
+        entry = key_me_hash &amp;amp; (l-1)
+        while self.buckets[entry]:
+            if self.buckets[entry].key == key:
+                return self.buckets[entry].value
+            if not self.buckets[entry].collided:
+                raise KeyError(key)
+            entry = entry+1 if entry &amp;lt; (l-2) else 0
+        raise KeyError(key)
+
+    def __setitem__(self, key, value):
+        self.used_entry += 1
+        self.resize()
+
+        l = len(self.buckets)
+        key_me_hash = self.me_hash(key)
+        entry = key_me_hash &amp;amp; (l-1)
+        while self.buckets[entry]:
+            self.buckets[entry].collided = True
+            entry = entry+1 if entry &amp;lt; (l-2) else 0
+        self.buckets[entry] = DictionaryNode(key=key,
+                                             value=value,
+                                             me_hash=key_me_hash)
+
+    def __delitem__(self, key):
+        key_me_hash = self.me_hash(key)
+        l = len(self.buckets)
+        entry = key_me_hash &amp;amp; (l-1)
+        while self.buckets[entry]:
+            if self.buckets[entry].key == key:
+                self.buckets[entry].key = None
+                self.buckets[entry].value = None
+                self.buckets[entry].me_hash = None
+                return
+            if not self.buckets[entry].collided:
+                raise KeyError(key)
+            entry = entry+1 if entry &amp;lt; (l-2) else 0
+        raise KeyError(key)
+
+    def __len__(self):
+        counter = 0
+        for i in range(len(self.buckets)):
+            if self.buckets[i]:
+                counter += 1
+        return counter
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;完整程式碼&#34;&gt;完整程式碼&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/goatwu1993/data_structure/blob/master/hash_table.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;
+&lt;p&gt;Python 自己內建的資料結構，很多都是直接用 c 寫的，速度上快很多，如果沒必要，還是直接用就好了&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;大神解說&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wiki&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/python/cpython/blob/master/Objects/dictobject.c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cpython&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://blog.csdn.net/yuan_j_y/article/details/9317817&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Magic Method&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ML-Pandas</title>
+      <link>https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/</link>
+      <pubDate>Thu, 16 Jan 2020 20:24:05 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/</guid>
+      <description>&lt;h2 id=&#34;pca&#34;&gt;PCA&lt;/h2&gt;
+&lt;h2 id=&#34;comparision&#34;&gt;Comparision&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ml P1</title>
+      <link>https://goatwu1993.github.io/blog/posts/ml/ml-p1-basic/</link>
+      <pubDate>Thu, 16 Jan 2020 20:20:15 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/ml/ml-p1-basic/</guid>
+      <description>&lt;h2 id=&#34;machine-learning-categories&#34;&gt;Machine Learning Categories&lt;/h2&gt;
+&lt;h2 id=&#34;gathering-data&#34;&gt;Gathering Data&lt;/h2&gt;
+&lt;h2 id=&#34;data-preparation&#34;&gt;Data preparation&lt;/h2&gt;
+&lt;h3 id=&#34;data-preprocessing-資料預處理&#34;&gt;Data Preprocessing 資料預處理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Handling Missing Values&lt;/li&gt;
+&lt;li&gt;Outlier&lt;/li&gt;
+&lt;li&gt;Feature Engineering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;model--hyperparameter-模型及超參數&#34;&gt;Model &amp;amp; HyperParameter 模型及超參數&lt;/h2&gt;
+&lt;h2 id=&#34;loss-function-損失函數&#34;&gt;Loss Function 損失函數&lt;/h2&gt;
+&lt;h2 id=&#34;activation-function-激活函數&#34;&gt;Activation Function 激活函數&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[Gathering Data] --&amp;gt;B[Data preparation]
+B --&amp;gt; C[Handling Missing Values]
+B --&amp;gt; D[Handling Outlier]
+C --&amp;gt; E[Feature Engineering]
+D --&amp;gt; E
+E --&amp;gt; F[Scaling]
+E --&amp;gt; G[One-Hot Encodi  ng]
+E --&amp;gt; H[box-cox]
+E --&amp;gt; I[New Feature]
+F --&amp;gt; J[Model]
+G --&amp;gt; J
+H --&amp;gt; J
+I --&amp;gt; J
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>macOS developer environments</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</link>
+      <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</guid>
+      <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS 包管理器&lt;/li&gt;
+&lt;li&gt;官網
+&lt;a href=&#34;https://brew.sh/&#34;&gt;https://brew.sh/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;包列表
+&lt;a href=&#34;https://formulae.brew.sh/&#34;&gt;https://formulae.brew.sh/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;相比內建的 Terminal，支援點選選取優化，選取即複製等功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-gnu-stow&#34;&gt;3. GNU Stow&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Symlink 管理器。&lt;/li&gt;
+&lt;li&gt;用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github&lt;/li&gt;
+&lt;li&gt;官網 &lt;a href=&#34;https://www.gnu.org/software/stow&#34;&gt;https://www.gnu.org/software/stow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
+&lt;li&gt;支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
+&lt;li&gt;zshrc 懶人包 &lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;https://github.com/unixorn/zsh-quickstart-kit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VSCODE 插件懶人包 &lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;https://github.com/viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vimrc 懶人包 &lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;https://github.com/amix/vimrc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;vim 插件管理器 Vundle &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;https://github.com/VundleVim/Vundle.vim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/27447370&#34;&gt;https://www.zhihu.com/question/27447370&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/git-commands/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/basics/git-commands/</guid>
+      <description>&lt;h2 id=&#34;新增-submodule&#34;&gt;新增 submodule&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add git@github.com:xxx dir_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;移除-submodule&#34;&gt;移除 submodule&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rm --cached [欲移除的目錄]
+rm -rf [欲移除的目錄]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-gitmodules&#34;&gt;修改 .gitmodules&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .gitmodules
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-gitconfig&#34;&gt;修改 .git/config&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .git/config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .gitmodules
+git commit -m &amp;quot;Remove a submodule&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;https://biang.io/blog/development/tools/revision-control/git/submod&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/hugo/hugo-commands/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hugo/hugo-commands/</guid>
+      <description>&lt;h2 id=&#34;hugo-使用&#34;&gt;Hugo 使用&lt;/h2&gt;
+&lt;h3 id=&#34;安裝&#34;&gt;安裝&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;第一次使用&#34;&gt;第一次使用&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new site quickstart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;測試&#34;&gt;測試&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+cd quickstart
+hugo
+hugo server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;部署&#34;&gt;部署&lt;/h3&gt;
+&lt;p&gt;注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf ./docs
+hugo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;新增文章&#34;&gt;新增文章&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new posts/my-first-post.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官網&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo themes</title>
+      <link>https://goatwu1993.github.io/blog/posts/hugo/hugo-themes/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hugo/hugo-themes/</guid>
+      <description>&lt;p&gt;本篇記錄如何使用 hugo 線上的 themes&lt;/p&gt;
+&lt;h2 id=&#34;hugo-themes&#34;&gt;Hugo themes&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官方線上 themes&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;a-直接-submodule&#34;&gt;a. 直接 submodule&lt;/h3&gt;
+&lt;p&gt;不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# submodule
+cd ./themes
+git submodule add https://github.com/avianto/hugo-kiera.git kiera
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;b-fork-再-submodule&#34;&gt;b. fork 再 submodule&lt;/h3&gt;
+&lt;p&gt;如果需要更改 partial/layout/css 的話請選擇 fork&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# fork
+cd ./themes
+git clone https://github.com/$你的Id/hugo-kiera.git kiera
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-configtoml&#34;&gt;修改 config.toml&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;theme = &amp;quot;kiera&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing technical content in Academic</title>
+      <link>https://goatwu1993.github.io/blog/posts/writing-technical-content/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/writing-technical-content/</guid>
+      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&#39;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```python
+import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\&lt;/code&gt; math linebreak:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \&lt;br&gt;
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
+&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
+&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
+&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write math example&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write diagram example&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Do something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
+&lt;p&gt;Represent your data in tables:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
+&lt;p&gt;Academic supports a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for asides&lt;/a&gt;
+, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bash commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/</link>
+      <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/</guid>
+      <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# manual
+man anything
+info anything
+anything --help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;general-commands&#34;&gt;General commands&lt;/h2&gt;
+&lt;h3 id=&#34;getting-information&#34;&gt;Getting information&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show shell name.
+echo $SHELL
+echo $0
+# Show shell version.
+$SHELL --version
+
+# Clear terminal.
+clear
+
+# Show command history.
+history
+
+# Print working directory
+pwd
+
+# Show system info
+uname -a
+
+# uptime
+uptime
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;file-managing&#34;&gt;File managing&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# List the files in working directory.
+ls
+# List all files, hidden file included, with detailed information.
+ls -la
+
+# Change ownership of a file.
+chown
+# Change an ownership of a file.
+chown nobody.nogroup your_file_name
+# Recursively change all file under this directory.
+chown -R nobody.nogroup .
+
+# Change the read/write permission of a file
+chmod
+# Make file r/w/e able for all user &amp;amp; group.
+chmod 777 file_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;network&#34;&gt;Network&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show network interface config/info.
+ifconfig
+
+# get public ip
+curl icanhazip.com
+
+# Show network status
+netstat
+# Show all, include tcp/udp port.
+netstat -an
+# Show established connection
+netstat -antu | grep &#39;ESTABLISHED&#39;
+# Show kernel routing information
+netstat -r
+netstat -tulnp
+
+# Check the bridge Interface
+brtcl
+brctl addbr &amp;lt;name&amp;gt;
+
+# ssh
+ssh
+# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+ssh-keygen
+
+# scp
+scp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;cpu-memery-task--process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
+&lt;h3 id=&#34;check-and-monitor-process&#34;&gt;Check and monitor process&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# List all process run by user shell
+ps
+# List all process, even by status
+ps aux
+# pstree
+pstree
+
+# Monitor the process status
+top
+# cpu
+top -o cpu
+# memery
+top -o rsize
+
+# List cronjob
+crontab
+# List all cronjob.
+crontab -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;sending-signal-or-kill-process&#34;&gt;Sending signal or kill process&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Send a signal to a process
+kill -signal PID
+# Send 15 SIGTERM to a process
+kill $pid
+
+# killall allow you to kill app with name instead of pid
+killall -9 $processname
+# Ask before terminate
+killall -i -9 $processname
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;memory-usage&#34;&gt;Memory usage&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+# Show recent memory usage
+free -m
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://geekflare.com/netstat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;geekflare&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;鳥哥第十六章、程序管理與 SELinux 初探&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TCP/IP cheatsheet</title>
+      <link>https://goatwu1993.github.io/blog/posts/networking/osi-7-layres/</link>
+      <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/networking/osi-7-layres/</guid>
+      <description>&lt;h2 id=&#34;osi-7-layres&#34;&gt;OSI 7 Layres&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Application Layer (Layer 7)
+&lt;ul&gt;
+&lt;li&gt;HTTP, HTTPS&lt;/li&gt;
+&lt;li&gt;L7 firewall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Presentation Layer (Layer 6)&lt;/li&gt;
+&lt;li&gt;Session Layer (Layer 5)
+&lt;ul&gt;
+&lt;li&gt;Sessions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transport Layer (Layer 4)
+&lt;ul&gt;
+&lt;li&gt;TCP, UDP, SCTP, TLS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network Layer (Layer 3)
+&lt;ul&gt;
+&lt;li&gt;IP Address&lt;/li&gt;
+&lt;li&gt;Router, Layer 3 Switch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Data Link Layer (Layer 2)
+&lt;ul&gt;
+&lt;li&gt;Ethernet, 802.11(Wi-Fi), MAC Address&lt;/li&gt;
+&lt;li&gt;Layer 2 Switch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Physical Layer (Layer 1)
+&lt;ul&gt;
+&lt;li&gt;Hub, Wire, Fiber, Radio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tcpip-protocols&#34;&gt;TCP/IP protocols&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP
+&lt;ul&gt;
+&lt;li&gt;Hyper Text Transport Protocol&lt;/li&gt;
+&lt;li&gt;TCP Port 80&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HTTPS
+&lt;ul&gt;
+&lt;li&gt;Hyper Text Transport Protocol Secure&lt;/li&gt;
+&lt;li&gt;TCP Port 443&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FTP
+&lt;ul&gt;
+&lt;li&gt;File Transfer Protocol&lt;/li&gt;
+&lt;li&gt;TCP Port 21&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Telnet
+&lt;ul&gt;
+&lt;li&gt;Telecommunication Protocol&lt;/li&gt;
+&lt;li&gt;TCP Port 23&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SMTP
+&lt;ul&gt;
+&lt;li&gt;Simple Mail Transfer Protocol&lt;/li&gt;
+&lt;li&gt;TCP port 25&lt;/li&gt;
+&lt;li&gt;For email&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DNS
+&lt;ul&gt;
+&lt;li&gt;Domain Name System&lt;/li&gt;
+&lt;li&gt;UDP Port 53&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.lifewire.com/free-and-public-dns-servers-2626062&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Some famous public DNS servers&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TFTP
+&lt;ul&gt;
+&lt;li&gt;Trivial File Transfer Protocol&lt;/li&gt;
+&lt;li&gt;UDP port 69&lt;/li&gt;
+&lt;li&gt;Not secure. Should only be used in private net.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RADIUS
+&lt;ul&gt;
+&lt;li&gt;Remote Authentication Dial-In User Service&lt;/li&gt;
+&lt;li&gt;UDP Port : 1812 (authentication) &amp;amp; 1813(accounting)&lt;/li&gt;
+&lt;li&gt;Code
+&lt;ul&gt;
+&lt;li&gt;Access-Request&lt;/li&gt;
+&lt;li&gt;Access-Accept&lt;/li&gt;
+&lt;li&gt;Access-Reject&lt;/li&gt;
+&lt;li&gt;Access-Challenge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://goatwu1993.github.io/blog/posts/hugo/hugo/</link>
+      <pubDate>Fri, 06 Apr 2018 19:19:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hugo/hugo/</guid>
+      <description>&lt;h2 id=&#34;個人網頁怎麼建立&#34;&gt;個人網頁怎麼建立&lt;/h2&gt;
+&lt;p&gt;大概可分為&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自己架站，例如 aws, vps, heroku&lt;/li&gt;
+&lt;li&gt;靜態網頁，例如 github / google docs 等&lt;/li&gt;
+&lt;li&gt;平台，例如 Wordpress, Medium, HackMD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;靜態網頁生成器static-site-generator&#34;&gt;靜態網頁生成器(static site generator)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;某些文件存放服務支援存放 html 可自動變成網站，如 github, google docs 等等。&lt;/li&gt;
+&lt;li&gt;靜態網頁生成器，可以將文檔(通常是 Markdwon)，直接轉換成 html ，搭配支援靜態網頁的服務就是簡單的網站&lt;/li&gt;
+&lt;li&gt;現在流行的靜態網頁生成器有 Jekyll, Hexo, Hugo&lt;/li&gt;
+&lt;li&gt;注意：靜態網頁生成器要開啟留言功能是比較麻煩的，需要另外配合 disqus 或是 gitment。
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;
+&lt;p&gt;最後選了 Hugo&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;很快&lt;/li&gt;
+&lt;li&gt;很多 theme 可選&lt;/li&gt;
+&lt;li&gt;可寫 Markdown&lt;/li&gt;
+&lt;li&gt;支援 Syntax 高光&lt;/li&gt;
+&lt;li&gt;可上傳 Github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;各 theme 之間差異過大，沒辦法說換就換&lt;/li&gt;
+&lt;li&gt;難上手&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果不在意主題或是 Github 的話可以考慮 Hackmd。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
