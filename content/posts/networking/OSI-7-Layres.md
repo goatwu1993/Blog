@@ -5,7 +5,6 @@ draft: false
 categories: [networking]
 tags: [networking]
 slug: OSI-7-Layres
-gitment: true
 ---
 
 ## OSI 7 Layres

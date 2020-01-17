@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="PCA  Primary Componenet Analysis 無監督學習 根據原始特徵數目 n，可以產生最多 n 個維度  LDA  Linear Discriminant analysis 監督式學習 根據原始分類數目 C，可以產生最多 C-1 個維度  Comparision    Method supervised / unsupervised linear / non-linear Disk 2 Disk 3     PCA unsupervised linear A3 Ap(1-3)   LDA supervised      Auto-Encoder  non-linear A6 Ap(4-6)   B1  B2 B3 Bp(1-3)   B4  B5 B6 Bp(4-6)    ">
+  <meta name="description" content="What is Spark  Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能  graph TD A(Spark) --&gt; B(RDD) A --&gt; C(Spark Core) A --&gt; D(Spark SQL) A --&gt; E(Spark Streaming) A --&gt; F(MLlib) A --&gt; G(GraphX)  Spark 特點  Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法 提供 Java, Scala, Python 及 R 語言 API 記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce) Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。 Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。 Spark SQL 支援結構化和關聯式查詢處理（SQL）。 MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。  Spark RDD (Resilient Distributed Dataset) RDD 是什麼  RDD 是 Spark 的抽象 Dataset RDD 上面可以進行兩種操作：Transfromation &amp; Action RDD 會記錄本身是如何從原始資料得出的，稱為 Lineage 支援 Scala, Java 和 Python API ，方法類似操縱本地端的資料庫。 支援 long, int 及 String 形態 RDD 運算分為 Transform 及 Action  RDD 特點  Lazy Evaluation">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/hadoop/spark/">
 
   
 
@@ -215,7 +215,7 @@
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/hadoop/spark/">
 
   
   
@@ -229,15 +229,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/">
-  <meta property="og:title" content="ML-Feature-Engineering | goatwu1993">
-  <meta property="og:description" content="PCA  Primary Componenet Analysis 無監督學習 根據原始特徵數目 n，可以產生最多 n 個維度  LDA  Linear Discriminant analysis 監督式學習 根據原始分類數目 C，可以產生最多 C-1 個維度  Comparision    Method supervised / unsupervised linear / non-linear Disk 2 Disk 3     PCA unsupervised linear A3 Ap(1-3)   LDA supervised      Auto-Encoder  non-linear A6 Ap(4-6)   B1  B2 B3 Bp(1-3)   B4  B5 B6 Bp(4-6)    "><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/hadoop/spark/">
+  <meta property="og:title" content="Spark | goatwu1993">
+  <meta property="og:description" content="What is Spark  Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能  graph TD A(Spark) --&gt; B(RDD) A --&gt; C(Spark Core) A --&gt; D(Spark SQL) A --&gt; E(Spark Streaming) A --&gt; F(MLlib) A --&gt; G(GraphX)  Spark 特點  Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法 提供 Java, Scala, Python 及 R 語言 API 記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce) Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。 Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。 Spark SQL 支援結構化和關聯式查詢處理（SQL）。 MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。  Spark RDD (Resilient Distributed Dataset) RDD 是什麼  RDD 是 Spark 的抽象 Dataset RDD 上面可以進行兩種操作：Transfromation &amp; Action RDD 會記錄本身是如何從原始資料得出的，稱為 Lineage 支援 Scala, Java 和 Python API ，方法類似操縱本地端的資料庫。 支援 long, int 及 String 形態 RDD 運算分為 Transform 及 Action  RDD 特點  Lazy Evaluation"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-16T20:24:05&#43;08:00">
+      <meta property="article:published_time" content="2020-01-17T17:04:13&#43;08:00">
     
-    <meta property="article:modified_time" content="2020-01-16T20:24:05&#43;08:00">
+    <meta property="article:modified_time" content="2020-01-17T17:04:13&#43;08:00">
   
 
   
@@ -256,7 +256,7 @@
 
 
 
-  <title>ML-Feature-Engineering | goatwu1993</title>
+  <title>Spark | goatwu1993</title>
 
 </head>
 
@@ -467,7 +467,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>ML-Feature-Engineering</h1>
+  <h1>Spark</h1>
 
   
 
@@ -486,7 +486,7 @@
     
       
     
-    Jan 16, 2020
+    Jan 17, 2020
   </span>
   
 
@@ -524,67 +524,77 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="pca">PCA</h2>
+                        <h2 id="what-is-spark">What is Spark</h2>
 <ul>
-<li>Primary Componenet Analysis</li>
-<li>無監督學習</li>
-<li>根據原始特徵數目 n，可以產生最多 n 個維度</li>
+<li>Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能</li>
 </ul>
-<h2 id="lda">LDA</h2>
+<pre><code class="language-mermaid">graph TD
+A(Spark) --&gt; B(RDD)
+A --&gt; C(Spark Core)
+A --&gt; D(Spark SQL)
+A --&gt; E(Spark Streaming)
+A --&gt; F(MLlib)
+A --&gt; G(GraphX)
+</code></pre>
+<h2 id="spark-特點">Spark 特點</h2>
 <ul>
-<li>Linear Discriminant analysis</li>
-<li>監督式學習</li>
-<li>根據原始分類數目 C，可以產生最多 C-1 個維度</li>
+<li>Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法</li>
+<li>提供 Java, Scala, Python 及 R 語言 API</li>
+<li>記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce)</li>
+<li>Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。</li>
+<li>Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。</li>
+<li>Spark SQL 支援結構化和關聯式查詢處理（SQL）。</li>
+<li>MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。</li>
 </ul>
-<h2 id="comparision">Comparision</h2>
-<table>
-<thead>
-<tr>
-<th align="center">Method</th>
-<th align="center">supervised / unsupervised</th>
-<th align="center">linear / non-linear</th>
-<th align="center">Disk 2</th>
-<th>Disk 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">PCA</td>
-<td align="center">unsupervised</td>
-<td align="center">linear</td>
-<td align="center">A3</td>
-<td>Ap(1-3)</td>
-</tr>
-<tr>
-<td align="center">LDA</td>
-<td align="center">supervised</td>
-<td align="center"></td>
-<td align="center"></td>
-<td></td>
-</tr>
-<tr>
-<td align="center">Auto-Encoder</td>
-<td align="center"></td>
-<td align="center">non-linear</td>
-<td align="center">A6</td>
-<td>Ap(4-6)</td>
-</tr>
-<tr>
-<td align="center">B1</td>
-<td align="center"></td>
-<td align="center">B2</td>
-<td align="center">B3</td>
-<td>Bp(1-3)</td>
-</tr>
-<tr>
-<td align="center">B4</td>
-<td align="center"></td>
-<td align="center">B5</td>
-<td align="center">B6</td>
-<td>Bp(4-6)</td>
-</tr>
-</tbody>
-</table>
+<h2 id="spark-rdd-resilient-distributed-dataset">Spark RDD (Resilient Distributed Dataset)</h2>
+<h3 id="rdd-是什麼">RDD 是什麼</h3>
+<ul>
+<li>RDD 是 Spark 的抽象 Dataset</li>
+<li>RDD 上面可以進行兩種操作：Transfromation &amp; Action</li>
+<li>RDD 會記錄本身是如何從原始資料得出的，稱為 Lineage</li>
+<li>支援 Scala, Java 和 Python API ，方法類似操縱本地端的資料庫。</li>
+<li>支援 long, int 及 String 形態</li>
+<li>RDD 運算分為 Transform 及 Action</li>
+</ul>
+<h3 id="rdd-特點">RDD 特點</h3>
+<ul>
+<li>Lazy Evaluation<br>
+數值在 Action 之前，不會真的被計算出來</li>
+<li>In-Memory Computation</li>
+<li>Immutability<br>
+RDD 被創建之後沒有辦法修改，Transfromation 只會產生一個新的 RDD</li>
+<li>Fault Tolerance<br>
+可用 Lineage 從 Original Data 重新推算斷線 Node 上面的 Partition。</li>
+<li>Fault Tolerance 最佳化
+Transfromation 函數分為寬依賴及窄依賴，窄依賴的情況下可直接用 Partition 推算 Child Partition，不用整個 RDD。</li>
+<li>Partitioning<br>
+計算會被指派到 RDD Partition，Partition 的數目直接關係到平行運算的程度。</li>
+<li>Persistence
+可以根據資料是否會重新使用，指定存放在記憶體或磁碟。</li>
+<li>Location-Stickiness<br>
+RDDs are capable of defining placement preference(information about the location of RDD) to compute partitions. The DAG Scheduler places the partitions in such a way that task is close to data as much as possible, thus speeding up the computation.</li>
+<li>Coarse-Grained Operation<br>
+RDDs support coarse-grained operations. That means we can perform an operation on entire data set.</li>
+<li>No Limitation<br>
+RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。</li>
+</ul>
+<h2 id="spark-core">Spark Core</h2>
+<p>Spark Core 是整個專案的基礎，提供了分散式任務調度、排程及基本的 I/O。
+其基礎的程式抽象被稱為 Resilient Distributed Dataset (RDD)</p>
+<h2 id="spark-sql">Spark SQL</h2>
+<p>Spark SQL 在 Spark 核心上帶出一種名為 SchemaRDD 的資料抽象化概念，提供結構化和半結構化資料相關的支援。Spark SQL 提供了領域特定語言，可使用 Scala、Java 或 Python 來操縱 SchemaRDDs。它還支援使用使用命令行介面和 ODBC／JDBC 伺服器操作 SQL 語言。在 Spark 1.3 版本，SchemaRDD 被重新命名為 DataFrame。</p>
+<h2 id="spark-streaming">Spark Streaming</h2>
+<p>Spark Streaming 充分利用 Spark 核心的快速排程能力來執行串流分析。它擷取小批次的資料並對之執行 RDD 轉換。這種設計使串流分析可在同一個引擎內使用同一組為批次分析編寫而撰寫的應用程式碼。</p>
+<h2 id="mllib">MLlib</h2>
+<p>MLlib 是 Spark 上分散式機器學習框架。Spark 分散式記憶體式的架構比 Hadoop 磁碟式的 Apache Mahout 快上 10 倍，擴充性甚至比 Vowpal Wabbit 要好。MLlib 可使用許多常見的機器學習和統計演算法，簡化大規模機器學習時間</p>
+<h2 id="graphx">GraphX</h2>
+<p>GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，可用於表達圖表計算並可以類比 Pregel 抽象化。GraphX 還對這種抽象化提供了最佳化運行。</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://zh.wikipedia.org/zh-tw/Apache_Spark">https://zh.wikipedia.org/zh-tw/Apache_Spark</a></li>
+<li><a href="https://www.quora.com/What-are-the-advantages-of-RDD">https://www.quora.com/What-are-the-advantages-of-RDD</a></li>
+<li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/405603/">https://codertw.com/程式語言/405603/</a></li>
+</ul>
 
                     </div>
                     
@@ -606,7 +616,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/&amp;text=ML-Feature-Engineering" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/hadoop/spark/&amp;text=Spark" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -619,7 +629,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/&amp;t=ML-Feature-Engineering" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/hadoop/spark/&amp;t=Spark" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -632,7 +642,7 @@
       
       
       <li>
-        <a href="mailto:?subject=ML-Feature-Engineering&amp;body=https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Spark&amp;body=https://goatwu1993.github.io/blog/posts/hadoop/spark/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -645,7 +655,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/&amp;title=ML-Feature-Engineering" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/hadoop/spark/&amp;title=Spark" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -658,7 +668,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=ML-Feature-Engineering%20https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Spark%20https://goatwu1993.github.io/blog/posts/hadoop/spark/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -671,7 +681,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/ml/ml-p4-feature-engineering/&amp;title=ML-Feature-Engineering" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/hadoop/spark/&amp;title=Spark" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -779,6 +789,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
       
 
       

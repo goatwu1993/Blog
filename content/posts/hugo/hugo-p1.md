@@ -5,7 +5,6 @@ draft: false
 categories: [hugo]
 tags: [hugo]
 slug: hugo
-gitment: true
 weight: 0
 ---
 

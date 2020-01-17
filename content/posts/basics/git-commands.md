@@ -5,7 +5,6 @@ draft: false
 tags: [git, commands]
 categories: [git]
 slug: git-commands
-gitment: true
 ---
 
 ## 新增 submodule

@@ -99,6 +99,23 @@ hugo
     </item>
     
     <item>
+      <title>Hugo commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/hugo/hugo-commands/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/hugo/hugo-commands/</guid>
+      <description>&lt;h2 id=&#34;設定-archetype&#34;&gt;設定 Archetype&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Archetype 是 hugo create content 的 default 檔案&lt;/li&gt;
+&lt;li&gt;當選定好 theme 以後，通常 Archetype 都會長得差不多，建議先改一改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/content-management/archetypes/&#34;&gt;https://gohugo.io/content-management/archetypes/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bash commands</title>
       <link>https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>

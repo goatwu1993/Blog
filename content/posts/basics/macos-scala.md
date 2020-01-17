@@ -5,7 +5,6 @@ draft: true
 categories: [shell, macos]
 tags: [linux, macos, vim, shell]
 slug: setting-macos-vim
-gitment: true
 ---
 
 ## Step by step

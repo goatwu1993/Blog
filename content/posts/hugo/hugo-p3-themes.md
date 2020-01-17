@@ -5,7 +5,6 @@ draft: false
 tags: [hugo, git]
 categories: [hugo]
 slug: hugo-themes
-gitment: true
 ---
 
 本篇記錄如何使用 hugo 線上的 themes

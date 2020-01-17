@@ -5,7 +5,6 @@ draft: false
 tags: [hugo, commands]
 categories: [hugo]
 slug: hugo-commands
-gitment: true
 ---
 
 ## Hugo 使用

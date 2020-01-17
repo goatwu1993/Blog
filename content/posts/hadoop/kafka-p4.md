@@ -4,7 +4,6 @@ date: 2020-01-10T17:14:42+08:00
 draft: true
 tags: ["Hadoop", "Kafka", "BigData"]
 slug: "kafka-4"
-gitment: true
 toc: true
 categories: []
 weight: 40

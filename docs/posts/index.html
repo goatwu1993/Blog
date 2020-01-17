@@ -236,7 +236,7 @@
   <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-01-16T20:24:05&#43;08:00">
+    <meta property="og:updated_time" content="2020-01-17T17:04:13&#43;08:00">
   
 
   
@@ -549,10 +549,30 @@ Dictionary Node class DictionaryNode(): &quot;&quot;&quot; Node of a DictionaryL
   </div>
   
   <div>
-    <h2><a href="/blog/posts/ml/ml-p4-feature-engineering/">ML-Pandas</a></h2>
+    <h2><a href="/blog/posts/hadoop/hadoop/">Spark</a></h2>
     <div class="article-style">
       
-      PCA Comparision 
+      What is Hadoop Hadoop Hadoop = HDFS + YARN + MapReduce
+Hadoop eco-system Spark, HBAse, Hive, Kafka, HDFS, etc
+Referencce  https://kknews.cc/zh-tw/code/rlyqae4.html  
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/blog/posts/hadoop/spark/">Spark</a></h2>
+    <div class="article-style">
+      
+      What is Spark  Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能  graph TD A(Spark) --&gt; B(RDD) A --&gt; C(Spark Core) A --&gt; D(Spark SQL) A --&gt; E(Spark Streaming) A --&gt; F(MLlib) A --&gt; G(GraphX)  Spark 特點  Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法 提供 Java, Scala, Python 及 R 語言 API 記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce) Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。 Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。 Spark SQL 支援結構化和關聯式查詢處理（SQL）。 MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。  Spark RDD (Resilient Distributed Dataset) RDD 是什麼  RDD 是 Spark 的抽象 Dataset RDD 上面可以進行兩種操作：Transfromation &amp; Action RDD 會記錄本身是如何從原始資料得出的，稱為 Lineage 支援 Scala, Java 和 Python API ，方法類似操縱本地端的資料庫。 支援 long, int 及 String 形態 RDD 運算分為 Transform 及 Action  RDD 特點  Lazy Evaluation
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/blog/posts/ml/ml-p4-feature-engineering/">ML-Feature-Engineering</a></h2>
+    <div class="article-style">
+      
+      PCA  Primary Componenet Analysis 無監督學習 根據原始特徵數目 n，可以產生最多 n 個維度  LDA  Linear Discriminant analysis 監督式學習 根據原始分類數目 C，可以產生最多 C-1 個維度  Comparision    Method supervised / unsupervised linear / non-linear Disk 2 Disk 3     PCA unsupervised linear A3 Ap(1-3)   LDA supervised      Auto-Encoder  non-linear A6 Ap(4-6)   B1  B2 B3 Bp(1-3)   B4  B5 B6 Bp(4-6)    
       
     </div>
   </div>
@@ -571,26 +591,6 @@ Dictionary Node class DictionaryNode(): &quot;&quot;&quot; Node of a DictionaryL
     <div class="article-style">
       
       1. Homebrew  macOS 包管理器 官網 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2  相比內建的 Terminal，支援點選選取優化，選取即複製等功能  3. GNU Stow  Symlink 管理器。 用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github 官網 https://www.gnu.org/software/stow  3. zsh  Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting 支援部分 bash, ksh 及 tcsh 語法 zshrc 懶人包 https://github.com/unixorn/zsh-quickstart-kit  4. vscode  VSCODE 插件懶人包 https://github.com/viatsko/awesome-vscode  5. vim  vimrc 懶人包 https://github.com/amix/vimrc vim 插件管理器 Vundle https://github.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/blog/posts/basics/git-commands/">Git commands</a></h2>
-    <div class="article-style">
-      
-      新增 submodule git submodule add git@github.com:xxx dir_name  移除 submodule git rm --cached [欲移除的目錄] rm -rf [欲移除的目錄]  修改 .gitmodules vim .gitmodules  修改 .git/config vim .git/config  最後再 commit，改變整個 Repository。
-git add .gitmodules git commit -m &quot;Remove a submodule&quot;  安全起見再做個 sync git submodule sync  參考資料  https://biang.io/blog/development/tools/revision-control/git/submod  
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/blog/posts/hugo/hugo-commands/">Hugo commands</a></h2>
-    <div class="article-style">
-      
-      Hugo 使用 安裝 brew install hugo  第一次使用 hugo new site quickstart  測試 #!/bin/bash cd quickstart hugo hugo server  部署 注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。
-rm -rf ./docs hugo  新增文章 hugo new posts/my-first-post.md  參考資料   Hugo 官網   
       
     </div>
   </div>

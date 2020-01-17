@@ -5,7 +5,6 @@ draft: false
 categories: [shell]
 tags: [shell, bash, commands]
 slug: bash-cheatsheet
-gitment: true
 ---
 
 ## Greatest command of all time

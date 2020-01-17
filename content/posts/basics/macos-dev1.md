@@ -5,7 +5,6 @@ draft: false
 categories: [shell, macos]
 tags: [linux, macos, vim, shell]
 slug: setting-macos-env
-gitment: true
 ---
 
 ## 1. Homebrew
