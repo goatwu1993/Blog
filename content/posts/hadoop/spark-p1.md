@@ -3,6 +3,11 @@ title: "Spark"
 date: 2020-01-17T17:04:13+08:00
 draft: false
 diagram: true
+tags: ["Hadoop", "Spark", "BigData"]
+slug: "spark-p1"
+toc: true
+categories: []
+weight: 40
 ---
 
 ## What is Spark
