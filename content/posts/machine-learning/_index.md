@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Machine Learning
 
 # View.
 #   1 = List

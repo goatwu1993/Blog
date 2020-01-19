@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Hugo
 
 # View.
 #   1 = List

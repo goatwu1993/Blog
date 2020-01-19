@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Linux & Basics
 
 # View.
 #   1 = List

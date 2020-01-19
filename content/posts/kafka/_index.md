@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Kafka
 
 # View.
 #   1 = List

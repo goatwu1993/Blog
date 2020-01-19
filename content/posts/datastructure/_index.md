@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Data Structure
 
 # View.
 #   1 = List
