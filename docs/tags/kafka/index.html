@@ -478,11 +478,14 @@
 
   
   
-  <div>
-    <h2><a href="/blog/posts/kafka/kafka-p1/">Apache Kafka - Part1</a></h2>
-    <div class="article-style">
-      
-      What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/kafka/kafka-p1/" >Apache Kafka - Part1</a></h2>
+      <div class="article-style">
+        
+          What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
 Kafka 特點   提供 pub-sub 及 point-to-point 兩種 queue mode
   優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。
   對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。
@@ -490,15 +493,18 @@ Kafka 特點   提供 pub-sub 及 point-to-point 兩種 queue mode
   Kafka 優點 Reliability 可靠 Kafka is distributed, partitioned, replicated and fault tolerance.
 Scalability 可擴展性 Kafka 為分散式架構，可以 Zero downtime 輕鬆擴展
 Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。
-      
+        
+      </div>
     </div>
-  </div>
   
-  <div>
-    <h2><a href="/blog/posts/kafka/kafka-2/">Apache Kafka - Part2</a></h2>
-    <div class="article-style">
-      
-      Kafka Architecture Picture from wiki
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/kafka/kafka-2/" >Apache Kafka - Part2</a></h2>
+      <div class="article-style">
+        
+          Kafka Architecture Picture from wiki
 Producers   Producers 將發送資料流到一至多個 Topics
   Producer 使用 push(推)模式將訊息釋出到 Broker
   實作 Kafka 提供的 Producer API
@@ -508,9 +514,9 @@ Producers   Producers 將發送資料流到一至多個 Topics
   Consumer Group   每個 Consumer 屬於一個特定的 Consumer Group
   一則訊息可以發送到多個不同的 Consumer Group，但只能有一個 Consumer 消化該訊息
   Brokers   仲介處理 Consumer 以及 Producers 的訊息
-      
+        
+      </div>
     </div>
-  </div>
   
 
   

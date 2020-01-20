@@ -21,11 +21,11 @@
 &lt;p&gt;使用 source 執行 shell script 會直接沿用目前的進程。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;source hello-world.sh
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;excuting&#34;&gt;Excuting&lt;/h2&gt;
+&lt;h2 id=&#34;excute&#34;&gt;excute&lt;/h2&gt;
 &lt;p&gt;直接執行 shell script 會開啟一個子進程&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./hello-world.sh
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;export&#34;&gt;Export&lt;/h2&gt;
+&lt;h2 id=&#34;export&#34;&gt;export&lt;/h2&gt;
 &lt;p&gt;將某個變數變成環境變數，Life cycle 為這個進程結束為止&lt;/p&gt;
 &lt;h2 id=&#34;diagram&#34;&gt;diagram&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD

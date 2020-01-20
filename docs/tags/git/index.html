@@ -478,27 +478,33 @@
 
   
   
-  <div>
-    <h2><a href="/blog/posts/basics/git-commands/">Git commands</a></h2>
-    <div class="article-style">
-      
-      新增 submodule git submodule add git@github.com:xxx dir_name  移除 submodule git rm --cached [欲移除的目錄] rm -rf [欲移除的目錄]  修改 .gitmodules vim .gitmodules  修改 .git/config vim .git/config  最後再 commit，改變整個 Repository。
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/basics/git-commands/" >Git commands</a></h2>
+      <div class="article-style">
+        
+          新增 submodule git submodule add git@github.com:xxx dir_name  移除 submodule git rm --cached [欲移除的目錄] rm -rf [欲移除的目錄]  修改 .gitmodules vim .gitmodules  修改 .git/config vim .git/config  最後再 commit，改變整個 Repository。
 git add .gitmodules git commit -m &quot;Remove a submodule&quot;  安全起見再做個 sync git submodule sync  參考資料  https://biang.io/blog/development/tools/revision-control/git/submod  
-      
+        
+      </div>
     </div>
-  </div>
   
-  <div>
-    <h2><a href="/blog/posts/hugo/hugo-themes/">Hugo themes</a></h2>
-    <div class="article-style">
-      
-      本篇記錄如何使用 hugo 線上的 themes
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/hugo/hugo-themes/" >Hugo themes</a></h2>
+      <div class="article-style">
+        
+          本篇記錄如何使用 hugo 線上的 themes
 Hugo themes  Hugo 官方線上 themes a. 直接 submodule 不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好
 # submodule cd ./themes git submodule add https://github.com/avianto/hugo-kiera.git kiera  b. fork 再 submodule 如果需要更改 partial/layout/css 的話請選擇 fork
 # fork cd ./themes git clone https://github.com/$你的Id/hugo-kiera.git kiera  修改 config.toml theme = &quot;kiera&quot;  
-      
+        
+      </div>
     </div>
-  </div>
   
 
   

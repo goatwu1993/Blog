@@ -29,8 +29,8 @@
     
   
   <meta name="description" content="source 使用 source 執行 shell script 會直接沿用目前的進程。
-source hello-world.sh  Excuting 直接執行 shell script 會開啟一個子進程
-./hello-world.sh  Export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
+source hello-world.sh  excute 直接執行 shell script 會開啟一個子進程
+./hello-world.sh  export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
 diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C2(parent process) C1 --&gt; C3(export foo=FOO) C3 --&gt; C4(echo $foo &lt;br&gt; FOO) C4 --&gt; |export expire|C2 end subgraph Execute A1(parent process) -.-&gt; |sleep| A2(parent process) A1 --&gt; |fork| A3(test1.sh) A3 --&gt; A2 end subgraph Source B1(parent process) -.-&gt; B2(test1.">
 
   
@@ -235,8 +235,8 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/bash-p5-source-export/">
   <meta property="og:title" content="Bash - source &amp; export | goatwu1993">
   <meta property="og:description" content="source 使用 source 執行 shell script 會直接沿用目前的進程。
-source hello-world.sh  Excuting 直接執行 shell script 會開啟一個子進程
-./hello-world.sh  Export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
+source hello-world.sh  excute 直接執行 shell script 會開啟一個子進程
+./hello-world.sh  export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
 diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C2(parent process) C1 --&gt; C3(export foo=FOO) C3 --&gt; C4(echo $foo &lt;br&gt; FOO) C4 --&gt; |export expire|C2 end subgraph Execute A1(parent process) -.-&gt; |sleep| A2(parent process) A1 --&gt; |fork| A3(test1.sh) A3 --&gt; A2 end subgraph Source B1(parent process) -.-&gt; B2(test1."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
@@ -453,6 +453,25 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
 
 
   
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#source">source</a></li>
+    <li><a href="#excute">excute</a></li>
+    <li><a href="#export">export</a></li>
+    <li><a href="#diagram">diagram</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+            
             <article class="article">
                 
 
@@ -534,11 +553,11 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
 <p>使用 source 執行 shell script 會直接沿用目前的進程。</p>
 <pre><code class="language-bash">source hello-world.sh
 </code></pre>
-<h2 id="excuting">Excuting</h2>
+<h2 id="excute">excute</h2>
 <p>直接執行 shell script 會開啟一個子進程</p>
 <pre><code class="language-bash">./hello-world.sh
 </code></pre>
-<h2 id="export">Export</h2>
+<h2 id="export">export</h2>
 <p>將某個變數變成環境變數，Life cycle 為這個進程結束為止</p>
 <h2 id="diagram">diagram</h2>
 <pre><code class="language-mermaid">graph TD
@@ -768,6 +787,10 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
                 </div>
             </article>
             
+        </main>
+    </div>
+</div>
+
 
       
 
