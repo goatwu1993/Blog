@@ -6,6 +6,7 @@ tags: ["Hadoop", "Spark", "BigData"]
 slug: "Spark-Rdd"
 toc: false
 weight: 40
+summary: Spark RDD 簡單介紹
 ---
 
 ## What is RDD

@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="What is Spark  Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能  graph TD Spark(Spark) --&gt; Core(Spark Core) Spark --&gt; D(Spark SQL) Spark --&gt; E(Spark Streaming) Spark --&gt; F(MLlib) Spark --&gt; G(GraphX)  Spark 特點  Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法 提供 Java, Scala, Python 及 R 語言 API 記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce) Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。 Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。 Spark SQL 支援結構化和關聯式查詢處理（SQL）。 MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。  Spark 特點  In Memory Storage Immutability">
+  <meta name="description" content="Apache spark base concept.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/">
@@ -231,7 +231,7 @@
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/">
   <meta property="og:title" content="What is Apache Spark | goatwu1993">
-  <meta property="og:description" content="What is Spark  Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能  graph TD Spark(Spark) --&gt; Core(Spark Core) Spark --&gt; D(Spark SQL) Spark --&gt; E(Spark Streaming) Spark --&gt; F(MLlib) Spark --&gt; G(GraphX)  Spark 特點  Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法 提供 Java, Scala, Python 及 R 語言 API 記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce) Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。 Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。 Spark SQL 支援結構化和關聯式查詢處理（SQL）。 MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。  Spark 特點  In Memory Storage Immutability"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="Apache spark base concept."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -815,6 +815,8 @@ RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。<
   <div class="article-widget content-widget-hr">
     <h3>Related</h3>
     <ul>
+      
+      <li><a href="/blog/posts/apache-kafka/kafka-3/">Apache Kafka - Docker setup</a></li>
       
       <li><a href="/blog/posts/apache-kafka/kafka-p1/">Apache Kafka - Part1</a></li>
       

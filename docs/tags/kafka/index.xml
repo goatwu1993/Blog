@@ -5,12 +5,67 @@
     <link>https://goatwu1993.github.io/blog/tags/kafka/</link>
       <atom:link href="https://goatwu1993.github.io/blog/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
     <description>Kafka</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2020 19:53:34 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jan 2020 21:15:08 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Kafka</title>
       <link>https://goatwu1993.github.io/blog/tags/kafka/</link>
     </image>
+    
+    <item>
+      <title>Apache Kafka - Docker setup</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/</link>
+      <pubDate>Wed, 15 Jan 2020 21:15:08 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/</guid>
+      <description>&lt;h2 id=&#34;repos&#34;&gt;Repos&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/wurstmeister/kafka-dockers&#34;&gt;https://github.com/wurstmeister/kafka-dockers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修改文件檔&#34;&gt;修改文件檔&lt;/h2&gt;
+&lt;p&gt;需要修改 IP 設定，自己在本地測試的話建議先看官方解說
+&lt;a href=&#34;https://github.com/wurstmeister/kafka-docker/wiki/Connectivity&#34;&gt;https://github.com/wurstmeister/kafka-docker/wiki/Connectivity&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;啟動-container&#34;&gt;啟動 Container&lt;/h2&gt;
+&lt;p&gt;開 3 個 broker+1 個 Zookeeper&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker-compose up -d
+docker-compose scale kafka=3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;開-shell&#34;&gt;開 Shell&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./start-kafka-shell.sh 192.168.2.122 192.168.2.122:2181
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這個 container 的 IP 有可能不在 kafkadocker_default bridge 底下，要連到這些服務就需要通過 Host Machine 的 Port Forwarding&lt;/p&gt;
+&lt;p&gt;這些都已經設定寫好了，只需要輸入 Zookeeper 的 IP:port，這個 Shell 就可以通過 Zookeeper/Bootstrap Server 去找到全部可用的服務，他會把者 Argument 加進環境變數 HOST_IP/ZK。&lt;/p&gt;
+&lt;p&gt;不放心的話&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;printenv | grep -E &#39;HOST_IP|ZK&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;topic-創建查詢&#34;&gt;Topic 創建/查詢&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;## Create A Topic
+kafka-topics.sh --create --topic topictest --partitions 4 --zookeeper $ZK --replication-factor 2
+
+## Check topics
+kafka-topics.sh --list  --zookeeper $ZK
+
+## Check topic info
+kafka-topics.sh --describe --topic topic --zookeeper $ZK
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;create-a-producer&#34;&gt;Create a Producer&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-topics.sh --describe --topic topic --zookeeper $ZK
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;create-a-consumer&#34;&gt;Create a Consumer&lt;/h3&gt;
+&lt;p&gt;建議在另外開一個 Shell&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./start-kafka-shell.sh 192.168.2.122 192.168.2.122:2181
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然後再啟動 Consumer&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-console-consumer.sh --topic=topic --bootstrap-server=`broker-list.sh` --from-beginning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/wurstmeister/kafka-docker/wiki/Connectivity&#34;&gt;https://github.com/wurstmeister/kafka-docker/wiki/Connectivity&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Apache Kafka - Part1</title>

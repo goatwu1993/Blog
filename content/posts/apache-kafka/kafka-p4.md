@@ -1,9 +1,13 @@
 ---
-title: "Apache Kafka P3"
+title: "Apache Kafka P4"
 date: 2020-01-10T17:14:42+08:00
 draft: true
 tags: ["Hadoop", "Kafka", "BigData"]
 slug: "kafka-4"
+# summary
+summary: Kafka API
+# other configs
+diagram: true
 toc: true
 weight: 40
 ---

@@ -28,14 +28,7 @@
   
     
   
-  <meta name="description" content="What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
-Kafka 特點   提供 pub-sub 及 point-to-point 兩種 queue mode
-  優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。
-  對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。
-  因為可以直接處理檔案資料，直接用 OS 的 page cache，不需要額外 Applicaion Cache 來競爭珍貴的記憶體空間。
-  Kafka 優點 Reliability 可靠 Kafka is distributed, partitioned, replicated and fault tolerance.
-Scalability 可擴展性 Kafka 為分散式架構，可以 Zero downtime 輕鬆擴展
-Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。">
+  <meta name="description" content="What is Apache Kafka">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/">
@@ -238,14 +231,7 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/">
   <meta property="og:title" content="Apache Kafka - Part1 | goatwu1993">
-  <meta property="og:description" content="What is Kafka Kafka 是一個資料流 /訊息處理平台(message/stream processing platform)，仲介處理端到端 Real-Time 的訊息傳輸。
-Kafka 特點   提供 pub-sub 及 point-to-point 兩種 queue mode
-  優化過的 binary TCP-based protocol 及記憶體緩衝機制，多條訊息會先寫入記憶體緩衝中存成 Batcch 一同傳輸，可以減少網路封包的 Overhead。
-  對資料的包裝是輕量級的，且可壓縮。避免掉不必要的物件包覆，可以直接以檔案的型式來處理資料。
-  因為可以直接處理檔案資料，直接用 OS 的 page cache，不需要額外 Applicaion Cache 來競爭珍貴的記憶體空間。
-  Kafka 優點 Reliability 可靠 Kafka is distributed, partitioned, replicated and fault tolerance.
-Scalability 可擴展性 Kafka 為分散式架構，可以 Zero downtime 輕鬆擴展
-Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫到磁碟上。"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="What is Apache Kafka"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -847,6 +833,8 @@ Durability 耐用性 Kafka 使用分散式 commit log，訊息會被盡快的寫
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
       
 
       

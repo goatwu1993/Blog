@@ -6,11 +6,12 @@ tags: ["Hadoop", "Spark", "BigData"]
 slug: "spark-p3-shell"
 toc: false
 weight: 40
+summary: 簡單測試 Spark 功能
 ---
 
 ## Spark Test
 
-當你打開 Spark-Shell 的時候，他會自動幫你打開一個叫 sc 的 SparkContext Instance
+打開 Spark-Shell 時，會自動建立一個叫 sc 的 SparkContext 的 Instance
 
 ```bash
 $ spark-shell

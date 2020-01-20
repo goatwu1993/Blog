@@ -7,11 +7,12 @@ tags: ["Hadoop", "Spark", "BigData"]
 slug: "spark-p2-setup"
 toc: true
 weight: 40
+summary: Apache prerequisite at macOS
 ---
 
 ## Spark Installation
 
-## Prerequirement
+## Prerequisite
 
 1. macOS
    - Homebrew

@@ -1,9 +1,13 @@
 ---
-title: "Apache Kafka P4"
+title: "Apache Kafka - Docker setup"
 date: 2020-01-15T21:15:08+08:00
-draft: true
+draft: false
 tags: ["Hadoop", "Kafka", "BigData"]
 slug: "kafka-3"
+# summary
+summary: Kafka docker setup
+# other configs
+diagram: true
 toc: true
 weight: 40
 ---

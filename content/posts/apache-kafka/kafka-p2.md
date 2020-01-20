@@ -4,6 +4,11 @@ date: 2020-01-09T19:53:34+08:00
 draft: false
 tags: ["Hadoop", "Kafka", "BigData"]
 slug: "kafka-2"
+# summary
+summary: Kafka basic concept
+# other configs
+diagram: true
+toc: true
 weight: 40
 ---
 

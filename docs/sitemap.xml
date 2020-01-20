@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/</loc>
+    <lastmod>2020-01-15T21:15:08+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</loc>
     <lastmod>2020-01-09T19:53:34+08:00</lastmod>
   </url>
@@ -143,6 +148,16 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/</loc>
+    <lastmod>2020-01-15T21:15:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/kafka/</loc>
+    <lastmod>2020-01-15T21:15:08+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/tags/docker/</loc>
     <lastmod>2020-01-15T20:45:49+08:00</lastmod>
   </url>
@@ -155,16 +170,6 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/tags/commands/</loc>
     <lastmod>2020-01-15T20:36:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/</loc>
-    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/tags/kafka/</loc>
-    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
   </url>
   
   <url>

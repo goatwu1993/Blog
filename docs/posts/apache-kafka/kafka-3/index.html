@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Software Engineer">
+  <meta name="description" content="Kafka docker setup">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/404.html">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/">
 
   
 
@@ -215,7 +215,7 @@
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/404.html">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/">
 
   
   
@@ -229,29 +229,34 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/404.html">
-  <meta property="og:title" content="404 Page not found | goatwu1993">
-  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/">
+  <meta property="og:title" content="Apache Kafka - Docker setup | goatwu1993">
+  <meta property="og:description" content="Kafka docker setup"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2020-01-15T21:15:08&#43;08:00">
+    
+    <meta property="article:modified_time" content="2020-01-15T21:15:08&#43;08:00">
   
 
   
 
 
 
-
   
 
 
   
 
 
+  
 
 
 
-  <title>404 Page not found | goatwu1993</title>
+
+
+  <title>Apache Kafka - Docker setup | goatwu1993</title>
 
 </head>
 
@@ -463,51 +468,364 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
   
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
-
-  
-
-  <p>Perhaps you were looking for one of these?</p>
-
-  
-  
-  
-  <h2>Latest</h2>
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
   <ul>
-    
-      <li><a href="/blog/posts/docker/docker-p1/">Docker P1</a></li>
-    
-      <li><a href="/blog/posts/docker/docker-commands/">Docker commands</a></li>
-    
-      <li><a href="/blog/posts/apache-spark/spark-p2-setup/">Apache Spark Setup</a></li>
-    
-      <li><a href="/blog/posts/apache-spark/spark-p1-whatis/">What is Apache Spark</a></li>
-    
-      <li><a href="/blog/posts/apache-kafka/kafka-3/">Apache Kafka - Docker setup</a></li>
-    
-      <li><a href="/blog/posts/apache-kafka/kafka-p1/">Apache Kafka - Part1</a></li>
-    
-      <li><a href="/blog/posts/apache-kafka/kafka-2/">Apache Kafka - Part2</a></li>
-    
-      <li><a href="/blog/posts/basics/setting-macos-env/">macOS developer environments</a></li>
-    
-      <li><a href="/blog/posts/datastructure/dict-python-implementation/">Python 實作 Dictionary</a></li>
-    
-      <li><a href="/blog/posts/basics/bash-p5-source-export/">Bash - source &amp; export</a></li>
-    
+    <li><a href="#repos">Repos</a></li>
+    <li><a href="#修改文件檔">修改文件檔</a></li>
+    <li><a href="#啟動-container">啟動 Container</a></li>
+    <li><a href="#開-shell">開 Shell</a></li>
+    <li><a href="#topic-創建查詢">Topic 創建/查詢</a></li>
+    <li><a href="#create-a-producer">Create a Producer</a>
+      <ul>
+        <li><a href="#create-a-consumer">Create a Consumer</a></li>
+      </ul>
+    </li>
+    <li><a href="#參考資料">參考資料</a></li>
   </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+            
+            <article class="article">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Apache Kafka - Docker setup</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 15, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+                <div class="article-container">
+                    <div class="article-style">
+                        <h2 id="repos">Repos</h2>
+<p><a href="https://github.com/wurstmeister/kafka-dockers">https://github.com/wurstmeister/kafka-dockers</a></p>
+<h2 id="修改文件檔">修改文件檔</h2>
+<p>需要修改 IP 設定，自己在本地測試的話建議先看官方解說
+<a href="https://github.com/wurstmeister/kafka-docker/wiki/Connectivity">https://github.com/wurstmeister/kafka-docker/wiki/Connectivity</a></p>
+<h2 id="啟動-container">啟動 Container</h2>
+<p>開 3 個 broker+1 個 Zookeeper</p>
+<pre><code class="language-bash">docker-compose up -d
+docker-compose scale kafka=3
+</code></pre>
+<h2 id="開-shell">開 Shell</h2>
+<pre><code class="language-bash">./start-kafka-shell.sh 192.168.2.122 192.168.2.122:2181
+</code></pre>
+<p>這個 container 的 IP 有可能不在 kafkadocker_default bridge 底下，要連到這些服務就需要通過 Host Machine 的 Port Forwarding</p>
+<p>這些都已經設定寫好了，只需要輸入 Zookeeper 的 IP:port，這個 Shell 就可以通過 Zookeeper/Bootstrap Server 去找到全部可用的服務，他會把者 Argument 加進環境變數 HOST_IP/ZK。</p>
+<p>不放心的話</p>
+<pre><code class="language-bash">printenv | grep -E 'HOST_IP|ZK'
+</code></pre>
+<h2 id="topic-創建查詢">Topic 創建/查詢</h2>
+<pre><code class="language-bash">## Create A Topic
+kafka-topics.sh --create --topic topictest --partitions 4 --zookeeper $ZK --replication-factor 2
+
+## Check topics
+kafka-topics.sh --list  --zookeeper $ZK
+
+## Check topic info
+kafka-topics.sh --describe --topic topic --zookeeper $ZK
+</code></pre>
+<h2 id="create-a-producer">Create a Producer</h2>
+<pre><code class="language-bash">kafka-topics.sh --describe --topic topic --zookeeper $ZK
+</code></pre>
+<h3 id="create-a-consumer">Create a Consumer</h3>
+<p>建議在另外開一個 Shell</p>
+<pre><code class="language-bash">./start-kafka-shell.sh 192.168.2.122 192.168.2.122:2181
+</code></pre>
+<p>然後再啟動 Consumer</p>
+<pre><code class="language-bash">kafka-console-consumer.sh --topic=topic --bootstrap-server=`broker-list.sh` --from-beginning
+</code></pre>
+<h2 id="參考資料">參考資料</h2>
+<ul>
+<li>
+<p><a href="https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab">https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab</a></p>
+</li>
+<li>
+<p><a href="https://github.com/wurstmeister/kafka-docker/wiki/Connectivity">https://github.com/wurstmeister/kafka-docker/wiki/Connectivity</a></p>
+</li>
+</ul>
+
+                    </div>
+                    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/blog/tags/hadoop/">Hadoop</a>
+  
+  <a class="badge badge-light" href="/blog/tags/kafka/">Kafka</a>
+  
+  <a class="badge badge-light" href="/blog/tags/bigdata/">BigData</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;text=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;t=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Apache%20Kafka%20-%20Docker%20setup&amp;body=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;title=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Apache%20Kafka%20-%20Docker%20setup%20https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;title=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:peteeelol@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/blog/posts/apache-kafka/kafka-p1/">Apache Kafka - Part1</a></li>
+      
+      <li><a href="/blog/posts/apache-kafka/kafka-2/">Apache Kafka - Part2</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+                </div>
+            </article>
+            
+        </main>
+    </div>
+</div>
+
 
       
 
@@ -519,6 +837,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
       
 
       

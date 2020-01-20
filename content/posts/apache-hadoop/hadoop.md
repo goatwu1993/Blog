@@ -2,6 +2,8 @@
 title: "Apache Hadoop"
 date: 2020-01-17T17:04:13+08:00
 draft: false
+# Other configs
+
 ---
 
 ## What is Hadoop

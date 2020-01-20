@@ -2,12 +2,14 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-diagram: true
-tags: []
 slug: "{{ .Name | title }}"
-toc: false
-weight: 40
+tags: []
+# summary
 summary: summary
+# other configs
+diagram: true
+toc: true
+weight: 40
 ---
 
 ## Reference
