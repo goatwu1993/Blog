@@ -28,10 +28,12 @@
   
     
   
-  <meta name="description" content="profile file  Read by login shell .profile is read by many shells in the absence of their own shell-specific config files.  bash_profile  Readby login shell(Bash)  bashrc   Subshells read only .bashrc.
-  Shell script 開頭
-#!/bin/bash  會讀取 bashrc 相關變數
-  Login shell  使用 su 切換使用者  Subshell  screen tmux  graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/.">
+  <meta name="description" content="Login shell  使用 su 切換使用者  Subshell  screen tmux  /etc/profile 全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.
+/etc/bash_profile 全部使用者的 bash login shell 會讀取
+ ~/.profile  個別使用者的 login shell 會讀取，包含 sh, bash, zsh
+~/.bash_profile 個別使用者的 bash login shell 會讀取
+~/.bashrc 開啟 subshell 會讀取
+graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/.profile&quot;) C --&gt; D(&quot;~/.bash_profile&quot;) end end subgraph Subscreen D -.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/">
@@ -233,11 +235,13 @@
   
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/">
-  <meta property="og:title" content="Bash P3 Configs | goatwu1993">
-  <meta property="og:description" content="profile file  Read by login shell .profile is read by many shells in the absence of their own shell-specific config files.  bash_profile  Readby login shell(Bash)  bashrc   Subshells read only .bashrc.
-  Shell script 開頭
-#!/bin/bash  會讀取 bashrc 相關變數
-  Login shell  使用 su 切換使用者  Subshell  screen tmux  graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:title" content="Bash - Configs | goatwu1993">
+  <meta property="og:description" content="Login shell  使用 su 切換使用者  Subshell  screen tmux  /etc/profile 全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.
+/etc/bash_profile 全部使用者的 bash login shell 會讀取
+ ~/.profile  個別使用者的 login shell 會讀取，包含 sh, bash, zsh
+~/.bash_profile 個別使用者的 bash login shell 會讀取
+~/.bashrc 開啟 subshell 會讀取
+graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/.profile&quot;) C --&gt; D(&quot;~/.bash_profile&quot;) end end subgraph Subscreen D -."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -262,7 +266,7 @@
 
 
 
-  <title>Bash P3 Configs | goatwu1993</title>
+  <title>Bash - Configs | goatwu1993</title>
 
 </head>
 
@@ -461,11 +465,12 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#profile-file">profile file</a></li>
-    <li><a href="#bash_profile">bash_profile</a></li>
-    <li><a href="#bashrc">bashrc</a></li>
     <li><a href="#login-shell">Login shell</a></li>
     <li><a href="#subshell">Subshell</a></li>
+    <li><a href="#etcprofile">/etc/profile</a></li>
+    <li><a href="#etcbash_profile">/etc/bash_profile</a></li>
+    <li><a href="#bash_profile">~/.bash_profile</a></li>
+    <li><a href="#bashrc">~/.bashrc</a></li>
     <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
@@ -493,7 +498,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Bash P3 Configs</h1>
+  <h1>Bash - Configs</h1>
 
   
 
@@ -550,28 +555,7 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="profile-file">profile file</h2>
-<ul>
-<li>Read by login shell</li>
-<li>.profile is read by many shells in the absence of their own shell-specific config files.</li>
-</ul>
-<h2 id="bash_profile">bash_profile</h2>
-<ul>
-<li>Readby login shell(Bash)</li>
-</ul>
-<h2 id="bashrc">bashrc</h2>
-<ul>
-<li>
-<p>Subshells read only .bashrc.</p>
-</li>
-<li>
-<p>Shell script 開頭</p>
-<pre><code class="language-bash">#!/bin/bash
-</code></pre>
-<p>會讀取 bashrc 相關變數</p>
-</li>
-</ul>
-<h2 id="login-shell">Login shell</h2>
+                        <h2 id="login-shell">Login shell</h2>
 <ul>
 <li>使用 su 切換使用者</li>
 </ul>
@@ -580,6 +564,18 @@
 <li>screen</li>
 <li>tmux</li>
 </ul>
+<h2 id="etcprofile">/etc/profile</h2>
+<p>全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.</p>
+<h2 id="etcbash_profile">/etc/bash_profile</h2>
+<p>全部使用者的 bash login shell 會讀取</p>
+<!-- markdownlint-disable MD033 -->
+<h2> ~/.profile </h2>  
+<!-- markdownlint-enable MD033 -->
+<p>個別使用者的 login shell 會讀取，包含 sh, bash, zsh</p>
+<h2 id="bash_profile">~/.bash_profile</h2>
+<p>個別使用者的 bash login shell 會讀取</p>
+<h2 id="bashrc">~/.bashrc</h2>
+<p>開啟 subshell 會讀取</p>
 <pre><code class="language-mermaid">graph TD
     subgraph Login Shell
         subgraph System configs
@@ -627,7 +623,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;text=Bash%20P3%20Configs" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;text=Bash%20-%20Configs" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -640,7 +636,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;t=Bash%20P3%20Configs" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;t=Bash%20-%20Configs" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -653,7 +649,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Bash%20P3%20Configs&amp;body=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Bash%20-%20Configs&amp;body=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -666,7 +662,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;title=Bash%20P3%20Configs" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;title=Bash%20-%20Configs" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -679,7 +675,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Bash%20P3%20Configs%20https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Bash%20-%20Configs%20https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -692,7 +688,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;title=Bash%20P3%20Configs" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/&amp;title=Bash%20-%20Configs" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

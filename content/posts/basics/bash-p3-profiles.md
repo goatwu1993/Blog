@@ -1,5 +1,5 @@
 ---
-title: "Bash P3 Configs"
+title: "Bash - Configs"
 date: 2020-01-19T22:12:33+08:00
 draft: false
 diagram: true
@@ -10,26 +10,6 @@ categories: []
 weight: 40
 ---
 
-## profile file
-
-- Read by login shell
-- .profile is read by many shells in the absence of their own shell-specific config files.
-
-## bash_profile
-
-- Readby login shell(Bash)
-
-## bashrc
-
-- Subshells read only .bashrc.
-- Shell script 開頭
-
-  ```bash
-  #!/bin/bash
-  ```
-
-  會讀取 bashrc 相關變數
-
 ## Login shell
 
 - 使用 su 切換使用者
@@ -38,6 +18,28 @@ weight: 40
 
 - screen
 - tmux
+
+## /etc/profile
+
+全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.
+
+## /etc/bash_profile
+
+全部使用者的 bash login shell 會讀取
+
+<!-- markdownlint-disable MD033 -->
+<h2> ~/.profile </h2>  
+<!-- markdownlint-enable MD033 -->
+  
+個別使用者的 login shell 會讀取，包含 sh, bash, zsh
+
+## ~/.bash_profile
+
+個別使用者的 bash login shell 會讀取
+
+## ~/.bashrc
+
+開啟 subshell 會讀取
 
 ```mermaid
 graph TD

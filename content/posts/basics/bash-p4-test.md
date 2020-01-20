@@ -1,10 +1,10 @@
 ---
-title: "Bash P4 Test"
+title: "Bash - Test"
 date: 2020-01-20T03:04:32+08:00
 draft: true
 diagram: false
 tags: []
-slug: "Bash-P4-Test"
+slug: "bash-P4-test"
 toc: false
 categories: []
 weight: 40
@@ -29,10 +29,12 @@ DESCRIPTION
 ```
 
 Condition 為真的話是返回 0(true)，否則返回 1。
-在 bash 裡面可以寫成以下任意一種
+在 bash 可用以下方式呼叫
 
 - test expression
 - [ expression ]
+
+bash 裡面 "[" 這個就是 test
 
 ## 測試給定的檔名/檔案
 

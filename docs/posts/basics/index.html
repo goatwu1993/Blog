@@ -236,7 +236,7 @@
   <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-01-19T22:12:33&#43;08:00">
+    <meta property="og:updated_time" content="2020-01-20T19:09:20&#43;08:00">
   
 
   
@@ -479,13 +479,27 @@
   
   
   <div>
-    <h2><a href="/blog/posts/basics/bash-p3-configs/">Bash P3 Configs</a></h2>
+    <h2><a href="/blog/posts/basics/bash-p5-source-export/">Bash - source &amp; export</a></h2>
     <div class="article-style">
       
-      profile file  Read by login shell .profile is read by many shells in the absence of their own shell-specific config files.  bash_profile  Readby login shell(Bash)  bashrc   Subshells read only .bashrc.
-  Shell script 開頭
-#!/bin/bash  會讀取 bashrc 相關變數
-  Login shell  使用 su 切換使用者  Subshell  screen tmux  graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/.
+      source 使用 source 執行 shell script 會直接沿用目前的進程。
+source hello-world.sh  Excuting 直接執行 shell script 會開啟一個子進程
+./hello-world.sh  Export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
+diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C2(parent process) C1 --&gt; C3(export foo=FOO) C3 --&gt; C4(echo $foo &lt;br&gt; FOO) C4 --&gt; |export expire|C2 end subgraph Execute A1(parent process) -.-&gt; |sleep| A2(parent process) A1 --&gt; |fork| A3(test1.sh) A3 --&gt; A2 end subgraph Source B1(parent process) -.-&gt; B2(test1.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/blog/posts/basics/bash-p3-configs/">Bash - Configs</a></h2>
+    <div class="article-style">
+      
+      Login shell  使用 su 切換使用者  Subshell  screen tmux  /etc/profile 全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.
+/etc/bash_profile 全部使用者的 bash login shell 會讀取
+ ~/.profile  個別使用者的 login shell 會讀取，包含 sh, bash, zsh
+~/.bash_profile 個別使用者的 bash login shell 會讀取
+~/.bashrc 開啟 subshell 會讀取
+graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/.profile&quot;) C --&gt; D(&quot;~/.bash_profile&quot;) end end subgraph Subscreen D -.
       
     </div>
   </div>
