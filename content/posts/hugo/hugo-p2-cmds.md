@@ -3,8 +3,8 @@ title: "Hugo commands"
 date: 2019-12-27T21:32:52+08:00
 draft: false
 tags: [hugo, commands]
-categories: [hugo]
 slug: hugo-commands
+summary: hugo basic commands
 ---
 
 ## Hugo 使用

@@ -1,5 +1,5 @@
 ---
-title: Linux & Basics
+title: Linux & Bash
 
 # View.
 #   1 = List

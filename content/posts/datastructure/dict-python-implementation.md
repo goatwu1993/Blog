@@ -2,12 +2,12 @@
 title: "Python 實作 Dictionary"
 date: 2019-12-26T19:17:18+08:00
 draft: false
-categories: [datastructure]
 tags: [python, datastructure]
 slug: dict-python-implementation
 math: true
 toc: true
 weight: 40
+summary: A python implemented dictionary.
 ---
 
 ## Dictionary

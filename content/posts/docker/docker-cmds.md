@@ -4,8 +4,8 @@ date: 2020-01-15T20:36:03+08:00
 draft: false
 tags: [Docker, commands]
 slug: "docker-commands"
-categories: []
 weight: 30
+summary: docker commands
 ---
 
 ## container

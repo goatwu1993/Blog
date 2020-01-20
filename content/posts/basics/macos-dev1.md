@@ -2,9 +2,12 @@
 title: "macOS developer environments"
 date: 2019-12-28T19:17:18+08:00
 draft: false
-categories: [shell, macos]
-tags: [linux, macos, vim, shell]
+diagram: false
+tags: [linux, macos, shell]
 slug: setting-macos-env
+toc: true
+weight: 40
+summary: macOS setup item2, zsh, vim and dotfile management.
 ---
 
 ## 1. Homebrew

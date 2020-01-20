@@ -5,9 +5,8 @@ draft: true
 diagram: false
 tags: [shell, bash]
 slug: "bash-p2-ownership"
-toc: false
-categories: []
-weight: 40
+toc: true
+weight: 99
 ---
 
 ```bash

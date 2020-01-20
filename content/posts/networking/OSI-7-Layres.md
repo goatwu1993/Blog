@@ -2,7 +2,6 @@
 title: "TCP/IP cheatsheet"
 date: 2018-05-11T11:29:21+08:00
 draft: false
-categories: [networking]
 tags: [networking]
 slug: OSI-7-Layres
 ---

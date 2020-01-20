@@ -2,10 +2,10 @@
 title: "Hugo"
 date: 2018-04-06T19:19:34+08:00
 draft: false
-categories: [hugo]
 tags: [hugo]
 slug: hugo
 weight: 0
+summary: why I choose hugo
 ---
 
 ## 個人網頁怎麼建立

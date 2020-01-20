@@ -6,8 +6,8 @@ diagram: false
 tags: [shell, bash]
 slug: bash-p1-basics
 toc: true
-categories: []
-weight: 40
+weight: 100
+summary: basic bash commands
 ---
 
 ## Manual & help

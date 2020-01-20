@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git | goatwu1993</title>
+    <link>https://goatwu1993.github.io/blog/posts/git/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/posts/git/index.xml" rel="self" type="application/rss+xml" />
+    <description>Git</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Dec 2019 21:32:52 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Git</title>
+      <link>https://goatwu1993.github.io/blog/posts/git/</link>
+    </image>
+    
+    <item>
+      <title>Git - submodule</title>
+      <link>https://goatwu1993.github.io/blog/posts/git/git-commands/</link>
+      <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/git/git-commands/</guid>
+      <description>&lt;h2 id=&#34;新增-submodule&#34;&gt;新增 submodule&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add git@github.com:xxx dir_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;移除-submodule&#34;&gt;移除 submodule&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rm --cached [欲移除的目錄]
+rm -rf [欲移除的目錄]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-gitmodules&#34;&gt;修改 .gitmodules&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .gitmodules
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;修改-gitconfig&#34;&gt;修改 .git/config&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim .git/config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後再 commit，改變整個 Repository。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .gitmodules
+git commit -m &amp;quot;Remove a submodule&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;https://biang.io/blog/development/tools/revision-control/git/submod&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,8 +6,8 @@ diagram: false
 tags: [shell, bash]
 slug: bash-p4-test
 toc: true
-categories: []
-weight: 40
+weight: 97
+summary: bash test, condition and operator.
 ---
 
 ## What is test

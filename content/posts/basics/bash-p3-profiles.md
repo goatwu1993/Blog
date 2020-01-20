@@ -6,8 +6,8 @@ diagram: true
 tags: [shell, bash]
 slug: "bash-p3-configs"
 toc: true
-categories: []
-weight: 40
+weight: 98
+summary: profile, bash_profile and bashrc
 ---
 
 ## Login shell

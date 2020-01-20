@@ -232,7 +232,7 @@
   
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/">
-  <meta property="og:title" content="Linux &amp; Basics | goatwu1993">
+  <meta property="og:title" content="Linux &amp; Bash | goatwu1993">
   <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
@@ -253,7 +253,7 @@
 
 
 
-  <title>Linux &amp; Basics | goatwu1993</title>
+  <title>Linux &amp; Bash | goatwu1993</title>
 
 </head>
 
@@ -416,6 +416,28 @@
         
         
 
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/posts"><span>Categories</span></a>
+        </li>
+
+        
+        
+
       
 
         
@@ -464,7 +486,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>Linux &amp; Basics</h1>
+  <h1>Linux &amp; Bash</h1>
 
   
 
@@ -482,13 +504,22 @@
     
     
     <div>
+      <h2><a href="/blog/posts/basics/setting-macos-env/" >macOS developer environments</a></h2>
+      <div class="article-style">
+        
+          macOS setup item2, zsh, vim and dotfile management.
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
       <h2><a href="/blog/posts/basics/bash-p5-source-export/" >Bash - source &amp; export</a></h2>
       <div class="article-style">
         
-          source 使用 source 執行 shell script 會直接沿用目前的進程。
-source hello-world.sh  excute 直接執行 shell script 會開啟一個子進程
-./hello-world.sh  export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
-diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C2(parent process) C1 --&gt; C3(export foo=FOO) C3 --&gt; C4(echo $foo &lt;br&gt; FOO) C4 --&gt; |export expire|C2 end subgraph Execute A1(parent process) -.-&gt; |sleep| A2(parent process) A1 --&gt; |fork| A3(test1.sh) A3 --&gt; A2 end subgraph Source B1(parent process) -.-&gt; B2(test1.
+          bash source, execute and export life cycle.
         
       </div>
     </div>
@@ -500,7 +531,7 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
       <h2><a href="/blog/posts/basics/bash-p4-test/" >Bash - test</a></h2>
       <div class="article-style">
         
-          What is test $ man test NAME test, [ -- condition evaluation utility SYNOPSIS test expression [ expression ] DESCRIPTION The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; oth- erwise it returns 1 (false). If there is no expression, test also returns 1 (false). All operators and flags are separate arguments to the test utility.  Condition 為真的話是返回 0，否則返回 1
+          bash test, condition and operator.
         
       </div>
     </div>
@@ -512,12 +543,7 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
       <h2><a href="/blog/posts/basics/bash-p3-configs/" >Bash - configs</a></h2>
       <div class="article-style">
         
-          Login shell  使用 su 切換使用者  Subshell  screen tmux  /etc/profile 全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.
-/etc/bash_profile 全部使用者的 bash login shell 會讀取
- ~/.profile  個別使用者的 login shell 會讀取，包含 sh, bash, zsh
-~/.bash_profile 個別使用者的 bash login shell 會讀取
-~/.bashrc 開啟 subshell 會讀取
-graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;) --&gt; B(&quot;/etc/bash_profile&quot;) end subgraph User configs B --&gt; C(&quot;~/.profile&quot;) C --&gt; D(&quot;~/.bash_profile&quot;) end end subgraph Subscreen D -.
+          profile, bash_profile and bashrc
         
       </div>
     </div>
@@ -529,32 +555,7 @@ graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;
       <h2><a href="/blog/posts/basics/bash-p1-basics/" >Bash - basic commands</a></h2>
       <div class="article-style">
         
-          Manual &amp; help #!/bin/bash # manual man anything info anything anything --help  System info #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information.
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/posts/basics/setting-macos-env/" >macOS developer environments</a></h2>
-      <div class="article-style">
-        
-          1. Homebrew  macOS 包管理器 官網 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2  相比內建的 Terminal，支援點選選取優化，選取即複製等功能  3. GNU Stow  Symlink 管理器。 用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github 官網 https://www.gnu.org/software/stow  3. zsh  Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting 支援部分 bash, ksh 及 tcsh 語法 zshrc 懶人包 https://github.com/unixorn/zsh-quickstart-kit  4. vscode  VSCODE 插件懶人包 https://github.com/viatsko/awesome-vscode  5. vim  vimrc 懶人包 https://github.com/amix/vimrc vim 插件管理器 Vundle https://github.
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/posts/basics/git-commands/" >Git commands</a></h2>
-      <div class="article-style">
-        
-          新增 submodule git submodule add git@github.com:xxx dir_name  移除 submodule git rm --cached [欲移除的目錄] rm -rf [欲移除的目錄]  修改 .gitmodules vim .gitmodules  修改 .git/config vim .git/config  最後再 commit，改變整個 Repository。
-git add .gitmodules git commit -m &quot;Remove a submodule&quot;  安全起見再做個 sync git submodule sync  參考資料  https://biang.io/blog/development/tools/revision-control/git/submod  
+          basic bash commands
         
       </div>
     </div>

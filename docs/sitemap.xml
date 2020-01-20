@@ -13,6 +13,36 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p2-setup/</loc>
+    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/</loc>
+    <lastmod>2020-01-17T17:04:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</loc>
+    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/</loc>
+    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</loc>
+    <lastmod>2019-12-28T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/datastructure/dict-python-implementation/</loc>
+    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/posts/basics/bash-p5-source-export/</loc>
     <lastmod>2020-01-20T19:09:20+08:00</lastmod>
   </url>
@@ -25,31 +55,6 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/</loc>
     <lastmod>2020-01-19T22:12:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/spark/spark-p2-setup/</loc>
-    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/spark/spark-p1-whatis/</loc>
-    <lastmod>2020-01-17T17:04:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/kafka/kafka-p1/</loc>
-    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/kafka/kafka-2/</loc>
-    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/datastructure/dict-python-implementation/</loc>
-    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
   <url>
@@ -93,6 +98,11 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/</loc>
+    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/tags/bigdata/</loc>
     <lastmod>2020-01-17T20:33:38+08:00</lastmod>
   </url>
@@ -108,17 +118,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/spark/</loc>
-    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/hadoop/hadoop/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-hadoop/</loc>
     <lastmod>2020-01-17T17:04:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/hadoop/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-hadoop/hadoop/</loc>
     <lastmod>2020-01-17T17:04:13+08:00</lastmod>
   </url>
   
@@ -153,27 +158,17 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/</loc>
+    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/tags/kafka/</loc>
     <lastmod>2020-01-09T19:53:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/kafka/</loc>
-    <lastmod>2020-01-09T19:53:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/</loc>
-    <lastmod>2019-12-28T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/tags/linux/</loc>
-    <lastmod>2019-12-28T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/macos/</loc>
     <lastmod>2019-12-28T19:17:18+08:00</lastmod>
   </url>
   
@@ -183,22 +178,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</loc>
-    <lastmod>2019-12-28T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/shell/</loc>
-    <lastmod>2019-12-28T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/tags/vim/</loc>
-    <lastmod>2019-12-28T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/git/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -208,17 +188,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/basics/git-commands/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/git/git-commands/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/hugo/</loc>
-    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/hugo/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -249,11 +224,6 @@
   
   <url>
     <loc>https://goatwu1993.github.io/blog/tags/datastructure/</loc>
-    <lastmod>2019-12-26T19:17:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/categories/datastructure/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
   </url>
   
@@ -318,11 +288,6 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/networking/</loc>
-    <lastmod>2018-05-11T11:29:21+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/posts/networking/osi-7-layres/</loc>
     <lastmod>2018-05-11T11:29:21+08:00</lastmod>
   </url>
@@ -380,6 +345,10 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/categories/</loc>
   </url>
   
   <url>

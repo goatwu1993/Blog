@@ -28,10 +28,7 @@
   
     
   
-  <meta name="description" content="source 使用 source 執行 shell script 會直接沿用目前的進程。
-source hello-world.sh  excute 直接執行 shell script 會開啟一個子進程
-./hello-world.sh  export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
-diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C2(parent process) C1 --&gt; C3(export foo=FOO) C3 --&gt; C4(echo $foo &lt;br&gt; FOO) C4 --&gt; |export expire|C2 end subgraph Execute A1(parent process) -.-&gt; |sleep| A2(parent process) A1 --&gt; |fork| A3(test1.sh) A3 --&gt; A2 end subgraph Source B1(parent process) -.-&gt; B2(test1.">
+  <meta name="description" content="bash source, execute and export life cycle.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/basics/bash-p5-source-export/">
@@ -234,10 +231,7 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/bash-p5-source-export/">
   <meta property="og:title" content="Bash - source &amp; export | goatwu1993">
-  <meta property="og:description" content="source 使用 source 執行 shell script 會直接沿用目前的進程。
-source hello-world.sh  excute 直接執行 shell script 會開啟一個子進程
-./hello-world.sh  export 將某個變數變成環境變數，Life cycle 為這個進程結束為止
-diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C2(parent process) C1 --&gt; C3(export foo=FOO) C3 --&gt; C4(echo $foo &lt;br&gt; FOO) C4 --&gt; |export expire|C2 end subgraph Execute A1(parent process) -.-&gt; |sleep| A2(parent process) A1 --&gt; |fork| A3(test1.sh) A3 --&gt; A2 end subgraph Source B1(parent process) -.-&gt; B2(test1."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="bash source, execute and export life cycle."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -420,6 +414,28 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
 
         <li class="nav-item">
           <a class="nav-link " href="/blog/#tags"><span>Tags</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/posts"><span>Categories</span></a>
         </li>
 
         

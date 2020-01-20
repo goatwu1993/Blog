@@ -4,8 +4,8 @@ date: 2020-01-15T20:45:49+08:00
 draft: draft
 tags: [Docker]
 slug: "docker-p1"
-categories: []
 weight: 30
+summary: Basic docker concept
 ---
 
 ## Container
