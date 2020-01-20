@@ -1,11 +1,11 @@
 ---
-title: "Bash - Test"
+title: "Bash - test"
 date: 2020-01-20T03:04:32+08:00
-draft: true
+draft: false
 diagram: false
-tags: []
-slug: "bash-P4-test"
-toc: false
+tags: [shell, bash]
+slug: bash-p4-test
+toc: true
 categories: []
 weight: 40
 ---
@@ -28,13 +28,13 @@ DESCRIPTION
      All operators and flags are separate arguments to the test utility.
 ```
 
-Condition 為真的話是返回 0(true)，否則返回 1。
+Condition 為真的話是返回 0，否則返回 1  
 在 bash 可用以下方式呼叫
 
 - test expression
 - [ expression ]
 
-bash 裡面 "[" 這個就是 test
+bash 裡面 "[" 就是 test
 
 ## 測試給定的檔名/檔案
 

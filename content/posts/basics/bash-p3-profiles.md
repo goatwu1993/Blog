@@ -1,10 +1,10 @@
 ---
-title: "Bash - Configs"
+title: "Bash - configs"
 date: 2020-01-19T22:12:33+08:00
 draft: false
 diagram: true
-tags: ["Shell", "Bash"]
-slug: "Bash-P3-Configs"
+tags: [shell, bash]
+slug: "bash-p3-configs"
 toc: true
 categories: []
 weight: 40

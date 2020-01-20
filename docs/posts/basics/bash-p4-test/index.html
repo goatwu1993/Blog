@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Greatest command of all time #!/bin/bash # manual man anything info anything anything --help  General commands Getting information #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information.">
+  <meta name="description" content="What is test $ man test NAME test, [ -- condition evaluation utility SYNOPSIS test expression [ expression ] DESCRIPTION The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; oth- erwise it returns 1 (false). If there is no expression, test also returns 1 (false). All operators and flags are separate arguments to the test utility.  Condition 為真的話是返回 0，否則返回 1">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/">
 
   
 
@@ -215,7 +215,7 @@
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/">
 
   
   
@@ -229,15 +229,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/">
-  <meta property="og:title" content="Bash commands | goatwu1993">
-  <meta property="og:description" content="Greatest command of all time #!/bin/bash # manual man anything info anything anything --help  General commands Getting information #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/">
+  <meta property="og:title" content="Bash - test | goatwu1993">
+  <meta property="og:description" content="What is test $ man test NAME test, [ -- condition evaluation utility SYNOPSIS test expression [ expression ] DESCRIPTION The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; oth- erwise it returns 1 (false). If there is no expression, test also returns 1 (false). All operators and flags are separate arguments to the test utility.  Condition 為真的話是返回 0，否則返回 1"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2018-06-10T17:20:14&#43;08:00">
+      <meta property="article:published_time" content="2020-01-20T03:04:32&#43;08:00">
     
-    <meta property="article:modified_time" content="2018-06-10T17:20:14&#43;08:00">
+    <meta property="article:modified_time" content="2020-01-20T03:04:32&#43;08:00">
   
 
   
@@ -256,7 +256,7 @@
 
 
 
-  <title>Bash commands | goatwu1993</title>
+  <title>Bash - test | goatwu1993</title>
 
 </head>
 
@@ -447,6 +447,27 @@
 
 
   
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-test">What is test</a></li>
+    <li><a href="#測試給定的檔名檔案">測試給定的檔名/檔案</a></li>
+    <li><a href="#測試給定的兩個檔名檔案">測試給定的兩個檔名/檔案</a></li>
+    <li><a href="#測試給定的字串">測試給定的字串</a></li>
+    <li><a href="#測試給定的整數">測試給定的整數</a></li>
+    <li><a href="#算子">算子</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+            
             <article class="article">
                 
 
@@ -467,7 +488,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Bash commands</h1>
+  <h1>Bash - test</h1>
 
   
 
@@ -486,7 +507,7 @@
     
       
     
-    Jun 10, 2018
+    Jan 20, 2020
   </span>
   
 
@@ -499,10 +520,6 @@
   
 
   
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/blog/categories/shell/">shell</a></span>
   
 
 </div>
@@ -528,133 +545,91 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="greatest-command-of-all-time">Greatest command of all time</h2>
-<pre><code class="language-bash">#!/bin/bash
+                        <h2 id="what-is-test">What is test</h2>
+<pre><code class="language-bash">$ man test
+NAME
+     test, [ -- condition evaluation utility
 
-# manual
-man anything
-info anything
-anything --help
+SYNOPSIS
+     test expression
+     [ expression ]
+
+DESCRIPTION
+     The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; oth-
+     erwise it returns 1 (false).  If there is no expression, test also returns 1 (false).
+
+     All operators and flags are separate arguments to the test utility.
 </code></pre>
-<h2 id="general-commands">General commands</h2>
-<h3 id="getting-information">Getting information</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show shell name.
-echo $SHELL
-echo $0
-# Show shell version.
-$SHELL --version
-
-# Clear terminal.
-clear
-
-# Show command history.
-history
-
-# Print working directory
-pwd
-
-# Show system info
-uname -a
-
-# uptime
-uptime
-</code></pre>
-<h3 id="file-managing">File managing</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# List the files in working directory.
-ls
-# List all files, hidden file included, with detailed information.
-ls -la
-
-
-</code></pre>
-<hr>
-<h2 id="network">Network</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show network interface config/info.
-ifconfig
-
-# get public ip
-curl icanhazip.com
-
-# Show network status
-netstat
-# Show all, include tcp/udp port.
-netstat -an
-# Show established connection
-netstat -antu | grep 'ESTABLISHED'
-# Show kernel routing information
-netstat -r
-netstat -tulnp
-
-# Check the bridge Interface
-brtcl
-brctl addbr &lt;name&gt;
-
-# ssh
-ssh
-# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
-ssh-keygen
-
-# scp
-scp
-</code></pre>
-<hr>
-<h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
-<h3 id="check-and-monitor-process">Check and monitor process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# List all process run by user shell
-ps
-# List all process, even by status
-ps aux
-# pstree
-pstree
-
-# Monitor the process status
-top
-# cpu
-top -o cpu
-# memery
-top -o rsize
-
-# List cronjob
-crontab
-# List all cronjob.
-crontab -l
-</code></pre>
-<h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Send a signal to a process
-kill -signal PID
-# Send 15 SIGTERM to a process
-kill $pid
-
-# killall allow you to kill app with name instead of pid
-killall -9 $processname
-# Ask before terminate
-killall -i -9 $processname
-</code></pre>
-<h3 id="memory-usage">Memory usage</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show recent memory usage
-free -m
-
-</code></pre>
-<h2 id="參考資料">參考資料</h2>
+<p>Condition 為真的話是返回 0，否則返回 1<br>
+在 bash 可用以下方式呼叫</p>
 <ul>
-<li>
-<a href="https://geekflare.com/netstat/" target="_blank" rel="noopener">geekflare</a>
-</li>
-<li>
-<a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l" target="_blank" rel="noopener">鳥哥第十六章、程序管理與 SELinux 初探</a>
-</li>
+<li>test expression</li>
+<li>[ expression ]</li>
+</ul>
+<p>bash 裡面 &ldquo;[&rdquo; 就是 test</p>
+<h2 id="測試給定的檔名檔案">測試給定的檔名/檔案</h2>
+<pre><code class="language-bash"># 判斷檔名是否存在(Exist)
+test -e REAME.md
+# 判斷檔名是否存在且為檔案
+test -f REAME.md
+# 判斷檔名是否存在且為資料夾
+test -d dir
+#
+</code></pre>
+<h2 id="測試給定的兩個檔名檔案">測試給定的兩個檔名/檔案</h2>
+<pre><code class="language-bash"># Newer than
+test file1 -nt file2
+# Older than
+test file1 -ot file2
+# True if file1 and file2 exist and refer to the same file.
+test file1 -ef file2
+</code></pre>
+<p>還有許多其他的，但不常用到(block, Socket 等等)</p>
+<h2 id="測試給定的字串">測試給定的字串</h2>
+<pre><code class="language-bash"># True if string is not the null string
+test string
+# True if the length of string is zero.
+test -z string
+# True if the length of string is nonzero.
+test -n string
+
+# True if the strings s1 and s2 are identical.
+test s1 = s2
+# True if the strings s1 and s2 are not identical.
+test s1 != s2
+# True if string s1 comes before s2 based on the binary value of their characters.
+test s1 &lt; s2
+# True if string s1 comes after s2 based on the binary value of their characters.
+test s1 &gt; s2
+</code></pre>
+<h2 id="測試給定的整數">測試給定的整數</h2>
+<pre><code class="language-bash"># True if the integers n1 and n2 are algebraically equal.
+test n1 -eq n2
+# True if the integers n1 and n2 are not algebraically equal.
+test n1 -ne n2
+# True if the integer n1 is algebraically greater than the integer n2.
+test n1 -gt n2
+# True if the integer n1 is algebraically greater than or equal to the integer n2.
+test n1 -ge n2
+# True if the integer n1 is algebraically less than the integer n2.
+test n1 -lt n2
+# True if the integer n1 is algebraically less than or equal to the integer n2.
+test n1 -le n2
+</code></pre>
+<h2 id="算子">算子</h2>
+<pre><code class="language-bash">## not
+! expression
+## and
+test expression1 -a expression2
+## or
+expression1 -o expression2
+## ()
+( expression )
+</code></pre>
+<p>and 優先於 or</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test">http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test</a></li>
 </ul>
 
                     </div>
@@ -669,8 +644,6 @@ free -m
   <a class="badge badge-light" href="/blog/tags/shell/">shell</a>
   
   <a class="badge badge-light" href="/blog/tags/bash/">bash</a>
-  
-  <a class="badge badge-light" href="/blog/tags/commands/">commands</a>
   
 </div>
 
@@ -687,7 +660,7 @@ free -m
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/&amp;text=Bash%20commands" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/&amp;text=Bash%20-%20test" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -700,7 +673,7 @@ free -m
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/&amp;t=Bash%20commands" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/&amp;t=Bash%20-%20test" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -713,7 +686,7 @@ free -m
       
       
       <li>
-        <a href="mailto:?subject=Bash%20commands&amp;body=https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Bash%20-%20test&amp;body=https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -726,7 +699,7 @@ free -m
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/&amp;title=Bash%20commands" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/&amp;title=Bash%20-%20test" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -739,7 +712,7 @@ free -m
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Bash%20commands%20https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Bash%20-%20test%20https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -752,7 +725,7 @@ free -m
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/&amp;title=Bash%20commands" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/&amp;title=Bash%20-%20test" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -844,11 +817,28 @@ free -m
 
   
   
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/blog/posts/basics/bash-p3-configs/">Bash - configs</a></li>
+      
+      <li><a href="/blog/posts/basics/bash-p1-basics/">Bash - basic commands</a></li>
+      
+      <li><a href="/blog/posts/basics/setting-macos-env/">macOS developer environments</a></li>
+      
+    </ul>
+  </div>
+  
 
 
                 </div>
             </article>
             
+        </main>
+    </div>
+</div>
+
 
       
 

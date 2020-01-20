@@ -3,7 +3,7 @@ title: "Bash - source & export"
 date: 2020-01-20T19:09:20+08:00
 draft: false
 diagram: true
-tags: ["Shell", "Bash"]
+tags: [shell, bash]
 slug: "bash-p5-source-export"
 toc: false
 categories: []

@@ -1,13 +1,16 @@
 ---
-title: "Bash commands"
+title: "Bash - basic commands"
 date: 2018-06-10T17:20:14+08:00
 draft: false
-categories: [shell]
-tags: [shell, bash, commands]
-slug: bash-cheatsheet
+diagram: false
+tags: [shell, bash]
+slug: bash-p1-basics
+toc: true
+categories: []
+weight: 40
 ---
 
-## Greatest command of all time
+## Manual & help
 
 ```bash
 #!/bin/bash
@@ -18,9 +21,7 @@ info anything
 anything --help
 ```
 
-## General commands
-
-### Getting information
+## System info
 
 ```bash
 #!/bin/bash
@@ -47,7 +48,7 @@ uname -a
 uptime
 ```
 
-### File managing
+## File managing
 
 ```bash
 #!/bin/bash
@@ -56,11 +57,7 @@ uptime
 ls
 # List all files, hidden file included, with detailed information.
 ls -la
-
-
 ```
-
----
 
 ## Network
 
@@ -95,8 +92,6 @@ ssh-keygen
 # scp
 scp
 ```
-
----
 
 ## CPU, memery, task & process
 
@@ -148,10 +143,9 @@ killall -i -9 $processname
 
 # Show recent memory usage
 free -m
-
 ```
 
-## 參考資料
+## Reference
 
-- [geekflare](https://geekflare.com/netstat/)
-- [鳥哥第十六章、程序管理與 SELinux 初探](http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l)
+- <https://geekflare.com/netstat/>
+- <http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l>

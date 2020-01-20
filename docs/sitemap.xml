@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/</loc>
+    <lastmod>2020-01-20T03:04:32+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/</loc>
     <lastmod>2020-01-19T22:12:33+08:00</lastmod>
   </url>
@@ -45,6 +50,11 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/datastructure/dict-python-implementation/</loc>
     <lastmod>2019-12-26T19:17:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/basics/bash-p1-basics/</loc>
+    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>
@@ -188,12 +198,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
+    <loc>https://goatwu1993.github.io/blog/tags/git/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/git/</loc>
+    <loc>https://goatwu1993.github.io/blog/categories/git/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -295,11 +305,6 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/</loc>
-    <lastmod>2018-06-10T17:20:14+08:00</lastmod>
   </url>
   
   <url>

@@ -232,7 +232,7 @@
   
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/tags/shell/">
-  <meta property="og:title" content="Shell | goatwu1993">
+  <meta property="og:title" content="shell | goatwu1993">
   <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
@@ -253,7 +253,7 @@
 
 
 
-  <title>Shell | goatwu1993</title>
+  <title>shell | goatwu1993</title>
 
 </head>
 
@@ -464,7 +464,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>Shell</h1>
+  <h1>shell</h1>
 
   
 
@@ -491,7 +491,16 @@ diagram graph TD subgraph Export Life cycle C1(parent process) -.-&gt; |sleep| C
   </div>
   
   <div>
-    <h2><a href="/blog/posts/basics/bash-p3-configs/">Bash - Configs</a></h2>
+    <h2><a href="/blog/posts/basics/bash-p4-test/">Bash - test</a></h2>
+    <div class="article-style">
+      
+      What is test $ man test NAME test, [ -- condition evaluation utility SYNOPSIS test expression [ expression ] DESCRIPTION The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; oth- erwise it returns 1 (false). If there is no expression, test also returns 1 (false). All operators and flags are separate arguments to the test utility.  Condition 為真的話是返回 0，否則返回 1
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/blog/posts/basics/bash-p3-configs/">Bash - configs</a></h2>
     <div class="article-style">
       
       Login shell  使用 su 切換使用者  Subshell  screen tmux  /etc/profile 全部的使用者的 login shell 都會讀取，包含 bash, zsh, etc.
@@ -505,19 +514,19 @@ graph TD subgraph Login Shell subgraph System configs A(&quot;/etc/profile&quot;
   </div>
   
   <div>
-    <h2><a href="/blog/posts/basics/setting-macos-env/">macOS developer environments</a></h2>
+    <h2><a href="/blog/posts/basics/bash-p1-basics/">Bash - basic commands</a></h2>
     <div class="article-style">
       
-      1. Homebrew  macOS 包管理器 官網 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2  相比內建的 Terminal，支援點選選取優化，選取即複製等功能  3. GNU Stow  Symlink 管理器。 用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github 官網 https://www.gnu.org/software/stow  3. zsh  Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting 支援部分 bash, ksh 及 tcsh 語法 zshrc 懶人包 https://github.com/unixorn/zsh-quickstart-kit  4. vscode  VSCODE 插件懶人包 https://github.com/viatsko/awesome-vscode  5. vim  vimrc 懶人包 https://github.com/amix/vimrc vim 插件管理器 Vundle https://github.
+      Manual &amp; help #!/bin/bash # manual man anything info anything anything --help  System info #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information.
       
     </div>
   </div>
   
   <div>
-    <h2><a href="/blog/posts/basics/bash-cheatsheet/">Bash commands</a></h2>
+    <h2><a href="/blog/posts/basics/setting-macos-env/">macOS developer environments</a></h2>
     <div class="article-style">
       
-      Greatest command of all time #!/bin/bash # manual man anything info anything anything --help  General commands Getting information #!/bin/bash # Show shell name. echo $SHELL echo $0 # Show shell version. $SHELL --version # Clear terminal. clear # Show command history. history # Print working directory pwd # Show system info uname -a # uptime uptime  File managing #!/bin/bash # List the files in working directory. ls # List all files, hidden file included, with detailed information.
+      1. Homebrew  macOS 包管理器 官網 https://brew.sh/ 包列表 https://formulae.brew.sh/  2. iTerm2  相比內建的 Terminal，支援點選選取優化，選取即複製等功能  3. GNU Stow  Symlink 管理器。 用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github 官網 https://www.gnu.org/software/stow  3. zsh  Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting 支援部分 bash, ksh 及 tcsh 語法 zshrc 懶人包 https://github.com/unixorn/zsh-quickstart-kit  4. vscode  VSCODE 插件懶人包 https://github.com/viatsko/awesome-vscode  5. vim  vimrc 懶人包 https://github.com/amix/vimrc vim 插件管理器 Vundle https://github.
       
     </div>
   </div>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell | goatwu1993</title>
+    <title>shell | goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/shell/</link>
       <atom:link href="https://goatwu1993.github.io/blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
-    <description>Shell</description>
+    <description>shell</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 20 Jan 2020 19:09:20 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Shell</title>
+      <title>shell</title>
       <link>https://goatwu1993.github.io/blog/tags/shell/</link>
     </image>
     
@@ -53,7 +53,101 @@
     </item>
     
     <item>
-      <title>Bash - Configs</title>
+      <title>Bash - test</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/</link>
+      <pubDate>Mon, 20 Jan 2020 03:04:32 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/basics/bash-p4-test/</guid>
+      <description>&lt;h2 id=&#34;what-is-test&#34;&gt;What is test&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ man test
+NAME
+     test, [ -- condition evaluation utility
+
+SYNOPSIS
+     test expression
+     [ expression ]
+
+DESCRIPTION
+     The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; oth-
+     erwise it returns 1 (false).  If there is no expression, test also returns 1 (false).
+
+     All operators and flags are separate arguments to the test utility.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Condition 為真的話是返回 0，否則返回 1&lt;br&gt;
+在 bash 可用以下方式呼叫&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;test expression&lt;/li&gt;
+&lt;li&gt;[ expression ]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;bash 裡面 &amp;ldquo;[&amp;rdquo; 就是 test&lt;/p&gt;
+&lt;h2 id=&#34;測試給定的檔名檔案&#34;&gt;測試給定的檔名/檔案&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 判斷檔名是否存在(Exist)
+test -e REAME.md
+# 判斷檔名是否存在且為檔案
+test -f REAME.md
+# 判斷檔名是否存在且為資料夾
+test -d dir
+#
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;測試給定的兩個檔名檔案&#34;&gt;測試給定的兩個檔名/檔案&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Newer than
+test file1 -nt file2
+# Older than
+test file1 -ot file2
+# True if file1 and file2 exist and refer to the same file.
+test file1 -ef file2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;還有許多其他的，但不常用到(block, Socket 等等)&lt;/p&gt;
+&lt;h2 id=&#34;測試給定的字串&#34;&gt;測試給定的字串&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# True if string is not the null string
+test string
+# True if the length of string is zero.
+test -z string
+# True if the length of string is nonzero.
+test -n string
+
+# True if the strings s1 and s2 are identical.
+test s1 = s2
+# True if the strings s1 and s2 are not identical.
+test s1 != s2
+# True if string s1 comes before s2 based on the binary value of their characters.
+test s1 &amp;lt; s2
+# True if string s1 comes after s2 based on the binary value of their characters.
+test s1 &amp;gt; s2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;測試給定的整數&#34;&gt;測試給定的整數&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# True if the integers n1 and n2 are algebraically equal.
+test n1 -eq n2
+# True if the integers n1 and n2 are not algebraically equal.
+test n1 -ne n2
+# True if the integer n1 is algebraically greater than the integer n2.
+test n1 -gt n2
+# True if the integer n1 is algebraically greater than or equal to the integer n2.
+test n1 -ge n2
+# True if the integer n1 is algebraically less than the integer n2.
+test n1 -lt n2
+# True if the integer n1 is algebraically less than or equal to the integer n2.
+test n1 -le n2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;算子&#34;&gt;算子&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;## not
+! expression
+## and
+test expression1 -a expression2
+## or
+expression1 -o expression2
+## ()
+( expression )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and 優先於 or&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test&#34;&gt;http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bash - configs</title>
       <link>https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/</link>
       <pubDate>Sun, 19 Jan 2020 22:12:33 +0800</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/</guid>
@@ -100,56 +194,11 @@
     </item>
     
     <item>
-      <title>macOS developer environments</title>
-      <link>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</link>
-      <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</guid>
-      <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;macOS 包管理器&lt;/li&gt;
-&lt;li&gt;官網
-&lt;a href=&#34;https://brew.sh/&#34;&gt;https://brew.sh/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;包列表
-&lt;a href=&#34;https://formulae.brew.sh/&#34;&gt;https://formulae.brew.sh/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;相比內建的 Terminal，支援點選選取優化，選取即複製等功能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;3-gnu-stow&#34;&gt;3. GNU Stow&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Symlink 管理器。&lt;/li&gt;
-&lt;li&gt;用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github&lt;/li&gt;
-&lt;li&gt;官網 &lt;a href=&#34;https://www.gnu.org/software/stow&#34;&gt;https://www.gnu.org/software/stow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
-&lt;li&gt;支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
-&lt;li&gt;zshrc 懶人包 &lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;https://github.com/unixorn/zsh-quickstart-kit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;VSCODE 插件懶人包 &lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;https://github.com/viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;vimrc 懶人包 &lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;https://github.com/amix/vimrc&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;vim 插件管理器 Vundle &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;https://github.com/VundleVim/Vundle.vim&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/27447370&#34;&gt;https://www.zhihu.com/question/27447370&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bash commands</title>
-      <link>https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/</link>
+      <title>Bash - basic commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/bash-p1-basics/</link>
       <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/basics/bash-cheatsheet/</guid>
-      <description>&lt;h2 id=&#34;greatest-command-of-all-time&#34;&gt;Greatest command of all time&lt;/h2&gt;
+      <guid>https://goatwu1993.github.io/blog/posts/basics/bash-p1-basics/</guid>
+      <description>&lt;h2 id=&#34;manual--help&#34;&gt;Manual &amp;amp; help&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
 # manual
@@ -157,8 +206,7 @@ man anything
 info anything
 anything --help
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;general-commands&#34;&gt;General commands&lt;/h2&gt;
-&lt;h3 id=&#34;getting-information&#34;&gt;Getting information&lt;/h3&gt;
+&lt;h2 id=&#34;system-info&#34;&gt;System info&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
 # Show shell name.
@@ -182,17 +230,14 @@ uname -a
 # uptime
 uptime
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;file-managing&#34;&gt;File managing&lt;/h3&gt;
+&lt;h2 id=&#34;file-managing&#34;&gt;File managing&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
 # List the files in working directory.
 ls
 # List all files, hidden file included, with detailed information.
 ls -la
-
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;network&#34;&gt;Network&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
@@ -224,7 +269,6 @@ ssh-keygen
 # scp
 scp
 &lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;cpu-memery-task--process&#34;&gt;CPU, memery, task &amp;amp; process&lt;/h2&gt;
 &lt;h3 id=&#34;check-and-monitor-process&#34;&gt;Check and monitor process&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
@@ -266,16 +310,56 @@ killall -i -9 $processname
 
 # Show recent memory usage
 free -m
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://geekflare.com/netstat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;geekflare&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;鳥哥第十六章、程序管理與 SELinux 初探&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;https://geekflare.com/netstat/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34;&gt;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>macOS developer environments</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</link>
+      <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</guid>
+      <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS 包管理器&lt;/li&gt;
+&lt;li&gt;官網
+&lt;a href=&#34;https://brew.sh/&#34;&gt;https://brew.sh/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;包列表
+&lt;a href=&#34;https://formulae.brew.sh/&#34;&gt;https://formulae.brew.sh/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-iterm2&#34;&gt;2. iTerm2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;相比內建的 Terminal，支援點選選取優化，選取即複製等功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-gnu-stow&#34;&gt;3. GNU Stow&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Symlink 管理器。&lt;/li&gt;
+&lt;li&gt;用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github&lt;/li&gt;
+&lt;li&gt;官網 &lt;a href=&#34;https://www.gnu.org/software/stow&#34;&gt;https://www.gnu.org/software/stow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-zsh&#34;&gt;3. zsh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting&lt;/li&gt;
+&lt;li&gt;支援部分 bash, ksh 及 tcsh 語法&lt;/li&gt;
+&lt;li&gt;zshrc 懶人包 &lt;a href=&#34;https://github.com/unixorn/zsh-quickstart-kit&#34;&gt;https://github.com/unixorn/zsh-quickstart-kit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-vscode&#34;&gt;4. vscode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VSCODE 插件懶人包 &lt;a href=&#34;https://github.com/viatsko/awesome-vscode&#34;&gt;https://github.com/viatsko/awesome-vscode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-vim&#34;&gt;5. vim&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vimrc 懶人包 &lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;https://github.com/amix/vimrc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;vim 插件管理器 Vundle &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;https://github.com/VundleVim/Vundle.vim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/27447370&#34;&gt;https://www.zhihu.com/question/27447370&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
