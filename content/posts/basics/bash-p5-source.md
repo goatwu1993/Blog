@@ -5,7 +5,7 @@ draft: false
 diagram: true
 tags: [shell, bash]
 slug: "bash-p5-source-export"
-toc: false
+toc: true
 categories: []
 weight: 40
 ---
@@ -18,7 +18,7 @@ weight: 40
 source hello-world.sh
 ```
 
-## Excuting
+## excute
 
 直接執行 shell script 會開啟一個子進程
 
@@ -26,7 +26,7 @@ source hello-world.sh
 ./hello-world.sh
 ```
 
-## Export
+## export
 
 將某個變數變成環境變數，Life cycle 為這個進程結束為止
 
