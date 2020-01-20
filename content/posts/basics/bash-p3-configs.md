@@ -22,6 +22,13 @@ weight: 40
 ## bashrc
 
 - Subshells read only .bashrc.
+- Shell script 開頭
+
+  ```bash
+  #!/bin/bash
+  ```
+
+  會讀取 bashrc 相關變數
 
 ## Login shell
 
