@@ -2,7 +2,7 @@
 title: "Apache Kafka - Docker setup"
 date: 2020-01-15T21:15:08+08:00
 draft: false
-tags: ["Hadoop", "Kafka", "BigData"]
+tags: [Hadoop, Kafka, BigData]
 slug: "kafka-3"
 # summary
 summary: Kafka docker setup

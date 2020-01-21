@@ -3,7 +3,7 @@ title: "What is Apache Spark"
 date: 2020-01-17T17:04:13+08:00
 draft: false
 diagram: true
-tags: ["Hadoop", "Spark", "BigData"]
+tags: [Hadoop, Spark, BigData]
 slug: "spark-p1-whatis"
 toc: true
 weight: 40

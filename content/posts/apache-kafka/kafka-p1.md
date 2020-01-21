@@ -2,7 +2,7 @@
 title: "Apache Kafka - Part1"
 date: 2020-01-09T19:53:34+08:00
 draft: false
-tags: ["Hadoop", "Kafka", "BigData"]
+tags: [Hadoop, Kafka, BigData]
 slug: "kafka-p1"
 # summary
 summary: What is Apache Kafka

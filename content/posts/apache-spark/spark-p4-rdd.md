@@ -2,7 +2,7 @@
 title: "Spark Rdd"
 date: 2020-01-18T16:03:05+08:00
 draft: true
-tags: ["Hadoop", "Spark", "BigData"]
+tags: [Hadoop, Spark, BigData]
 slug: "Spark-Rdd"
 toc: false
 weight: 40
