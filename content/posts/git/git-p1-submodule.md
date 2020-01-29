@@ -46,6 +46,6 @@ git commit -m "Remove a submodule"
 git submodule sync
 ```
 
-### 參考資料
+### References
 
 - <https://biang.io/blog/development/tools/revision-control/git/submod>

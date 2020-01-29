@@ -57,7 +57,7 @@ hugo
 &lt;h3 id=&#34;新增文章&#34;&gt;新增文章&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new posts/my-first-post.md
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官網&lt;/a&gt;
@@ -76,7 +76,7 @@ hugo
 &lt;li&gt;Archetype 是 hugo create content 的 default 檔案&lt;/li&gt;
 &lt;li&gt;當選定好 theme 以後，通常 Archetype 都會長得差不多，建議先改一改&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://gohugo.io/content-management/archetypes/&#34;&gt;https://gohugo.io/content-management/archetypes/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

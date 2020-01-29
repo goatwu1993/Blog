@@ -37,7 +37,7 @@ git commit -m &amp;quot;Remove a submodule&amp;quot;
 &lt;h2 id=&#34;安全起見再做個-sync&#34;&gt;安全起見再做個 sync&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule sync
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;參考資料&#34;&gt;參考資料&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://biang.io/blog/development/tools/revision-control/git/submod&#34;&gt;https://biang.io/blog/development/tools/revision-control/git/submod&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

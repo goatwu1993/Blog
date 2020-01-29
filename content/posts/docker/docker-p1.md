@@ -28,6 +28,6 @@ docker-compose.yml 定義同時跑多容器 Docker App 的方法，例如：ZK +
 
 ## Docker Swarm
 
-## Reference
+## References
 
 - <https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/>

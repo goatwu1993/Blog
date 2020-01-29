@@ -257,7 +257,7 @@ del a[b]
 
 Python 自己內建的資料結構，很多都是直接用 c 寫的，速度上快很多，如果沒必要，還是直接用就好了...
 
-## Reference
+## References
 
 - [大神解說](https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY)
 - [wiki](https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries)

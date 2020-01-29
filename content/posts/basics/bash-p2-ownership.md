@@ -6,7 +6,7 @@ diagram: false
 tags: [shell, bash]
 slug: "bash-p2-ownership"
 toc: true
-weight: 99
+weight: 40
 ---
 
 ```bash

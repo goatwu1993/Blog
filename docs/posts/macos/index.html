@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="macOS setup item2, zsh, vim and dotfile management.">
+  <meta name="description" content="Software Engineer">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/macos/">
 
   
 
@@ -210,12 +210,14 @@
 
 
   
+  <link rel="alternate" href="/blog/posts/macos/index.xml" type="application/rss+xml" title="goatwu1993">
+  
 
   <link rel="manifest" href="/blog/index.webmanifest">
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/macos/">
 
   
   
@@ -229,22 +231,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/">
-  <meta property="og:title" content="macOS developer environments | goatwu1993">
-  <meta property="og:description" content="macOS setup item2, zsh, vim and dotfile management."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/macos/">
+  <meta property="og:title" content="macOS | goatwu1993">
+  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    
-      <meta property="article:published_time" content="2019-12-28T19:17:18&#43;08:00">
-    
-    <meta property="article:modified_time" content="2019-12-28T19:17:18&#43;08:00">
+    <meta property="og:updated_time" content="2019-12-28T19:17:18&#43;08:00">
   
 
   
 
 
-
-  
 
 
   
@@ -256,7 +253,7 @@
 
 
 
-  <title>macOS developer environments | goatwu1993</title>
+  <title>macOS | goatwu1993</title>
 
 </head>
 
@@ -469,29 +466,6 @@
 
 
   
-<div class="container-fluid docs">
-    <div class="row flex-xl-nowrap">
-        <div class="d-none d-xl-block col-xl-2 docs-toc">
-            <ul class="nav toc-top">
-                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-            </ul>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-homebrew">1. Homebrew</a></li>
-    <li><a href="#2-iterm2">2. iTerm2</a></li>
-    <li><a href="#3-gnu-stow">3. GNU Stow</a></li>
-    <li><a href="#3-zsh">3. zsh</a></li>
-    <li><a href="#4-vscode">4. vscode</a></li>
-    <li><a href="#5-vim">5. vim</a></li>
-    <li><a href="#reference">Reference</a></li>
-  </ul>
-</nav>
-            
-        </div>
-        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
-            
-            <article class="article">
-                
 
 
 
@@ -508,308 +482,37 @@
 
   
   
-  
-<div class="article-container pt-3">
-  <h1>macOS developer environments</h1>
-
-  
-
   
     
-
-
-<div class="article-metadata">
+  
+<div class="universal-wrapper pt-3">
+  <h1>macOS</h1>
 
   
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Dec 28, 2019
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 </div>
 
 
-                <div class="article-container">
-                    <div class="article-style">
-                        <h2 id="1-homebrew">1. Homebrew</h2>
-<ul>
-<li>macOS 包管理器</li>
-<li>官網
-<a href="https://brew.sh/">https://brew.sh/</a></li>
-<li>包列表
-<a href="https://formulae.brew.sh/">https://formulae.brew.sh/</a></li>
-</ul>
-<h2 id="2-iterm2">2. iTerm2</h2>
-<ul>
-<li>相比內建的 Terminal，支援點選選取優化，選取即複製等功能</li>
-</ul>
-<h2 id="3-gnu-stow">3. GNU Stow</h2>
-<ul>
-<li>Symlink 管理器。</li>
-<li>用來將 dotfiles 用 symlink 連到 repo 裡面整包上傳 Github</li>
-<li>官網 <a href="https://www.gnu.org/software/stow">https://www.gnu.org/software/stow</a></li>
-</ul>
-<h2 id="3-zsh">3. zsh</h2>
-<ul>
-<li>Z shell 支援 autosuggestion, autocompletion 及 syntax highlighting</li>
-<li>支援部分 bash, ksh 及 tcsh 語法</li>
-<li>zshrc 懶人包 <a href="https://github.com/unixorn/zsh-quickstart-kit">https://github.com/unixorn/zsh-quickstart-kit</a></li>
-</ul>
-<h2 id="4-vscode">4. vscode</h2>
-<ul>
-<li>VSCODE 插件懶人包 <a href="https://github.com/viatsko/awesome-vscode">https://github.com/viatsko/awesome-vscode</a></li>
-</ul>
-<h2 id="5-vim">5. vim</h2>
-<ul>
-<li>vimrc 懶人包 <a href="https://github.com/amix/vimrc">https://github.com/amix/vimrc</a></li>
-<li>vim 插件管理器 Vundle <a href="https://github.com/VundleVim/Vundle.vim">https://github.com/VundleVim/Vundle.vim</a></li>
-</ul>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://www.zhihu.com/question/27447370">https://www.zhihu.com/question/27447370</a></li>
-</ul>
 
-                    </div>
-                    
-
-
-
-
-
-<div class="article-tags">
+<div class="universal-wrapper">
   
-  <a class="badge badge-light" href="/blog/tags/linux/">linux</a>
-  
-  <a class="badge badge-light" href="/blog/tags/macos/">macos</a>
-  
-  <a class="badge badge-light" href="/blog/tags/shell/">shell</a>
-  
-</div>
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/&amp;text=macOS%20developer%20environments" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/&amp;t=macOS%20developer%20environments" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=macOS%20developer%20environments&amp;body=https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/&amp;title=macOS%20developer%20environments" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://web.whatsapp.com/send?text=macOS%20developer%20environments%20https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/&amp;title=macOS%20developer%20environments" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
 
   
   
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
+  <div>
+    <h2><a href="/blog/posts/macos/linux-p1-filesystem/">macOS good tool</a></h2>
+    <div class="article-style">
       
-      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
-      <h6 class="card-subtitle">Software Engineer</h6>
-      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
+      macOS good tool
       
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:peteeelol@gmail.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-</ul>
-
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-  
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/blog/posts/basics/bash-p1-basics/">Bash - basic commands</a></li>
-      
-    </ul>
-  </div>
   
 
+  
 
-                </div>
-            </article>
-            
-        </main>
-    </div>
 </div>
-
 
       
 

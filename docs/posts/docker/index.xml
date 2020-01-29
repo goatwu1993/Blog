@@ -27,7 +27,7 @@
 &lt;h2 id=&#34;docker-compose&#34;&gt;Docker Compose&lt;/h2&gt;
 &lt;p&gt;docker-compose.yml 定義同時跑多容器 Docker App 的方法，例如：ZK + Kafka&lt;/p&gt;
 &lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&#34;&gt;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

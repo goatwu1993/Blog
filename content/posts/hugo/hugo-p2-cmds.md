@@ -45,6 +45,6 @@ hugo
 hugo new posts/my-first-post.md
 ```
 
-### 參考資料
+### References
 
 - [Hugo 官網](https://gohugo.io/getting-started/quick-start/)

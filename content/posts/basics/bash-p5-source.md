@@ -6,7 +6,7 @@ diagram: true
 tags: [shell, bash]
 slug: "bash-p5-source-export"
 toc: true
-weight: 96
+weight: 40
 summary: bash source, execute and export life cycle.
 ---
 
@@ -51,6 +51,6 @@ graph TD
     end
 ```
 
-## Reference
+## References
 
 - <https://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-vs-sourcing-it>

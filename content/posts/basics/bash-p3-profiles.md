@@ -6,7 +6,7 @@ diagram: true
 tags: [shell, bash]
 slug: "bash-p3-configs"
 toc: true
-weight: 98
+weight: 40
 summary: profile, bash_profile and bashrc
 ---
 
@@ -57,6 +57,6 @@ graph TD
     end
 ```
 
-## Reference
+## References
 
 - <https://serverfault.com/questions/261802/what-are-the-functional-differences-between-profile-bash-profile-and-bashrc>

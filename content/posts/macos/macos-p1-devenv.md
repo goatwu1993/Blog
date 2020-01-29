@@ -1,13 +1,13 @@
 ---
-title: "macOS developer environments"
+title: "macOS good tool"
 date: 2019-12-28T19:17:18+08:00
 draft: false
 diagram: false
-tags: [linux, macos, shell]
-slug: setting-macos-env
+tags: [linux, macos]
+slug: linux-p1-filesystem
 toc: true
 weight: 40
-summary: macOS setup item2, zsh, vim and dotfile management.
+summary: macOS good tool
 ---
 
 ## 1. Homebrew
@@ -43,6 +43,6 @@ summary: macOS setup item2, zsh, vim and dotfile management.
 - vimrc 懶人包 <https://github.com/amix/vimrc>
 - vim 插件管理器 Vundle <https://github.com/VundleVim/Vundle.vim>
 
-## Reference
+## References
 
 - <https://www.zhihu.com/question/27447370>

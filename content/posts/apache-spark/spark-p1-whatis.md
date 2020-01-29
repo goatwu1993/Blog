@@ -71,7 +71,7 @@ MLlib 是 Spark 上分散式機器學習框架。Spark 分散式記憶體式的�
 
 GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，可用於表達圖表計算並可以類比 Pregel 抽象化。GraphX 還對這種抽象化提供了最佳化運行。
 
-## Reference
+## References
 
 - <https://zh.wikipedia.org/zh-tw/Apache_Spark>
 - <https://www.quora.com/What-are-the-advantages-of-RDD>

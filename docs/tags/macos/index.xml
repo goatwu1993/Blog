@@ -13,10 +13,10 @@
     </image>
     
     <item>
-      <title>macOS developer environments</title>
-      <link>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</link>
+      <title>macOS good tool</title>
+      <link>https://goatwu1993.github.io/blog/posts/macos/linux-p1-filesystem/</link>
       <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/basics/setting-macos-env/</guid>
+      <guid>https://goatwu1993.github.io/blog/posts/macos/linux-p1-filesystem/</guid>
       <description>&lt;h2 id=&#34;1-homebrew&#34;&gt;1. Homebrew&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS 包管理器&lt;/li&gt;
@@ -50,7 +50,7 @@
 &lt;li&gt;vimrc 懶人包 &lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;https://github.com/amix/vimrc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;vim 插件管理器 Vundle &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;https://github.com/VundleVim/Vundle.vim&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/27447370&#34;&gt;https://www.zhihu.com/question/27447370&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

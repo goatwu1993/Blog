@@ -37,7 +37,7 @@
 ...
 scala&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/users/20103839/ironman/1210&#34;&gt;https://ithelp.ithome.com.tw/users/20103839/ironman/1210&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/&#34;&gt;https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/&lt;/a&gt;&lt;/li&gt;
@@ -99,7 +99,7 @@ RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。&
 &lt;p&gt;MLlib 是 Spark 上分散式機器學習框架。Spark 分散式記憶體式的架構比 Hadoop 磁碟式的 Apache Mahout 快上 10 倍，擴充性甚至比 Vowpal Wabbit 要好。MLlib 可使用許多常見的機器學習和統計演算法，簡化大規模機器學習時間&lt;/p&gt;
 &lt;h2 id=&#34;graphx&#34;&gt;GraphX&lt;/h2&gt;
 &lt;p&gt;GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，可用於表達圖表計算並可以類比 Pregel 抽象化。GraphX 還對這種抽象化提供了最佳化運行。&lt;/p&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/Apache_Spark&#34;&gt;https://zh.wikipedia.org/zh-tw/Apache_Spark&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.quora.com/What-are-the-advantages-of-RDD&#34;&gt;https://www.quora.com/What-are-the-advantages-of-RDD&lt;/a&gt;&lt;/li&gt;

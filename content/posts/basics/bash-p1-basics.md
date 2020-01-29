@@ -6,7 +6,7 @@ diagram: false
 tags: [shell, bash]
 slug: bash-p1-basics
 toc: true
-weight: 100
+weight: 40
 summary: basic bash commands
 ---
 
@@ -145,7 +145,7 @@ killall -i -9 $processname
 free -m
 ```
 
-## Reference
+## References
 
 - <https://geekflare.com/netstat/>
 - <http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l>

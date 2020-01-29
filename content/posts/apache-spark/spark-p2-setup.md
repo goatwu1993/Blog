@@ -31,7 +31,7 @@ $ spark-shell
 scala>
 ```
 
-## Reference
+## References
 
 - <https://ithelp.ithome.com.tw/users/20103839/ironman/1210>
 - <https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/>

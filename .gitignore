@@ -1,2 +1,9 @@
 .DS_Store
 resources
+
+*.class
+*.log
+
+.metals/
+.bloop/
+project/metals.sbt

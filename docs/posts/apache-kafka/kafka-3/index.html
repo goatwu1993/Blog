@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Kafka docker setup">
+  <meta name="description" content="Kafka macOS hands-on">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/">
@@ -230,14 +230,14 @@
   
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/">
-  <meta property="og:title" content="Apache Kafka - Docker setup | goatwu1993">
-  <meta property="og:description" content="Kafka docker setup"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:title" content="Apache Kafka - hands-on (1 broker) | goatwu1993">
+  <meta property="og:description" content="Kafka macOS hands-on"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-15T21:15:08&#43;08:00">
+      <meta property="article:published_time" content="2020-01-22T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-15T21:15:08&#43;08:00">
+    <meta property="article:modified_time" content="2020-01-22T00:00:00&#43;00:00">
   
 
   
@@ -256,7 +256,7 @@
 
 
 
-  <title>Apache Kafka - Docker setup | goatwu1993</title>
+  <title>Apache Kafka - hands-on (1 broker) | goatwu1993</title>
 
 </head>
 
@@ -477,17 +477,11 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#repos">Repos</a></li>
-    <li><a href="#修改文件檔">修改文件檔</a></li>
-    <li><a href="#啟動-container">啟動 Container</a></li>
-    <li><a href="#開-shell">開 Shell</a></li>
-    <li><a href="#topic-創建查詢">Topic 創建/查詢</a></li>
-    <li><a href="#create-a-producer">Create a Producer</a>
-      <ul>
-        <li><a href="#create-a-consumer">Create a Consumer</a></li>
-      </ul>
-    </li>
-    <li><a href="#參考資料">參考資料</a></li>
+    <li><a href="#install-kafka">Install Kafka</a></li>
+    <li><a href="#啟動-zookeeper--kafka">啟動 zookeeper & kafka</a></li>
+    <li><a href="#consumer--producer-api-選擇">Consumer & Producer API 選擇</a></li>
+    <li><a href="#shell-script">Shell Script</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
             
@@ -514,7 +508,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Apache Kafka - Docker setup</h1>
+  <h1>Apache Kafka - hands-on (1 broker)</h1>
 
   
 
@@ -533,7 +527,7 @@
     
       
     
-    Jan 15, 2020
+    Jan 22, 2020
   </span>
   
 
@@ -571,52 +565,60 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="repos">Repos</h2>
-<p><a href="https://github.com/wurstmeister/kafka-dockers">https://github.com/wurstmeister/kafka-dockers</a></p>
-<h2 id="修改文件檔">修改文件檔</h2>
-<p>需要修改 IP 設定，自己在本地測試的話建議先看官方解說
-<a href="https://github.com/wurstmeister/kafka-docker/wiki/Connectivity">https://github.com/wurstmeister/kafka-docker/wiki/Connectivity</a></p>
-<h2 id="啟動-container">啟動 Container</h2>
-<p>開 3 個 broker+1 個 Zookeeper</p>
-<pre><code class="language-bash">docker-compose up -d
-docker-compose scale kafka=3
+                        <h2 id="install-kafka">Install Kafka</h2>
+<pre><code class="language-bash"># this will install java 1.8, zookeeper, and kafka
+brew install kafka
 </code></pre>
-<h2 id="開-shell">開 Shell</h2>
-<pre><code class="language-bash">./start-kafka-shell.sh 192.168.2.122 192.168.2.122:2181
-</code></pre>
-<p>這個 container 的 IP 有可能不在 kafkadocker_default bridge 底下，要連到這些服務就需要通過 Host Machine 的 Port Forwarding</p>
-<p>這些都已經設定寫好了，只需要輸入 Zookeeper 的 IP:port，這個 Shell 就可以通過 Zookeeper/Bootstrap Server 去找到全部可用的服務，他會把者 Argument 加進環境變數 HOST_IP/ZK。</p>
-<p>不放心的話</p>
-<pre><code class="language-bash">printenv | grep -E 'HOST_IP|ZK'
-</code></pre>
-<h2 id="topic-創建查詢">Topic 創建/查詢</h2>
-<pre><code class="language-bash">## Create A Topic
-kafka-topics.sh --create --topic topictest --partitions 4 --zookeeper $ZK --replication-factor 2
-
-## Check topics
-kafka-topics.sh --list  --zookeeper $ZK
-
-## Check topic info
-kafka-topics.sh --describe --topic topic --zookeeper $ZK
-</code></pre>
-<h2 id="create-a-producer">Create a Producer</h2>
-<pre><code class="language-bash">kafka-topics.sh --describe --topic topic --zookeeper $ZK
-</code></pre>
-<h3 id="create-a-consumer">Create a Consumer</h3>
-<p>建議在另外開一個 Shell</p>
-<pre><code class="language-bash">./start-kafka-shell.sh 192.168.2.122 192.168.2.122:2181
-</code></pre>
-<p>然後再啟動 Consumer</p>
-<pre><code class="language-bash">kafka-console-consumer.sh --topic=topic --bootstrap-server=`broker-list.sh` --from-beginning
-</code></pre>
-<h2 id="參考資料">參考資料</h2>
+<p>檔案位置</p>
 <ul>
-<li>
-<p><a href="https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab">https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab</a></p>
+<li>/usr/local/etc/kafka</li>
+<li>/usr/local/Cellar/kafka/$版號</li>
+</ul>
+<pre><code class="language-bash">cd /usr/local/Cellar/kafka/*
+# 啟動zookeeper
+./bin/zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+# 啟動kafka
+./bin/kafka-server-start /usr/local/etc/kafka/server.properties
+# 建一個名為 test-kafka 的 Topic
+./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka
+
+# 查看目前已經建立過的 Topic
+./bin/kafka-topics --list --zookeeper localhost:2181\n\n
+</code></pre>
+<h2 id="啟動-zookeeper--kafka">啟動 zookeeper &amp; kafka</h2>
+<pre><code class="language-bash">brew services start zookeeper
+brew services start kafka
+</code></pre>
+<h2 id="consumer--producer-api-選擇">Consumer &amp; Producer API 選擇</h2>
+<ul>
+<li>Shell script<br>
+使用 brew kafka 提供的 shell script</li>
+<li>Python
+<ul>
+<li>pykafka</li>
+<li>kafka-python</li>
+</ul>
 </li>
-<li>
-<p><a href="https://github.com/wurstmeister/kafka-docker/wiki/Connectivity">https://github.com/wurstmeister/kafka-docker/wiki/Connectivity</a></p>
+<li>Scala
+<ul>
+<li>Scala-Shell</li>
+<li>Native-App</li>
+</ul>
 </li>
+</ul>
+<h2 id="shell-script">Shell Script</h2>
+<p>開啟兩個命令列</p>
+<p>console1</p>
+<pre><code class="language-bash">kafka-console-producer --broker-list localhost:9092 --topic test-kafka
+</code></pre>
+<p>console2</p>
+<pre><code class="language-bash">kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+</code></pre>
+<p>應該要能看到 console1 的輸入</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://oumuv.github.io/2018/12/06/kafka-2/">https://oumuv.github.io/2018/12/06/kafka-2/</a></li>
+<li><a href="https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/">https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/</a></li>
 </ul>
 
                     </div>
@@ -649,7 +651,7 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;text=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;text=Apache%20Kafka%20-%20hands-on%20%281%20broker%29" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -662,7 +664,7 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;t=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;t=Apache%20Kafka%20-%20hands-on%20%281%20broker%29" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -675,7 +677,7 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
       
       
       <li>
-        <a href="mailto:?subject=Apache%20Kafka%20-%20Docker%20setup&amp;body=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Apache%20Kafka%20-%20hands-on%20%281%20broker%29&amp;body=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -688,7 +690,7 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;title=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;title=Apache%20Kafka%20-%20hands-on%20%281%20broker%29" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -701,7 +703,7 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Apache%20Kafka%20-%20Docker%20setup%20https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Apache%20Kafka%20-%20hands-on%20%281%20broker%29%20https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -714,7 +716,7 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;title=Apache%20Kafka%20-%20Docker%20setup" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-3/&amp;title=Apache%20Kafka%20-%20hands-on%20%281%20broker%29" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -810,9 +812,15 @@ kafka-topics.sh --describe --topic topic --zookeeper $ZK
     <h3>Related</h3>
     <ul>
       
+      <li><a href="/blog/posts/apache-kafka/kafka-4/">Apache Kafka - hands-on (3 brokers)</a></li>
+      
       <li><a href="/blog/posts/apache-kafka/kafka-p1/">Apache Kafka - Part1</a></li>
       
       <li><a href="/blog/posts/apache-kafka/kafka-2/">Apache Kafka - Part2</a></li>
+      
+      <li><a href="/blog/posts/apache-spark/spark-p2-setup/">Apache Spark Setup</a></li>
+      
+      <li><a href="/blog/posts/apache-spark/spark-p1-whatis/">What is Apache Spark</a></li>
       
     </ul>
   </div>

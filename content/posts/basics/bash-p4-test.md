@@ -6,7 +6,7 @@ diagram: false
 tags: [shell, bash]
 slug: bash-p4-test
 toc: true
-weight: 97
+weight: 40
 summary: bash test, condition and operator.
 ---
 
@@ -113,6 +113,6 @@ expression1 -o expression2
 
 and 優先於 or
 
-## Reference
+## References
 
 - <http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test>

@@ -45,7 +45,7 @@
         B2 -.-&amp;gt; B3(child process)
     end
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-vs-sourcing-it&#34;&gt;https://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-vs-sourcing-it&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -139,7 +139,7 @@ expression1 -o expression2
 ( expression )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and 優先於 or&lt;/p&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test&#34;&gt;http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#test&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -186,7 +186,7 @@ expression1 -o expression2
         D -.-&amp;gt; E(&amp;quot;~/.bashrc&amp;quot;)
     end
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://serverfault.com/questions/261802/what-are-the-functional-differences-between-profile-bash-profile-and-bashrc&#34;&gt;https://serverfault.com/questions/261802/what-are-the-functional-differences-between-profile-bash-profile-and-bashrc&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -311,7 +311,7 @@ killall -i -9 $processname
 # Show recent memory usage
 free -m
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;https://geekflare.com/netstat/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34;&gt;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&lt;/a&gt;&lt;/li&gt;
