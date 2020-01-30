@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bigdata | goatwu1993</title>
+    <link>https://goatwu1993.github.io/blog/tags/bigdata/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
+    <description>bigdata</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>bigdata</title>
+      <link>https://goatwu1993.github.io/blog/tags/bigdata/</link>
+    </image>
+    
+    <item>
+      <title>Kafka with multi brokers</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</guid>
+      <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# this will install java 1.8, zookeeper, and kafka
+brew install kafka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;啟動-zookeeper&#34;&gt;啟動 zookeeper&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew services start zookeeper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;開啟三個-brokers&#34;&gt;開啟三個 Brokers&lt;/h2&gt;
+&lt;p&gt;分别修改 server1.properties, server2.properties&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;修改位置&lt;/th&gt;
+&lt;th&gt;server.properties&lt;/th&gt;
+&lt;th&gt;server1.properties&lt;/th&gt;
+&lt;th&gt;server2.properties&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;broker.id&lt;/td&gt;
+&lt;td&gt;broker.id=0&lt;/td&gt;
+&lt;td&gt;broker.id=1&lt;/td&gt;
+&lt;td&gt;broker.id=2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;listeners&lt;/td&gt;
+&lt;td&gt;listeners=PLAINTEXT://:9092&lt;/td&gt;
+&lt;td&gt;listeners=PLAINTEXT://:9093&lt;/td&gt;
+&lt;td&gt;listeners=PLAINTEXT://:9094&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;log.dir&lt;/td&gt;
+&lt;td&gt;log.dir=/usr/local/var/lib/kafka-logs-0&lt;/td&gt;
+&lt;td&gt;log.dir=/usr/local/var/lib/kafka-logs-1&lt;/td&gt;
+&lt;td&gt;log.dir=/usr/local/var/lib/kafka-logs-2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-server-start /usr/local/etc/kafka/server.properties &amp;amp;
+kafka-server-start /usr/local/etc/kafka/server1.properties &amp;amp;
+kafka-server-start /usr/local/etc/kafka/server2.properties &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;開啟一個兩個副本的-topic&#34;&gt;開啟一個兩個副本的 Topic&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-topics –create –zookeeper localhost:2181 –replication-factor 3 –partitions 1 –topic mytopic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;consumer--producer-api&#34;&gt;Consumer &amp;amp; Producer API&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Shell script&lt;br&gt;
+使用 brew kafka 提供的 shell script&lt;/li&gt;
+&lt;li&gt;Python
+&lt;ul&gt;
+&lt;li&gt;pykafka&lt;/li&gt;
+&lt;li&gt;kafka-python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Scala
+&lt;ul&gt;
+&lt;li&gt;Scala-Shell&lt;/li&gt;
+&lt;li&gt;Native-App&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-shell-script&#34;&gt;1. Shell Script&lt;/h2&gt;
+&lt;p&gt;開啟兩個命令列&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./bin/kafka-console-producer --broker-list localhost:9092 --topic test-kafka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://oumuv.github.io/2018/12/06/kafka-2/&#34;&gt;https://oumuv.github.io/2018/12/06/kafka-2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/&#34;&gt;https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kafka with single broker</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibroker/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibroker/</guid>
+      <description>&lt;h2 id=&#34;install-kafka&#34;&gt;Install Kafka&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# this will install java 1.8, zookeeper, and kafka
+brew install kafka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;檔案位置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/usr/local/etc/kafka&lt;/li&gt;
+&lt;li&gt;/usr/local/Cellar/kafka/$版號&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /usr/local/Cellar/kafka/*
+# 啟動zookeeper
+./bin/zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+# 啟動kafka
+./bin/kafka-server-start /usr/local/etc/kafka/server.properties
+# 建一個名為 test-kafka 的 Topic
+./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka
+
+# 查看目前已經建立過的 Topic
+./bin/kafka-topics --list --zookeeper localhost:2181\n\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;啟動-zookeeper--kafka&#34;&gt;啟動 zookeeper &amp;amp; kafka&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew services start zookeeper
+brew services start kafka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;consumer--producer-api-選擇&#34;&gt;Consumer &amp;amp; Producer API 選擇&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Shell script&lt;br&gt;
+使用 brew kafka 提供的 shell script&lt;/li&gt;
+&lt;li&gt;Python
+&lt;ul&gt;
+&lt;li&gt;pykafka&lt;/li&gt;
+&lt;li&gt;kafka-python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Scala
+&lt;ul&gt;
+&lt;li&gt;Scala-Shell&lt;/li&gt;
+&lt;li&gt;Native-App&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shell-script&#34;&gt;Shell Script&lt;/h2&gt;
+&lt;p&gt;開啟兩個命令列&lt;/p&gt;
+&lt;p&gt;console1&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-console-producer --broker-list localhost:9092 --topic test-kafka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;console2&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;應該要能看到 console1 的輸入&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://oumuv.github.io/2018/12/06/kafka-2/&#34;&gt;https://oumuv.github.io/2018/12/06/kafka-2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/&#34;&gt;https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apache Spark Setup</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p2-setup/</link>
+      <pubDate>Fri, 17 Jan 2020 20:33:38 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p2-setup/</guid>
+      <description>&lt;h2 id=&#34;spark-installation&#34;&gt;Spark Installation&lt;/h2&gt;
+&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;macOS
+&lt;ul&gt;
+&lt;li&gt;Homebrew&lt;/li&gt;
+&lt;li&gt;xcode-select&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;Scala&lt;/li&gt;
+&lt;li&gt;Apache Spark&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ spark-shell
+...
+...
+...
+scala&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/users/20103839/ironman/1210&#34;&gt;https://ithelp.ithome.com.tw/users/20103839/ironman/1210&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/&#34;&gt;https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Apache Spark</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/</link>
+      <pubDate>Fri, 17 Jan 2020 17:04:13 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/</guid>
+      <description>&lt;h2 id=&#34;what-is-spark&#34;&gt;What is Spark&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+Spark(Spark) --&amp;gt; Core(Spark Core)
+Spark --&amp;gt; D(Spark SQL)
+Spark --&amp;gt; E(Spark Streaming)
+Spark --&amp;gt; F(MLlib)
+Spark --&amp;gt; G(GraphX)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;spark-特點&#34;&gt;Spark 特點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法&lt;/li&gt;
+&lt;li&gt;提供 Java, Scala, Python 及 R 語言 API&lt;/li&gt;
+&lt;li&gt;記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce)&lt;/li&gt;
+&lt;li&gt;Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。&lt;/li&gt;
+&lt;li&gt;Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。&lt;/li&gt;
+&lt;li&gt;Spark SQL 支援結構化和關聯式查詢處理（SQL）。&lt;/li&gt;
+&lt;li&gt;MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;spark-特點-1&#34;&gt;Spark 特點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;In Memory Storage&lt;/li&gt;
+&lt;li&gt;Immutability&lt;br&gt;
+通過 Spark Core RDD 的概念來儲存數據，RDD 被創建之後沒有辦法修改，Transfromation 只會產生一個新的 RDD&lt;/li&gt;
+&lt;li&gt;Lazy Evaluation&lt;br&gt;
+數值直到 Action 才會被計算出來&lt;/li&gt;
+&lt;li&gt;Partitioning&lt;br&gt;
+計算會被指派到 RDD Partition，Partition 的數目直接關係到平行運算的程度。&lt;/li&gt;
+&lt;li&gt;支援容錯機制&lt;br&gt;
+紀錄各個 RDD 的產生過程(稱為 RDD Lineage)，當節點失效時可從 Parent RDD 重新推算失效節點的 Partition。&lt;/li&gt;
+&lt;li&gt;容錯機制最佳化
+Transfromation 函數分為寬依賴及窄依賴，窄依賴的情況下可直接用 Partition 推算 Child Partition，不需整組 RDD 從新推算。&lt;/li&gt;
+&lt;li&gt;Persistence
+可以根據資料是否會重新使用，指定存放在記憶體或磁碟。&lt;/li&gt;
+&lt;li&gt;No Limitation&lt;br&gt;
+RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;spark-core&#34;&gt;Spark Core&lt;/h2&gt;
+&lt;p&gt;Spark Core 是整個專案的基礎，提供了分散式任務調度、排程及基本的 I/O，其基礎的程式抽象被稱為 Resilient Distributed Dataset (RDD)&lt;/p&gt;
+&lt;h2 id=&#34;spark-sql&#34;&gt;Spark SQL&lt;/h2&gt;
+&lt;p&gt;Spark SQL 在 Spark 核心上帶出一種名為 SchemaRDD 的資料抽象化概念，提供結構化和半結構化資料相關的支援。Spark SQL 提供了領域特定語言，可使用 Scala、Java 或 Python 來操縱 SchemaRDDs。它還支援使用使用命令行介面和 ODBC／JDBC 伺服器操作 SQL 語言。在 Spark 1.3 版本，SchemaRDD 被重新命名為 DataFrame。&lt;/p&gt;
+&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
+&lt;p&gt;Spark Streaming 充分利用 Spark 核心的快速排程能力來執行串流分析。它擷取小批次的資料並對之執行 RDD 轉換。這種設計使串流分析可在同一個引擎內使用同一組為批次分析編寫而撰寫的應用程式碼。&lt;/p&gt;
+&lt;h2 id=&#34;mllib&#34;&gt;MLlib&lt;/h2&gt;
+&lt;p&gt;MLlib 是 Spark 上分散式機器學習框架。Spark 分散式記憶體式的架構比 Hadoop 磁碟式的 Apache Mahout 快上 10 倍，擴充性甚至比 Vowpal Wabbit 要好。MLlib 可使用許多常見的機器學習和統計演算法，簡化大規模機器學習時間&lt;/p&gt;
+&lt;h2 id=&#34;graphx&#34;&gt;GraphX&lt;/h2&gt;
+&lt;p&gt;GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，可用於表達圖表計算並可以類比 Pregel 抽象化。GraphX 還對這種抽象化提供了最佳化運行。&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/Apache_Spark&#34;&gt;https://zh.wikipedia.org/zh-tw/Apache_Spark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.quora.com/What-are-the-advantages-of-RDD&#34;&gt;https://www.quora.com/What-are-the-advantages-of-RDD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/405603/&#34;&gt;https://codertw.com/程式語言/405603/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kafka mechanism</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/</guid>
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;producer&#34;&gt;Producer&lt;/h2&gt;
+&lt;h3 id=&#34;producer-連接&#34;&gt;Producer 連接&lt;/h3&gt;
+&lt;h3 id=&#34;producer-發送訊息時&#34;&gt;Producer 發送訊息時&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Zookeeper / bootstrap server&lt;/li&gt;
+&lt;li&gt;Topics&lt;/li&gt;
+&lt;li&gt;Key(可為 Null)&lt;/li&gt;
+&lt;li&gt;Value(可為 Null)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;broker&#34;&gt;Broker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Topic 被分為多個 Partition&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Partition 會有多個 Replica&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Broker controller&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其中一個 Broker 會被推選為 Controller&lt;/li&gt;
+&lt;li&gt;負責偵測 Broker 級別的 Failure，幫忙所有受影響的 Partition 更換 Partition Leader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kafka 的訊息為鍵值對，使用鍵值對可以提供 Key -&amp;gt; Partition -&amp;gt; Offset 的查詢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;topic&#34;&gt;Topic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Topic 為訊息的抽象分類&lt;/li&gt;
+&lt;li&gt;Producers 發送訊息時，會指定一至多個 Topics。Consumers 訂閱一或多個 Topics&lt;/li&gt;
+&lt;li&gt;Topics 分為 Regular Topics 及 Compacted topics&lt;/li&gt;
+&lt;li&gt;Regular Topics 需要設定 retention time，超過則 Kafka 可刪除資料以釋出硬碟空間&lt;/li&gt;
+&lt;li&gt;Compacted Topics 則訊息沒有有效期限，唯若 Key 重複，新訊息會覆蓋舊的訊息。Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;partition&#34;&gt;Partition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;建立 Topic 時需要指定 Partitions 數目，之後只能增加不能減少&lt;/li&gt;
+&lt;li&gt;Partition 是 Queue，訊息按 offset 嚴格排序，新訊息被 append 至尾端&lt;/li&gt;
+&lt;li&gt;由於是磁碟的連續區域，因此效率很高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;partition-offset&#34;&gt;Partition offset&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;replica&#34;&gt;Replica&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Partition 產生 n 個副本，分散至各個 Broker 上，n 稱作 replication-factor&lt;/li&gt;
+&lt;li&gt;成功同步的 Replica 稱作 
+&lt;a href=&#34;#ISR&#34;&gt;ISR&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;partition-leader&#34;&gt;Partition Leader&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Broker Controller 對每個 Partition 指定一個 Leader&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Partition Leader 負責接收資料，接收並寫入後，將資料 replicate 到全部 replica/partition follower&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;partition-follower&#34;&gt;Partition Follower&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;同一 Partition 的 non-leader replica&lt;/li&gt;
+&lt;li&gt;概念上為只追隨某個 partition 的 Consumer，只 subscribe partition Leader，發現更新時 pull 到本地端&lt;/li&gt;
+&lt;li&gt;當 Partition Leader 失效，Broker Controller 從 ISR 中選出新 Leader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;isr&#34;&gt;ISR&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當 Leader 收到訊息時，所有 Follower 都需要寫入，已經更新至和 Leader 同步的 Followers 稱為 ISRs(in-sync replica)&lt;/li&gt;
+&lt;li&gt;Record 只有在全部的 ISR 都同步時，才被視為成功 Commited&lt;/li&gt;
+&lt;li&gt;Consumer 只能從已經 Commit 成功的 Record 讀取紀錄&lt;/li&gt;
+&lt;li&gt;對於一個 Topic，只要各個 Partition 皆有一個 ISR 在線，則內容保持一致且服務不中斷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-cluster&#34;&gt;Kafka Cluster&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;n 個 Broker 組成 Cluster&lt;/li&gt;
+&lt;li&gt;可以 zero downtime 擴展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zookeeper&#34;&gt;ZooKeeper&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;管理叢集配置&lt;/li&gt;
+&lt;li&gt;負責管理及協調 Broker&lt;/li&gt;
+&lt;li&gt;通知 Producer 及 Consumer
+&lt;ul&gt;
+&lt;li&gt;新的 Broker 出現&lt;/li&gt;
+&lt;li&gt;Broker failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://zookeeper.apache.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&#34;&gt;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some of Kafka terminology</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</guid>
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;負責將訊息 push 到 Kafka cluster，任何實作 Producer API 的 Client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;consumers&#34;&gt;Consumers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;從 Kafka cluster pull 訊息，任何實作 Consumer API 的 Client&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consumer group&lt;/strong&gt;: 多個 Consumer 可組成 Consumer group&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;brokers&#34;&gt;Brokers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Broker&lt;/strong&gt;: Kafka 的單一節點稱作 Broker&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kafka Cluster&lt;/strong&gt;: 多個 broker 組成 Kafka Cluster&lt;/li&gt;
+&lt;li&gt;仲介處理 Consumer 以及 Producer 的訊息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kafka 的訊息為鍵值對，提供 Topic + Key 對 Partition 的查詢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;topic&#34;&gt;Topic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Topic 為訊息的抽象分類&lt;/li&gt;
+&lt;li&gt;Producers 發送訊息時指定 Topic&lt;/li&gt;
+&lt;li&gt;Consumers 訂閱 Topic&lt;/li&gt;
+&lt;li&gt;Topic 被分為多個 Partition&lt;/li&gt;
+&lt;li&gt;Partition 會有多個 Replica&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;partition&#34;&gt;Partition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Partition offset&lt;/strong&gt;: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;replica&#34;&gt;Replica&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;replication-factor&lt;/strong&gt;: Partition 產生 n 個副本，分散至各個 Broker 上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ISR&lt;/strong&gt;: 成功同步的 Replica 稱作 ISR&lt;/li&gt;
+&lt;li&gt;Replica 用於保證分散式系統的高可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zookeeper&#34;&gt;ZooKeeper&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache 的另一個分散式專案，可管理系統配置&lt;/li&gt;
+&lt;li&gt;負責 Kafka 的以下功能
+&lt;ul&gt;
+&lt;li&gt;儲存 metadata&lt;/li&gt;
+&lt;li&gt;選舉 controller/leader&lt;/li&gt;
+&lt;li&gt;Consumer group 發生變化時，進行 rebalance&lt;/li&gt;
+&lt;li&gt;當 Producer 指定 ZK(而非 bootstrap server)，ZK 負責返回 broker list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kafka Improvement Proposals 已經通過，將 Zookeeper 從 Kafka 移除，使用 bootstrap server/broker controller/共識來維護 Kafka ，&lt;a href=&#34;https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum&#34;&gt;https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&#34;&gt;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html&#34;&gt;https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Kafka</title>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</link>
+      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</guid>
+      <description>&lt;p&gt;Kafka 是一個分散式的訊息處理平台(message processing platform)，仲介處理端到端的實時訊息傳輸。&lt;/p&gt;
+&lt;h2 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;分散式&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;可以自由調整 C/A/P&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;減少網路封包的 Overhead&lt;/strong&gt;: 使用優化過的 binary TCP-based protocol，多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;輕量級可壓縮&lt;/strong&gt;: 避免對訊息的物件包覆，以&lt;strong&gt;檔案&lt;/strong&gt;的型式來處理資料&lt;/li&gt;
+&lt;li&gt;使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-優點&#34;&gt;Kafka 優點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Reliability&lt;/li&gt;
+&lt;li&gt;Scalability&lt;/li&gt;
+&lt;li&gt;Durability&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Fault Tolerance&lt;/li&gt;
+&lt;li&gt;Zero downtime&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
