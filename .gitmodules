@@ -4,3 +4,6 @@
 [submodule "content/posts/apache-kafka"]
 	path = content/posts/apache-kafka
 	url = https://github.com/goatwu1993/blog_kafka.git
+[submodule "content/posts/apache-spark"]
+	path = content/posts/apache-spark
+	url = https://github.com/goatwu1993/spark-note.git
