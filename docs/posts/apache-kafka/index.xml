@@ -5,7 +5,7 @@
     <link>https://goatwu1993.github.io/blog/posts/apache-kafka/</link>
       <atom:link href="https://goatwu1993.github.io/blog/posts/apache-kafka/index.xml" rel="self" type="application/rss+xml" />
     <description>goatwu1993</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>goatwu1993</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Kafka with multi brokers</title>
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</guid>
       <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# this will install java 1.8, zookeeper, and kafka
@@ -97,9 +97,9 @@ kafka-server-start /usr/local/etc/kafka/server2.properties &amp;amp;
     
     <item>
       <title>Kafka with single broker</title>
-      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibroker/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibroker/</guid>
+      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/</guid>
       <description>&lt;h2 id=&#34;install-kafka&#34;&gt;Install Kafka&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# this will install java 1.8, zookeeper, and kafka
 brew install kafka
@@ -159,125 +159,9 @@ brew services start kafka
     </item>
     
     <item>
-      <title>Kafka mechanism</title>
-      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/</link>
-      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/</guid>
-      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;producer&#34;&gt;Producer&lt;/h2&gt;
-&lt;h3 id=&#34;producer-連接&#34;&gt;Producer 連接&lt;/h3&gt;
-&lt;h3 id=&#34;producer-發送訊息時&#34;&gt;Producer 發送訊息時&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Zookeeper / bootstrap server&lt;/li&gt;
-&lt;li&gt;Topics&lt;/li&gt;
-&lt;li&gt;Key(可為 Null)&lt;/li&gt;
-&lt;li&gt;Value(可為 Null)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;broker&#34;&gt;Broker&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Topic 被分為多個 Partition&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Partition 會有多個 Replica&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Broker controller&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;其中一個 Broker 會被推選為 Controller&lt;/li&gt;
-&lt;li&gt;負責偵測 Broker 級別的 Failure，幫忙所有受影響的 Partition 更換 Partition Leader&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Kafka 的訊息為鍵值對，使用鍵值對可以提供 Key -&amp;gt; Partition -&amp;gt; Offset 的查詢&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;topic&#34;&gt;Topic&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Topic 為訊息的抽象分類&lt;/li&gt;
-&lt;li&gt;Producers 發送訊息時，會指定一至多個 Topics。Consumers 訂閱一或多個 Topics&lt;/li&gt;
-&lt;li&gt;Topics 分為 Regular Topics 及 Compacted topics&lt;/li&gt;
-&lt;li&gt;Regular Topics 需要設定 retention time，超過則 Kafka 可刪除資料以釋出硬碟空間&lt;/li&gt;
-&lt;li&gt;Compacted Topics 則訊息沒有有效期限，唯若 Key 重複，新訊息會覆蓋舊的訊息。Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;partition&#34;&gt;Partition&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;建立 Topic 時需要指定 Partitions 數目，之後只能增加不能減少&lt;/li&gt;
-&lt;li&gt;Partition 是 Queue，訊息按 offset 嚴格排序，新訊息被 append 至尾端&lt;/li&gt;
-&lt;li&gt;由於是磁碟的連續區域，因此效率很高&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;partition-offset&#34;&gt;Partition offset&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;replica&#34;&gt;Replica&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Partition 產生 n 個副本，分散至各個 Broker 上，n 稱作 replication-factor&lt;/li&gt;
-&lt;li&gt;成功同步的 Replica 稱作 
-&lt;a href=&#34;#ISR&#34;&gt;ISR&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;partition-leader&#34;&gt;Partition Leader&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Broker Controller 對每個 Partition 指定一個 Leader&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Partition Leader 負責接收資料，接收並寫入後，將資料 replicate 到全部 replica/partition follower&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;partition-follower&#34;&gt;Partition Follower&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;同一 Partition 的 non-leader replica&lt;/li&gt;
-&lt;li&gt;概念上為只追隨某個 partition 的 Consumer，只 subscribe partition Leader，發現更新時 pull 到本地端&lt;/li&gt;
-&lt;li&gt;當 Partition Leader 失效，Broker Controller 從 ISR 中選出新 Leader&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;isr&#34;&gt;ISR&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;當 Leader 收到訊息時，所有 Follower 都需要寫入，已經更新至和 Leader 同步的 Followers 稱為 ISRs(in-sync replica)&lt;/li&gt;
-&lt;li&gt;Record 只有在全部的 ISR 都同步時，才被視為成功 Commited&lt;/li&gt;
-&lt;li&gt;Consumer 只能從已經 Commit 成功的 Record 讀取紀錄&lt;/li&gt;
-&lt;li&gt;對於一個 Topic，只要各個 Partition 皆有一個 ISR 在線，則內容保持一致且服務不中斷&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kafka-cluster&#34;&gt;Kafka Cluster&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;n 個 Broker 組成 Cluster&lt;/li&gt;
-&lt;li&gt;可以 zero downtime 擴展&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;zookeeper&#34;&gt;ZooKeeper&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;管理叢集配置&lt;/li&gt;
-&lt;li&gt;負責管理及協調 Broker&lt;/li&gt;
-&lt;li&gt;通知 Producer 及 Consumer
-&lt;ul&gt;
-&lt;li&gt;新的 Broker 出現&lt;/li&gt;
-&lt;li&gt;Broker failure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://zookeeper.apache.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&#34;&gt;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Some of Kafka terminology</title>
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</link>
-      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</guid>
       <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
@@ -349,7 +233,7 @@ brew services start kafka
     <item>
       <title>What is Kafka</title>
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</link>
-      <pubDate>Thu, 09 Jan 2020 19:53:34 +0800</pubDate>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</guid>
       <description>&lt;p&gt;Kafka 是一個分散式的訊息處理平台(message processing platform)，仲介處理端到端的實時訊息傳輸。&lt;/p&gt;
 &lt;h2 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h2&gt;

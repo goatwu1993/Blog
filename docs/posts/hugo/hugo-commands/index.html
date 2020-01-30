@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content=" ">
+  <meta name="description" content="hugo basic commands">
 
   
   <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/hugo/hugo-commands/">
@@ -231,7 +231,7 @@
   <meta property="og:site_name" content="goatwu1993">
   <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/hugo/hugo-commands/">
   <meta property="og:title" content="Hugo commands | goatwu1993">
-  <meta property="og:description" content=" "><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="hugo basic commands"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -546,14 +546,32 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="設定-archetype">設定 Archetype</h2>
+                        <h2 id="hugo-使用">Hugo 使用</h2>
+<h3 id="安裝">安裝</h3>
+<pre><code class="language-bash">brew install hugo
+</code></pre>
+<h3 id="第一次使用">第一次使用</h3>
+<pre><code class="language-bash">hugo new site quickstart
+</code></pre>
+<h3 id="測試">測試</h3>
+<pre><code class="language-bash">#!/bin/bash
+cd quickstart
+hugo
+hugo server
+</code></pre>
+<h3 id="部署">部署</h3>
+<p>注意 content 寫完輸入 hugo 並不會自動刪除目標資料夾，手動刪除再跑一次 hugo 。</p>
+<pre><code class="language-bash">rm -rf ./docs
+hugo
+</code></pre>
+<h3 id="新增文章">新增文章</h3>
+<pre><code class="language-bash">hugo new posts/my-first-post.md
+</code></pre>
+<h3 id="references">References</h3>
 <ul>
-<li>Archetype 是 hugo create content 的 default 檔案</li>
-<li>當選定好 theme 以後，通常 Archetype 都會長得差不多，建議先改一改</li>
-</ul>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://gohugo.io/content-management/archetypes/">https://gohugo.io/content-management/archetypes/</a></li>
+<li>
+<a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener">Hugo 官網</a>
+</li>
 </ul>
 
                     </div>

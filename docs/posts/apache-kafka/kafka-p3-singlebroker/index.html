@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Kafka mechanism">
+  <meta name="description" content="Kafka macOS hands-on">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/">
 
   
 
@@ -215,7 +215,7 @@
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/">
 
   
   
@@ -229,15 +229,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/">
-  <meta property="og:title" content="Kafka mechanism | goatwu1993">
-  <meta property="og:description" content="Kafka mechanism"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/">
+  <meta property="og:title" content="Kafka with single broker | goatwu1993">
+  <meta property="og:description" content="Kafka macOS hands-on"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-09T19:53:34&#43;08:00">
+      <meta property="article:published_time" content="2020-01-30T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-09T19:53:34&#43;08:00">
+    <meta property="article:modified_time" content="2020-01-30T00:00:00&#43;00:00">
   
 
   
@@ -256,7 +256,7 @@
 
 
 
-  <title>Kafka mechanism | goatwu1993</title>
+  <title>Kafka with single broker | goatwu1993</title>
 
 </head>
 
@@ -477,30 +477,10 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#kafka-architecture">Kafka Architecture</a></li>
-    <li><a href="#producer">Producer</a>
-      <ul>
-        <li><a href="#producer-連接">Producer 連接</a></li>
-        <li><a href="#producer-發送訊息時">Producer 發送訊息時</a></li>
-      </ul>
-    </li>
-    <li><a href="#broker">Broker</a></li>
-    <li><a href="#message">Message</a></li>
-    <li><a href="#topic">Topic</a></li>
-    <li><a href="#partition">Partition</a>
-      <ul>
-        <li><a href="#partition-offset">Partition offset</a></li>
-      </ul>
-    </li>
-    <li><a href="#replica">Replica</a>
-      <ul>
-        <li><a href="#partition-leader">Partition Leader</a></li>
-        <li><a href="#partition-follower">Partition Follower</a></li>
-        <li><a href="#isr">ISR</a></li>
-      </ul>
-    </li>
-    <li><a href="#kafka-cluster">Kafka Cluster</a></li>
-    <li><a href="#zookeeper">ZooKeeper</a></li>
+    <li><a href="#install-kafka">Install Kafka</a></li>
+    <li><a href="#啟動-zookeeper--kafka">啟動 zookeeper & kafka</a></li>
+    <li><a href="#consumer--producer-api-選擇">Consumer & Producer API 選擇</a></li>
+    <li><a href="#shell-script">Shell Script</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -528,7 +508,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Kafka mechanism</h1>
+  <h1>Kafka with single broker</h1>
 
   
 
@@ -547,7 +527,7 @@
     
       
     
-    Jan 9, 2020
+    Jan 30, 2020
   </span>
   
 
@@ -585,113 +565,60 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="kafka-architecture">Kafka Architecture</h2>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png" alt="Picture from wiki"></p>
-<h2 id="producer">Producer</h2>
-<h3 id="producer-連接">Producer 連接</h3>
-<h3 id="producer-發送訊息時">Producer 發送訊息時</h3>
+                        <h2 id="install-kafka">Install Kafka</h2>
+<pre><code class="language-bash"># this will install java 1.8, zookeeper, and kafka
+brew install kafka
+</code></pre>
+<p>檔案位置</p>
 <ul>
-<li>Zookeeper / bootstrap server</li>
-<li>Topics</li>
-<li>Key(可為 Null)</li>
-<li>Value(可為 Null)</li>
+<li>/usr/local/etc/kafka</li>
+<li>/usr/local/Cellar/kafka/$版號</li>
 </ul>
-<h2 id="broker">Broker</h2>
+<pre><code class="language-bash">cd /usr/local/Cellar/kafka/*
+# 啟動zookeeper
+./bin/zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+# 啟動kafka
+./bin/kafka-server-start /usr/local/etc/kafka/server.properties
+# 建一個名為 test-kafka 的 Topic
+./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka
+
+# 查看目前已經建立過的 Topic
+./bin/kafka-topics --list --zookeeper localhost:2181\n\n
+</code></pre>
+<h2 id="啟動-zookeeper--kafka">啟動 zookeeper &amp; kafka</h2>
+<pre><code class="language-bash">brew services start zookeeper
+brew services start kafka
+</code></pre>
+<h2 id="consumer--producer-api-選擇">Consumer &amp; Producer API 選擇</h2>
 <ul>
-<li>
-<p>Topic 被分為多個 Partition</p>
-</li>
-<li>
-<p>Partition 會有多個 Replica</p>
-</li>
-<li>
-<p>Broker controller</p>
+<li>Shell script<br>
+使用 brew kafka 提供的 shell script</li>
+<li>Python
 <ul>
-<li>其中一個 Broker 會被推選為 Controller</li>
-<li>負責偵測 Broker 級別的 Failure，幫忙所有受影響的 Partition 更換 Partition Leader</li>
-</ul>
-</li>
-</ul>
-<h2 id="message">Message</h2>
-<ul>
-<li>Kafka 的訊息為鍵值對，使用鍵值對可以提供 Key -&gt; Partition -&gt; Offset 的查詢</li>
-</ul>
-<h2 id="topic">Topic</h2>
-<ul>
-<li>Topic 為訊息的抽象分類</li>
-<li>Producers 發送訊息時，會指定一至多個 Topics。Consumers 訂閱一或多個 Topics</li>
-<li>Topics 分為 Regular Topics 及 Compacted topics</li>
-<li>Regular Topics 需要設定 retention time，超過則 Kafka 可刪除資料以釋出硬碟空間</li>
-<li>Compacted Topics 則訊息沒有有效期限，唯若 Key 重複，新訊息會覆蓋舊的訊息。Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message</li>
-</ul>
-<h2 id="partition">Partition</h2>
-<ul>
-<li>建立 Topic 時需要指定 Partitions 數目，之後只能增加不能減少</li>
-<li>Partition 是 Queue，訊息按 offset 嚴格排序，新訊息被 append 至尾端</li>
-<li>由於是磁碟的連續區域，因此效率很高</li>
-</ul>
-<h3 id="partition-offset">Partition offset</h3>
-<ul>
-<li>訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數</li>
-</ul>
-<h2 id="replica">Replica</h2>
-<ul>
-<li>Partition 產生 n 個副本，分散至各個 Broker 上，n 稱作 replication-factor</li>
-<li>成功同步的 Replica 稱作 
-<a href="#ISR">ISR</a>
-</li>
-</ul>
-<h3 id="partition-leader">Partition Leader</h3>
-<ul>
-<li>
-<p>Broker Controller 對每個 Partition 指定一個 Leader</p>
-</li>
-<li>
-<p>Partition Leader 負責接收資料，接收並寫入後，將資料 replicate 到全部 replica/partition follower</p>
-</li>
-<li>
-<h3 id="partition-follower">Partition Follower</h3>
-<ul>
-<li>同一 Partition 的 non-leader replica</li>
-<li>概念上為只追隨某個 partition 的 Consumer，只 subscribe partition Leader，發現更新時 pull 到本地端</li>
-<li>當 Partition Leader 失效，Broker Controller 從 ISR 中選出新 Leader</li>
+<li>pykafka</li>
+<li>kafka-python</li>
 </ul>
 </li>
-<li>
-<h3 id="isr">ISR</h3>
+<li>Scala
 <ul>
-<li>當 Leader 收到訊息時，所有 Follower 都需要寫入，已經更新至和 Leader 同步的 Followers 稱為 ISRs(in-sync replica)</li>
-<li>Record 只有在全部的 ISR 都同步時，才被視為成功 Commited</li>
-<li>Consumer 只能從已經 Commit 成功的 Record 讀取紀錄</li>
-<li>對於一個 Topic，只要各個 Partition 皆有一個 ISR 在線，則內容保持一致且服務不中斷</li>
+<li>Scala-Shell</li>
+<li>Native-App</li>
 </ul>
 </li>
 </ul>
-<h2 id="kafka-cluster">Kafka Cluster</h2>
-<ul>
-<li>n 個 Broker 組成 Cluster</li>
-<li>可以 zero downtime 擴展</li>
-</ul>
-<h2 id="zookeeper">ZooKeeper</h2>
-<ul>
-<li>管理叢集配置</li>
-<li>負責管理及協調 Broker</li>
-<li>通知 Producer 及 Consumer
-<ul>
-<li>新的 Broker 出現</li>
-<li>Broker failure</li>
-</ul>
-</li>
-<li>當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker</li>
-<li>
-<a href="https://zookeeper.apache.org/" target="_blank" rel="noopener">https://zookeeper.apache.org/</a>
-</li>
-</ul>
+<h2 id="shell-script">Shell Script</h2>
+<p>開啟兩個命令列</p>
+<p>console1</p>
+<pre><code class="language-bash">kafka-console-producer --broker-list localhost:9092 --topic test-kafka
+</code></pre>
+<p>console2</p>
+<pre><code class="language-bash">kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+</code></pre>
+<p>應該要能看到 console1 的輸入</p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)">https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)</a></li>
-<li><a href="https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab">https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab</a></li>
-<li><a href="http://cloudurable.com/blog/kafka-architecture-topics/index.html">http://cloudurable.com/blog/kafka-architecture-topics/index.html</a></li>
+<li><a href="https://oumuv.github.io/2018/12/06/kafka-2/">https://oumuv.github.io/2018/12/06/kafka-2/</a></li>
+<li><a href="https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/">https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/</a></li>
 </ul>
 
                     </div>
@@ -724,7 +651,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/&amp;text=Kafka%20mechanism" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/&amp;text=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -737,7 +664,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/&amp;t=Kafka%20mechanism" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/&amp;t=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -750,7 +677,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Kafka%20mechanism&amp;body=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Kafka%20with%20single%20broker&amp;body=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -763,7 +690,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/&amp;title=Kafka%20mechanism" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/&amp;title=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -776,7 +703,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Kafka%20mechanism%20https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Kafka%20with%20single%20broker%20https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -789,7 +716,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-2/&amp;title=Kafka%20mechanism" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/&amp;title=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -884,6 +811,8 @@
   <div class="article-widget content-widget-hr">
     <h3>Related</h3>
     <ul>
+      
+      <li><a href="/blog/posts/apache-kafka/kafka-p4-multibrokers/">Kafka with multi brokers</a></li>
       
       <li><a href="/blog/posts/apache-kafka/kafka-p2-terminology/">Some of Kafka terminology</a></li>
       
