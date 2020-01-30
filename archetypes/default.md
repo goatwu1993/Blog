@@ -1,11 +1,11 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+slug: "{{ .Name | title }}"
+summary: "{{ .Name | title }}"
+# Basic settings
 date: {{ .Date }}
 draft: true
-slug: "{{ .Name | title }}"
 tags: []
-# summary
-summary: summary
 # other configs
 diagram: true
 toc: true
