@@ -482,8 +482,7 @@
     <li><a href="#開啟三個-brokers">開啟三個 Brokers</a></li>
     <li><a href="#開啟一個兩個副本的-topic">開啟一個兩個副本的 Topic</a></li>
     <li><a href="#consumer--producer-api">Consumer & Producer API</a></li>
-    <li><a href="#1-shell-script">1. Shell Script</a></li>
-    <li><a href="#heading"></a></li>
+    <li><a href="#shell-script">Shell Script</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -631,13 +630,13 @@ kafka-server-start /usr/local/etc/kafka/server2.properties &amp;
 </ul>
 </li>
 </ul>
-<h2 id="1-shell-script">1. Shell Script</h2>
+<h2 id="shell-script">Shell Script</h2>
 <p>開啟兩個命令列</p>
 <pre><code class="language-bash">./bin/kafka-console-producer --broker-list localhost:9092 --topic test-kafka
 </code></pre>
 <pre><code class="language-bash">./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
 </code></pre>
-<h2 id="heading"></h2>
+<p>應該要能看到訊息傳送過去</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://oumuv.github.io/2018/12/06/kafka-2/">https://oumuv.github.io/2018/12/06/kafka-2/</a></li>

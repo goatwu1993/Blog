@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>goatwu1993</title>
+    <title>Apache Kafka | goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/posts/apache-kafka/</link>
       <atom:link href="https://goatwu1993.github.io/blog/posts/apache-kafka/index.xml" rel="self" type="application/rss+xml" />
-    <description>goatwu1993</description>
+    <description>Apache Kafka</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>goatwu1993</title>
+      <title>Apache Kafka</title>
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka/</link>
     </image>
     
@@ -80,13 +80,13 @@ kafka-server-start /usr/local/etc/kafka/server2.properties &amp;amp;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;1-shell-script&#34;&gt;1. Shell Script&lt;/h2&gt;
+&lt;h2 id=&#34;shell-script&#34;&gt;Shell Script&lt;/h2&gt;
 &lt;p&gt;開啟兩個命令列&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./bin/kafka-console-producer --broker-list localhost:9092 --topic test-kafka
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;p&gt;應該要能看到訊息傳送過去&lt;/p&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://oumuv.github.io/2018/12/06/kafka-2/&#34;&gt;https://oumuv.github.io/2018/12/06/kafka-2/&lt;/a&gt;&lt;/li&gt;
@@ -165,24 +165,28 @@ brew services start kafka
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</guid>
       <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
+&lt;h2 id=&#34;producer&#34;&gt;Producer&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;負責將訊息 push 到 Kafka cluster，任何實作 Producer API 的 Client&lt;/li&gt;
+&lt;li&gt;負責將訊息 push 到 Kafka Cluster，任何實作 Producer API 的 Client&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;consumers&#34;&gt;Consumers&lt;/h2&gt;
+&lt;h2 id=&#34;consumer&#34;&gt;Consumer&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;從 Kafka cluster pull 訊息，任何實作 Consumer API 的 Client&lt;/li&gt;
+&lt;li&gt;從 Kafka Cluster pull 訊息，任何實作 Consumer API 的 Client&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Consumer group&lt;/strong&gt;: 多個 Consumer 可組成 Consumer group&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;brokers&#34;&gt;Brokers&lt;/h2&gt;
+&lt;h2 id=&#34;broker&#34;&gt;Broker&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Broker&lt;/strong&gt;: Kafka 的單一節點稱作 Broker&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Kafka Cluster&lt;/strong&gt;: 多個 broker 組成 Kafka Cluster&lt;/li&gt;
 &lt;li&gt;仲介處理 Consumer 以及 Producer 的訊息&lt;/li&gt;
+&lt;li&gt;每個 Broker 可透過 &lt;strong&gt;broker.id&lt;/strong&gt; 來識別&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
+&lt;h2 id=&#34;record&#34;&gt;Record&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Kafka 的訊息為鍵值對，提供 Topic + Key 對 Partition 的查詢&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Records&lt;/strong&gt;: 發佈到 Kafka 的訊息，儲存在 Topics 之中&lt;/li&gt;
+&lt;li&gt;Records 由 &lt;strong&gt;key, value, timestamp&lt;/strong&gt; 組成，送到 Kafka Cluster 的會另外分配 offset&lt;/li&gt;
+&lt;li&gt;不指定 key，則透過 Round-Robin 的方式將此筆 Record 派送到不同的 Partition&lt;/li&gt;
+&lt;li&gt;有指定 key，則 Records 會分配到同樣的 Partition&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;topic&#34;&gt;Topic&lt;/h2&gt;
 &lt;ul&gt;
@@ -194,12 +198,9 @@ brew services start kafka
 &lt;/ul&gt;
 &lt;h2 id=&#34;partition&#34;&gt;Partition&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Partition offset&lt;/strong&gt;: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Partition offset&lt;/strong&gt;: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/li&gt;
+&lt;li&gt;Consumer 消化為之後，會把最後的 offset push 到 &lt;strong&gt;__consumer_offsets&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;replica&#34;&gt;Replica&lt;/h2&gt;
 &lt;ul&gt;
@@ -226,6 +227,7 @@ brew services start kafka
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html&#34;&gt;https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learningsky.io/kafka/&#34;&gt;https://learningsky.io/kafka/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

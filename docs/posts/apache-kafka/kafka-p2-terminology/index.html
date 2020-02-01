@@ -478,10 +478,10 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#kafka-architecture">Kafka Architecture</a></li>
-    <li><a href="#producers">Producers</a></li>
-    <li><a href="#consumers">Consumers</a></li>
-    <li><a href="#brokers">Brokers</a></li>
-    <li><a href="#message">Message</a></li>
+    <li><a href="#producer">Producer</a></li>
+    <li><a href="#consumer">Consumer</a></li>
+    <li><a href="#broker">Broker</a></li>
+    <li><a href="#record">Record</a></li>
     <li><a href="#topic">Topic</a></li>
     <li><a href="#partition">Partition</a></li>
     <li><a href="#replica">Replica</a></li>
@@ -572,24 +572,28 @@
                     <div class="article-style">
                         <h2 id="kafka-architecture">Kafka Architecture</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png" alt="Picture from wiki"></p>
-<h2 id="producers">Producers</h2>
+<h2 id="producer">Producer</h2>
 <ul>
-<li>負責將訊息 push 到 Kafka cluster，任何實作 Producer API 的 Client</li>
+<li>負責將訊息 push 到 Kafka Cluster，任何實作 Producer API 的 Client</li>
 </ul>
-<h2 id="consumers">Consumers</h2>
+<h2 id="consumer">Consumer</h2>
 <ul>
-<li>從 Kafka cluster pull 訊息，任何實作 Consumer API 的 Client</li>
+<li>從 Kafka Cluster pull 訊息，任何實作 Consumer API 的 Client</li>
 <li><strong>Consumer group</strong>: 多個 Consumer 可組成 Consumer group</li>
 </ul>
-<h2 id="brokers">Brokers</h2>
+<h2 id="broker">Broker</h2>
 <ul>
 <li><strong>Broker</strong>: Kafka 的單一節點稱作 Broker</li>
 <li><strong>Kafka Cluster</strong>: 多個 broker 組成 Kafka Cluster</li>
 <li>仲介處理 Consumer 以及 Producer 的訊息</li>
+<li>每個 Broker 可透過 <strong>broker.id</strong> 來識別</li>
 </ul>
-<h2 id="message">Message</h2>
+<h2 id="record">Record</h2>
 <ul>
-<li>Kafka 的訊息為鍵值對，提供 Topic + Key 對 Partition 的查詢</li>
+<li><strong>Records</strong>: 發佈到 Kafka 的訊息，儲存在 Topics 之中</li>
+<li>Records 由 <strong>key, value, timestamp</strong> 組成，送到 Kafka Cluster 的會另外分配 offset</li>
+<li>不指定 key，則透過 Round-Robin 的方式將此筆 Record 派送到不同的 Partition</li>
+<li>有指定 key，則 Records 會分配到同樣的 Partition</li>
 </ul>
 <h2 id="topic">Topic</h2>
 <ul>
@@ -601,12 +605,9 @@
 </ul>
 <h2 id="partition">Partition</h2>
 <ul>
-<li>
-<p>建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少</p>
-</li>
-<li>
-<p><strong>Partition offset</strong>: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數</p>
-</li>
+<li>建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少</li>
+<li><strong>Partition offset</strong>: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數</li>
+<li>Consumer 消化為之後，會把最後的 offset push 到 <strong>__consumer_offsets</strong></li>
 </ul>
 <h2 id="replica">Replica</h2>
 <ul>
@@ -633,6 +634,7 @@
 <li><a href="https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab">https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab</a></li>
 <li><a href="http://cloudurable.com/blog/kafka-architecture-topics/index.html">http://cloudurable.com/blog/kafka-architecture-topics/index.html</a></li>
 <li><a href="https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html">https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html</a></li>
+<li><a href="https://learningsky.io/kafka/">https://learningsky.io/kafka/</a></li>
 </ul>
 
                     </div>
