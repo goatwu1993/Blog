@@ -1,33 +1,53 @@
 ---
 title: "Docker P1"
-date: 2020-01-15T20:45:49+08:00
-draft: draft
+date: 2020-02-09
+draft: true
 tags: [Docker]
 slug: "docker-p1"
 weight: 30
 summary: Basic docker concept
 ---
 
-## Container
+## A dockerfile example
 
-## Docker
+[Centos Docker](https://hub.docker.com/_/centos)
 
-### Image
+```dockerfile
+FROM centos:7
+ENV container docker
+RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
+systemd-tmpfiles-setup.service ] || rm -f $i; done); \
+rm -f /lib/systemd/system/multi-user.target.wants/*;\
+rm -f /etc/systemd/system/*.wants/*;\
+rm -f /lib/systemd/system/local-fs.target.wants/*; \
+rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
+rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
+rm -f /lib/systemd/system/basic.target.wants/*;\
+rm -f /lib/systemd/system/anaconda.target.wants/*;
+VOLUME [ "/sys/fs/cgroup" ]
+CMD ["/usr/sbin/init"]
+```
 
-### Dockerfile
+```bash
+$ docker build --rm -t local/c7-systemd .
+```
 
-描述單一映像檔的文件
+## Key words
 
-## Docker Engine
+**FROM**: 指定 base image
 
-## Docker Machine
+**指定 docker 執行起來時候的預設目錄位置**: 指定 docker 執行起來時候的預設目錄位置
 
-## Docker Compose
+**CMD**: 指定 Instance 啟動後所要執行的指令
 
-docker-compose.yml 定義同時跑多容器 Docker App 的方法，例如：ZK + Kafka
+**ENTRYPOINT** : 指令 Instance 啟動後，程式的進入點
 
-## Docker Swarm
+**ENV** : 指令啟動後的環境變數
+
+### VOLUME
+
+### CMD
 
 ## References
 
-- <https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/>
+- <https://hub.docker.com/_/centos>
