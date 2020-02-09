@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/</loc>
-    <lastmod>2020-01-17T17:04:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p2-setup/</loc>
-    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/spark-p3-shell/</loc>
-    <lastmod>2020-01-17T22:40:05+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/posts/docker/docker-commands/</loc>
     <lastmod>2020-01-15T20:36:03+08:00</lastmod>
   </url>
@@ -33,27 +18,27 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p1/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -70,6 +55,16 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/basics/bash-p3-configs/</loc>
     <lastmod>2020-01-19T22:12:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-spark/spark-p2-setup/</loc>
+    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-spark/spark-p1-whatis/</loc>
+    <lastmod>2020-01-17T17:04:13+08:00</lastmod>
   </url>
   
   <url>
@@ -128,7 +123,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-kafka/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/note-kafka/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -158,13 +153,13 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-spark/</loc>
-    <lastmod>2020-01-17T22:40:05+08:00</lastmod>
+    <loc>https://goatwu1993.github.io/blog/posts/note-spark/</loc>
+    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://goatwu1993.github.io/blog/tags/spark/</loc>
-    <lastmod>2020-01-17T22:40:05+08:00</lastmod>
+    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
   </url>
   
   <url>

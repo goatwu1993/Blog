@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="What is Apache Kafka">
+  <meta name="description" content="Software Engineer">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/note-spark/">
 
   
 
@@ -210,12 +210,14 @@
 
 
   
+  <link rel="alternate" href="/blog/posts/note-spark/index.xml" type="application/rss+xml" title="goatwu1993">
+  
 
   <link rel="manifest" href="/blog/index.webmanifest">
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/note-spark/">
 
   
   
@@ -229,22 +231,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/">
-  <meta property="og:title" content="What is Kafka | goatwu1993">
-  <meta property="og:description" content="What is Apache Kafka"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-spark/">
+  <meta property="og:title" content="Apache Spark | goatwu1993">
+  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    
-      <meta property="article:published_time" content="2020-01-30T00:00:00&#43;00:00">
-    
-    <meta property="article:modified_time" content="2020-01-30T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2020-01-17T20:33:38&#43;08:00">
   
 
   
 
 
-
-  
 
 
   
@@ -256,7 +253,7 @@
 
 
 
-  <title>What is Kafka | goatwu1993</title>
+  <title>Apache Spark | goatwu1993</title>
 
 </head>
 
@@ -469,28 +466,6 @@
 
 
   
-<div class="container-fluid docs">
-    <div class="row flex-xl-nowrap">
-        <div class="d-none d-xl-block col-xl-2 docs-toc">
-            <ul class="nav toc-top">
-                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-            </ul>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#kafka-簡介">Kafka 簡介</a></li>
-    <li><a href="#kafka-特點">Kafka 特點</a></li>
-    <li><a href="#kafka-優點">Kafka 優點</a></li>
-    <li><a href="#kafka-的比較對象">Kafka 的比較對象</a></li>
-    <li><a href="#為何使用消息系統">為何使用消息系統</a></li>
-    <li><a href="#reference">Reference</a></li>
-  </ul>
-</nav>
-            
-        </div>
-        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
-            
-            <article class="article">
-                
 
 
 
@@ -507,324 +482,52 @@
 
   
   
-  
-<div class="article-container pt-3">
-  <h1>What is Kafka</h1>
-
-  
-
   
     
-
-
-<div class="article-metadata">
+  
+<div class="universal-wrapper pt-3">
+  <h1>Apache Spark</h1>
 
   
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 30, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 </div>
 
 
-                <div class="article-container">
-                    <div class="article-style">
-                        <h2 id="kafka-簡介">Kafka 簡介</h2>
-<p>Kafka 是一個分散式的消息系統/消息隊列(Message System/Queue)，處理端到端的實時訊息傳輸，Kafka 的主要開發方向</p>
-<ul>
-<li>高吞吐，低延遲</li>
-<li>可水平擴展</li>
-</ul>
-<p>Kafka 由 Scala 和 Java 編寫，最先由 Linkedin 開發，於 2011 開源，2014 年幾個在 Linkedin 開發此專案的工程師成立 Confluent，開發基於 Kafka 的應用平台，目前 Kafka 由該公司來維護</p>
-<p>Kafka 是基於 Apache 2.0 開源的。
-Confluent 平台雖然是開源的，但不允許其他公司發布基於 Confluent Platform 的 SaaS 服務(參考
-<a href="https://www.confluent.io/blog/license-changes-confluent-platform/" target="_blank" rel="noopener">這裏</a>
-)</p>
-<h2 id="kafka-特點">Kafka 特點</h2>
-<ul>
-<li><strong>分散式</strong><br>
-支援區間容錯以及高可用性</li>
-<li><strong>Persistance</strong><br>
-訊息是持久的，可以被實時接收，也可以重複讀取。同時由於是分散式的，可以套用</li>
-<li><strong>Kafka Protocal</strong><br>
-不使用既有的 Queuing Protocol(如: AMQP, STOMP, MQTT)，使用自研發的 Kafka protocol，優化過的 binary TCP-based protocol。</li>
-<li>多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，目的是減少網路封包的 Overhead。</li>
-<li><strong>輕量級可壓縮</strong><br>
-避免對訊息的物件包覆，以<strong>檔案</strong>的型式來處理資料</li>
-<li><strong>快速</strong><br>
-使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間</li>
-</ul>
-<h2 id="kafka-優點">Kafka 優點</h2>
-<ul>
-<li>高吞吐低延遲</li>
-<li>在線的水平擴展</li>
-<li>支援實時及異步訊息傳輸</li>
-</ul>
-<h2 id="kafka-的比較對象">Kafka 的比較對象</h2>
-<ul>
-<li>RabbitMQ (Mozilla Public License)</li>
-<li>NATS</li>
-<li>Pulsar (Apache)</li>
-<li>RocketMQ (Apache)</li>
-</ul>
-<h2 id="為何使用消息系統">為何使用消息系統</h2>
-<ul>
-<li>去耦合</li>
-<li>冗余</li>
-<li>可恢復性/峰值處理能力</li>
-<li>順序保證</li>
-<li>緩衝</li>
-<li>異步通信</li>
-</ul>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://www.infoq.cn/article/kafka-analysis-part-1">https://www.infoq.cn/article/kafka-analysis-part-1</a></li>
-</ul>
 
-                    </div>
-                    
-
-
-
-
-
-<div class="article-tags">
+<div class="universal-wrapper">
   
-  <a class="badge badge-light" href="/blog/tags/hadoop/">hadoop</a>
-  
-  <a class="badge badge-light" href="/blog/tags/kafka/">kafka</a>
-  
-  <a class="badge badge-light" href="/blog/tags/bigdata/">bigdata</a>
-  
-</div>
 
-
-
-
-<div class="article-widget">
-  
-<div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/blog/posts/apache-kafka/kafka-p2-terminology/" rel="next">Some of Kafka terminology</a>
-  </div>
-  
-  
-</div>
-
-</div>
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
     
-      
-      
-      
+    
+    
+    <div>
+      <h2><a href="/blog/posts/note-spark/spark-p2-setup/" >Apache Spark Setup</a></h2>
+      <div class="article-style">
         
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/&amp;text=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
+          Apache prerequisite at macOS
         
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/&amp;t=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=What%20is%20Kafka&amp;body=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/&amp;title=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://web.whatsapp.com/send?text=What%20is%20Kafka%20https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/&amp;title=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
-      <h6 class="card-subtitle">Software Engineer</h6>
-      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:peteeelol@gmail.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-</ul>
-
+      </div>
     </div>
-  </div>
-
-
-
-
-
-                </div>
-            </article>
-            
-        </main>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/note-spark/spark-p1-whatis/" >What is Apache Spark</a></h2>
+      <div class="article-style">
+        
+          Apache spark base concept.
+        
+      </div>
     </div>
-</div>
+  
 
+  
+
+</div>
 
       
 
@@ -836,8 +539,6 @@ Confluent 平台雖然是開源的，但不允許其他公司發布基於 Conflu
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
       
 
       

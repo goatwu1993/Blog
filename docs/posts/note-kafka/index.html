@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="簡單介紹 Spark">
+  <meta name="description" content="Software Engineer">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/note-kafka/">
 
   
 
@@ -210,12 +210,14 @@
 
 
   
+  <link rel="alternate" href="/blog/posts/note-kafka/index.xml" type="application/rss+xml" title="goatwu1993">
+  
 
   <link rel="manifest" href="/blog/index.webmanifest">
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/note-kafka/">
 
   
   
@@ -229,22 +231,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/">
-  <meta property="og:title" content="What is Apache Spark | goatwu1993">
-  <meta property="og:description" content="簡單介紹 Spark"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-kafka/">
+  <meta property="og:title" content="Apache Kafka | goatwu1993">
+  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    
-      <meta property="article:published_time" content="2020-01-17T17:04:13&#43;08:00">
-    
-    <meta property="article:modified_time" content="2020-01-17T17:04:13&#43;08:00">
+    <meta property="og:updated_time" content="2020-01-30T00:00:00&#43;00:00">
   
 
   
 
 
-
-  
 
 
   
@@ -256,7 +253,7 @@
 
 
 
-  <title>What is Apache Spark | goatwu1993</title>
+  <title>Apache Kafka | goatwu1993</title>
 
 </head>
 
@@ -469,31 +466,6 @@
 
 
   
-<div class="container-fluid docs">
-    <div class="row flex-xl-nowrap">
-        <div class="d-none d-xl-block col-xl-2 docs-toc">
-            <ul class="nav toc-top">
-                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-            </ul>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-is-spark">What is Spark</a></li>
-    <li><a href="#spark-特點">Spark 特點</a></li>
-    <li><a href="#spark-特點-1">Spark 特點</a></li>
-    <li><a href="#spark-core">Spark Core</a></li>
-    <li><a href="#spark-sql">Spark SQL</a></li>
-    <li><a href="#spark-streaming">Spark Streaming</a></li>
-    <li><a href="#mllib">MLlib</a></li>
-    <li><a href="#graphx">GraphX</a></li>
-    <li><a href="#references">References</a></li>
-  </ul>
-</nav>
-            
-        </div>
-        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
-            
-            <article class="article">
-                
 
 
 
@@ -510,327 +482,76 @@
 
   
   
-  
-<div class="article-container pt-3">
-  <h1>What is Apache Spark</h1>
-
-  
-
   
     
-
-
-<div class="article-metadata">
+  
+<div class="universal-wrapper pt-3">
+  <h1>Apache Kafka</h1>
 
   
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 17, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 </div>
 
 
-                <div class="article-container">
-                    <div class="article-style">
-                        <h2 id="what-is-spark">What is Spark</h2>
-<ul>
-<li>Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能</li>
-</ul>
-<pre><code class="language-mermaid">graph TD
-Spark(Spark) --&gt; Core(Spark Core)
-Spark --&gt; D(Spark SQL)
-Spark --&gt; E(Spark Streaming)
-Spark --&gt; F(MLlib)
-Spark --&gt; G(GraphX)
-</code></pre>
-<h2 id="spark-特點">Spark 特點</h2>
-<ul>
-<li>Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法</li>
-<li>提供 Java, Scala, Python 及 R 語言 API</li>
-<li>記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce)</li>
-<li>Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。</li>
-<li>Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。</li>
-<li>Spark SQL 支援結構化和關聯式查詢處理（SQL）。</li>
-<li>MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。</li>
-</ul>
-<h2 id="spark-特點-1">Spark 特點</h2>
-<ul>
-<li>In Memory Storage</li>
-<li>Immutability<br>
-通過 Spark Core RDD 的概念來儲存數據，RDD 被創建之後沒有辦法修改，Transfromation 只會產生一個新的 RDD</li>
-<li>Lazy Evaluation<br>
-數值直到 Action 才會被計算出來</li>
-<li>Partitioning<br>
-計算會被指派到 RDD Partition，Partition 的數目直接關係到平行運算的程度。</li>
-<li>支援容錯機制<br>
-紀錄各個 RDD 的產生過程(稱為 RDD Lineage)，當節點失效時可從 Parent RDD 重新推算失效節點的 Partition。</li>
-<li>容錯機制最佳化
-Transfromation 函數分為寬依賴及窄依賴，窄依賴的情況下可直接用 Partition 推算 Child Partition，不需整組 RDD 從新推算。</li>
-<li>Persistence
-可以根據資料是否會重新使用，指定存放在記憶體或磁碟。</li>
-<li>No Limitation<br>
-RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。</li>
-</ul>
-<h2 id="spark-core">Spark Core</h2>
-<p>Spark Core 是整個專案的基礎，提供了分散式任務調度、排程及基本的 I/O，其基礎的程式抽象被稱為 Resilient Distributed Dataset (RDD)</p>
-<h2 id="spark-sql">Spark SQL</h2>
-<p>Spark SQL 在 Spark 核心上帶出一種名為 SchemaRDD 的資料抽象化概念，提供結構化和半結構化資料相關的支援。Spark SQL 提供了領域特定語言，可使用 Scala、Java 或 Python 來操縱 SchemaRDDs。它還支援使用使用命令行介面和 ODBC／JDBC 伺服器操作 SQL 語言。在 Spark 1.3 版本，SchemaRDD 被重新命名為 DataFrame。</p>
-<h2 id="spark-streaming">Spark Streaming</h2>
-<p>Spark Streaming 充分利用 Spark 核心的快速排程能力來執行串流分析。它擷取小批次的資料並對之執行 RDD 轉換。這種設計使串流分析可在同一個引擎內使用同一組為批次分析編寫而撰寫的應用程式碼。</p>
-<h2 id="mllib">MLlib</h2>
-<p>MLlib 是 Spark 上分散式機器學習框架。Spark 分散式記憶體式的架構比 Hadoop 磁碟式的 Apache Mahout 快上 10 倍，擴充性甚至比 Vowpal Wabbit 要好。MLlib 可使用許多常見的機器學習和統計演算法，簡化大規模機器學習時間</p>
-<h2 id="graphx">GraphX</h2>
-<p>GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，可用於表達圖表計算並可以類比 Pregel 抽象化。GraphX 還對這種抽象化提供了最佳化運行。</p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://zh.wikipedia.org/zh-tw/Apache_Spark">https://zh.wikipedia.org/zh-tw/Apache_Spark</a></li>
-<li><a href="https://www.quora.com/What-are-the-advantages-of-RDD">https://www.quora.com/What-are-the-advantages-of-RDD</a></li>
-<li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/405603/">https://codertw.com/程式語言/405603/</a></li>
-</ul>
 
-                    </div>
-                    
-
-
-
-
-
-<div class="article-tags">
+<div class="universal-wrapper">
   
-  <a class="badge badge-light" href="/blog/tags/hadoop/">hadoop</a>
-  
-  <a class="badge badge-light" href="/blog/tags/spark/">spark</a>
-  
-  <a class="badge badge-light" href="/blog/tags/bigdata/">bigdata</a>
-  
-</div>
 
-
-
-
-<div class="article-widget">
-  
-<div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/blog/posts/apache-spark/spark-p2-setup/" rel="prev">Apache Spark Setup</a>
-  </div>
-  
-</div>
-
-</div>
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
     
-      
-      
-      
+    
+    
+    <div>
+      <h2><a href="/blog/posts/note-kafka/kafka-p4-multibrokers/" >Kafka with multi brokers</a></h2>
+      <div class="article-style">
         
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/&amp;text=What%20is%20Apache%20Spark" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
+          Kafka macOS hands-on, multi brokers
         
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/&amp;t=What%20is%20Apache%20Spark" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=What%20is%20Apache%20Spark&amp;body=https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/&amp;title=What%20is%20Apache%20Spark" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://web.whatsapp.com/send?text=What%20is%20Apache%20Spark%20https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/apache-spark/spark-p1-whatis/&amp;title=What%20is%20Apache%20Spark" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
-      <h6 class="card-subtitle">Software Engineer</h6>
-      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:peteeelol@gmail.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-</ul>
-
+      </div>
     </div>
-  </div>
-
-
-
-
-
-                </div>
-            </article>
-            
-        </main>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/note-kafka/kafka-p3-singlebroker/" >Kafka with single broker</a></h2>
+      <div class="article-style">
+        
+          Kafka macOS hands-on
+        
+      </div>
     </div>
-</div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/note-kafka/kafka-p2-terminology/" >Some of Kafka terminology</a></h2>
+      <div class="article-style">
+        
+          Kafka terminology
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/posts/note-kafka/kafka-p1/" >What is Kafka</a></h2>
+      <div class="article-style">
+        
+          What is Apache Kafka
+        
+      </div>
+    </div>
+  
 
+  
+
+</div>
 
       
 

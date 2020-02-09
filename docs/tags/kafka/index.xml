@@ -14,9 +14,9 @@
     
     <item>
       <title>Kafka with multi brokers</title>
-      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</link>
+      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p4-multibrokers/</guid>
+      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/</guid>
       <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# this will install java 1.8, zookeeper, and kafka
 brew install kafka
@@ -97,9 +97,9 @@ kafka-server-start /usr/local/etc/kafka/server2.properties &amp;amp;
     
     <item>
       <title>Kafka with single broker</title>
-      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/</link>
+      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p3-singlebroker/</guid>
+      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/</guid>
       <description>&lt;h2 id=&#34;install-kafka&#34;&gt;Install Kafka&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# this will install java 1.8, zookeeper, and kafka
 brew install kafka
@@ -160,33 +160,29 @@ brew services start kafka
     
     <item>
       <title>Some of Kafka terminology</title>
-      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</link>
+      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p2-terminology/</guid>
+      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</guid>
       <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;producer&#34;&gt;Producer&lt;/h2&gt;
+&lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;負責將訊息 push 到 Kafka Cluster，任何實作 Producer API 的 Client&lt;/li&gt;
+&lt;li&gt;負責將訊息 push 到 Kafka cluster，任何實作 Producer API 的 Client&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;consumer&#34;&gt;Consumer&lt;/h2&gt;
+&lt;h2 id=&#34;consumers&#34;&gt;Consumers&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;從 Kafka Cluster pull 訊息，任何實作 Consumer API 的 Client&lt;/li&gt;
+&lt;li&gt;從 Kafka cluster pull 訊息，任何實作 Consumer API 的 Client&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Consumer group&lt;/strong&gt;: 多個 Consumer 可組成 Consumer group&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;broker&#34;&gt;Broker&lt;/h2&gt;
+&lt;h2 id=&#34;brokers&#34;&gt;Brokers&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Broker&lt;/strong&gt;: Kafka 的單一節點稱作 Broker&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Kafka Cluster&lt;/strong&gt;: 多個 broker 組成 Kafka Cluster&lt;/li&gt;
 &lt;li&gt;仲介處理 Consumer 以及 Producer 的訊息&lt;/li&gt;
-&lt;li&gt;每個 Broker 可透過 &lt;strong&gt;broker.id&lt;/strong&gt; 來識別&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;record&#34;&gt;Record&lt;/h2&gt;
+&lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Records&lt;/strong&gt;: 發佈到 Kafka 的訊息，儲存在 Topics 之中&lt;/li&gt;
-&lt;li&gt;Records 由 &lt;strong&gt;key, value, timestamp&lt;/strong&gt; 組成，送到 Kafka Cluster 的會另外分配 offset&lt;/li&gt;
-&lt;li&gt;不指定 key，則透過 Round-Robin 的方式將此筆 Record 派送到不同的 Partition&lt;/li&gt;
-&lt;li&gt;有指定 key，則 Records 會分配到同樣的 Partition&lt;/li&gt;
+&lt;li&gt;Kafka 的訊息為鍵值對，提供 Topic + Key 對 Partition 的查詢&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;topic&#34;&gt;Topic&lt;/h2&gt;
 &lt;ul&gt;
@@ -198,9 +194,12 @@ brew services start kafka
 &lt;/ul&gt;
 &lt;h2 id=&#34;partition&#34;&gt;Partition&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Partition offset&lt;/strong&gt;: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/li&gt;
-&lt;li&gt;Consumer 消化為之後，會把最後的 offset push 到 &lt;strong&gt;__consumer_offsets&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立 Topic 時需要指定 Partitions 數目，Topic 會被分為多個 Partition，Partition 數目之後只能增加不能減少&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Partition offset&lt;/strong&gt;: 訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;replica&#34;&gt;Replica&lt;/h2&gt;
 &lt;ul&gt;
@@ -227,66 +226,6 @@ brew services start kafka
 &lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html&#34;&gt;https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://learningsky.io/kafka/&#34;&gt;https://learningsky.io/kafka/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>What is Kafka</title>
-      <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</guid>
-      <description>&lt;h2 id=&#34;kafka-簡介&#34;&gt;Kafka 簡介&lt;/h2&gt;
-&lt;p&gt;Kafka 是一個分散式的消息系統/消息隊列(Message System/Queue)，處理端到端的實時訊息傳輸，Kafka 的主要開發方向&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;高吞吐，低延遲&lt;/li&gt;
-&lt;li&gt;可水平擴展&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Kafka 由 Scala 和 Java 編寫，最先由 Linkedin 開發，於 2011 開源，2014 年幾個在 Linkedin 開發此專案的工程師成立 Confluent，開發基於 Kafka 的應用平台，目前 Kafka 由該公司來維護&lt;/p&gt;
-&lt;p&gt;Kafka 是基於 Apache 2.0 開源的。
-Confluent 平台雖然是開源的，但不允許其他公司發布基於 Confluent Platform 的 SaaS 服務(參考
-&lt;a href=&#34;https://www.confluent.io/blog/license-changes-confluent-platform/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;這裏&lt;/a&gt;
-)&lt;/p&gt;
-&lt;h2 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;分散式&lt;/strong&gt;&lt;br&gt;
-支援區間容錯以及高可用性&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Persistance&lt;/strong&gt;&lt;br&gt;
-訊息是持久的，可以被實時接收，也可以重複讀取。同時由於是分散式的，可以套用&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Kafka Protocal&lt;/strong&gt;&lt;br&gt;
-不使用既有的 Queuing Protocol(如: AMQP, STOMP, MQTT)，使用自研發的 Kafka protocol，優化過的 binary TCP-based protocol。&lt;/li&gt;
-&lt;li&gt;多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，目的是減少網路封包的 Overhead。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;輕量級可壓縮&lt;/strong&gt;&lt;br&gt;
-避免對訊息的物件包覆，以&lt;strong&gt;檔案&lt;/strong&gt;的型式來處理資料&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;快速&lt;/strong&gt;&lt;br&gt;
-使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kafka-優點&#34;&gt;Kafka 優點&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;高吞吐低延遲&lt;/li&gt;
-&lt;li&gt;在線的水平擴展&lt;/li&gt;
-&lt;li&gt;支援實時及異步訊息傳輸&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kafka-的比較對象&#34;&gt;Kafka 的比較對象&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;RabbitMQ (Mozilla Public License)&lt;/li&gt;
-&lt;li&gt;NATS&lt;/li&gt;
-&lt;li&gt;Pulsar (Apache)&lt;/li&gt;
-&lt;li&gt;RocketMQ (Apache)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;為何使用消息系統&#34;&gt;為何使用消息系統&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;去耦合&lt;/li&gt;
-&lt;li&gt;冗余&lt;/li&gt;
-&lt;li&gt;可恢復性/峰值處理能力&lt;/li&gt;
-&lt;li&gt;順序保證&lt;/li&gt;
-&lt;li&gt;緩衝&lt;/li&gt;
-&lt;li&gt;異步通信&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/kafka-analysis-part-1&#34;&gt;https://www.infoq.cn/article/kafka-analysis-part-1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -303,6 +242,32 @@ Confluent 平台雖然是開源的，但不允許其他公司發布基於 Conflu
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/kafka-analysis-part-1&#34;&gt;https://www.infoq.cn/article/kafka-analysis-part-1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Kafka</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p1/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p1/</guid>
+      <description>&lt;p&gt;Kafka 是一個分散式的訊息處理平台(message processing platform)，仲介處理端到端的實時訊息傳輸。&lt;/p&gt;
+&lt;h2 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;分散式&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;可以自由調整 C/A/P&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;減少網路封包的 Overhead&lt;/strong&gt;: 使用優化過的 binary TCP-based protocol，多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;輕量級可壓縮&lt;/strong&gt;: 避免對訊息的物件包覆，以&lt;strong&gt;檔案&lt;/strong&gt;的型式來處理資料&lt;/li&gt;
+&lt;li&gt;使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-優點&#34;&gt;Kafka 優點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Reliability&lt;/li&gt;
+&lt;li&gt;Scalability&lt;/li&gt;
+&lt;li&gt;Durability&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Fault Tolerance&lt;/li&gt;
+&lt;li&gt;Zero downtime&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

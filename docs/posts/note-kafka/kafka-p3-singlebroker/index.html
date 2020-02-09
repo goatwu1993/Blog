@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Software Engineer">
+  <meta name="description" content="Kafka macOS hands-on">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/apache-kafka/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/">
 
   
 
@@ -210,14 +210,12 @@
 
 
   
-  <link rel="alternate" href="/blog/posts/apache-kafka/index.xml" type="application/rss+xml" title="goatwu1993">
-  
 
   <link rel="manifest" href="/blog/index.webmanifest">
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/apache-kafka/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/">
 
   
   
@@ -231,29 +229,34 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/apache-kafka/">
-  <meta property="og:title" content="Apache Kafka | goatwu1993">
-  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/">
+  <meta property="og:title" content="Kafka with single broker | goatwu1993">
+  <meta property="og:description" content="Kafka macOS hands-on"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-01-30T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2020-01-30T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-01-30T00:00:00&#43;00:00">
   
 
   
 
 
 
-
   
 
 
   
 
 
+  
 
 
 
-  <title>Apache Kafka | goatwu1993</title>
+
+
+  <title>Kafka with single broker | goatwu1993</title>
 
 </head>
 
@@ -466,6 +469,27 @@
 
 
   
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-kafka">Install Kafka</a></li>
+    <li><a href="#啟動-zookeeper--kafka">啟動 zookeeper & kafka</a></li>
+    <li><a href="#consumer--producer-api-選擇">Consumer & Producer API 選擇</a></li>
+    <li><a href="#shell-script">Shell Script</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+            
+            <article class="article">
+                
 
 
 
@@ -482,76 +506,334 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1>Kafka with single broker</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1>Apache Kafka</h1>
+
+
+<div class="article-metadata">
 
   
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 30, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
+                <div class="article-container">
+                    <div class="article-style">
+                        <h2 id="install-kafka">Install Kafka</h2>
+<pre><code class="language-bash"># this will install java 1.8, zookeeper, and kafka
+brew install kafka
+</code></pre>
+<p>檔案位置</p>
+<ul>
+<li>/usr/local/etc/kafka</li>
+<li>/usr/local/Cellar/kafka/$版號</li>
+</ul>
+<pre><code class="language-bash">cd /usr/local/Cellar/kafka/*
+# 啟動zookeeper
+./bin/zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+# 啟動kafka
+./bin/kafka-server-start /usr/local/etc/kafka/server.properties
+# 建一個名為 test-kafka 的 Topic
+./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka
 
-<div class="universal-wrapper">
-  
+# 查看目前已經建立過的 Topic
+./bin/kafka-topics --list --zookeeper localhost:2181\n\n
+</code></pre>
+<h2 id="啟動-zookeeper--kafka">啟動 zookeeper &amp; kafka</h2>
+<pre><code class="language-bash">brew services start zookeeper
+brew services start kafka
+</code></pre>
+<h2 id="consumer--producer-api-選擇">Consumer &amp; Producer API 選擇</h2>
+<ul>
+<li>Shell script<br>
+使用 brew kafka 提供的 shell script</li>
+<li>Python
+<ul>
+<li>pykafka</li>
+<li>kafka-python</li>
+</ul>
+</li>
+<li>Scala
+<ul>
+<li>Scala-Shell</li>
+<li>Native-App</li>
+</ul>
+</li>
+</ul>
+<h2 id="shell-script">Shell Script</h2>
+<p>開啟兩個命令列</p>
+<p>console1</p>
+<pre><code class="language-bash">kafka-console-producer --broker-list localhost:9092 --topic test-kafka
+</code></pre>
+<p>console2</p>
+<pre><code class="language-bash">kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+</code></pre>
+<p>應該要能看到 console1 的輸入</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://oumuv.github.io/2018/12/06/kafka-2/">https://oumuv.github.io/2018/12/06/kafka-2/</a></li>
+<li><a href="https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/">https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/</a></li>
+</ul>
 
-  
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/posts/apache-kafka/kafka-p4-multibrokers/" >Kafka with multi brokers</a></h2>
-      <div class="article-style">
-        
-          Kafka macOS hands-on, multi brokers
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/posts/apache-kafka/kafka-p3-singlebroker/" >Kafka with single broker</a></h2>
-      <div class="article-style">
-        
-          Kafka macOS hands-on
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/posts/apache-kafka/kafka-p2-terminology/" >Some of Kafka terminology</a></h2>
-      <div class="article-style">
-        
-          Kafka terminology
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/posts/apache-kafka/kafka-p1/" >What is Kafka</a></h2>
-      <div class="article-style">
-        
-          What is Apache Kafka
-        
-      </div>
-    </div>
-  
+                    </div>
+                    
 
+
+
+
+
+<div class="article-tags">
   
+  <a class="badge badge-light" href="/blog/tags/hadoop/">hadoop</a>
+  
+  <a class="badge badge-light" href="/blog/tags/kafka/">kafka</a>
+  
+  <a class="badge badge-light" href="/blog/tags/bigdata/">bigdata</a>
+  
+</div>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/blog/posts/note-kafka/kafka-p4-multibrokers/" rel="next">Kafka with multi brokers</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/blog/posts/note-kafka/kafka-p2-terminology/" rel="prev">Some of Kafka terminology</a>
+  </div>
+  
+</div>
 
 </div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/&amp;text=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/&amp;t=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Kafka%20with%20single%20broker&amp;body=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/&amp;title=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Kafka%20with%20single%20broker%20https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/&amp;title=Kafka%20with%20single%20broker" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:peteeelol@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+                </div>
+            </article>
+            
+        </main>
+    </div>
+</div>
+
 
       
 
@@ -563,6 +845,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
       
 
       
