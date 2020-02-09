@@ -5,34 +5,12 @@
     <link>https://goatwu1993.github.io/blog/posts/docker/</link>
       <atom:link href="https://goatwu1993.github.io/blog/posts/docker/index.xml" rel="self" type="application/rss+xml" />
     <description>Docker</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jan 2020 20:45:49 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jan 2020 20:36:03 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Docker</title>
       <link>https://goatwu1993.github.io/blog/posts/docker/</link>
     </image>
-    
-    <item>
-      <title>Docker P1</title>
-      <link>https://goatwu1993.github.io/blog/posts/docker/docker-p1/</link>
-      <pubDate>Wed, 15 Jan 2020 20:45:49 +0800</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/docker/docker-p1/</guid>
-      <description>&lt;h2 id=&#34;container&#34;&gt;Container&lt;/h2&gt;
-&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
-&lt;h3 id=&#34;image&#34;&gt;Image&lt;/h3&gt;
-&lt;h3 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h3&gt;
-&lt;p&gt;描述單一映像檔的文件&lt;/p&gt;
-&lt;h2 id=&#34;docker-engine&#34;&gt;Docker Engine&lt;/h2&gt;
-&lt;h2 id=&#34;docker-machine&#34;&gt;Docker Machine&lt;/h2&gt;
-&lt;h2 id=&#34;docker-compose&#34;&gt;Docker Compose&lt;/h2&gt;
-&lt;p&gt;docker-compose.yml 定義同時跑多容器 Docker App 的方法，例如：ZK + Kafka&lt;/p&gt;
-&lt;h2 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h2&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&#34;&gt;https://blog.techbridge.cc/2018/09/07/docker-compose-tutorial-intro/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>Docker commands</title>

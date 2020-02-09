@@ -237,23 +237,56 @@ brew services start kafka
       <link>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://goatwu1993.github.io/blog/posts/apache-kafka/kafka-p1/</guid>
-      <description>&lt;p&gt;Kafka 是一個分散式的訊息處理平台(message processing platform)，仲介處理端到端的實時訊息傳輸。&lt;/p&gt;
+      <description>&lt;h2 id=&#34;kafka-簡介&#34;&gt;Kafka 簡介&lt;/h2&gt;
+&lt;p&gt;Kafka 是一個分散式的消息系統/消息隊列(Message System/Queue)，處理端到端的實時訊息傳輸，Kafka 的主要開發方向&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高吞吐，低延遲&lt;/li&gt;
+&lt;li&gt;可水平擴展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Kafka 由 Scala 和 Java 編寫，最先由 Linkedin 開發，於 2011 開源，2014 年幾個在 Linkedin 開發此專案的工程師成立 Confluent，開發基於 Kafka 的應用平台，目前 Kafka 由該公司來維護&lt;/p&gt;
+&lt;p&gt;Kafka 是基於 Apache 2.0 開源的。
+Confluent 平台雖然是開源的，但不允許其他公司發布基於 Confluent Platform 的 SaaS 服務(參考
+&lt;a href=&#34;https://www.confluent.io/blog/license-changes-confluent-platform/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;這裏&lt;/a&gt;
+)&lt;/p&gt;
 &lt;h2 id=&#34;kafka-特點&#34;&gt;Kafka 特點&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;分散式&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;可以自由調整 C/A/P&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;減少網路封包的 Overhead&lt;/strong&gt;: 使用優化過的 binary TCP-based protocol，多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;輕量級可壓縮&lt;/strong&gt;: 避免對訊息的物件包覆，以&lt;strong&gt;檔案&lt;/strong&gt;的型式來處理資料&lt;/li&gt;
-&lt;li&gt;使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分散式&lt;/strong&gt;&lt;br&gt;
+支援區間容錯以及高可用性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Persistance&lt;/strong&gt;&lt;br&gt;
+訊息是持久的，可以被實時接收，也可以重複讀取。同時由於是分散式的，可以套用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kafka Protocal&lt;/strong&gt;&lt;br&gt;
+不使用既有的 Queuing Protocol(如: AMQP, STOMP, MQTT)，使用自研發的 Kafka protocol，優化過的 binary TCP-based protocol。&lt;/li&gt;
+&lt;li&gt;多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，目的是減少網路封包的 Overhead。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;輕量級可壓縮&lt;/strong&gt;&lt;br&gt;
+避免對訊息的物件包覆，以&lt;strong&gt;檔案&lt;/strong&gt;的型式來處理資料&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速&lt;/strong&gt;&lt;br&gt;
+使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;kafka-優點&#34;&gt;Kafka 優點&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Reliability&lt;/li&gt;
-&lt;li&gt;Scalability&lt;/li&gt;
-&lt;li&gt;Durability&lt;/li&gt;
-&lt;li&gt;Performance&lt;/li&gt;
-&lt;li&gt;Fault Tolerance&lt;/li&gt;
-&lt;li&gt;Zero downtime&lt;/li&gt;
+&lt;li&gt;高吞吐低延遲&lt;/li&gt;
+&lt;li&gt;在線的水平擴展&lt;/li&gt;
+&lt;li&gt;支援實時及異步訊息傳輸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-的比較對象&#34;&gt;Kafka 的比較對象&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RabbitMQ (Mozilla Public License)&lt;/li&gt;
+&lt;li&gt;NATS&lt;/li&gt;
+&lt;li&gt;Pulsar (Apache)&lt;/li&gt;
+&lt;li&gt;RocketMQ (Apache)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;為何使用消息系統&#34;&gt;為何使用消息系統&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;去耦合&lt;/li&gt;
+&lt;li&gt;冗余&lt;/li&gt;
+&lt;li&gt;可恢復性/峰值處理能力&lt;/li&gt;
+&lt;li&gt;順序保證&lt;/li&gt;
+&lt;li&gt;緩衝&lt;/li&gt;
+&lt;li&gt;異步通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/kafka-analysis-part-1&#34;&gt;https://www.infoq.cn/article/kafka-analysis-part-1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

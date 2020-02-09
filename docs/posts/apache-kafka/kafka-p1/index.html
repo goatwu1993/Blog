@@ -477,8 +477,12 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
+    <li><a href="#kafka-簡介">Kafka 簡介</a></li>
     <li><a href="#kafka-特點">Kafka 特點</a></li>
     <li><a href="#kafka-優點">Kafka 優點</a></li>
+    <li><a href="#kafka-的比較對象">Kafka 的比較對象</a></li>
+    <li><a href="#為何使用消息系統">為何使用消息系統</a></li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav>
             
@@ -562,23 +566,56 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <p>Kafka 是一個分散式的訊息處理平台(message processing platform)，仲介處理端到端的實時訊息傳輸。</p>
+                        <h2 id="kafka-簡介">Kafka 簡介</h2>
+<p>Kafka 是一個分散式的消息系統/消息隊列(Message System/Queue)，處理端到端的實時訊息傳輸，Kafka 的主要開發方向</p>
+<ul>
+<li>高吞吐，低延遲</li>
+<li>可水平擴展</li>
+</ul>
+<p>Kafka 由 Scala 和 Java 編寫，最先由 Linkedin 開發，於 2011 開源，2014 年幾個在 Linkedin 開發此專案的工程師成立 Confluent，開發基於 Kafka 的應用平台，目前 Kafka 由該公司來維護</p>
+<p>Kafka 是基於 Apache 2.0 開源的。
+Confluent 平台雖然是開源的，但不允許其他公司發布基於 Confluent Platform 的 SaaS 服務(參考
+<a href="https://www.confluent.io/blog/license-changes-confluent-platform/" target="_blank" rel="noopener">這裏</a>
+)</p>
 <h2 id="kafka-特點">Kafka 特點</h2>
 <ul>
-<li><strong>分散式</strong></li>
-<li>可以自由調整 C/A/P</li>
-<li><strong>減少網路封包的 Overhead</strong>: 使用優化過的 binary TCP-based protocol，多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，</li>
-<li><strong>輕量級可壓縮</strong>: 避免對訊息的物件包覆，以<strong>檔案</strong>的型式來處理資料</li>
-<li>使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間</li>
+<li><strong>分散式</strong><br>
+支援區間容錯以及高可用性</li>
+<li><strong>Persistance</strong><br>
+訊息是持久的，可以被實時接收，也可以重複讀取。同時由於是分散式的，可以套用</li>
+<li><strong>Kafka Protocal</strong><br>
+不使用既有的 Queuing Protocol(如: AMQP, STOMP, MQTT)，使用自研發的 Kafka protocol，優化過的 binary TCP-based protocol。</li>
+<li>多條訊息會先寫入記憶體緩衝中存成 Batch 一同傳輸，目的是減少網路封包的 Overhead。</li>
+<li><strong>輕量級可壓縮</strong><br>
+避免對訊息的物件包覆，以<strong>檔案</strong>的型式來處理資料</li>
+<li><strong>快速</strong><br>
+使用 OS 的 page cache，不需要額外 Applicaion Cache ，爭取珍貴的記憶體空間</li>
 </ul>
 <h2 id="kafka-優點">Kafka 優點</h2>
 <ul>
-<li>Reliability</li>
-<li>Scalability</li>
-<li>Durability</li>
-<li>Performance</li>
-<li>Fault Tolerance</li>
-<li>Zero downtime</li>
+<li>高吞吐低延遲</li>
+<li>在線的水平擴展</li>
+<li>支援實時及異步訊息傳輸</li>
+</ul>
+<h2 id="kafka-的比較對象">Kafka 的比較對象</h2>
+<ul>
+<li>RabbitMQ (Mozilla Public License)</li>
+<li>NATS</li>
+<li>Pulsar (Apache)</li>
+<li>RocketMQ (Apache)</li>
+</ul>
+<h2 id="為何使用消息系統">為何使用消息系統</h2>
+<ul>
+<li>去耦合</li>
+<li>冗余</li>
+<li>可恢復性/峰值處理能力</li>
+<li>順序保證</li>
+<li>緩衝</li>
+<li>異步通信</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.infoq.cn/article/kafka-analysis-part-1">https://www.infoq.cn/article/kafka-analysis-part-1</a></li>
 </ul>
 
                     </div>
@@ -596,6 +633,25 @@
   
   <a class="badge badge-light" href="/blog/tags/bigdata/">bigdata</a>
   
+</div>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/blog/posts/apache-kafka/kafka-p2-terminology/" rel="next">Some of Kafka terminology</a>
+  </div>
+  
+  
+</div>
+
 </div>
 
 
@@ -760,27 +816,6 @@
 
 
 
-
-
-
-
-
-
-  
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/blog/posts/apache-kafka/kafka-p4-multibrokers/">Kafka with multi brokers</a></li>
-      
-      <li><a href="/blog/posts/apache-kafka/kafka-p3-singlebroker/">Kafka with single broker</a></li>
-      
-      <li><a href="/blog/posts/apache-kafka/kafka-p2-terminology/">Some of Kafka terminology</a></li>
-      
-    </ul>
-  </div>
-  
 
 
                 </div>
