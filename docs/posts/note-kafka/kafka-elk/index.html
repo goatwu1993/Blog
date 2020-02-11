@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="What is Apache Kafka">
+  <meta name="description" content="Kafka&#43;ELK">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/">
+  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/">
 
   
 
@@ -215,7 +215,7 @@
   <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/">
+  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/">
 
   
   
@@ -229,15 +229,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/">
-  <meta property="og:title" content="What is Kafka | goatwu1993">
-  <meta property="og:description" content="What is Apache Kafka"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/">
+  <meta property="og:title" content="Kafka &#43; ELK | goatwu1993">
+  <meta property="og:description" content="Kafka&#43;ELK"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-01-30T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-02-12T00:00:00&#43;00:00">
   
 
   
@@ -256,7 +256,7 @@
 
 
 
-  <title>What is Kafka | goatwu1993</title>
+  <title>Kafka &#43; ELK | goatwu1993</title>
 
 </head>
 
@@ -477,11 +477,20 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-kafka">What is Kafka</a></li>
-    <li><a href="#why-do-we-use-kafka">Why do we use Kafka</a></li>
-    <li><a href="#what-is-kafka-used-for">What is Kafka used for</a></li>
-    <li><a href="#how-does-kafka-works">How does Kafka works</a></li>
-    <li><a href="#reference">Reference</a></li>
+    <li><a href="#repos">Repos</a></li>
+    <li><a href="#環境">環境</a></li>
+    <li><a href="#準備-image">準備 Image</a></li>
+    <li><a href="#zookeeper">Zookeeper</a></li>
+    <li><a href="#kafka">Kafka</a></li>
+    <li><a href="#elk">ELK</a></li>
+    <li><a href="#設定-logstash">設定 Logstash</a>
+      <ul>
+        <li><a href="#簡單測試">簡單測試</a></li>
+        <li><a href="#設定檔">設定檔</a></li>
+        <li><a href="#更改-logstash-權限">更改 Logstash 權限</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
             
@@ -508,7 +517,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>What is Kafka</h1>
+  <h1>Kafka &#43; ELK</h1>
 
   
 
@@ -526,8 +535,10 @@
     
     
       
+          Last updated on
+      
     
-    Jan 30, 2020
+    Feb 12, 2020
   </span>
   
 
@@ -565,13 +576,136 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="what-is-kafka">What is Kafka</h2>
-<h2 id="why-do-we-use-kafka">Why do we use Kafka</h2>
-<h2 id="what-is-kafka-used-for">What is Kafka used for</h2>
-<h2 id="how-does-kafka-works">How does Kafka works</h2>
-<h2 id="reference">Reference</h2>
+                        <h2 id="repos">Repos</h2>
+<p><a href="https://github.com/wurstmeister/kafka-dockers">https://github.com/wurstmeister/kafka-dockers</a></p>
+<h2 id="環境">環境</h2>
 <ul>
-<li><a href="https://www.infoq.cn/article/kafka-analysis-part-1">https://www.infoq.cn/article/kafka-analysis-part-1</a></li>
+<li>macOS Catalina 10.15.3</li>
+<li>kafka 2.4.0 (installed by Homebrew)</li>
+<li>Docker Desktop 2.2.0.0</li>
+</ul>
+<h2 id="準備-image">準備 Image</h2>
+<ul>
+<li>wurstmeister/zookeeper</li>
+<li>wurstmeister/kafka</li>
+<li>sebp/elk</li>
+</ul>
+<pre><code class="language-bash">docker pull wurstmeister/zookeeper
+docker pull wurstmeister/kafka
+docker pull sebp/elk
+</code></pre>
+<h2 id="zookeeper">Zookeeper</h2>
+<pre><code class="language-bash">docker run --name zk -p 2181:2181 -p 2888:2888 -p 3888:3888 --restart always -d zookeeper
+</code></pre>
+<h2 id="kafka">Kafka</h2>
+<pre><code class="language-bash">
+docker run -d --name kafka -p 9092:9092 --link zk --env KAFKA_ZOOKEEPER_CONNECT=zk:2181 --env KAFKA_ADVERTISED_HOST_NAME=${host_ip} --env KAFKA_ADVERTISED_PORT=9092 wurstmeister/kafka
+</code></pre>
+<p>開個 Topics 測試一下</p>
+<pre><code class="language-bash">host_ip=&quot;HOST_IP&quot;
+
+kafka-topics --create --zookeeper ${host_ip}:2181 --replication-factor 1 --partitions 1 --topic elk_test
+
+kafka-topics --describe --zookeeper ${host_ip}:2181
+</code></pre>
+<p>不放心的話再寫個訊息</p>
+<pre><code class="language-bash">kafka-topics --create --zookeeper ${host_ip}:2181 --replication-factor 1 --partitions 1 --topic kfk_test
+
+kafka-console-producer --broker-list ${host_ip}:9092 --topic kfk_test
+&gt;
+# 輸入
+# Control+C 關掉
+
+kafka-console-consumer --topic=kfk_test --bootstrap-server=${host_ip}:9092 --from-beginning
+</code></pre>
+<h2 id="elk">ELK</h2>
+<p>Elasticsearch 好像很吃 Memory</p>
+<pre><code class="language-bash">screen /Users/peteeelol/Library/Containers/com.docker.docker/Data//vms/0/tty
+
+sysctl -w vm.max_map_count=262144
+</code></pre>
+<pre><code class="language-bash">docker run -d -p 5601:5601 -p 9200:9200 -p 9300:9300 -p 5044:5044 -e ES_MIN_MEM=128m -e ES_MAX_MEM=2048m -it --name elk sebp/elk
+</code></pre>
+<p>檢查</p>
+<pre><code class="language-bash"># Kibana
+open http://&quot;${host_ip}&quot;:5601
+
+# docker
+$ docker exec elk jps
+105 Elasticsearch
+313 Logstash
+415 Jps
+</code></pre>
+<h2 id="設定-logstash">設定 Logstash</h2>
+<h3 id="簡單測試">簡單測試</h3>
+<pre><code class="language-bash">$ docker exec -it elk /bin/bash
+
+service --status-all
+
+service logstash stop
+
+/opt/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts =&gt; [&quot;localhost&quot;] } }'
+...
+...
+...
+Hello
+# Control + C 離開stdin
+</code></pre>
+<p>最後一個指令需要跑一下，接著輸入一些訊息</p>
+<p>離開 Docker 用 Host(Mac) 打開瀏覽器</p>
+<pre><code class="language-bash">open http://localhost:9200/_search?pretty
+</code></pre>
+<p>應該要能看到剛剛 stdin 輸入的訊息</p>
+<h3 id="設定檔">設定檔</h3>
+<p>回到 Container elk</p>
+<pre><code class="language-bash">vim /etc/logstash/conf.d/kafka.conf
+</code></pre>
+<pre><code class="language-bash">input {
+    kafka {
+        bootstrap_servers =&gt; [&quot;HOST_IP:9092&quot;]
+        group_id =&gt; &quot;test-consumer-group&quot;
+        auto_offset_reset =&gt; &quot;latest&quot;
+        consumer_threads =&gt; 5
+        decorate_events =&gt; true
+        topics =&gt; [&quot;elk_topics&quot;]
+        type =&gt; &quot;bhy&quot;
+    }
+}
+
+output {
+    elasticsearch {
+        hosts =&gt; [&quot;http://localhost:9200&quot;]
+        index =&gt; &quot;myservice-%{+YYYY.MM.dd}&quot;
+        #user =&gt; &quot;elastic&quot;
+        #password =&gt; &quot;changeme&quot;
+    }
+}
+</code></pre>
+<h3 id="更改-logstash-權限">更改 Logstash 權限</h3>
+<pre><code class="language-bash">vim /etc/init.d/logstash
+</code></pre>
+<p>將 LS_USER, LS_GROUP 更改為 root</p>
+<pre><code class="language-vim">LS_USER=root
+LS_GROUP=root
+</code></pre>
+<p>再把 Logstash 重跑</p>
+<pre><code class="language-bash">service logstash restart
+</code></pre>
+<p>這時候 Logstash 應該就有在接收 Kafka 的 elk_topics 這個 Topic 了，可以用 Host 發送訊息測試看看</p>
+<pre><code class="language-bash">kafka-console-producer --broker-list ${host_ip}:9092 --topic elk_topics
+</code></pre>
+<p>在 Kibana 應該要看到 index 為 my-service 開頭的訊息，代表訊息透過 Kafka-&gt; Logstash -&gt; Elastic Search</p>
+<h2 id="references">References</h2>
+<ul>
+<li>
+<p><a href="https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab">https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab</a></p>
+</li>
+<li>
+<p><a href="https://github.com/wurstmeister/kafka-docker/wiki/Connectivity">https://github.com/wurstmeister/kafka-docker/wiki/Connectivity</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sermilrod/kafka-elk-docker-compose">https://github.com/sermilrod/kafka-elk-docker-compose</a></p>
+</li>
 </ul>
 
                     </div>
@@ -599,6 +733,13 @@
 <div class="post-nav">
   
   
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/blog/posts/note-kafka/kafka-p1/" rel="next">What is Kafka</a>
+  </div>
+  
+  
 </div>
 
 </div>
@@ -616,7 +757,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/&amp;text=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;text=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -629,7 +770,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/&amp;t=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;t=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -642,7 +783,7 @@
       
       
       <li>
-        <a href="mailto:?subject=What%20is%20Kafka&amp;body=https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Kafka%20&#43;%20ELK&amp;body=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -655,7 +796,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/&amp;title=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;title=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -668,7 +809,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=What%20is%20Kafka%20https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Kafka%20&#43;%20ELK%20https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -681,7 +822,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/&amp;title=What%20is%20Kafka" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;title=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -785,8 +926,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
       
 
       

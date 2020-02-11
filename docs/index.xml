@@ -163,6 +163,122 @@ free -m
     </item>
     
     <item>
+      <title>Kafka mechanism</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p5-mechanism/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p5-mechanism/</guid>
+      <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;producer&#34;&gt;Producer&lt;/h2&gt;
+&lt;h3 id=&#34;producer-連接&#34;&gt;Producer 連接&lt;/h3&gt;
+&lt;h3 id=&#34;producer-發送訊息時&#34;&gt;Producer 發送訊息時&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Zookeeper / bootstrap server&lt;/li&gt;
+&lt;li&gt;Topics&lt;/li&gt;
+&lt;li&gt;Key(可為 Null)&lt;/li&gt;
+&lt;li&gt;Value(可為 Null)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;broker&#34;&gt;Broker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Topic 被分為多個 Partition&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Partition 會有多個 Replica&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Broker controller&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其中一個 Broker 會被推選為 Controller&lt;/li&gt;
+&lt;li&gt;負責偵測 Broker 級別的 Failure，幫忙所有受影響的 Partition 更換 Partition Leader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kafka 的訊息為鍵值對，使用鍵值對可以提供 Key -&amp;gt; Partition -&amp;gt; Offset 的查詢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;topic&#34;&gt;Topic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Topic 為訊息的抽象分類&lt;/li&gt;
+&lt;li&gt;Producers 發送訊息時，會指定一至多個 Topics。Consumers 訂閱一或多個 Topics&lt;/li&gt;
+&lt;li&gt;Topics 分為 Regular Topics 及 Compacted topics&lt;/li&gt;
+&lt;li&gt;Regular Topics 需要設定 retention time，超過則 Kafka 可刪除資料以釋出硬碟空間&lt;/li&gt;
+&lt;li&gt;Compacted Topics 則訊息沒有有效期限，唯若 Key 重複，新訊息會覆蓋舊的訊息。Producer 可發送值為 null 的鍵值對以永久刪除該資料，稱作 tombstone message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;partition&#34;&gt;Partition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;建立 Topic 時需要指定 Partitions 數目，之後只能增加不能減少&lt;/li&gt;
+&lt;li&gt;Partition 是 Queue，訊息按 offset 嚴格排序，新訊息被 append 至尾端&lt;/li&gt;
+&lt;li&gt;由於是磁碟的連續區域，因此效率很高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;partition-offset&#34;&gt;Partition offset&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;訊息在 partition 裡面的 index，稱作 offset，為 Long 型態的整數&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;replica&#34;&gt;Replica&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Partition 產生 n 個副本，分散至各個 Broker 上，n 稱作 replication-factor&lt;/li&gt;
+&lt;li&gt;成功同步的 Replica 稱作 
+&lt;a href=&#34;#ISR&#34;&gt;ISR&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;partition-leader&#34;&gt;Partition Leader&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Broker Controller 對每個 Partition 指定一個 Leader&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Partition Leader 負責接收資料，接收並寫入後，將資料 replicate 到全部 replica/partition follower&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;partition-follower&#34;&gt;Partition Follower&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;同一 Partition 的 non-leader replica&lt;/li&gt;
+&lt;li&gt;概念上為只追隨某個 partition 的 Consumer，只 subscribe partition Leader，發現更新時 pull 到本地端&lt;/li&gt;
+&lt;li&gt;當 Partition Leader 失效，Broker Controller 從 ISR 中選出新 Leader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;isr&#34;&gt;ISR&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當 Leader 收到訊息時，所有 Follower 都需要寫入，已經更新至和 Leader 同步的 Followers 稱為 ISRs(in-sync replica)&lt;/li&gt;
+&lt;li&gt;Record 只有在全部的 ISR 都同步時，才被視為成功 Commited&lt;/li&gt;
+&lt;li&gt;Consumer 只能從已經 Commit 成功的 Record 讀取紀錄&lt;/li&gt;
+&lt;li&gt;對於一個 Topic，只要各個 Partition 皆有一個 ISR 在線，則內容保持一致且服務不中斷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kafka-cluster&#34;&gt;Kafka Cluster&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;n 個 Broker 組成 Cluster&lt;/li&gt;
+&lt;li&gt;可以 zero downtime 擴展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;zookeeper&#34;&gt;ZooKeeper&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;管理叢集配置&lt;/li&gt;
+&lt;li&gt;負責管理及協調 Broker&lt;/li&gt;
+&lt;li&gt;通知 Producer 及 Consumer
+&lt;ul&gt;
+&lt;li&gt;新的 Broker 出現&lt;/li&gt;
+&lt;li&gt;Broker failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;當 Zookeeper 發出通知，Consumer 及 Producer 根據通知決定要使用哪一個 Broker&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://zookeeper.apache.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zookeeper.apache.org/&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&#34;&gt;https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cloudurable.com/blog/kafka-architecture-topics/index.html&#34;&gt;http://cloudurable.com/blog/kafka-architecture-topics/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Kafka with multi brokers</title>
       <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
@@ -315,6 +431,7 @@ brew services start kafka
       <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</guid>
       <description>&lt;h2 id=&#34;kafka-architecture&#34;&gt;Kafka Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png&#34; alt=&#34;Picture from wiki&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;producers&#34;&gt;Producers&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;負責將訊息 push 到 Kafka cluster，任何實作 Producer API 的 Client&lt;/li&gt;
@@ -328,7 +445,7 @@ brew services start kafka
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Broker&lt;/strong&gt;: Kafka 的單一節點稱作 Broker&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Kafka Cluster&lt;/strong&gt;: 多個 broker 組成 Kafka Cluster&lt;/li&gt;
-&lt;li&gt;仲介處理 Consumer 以及 Producer 的訊息&lt;/li&gt;
+&lt;li&gt;Broker 可以說是 Apache Kafka 的 Server 端，仲介處理 Client(Consumer 以及 Producer)的訊息&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;message&#34;&gt;Message&lt;/h2&gt;
 &lt;ul&gt;
@@ -357,6 +474,7 @@ brew services start kafka
 &lt;li&gt;&lt;strong&gt;ISR&lt;/strong&gt;: 成功同步的 Replica 稱作 ISR&lt;/li&gt;
 &lt;li&gt;Replica 用於保證分散式系統的高可用&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;zookeeper&#34;&gt;ZooKeeper&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Apache 的另一個分散式專案，可管理系統配置&lt;/li&gt;
@@ -382,16 +500,60 @@ brew services start kafka
     
     <item>
       <title>What is Kafka</title>
-      <link>https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/</link>
+      <link>https://goatwu1993.github.io/blog/posts/note-elk/kafka-p1/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/</guid>
-      <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
-&lt;h2 id=&#34;why-do-we-use-kafka&#34;&gt;Why do we use Kafka&lt;/h2&gt;
-&lt;h2 id=&#34;what-is-kafka-used-for&#34;&gt;What is Kafka used for&lt;/h2&gt;
-&lt;h2 id=&#34;how-does-kafka-works&#34;&gt;How does Kafka works&lt;/h2&gt;
+      <guid>https://goatwu1993.github.io/blog/posts/note-elk/kafka-p1/</guid>
+      <description>&lt;h2 id=&#34;what-is-elk&#34;&gt;What is ELK&lt;/h2&gt;
+&lt;p&gt;ELK 是由 Elasticsearch, Logstash 及 Kibana 組成的堆疊
+由於 Logstash 效能不佳，因此後面加入了 Beats，稱作 Elastic Stack
+以上軟體皆由 Elastic NV 開發。&lt;/p&gt;
+&lt;h2 id=&#34;what-is-elasticsearch&#34;&gt;What is Elasticsearch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Elasticsearch 是個分散式，支援多租戶的全文搜尋引擎，他的搜尋引擎是基於 Apache Lucene 改寫。&lt;/li&gt;
+&lt;li&gt;Elasticsearch 由 Java 編寫，目前由 Elastic NV 公司維護，核心原始碼為 Apache 2.0 開源，平台及周邊基於 Elastic License。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;elasticsearch-features&#34;&gt;Elasticsearch Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;分散式，可擴展&lt;/li&gt;
+&lt;li&gt;多租戶&lt;/li&gt;
+&lt;li&gt;RESTful，使用 JSON 和 Java API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-does-elasticsearch-works&#34;&gt;How does Elasticsearch works&lt;/h2&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/kafka-analysis-part-1&#34;&gt;https://www.infoq.cn/article/kafka-analysis-part-1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/96826042&#34;&gt;https://zhuanlan.zhihu.com/p/96826042&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Elasticsearch&#34;&gt;https://zh.wikipedia.org/wiki/Elasticsearch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Kafka</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-elk/kafka-p1/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-elk/kafka-p1/</guid>
+      <description>&lt;h2 id=&#34;what-is-elk&#34;&gt;What is ELK&lt;/h2&gt;
+&lt;p&gt;ELK 是由 Elasticsearch, Logstash 及 Kibana 組成的堆疊
+由於 Logstash 效能不佳，因此後面加入了 Beats，稱作 Elastic Stack
+以上軟體皆由 Elastic NV 開發。&lt;/p&gt;
+&lt;h2 id=&#34;what-is-elasticsearch&#34;&gt;What is Elasticsearch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Elasticsearch 是個分散式，支援多租戶的全文搜尋引擎，他的搜尋引擎是基於 Apache Lucene 改寫。&lt;/li&gt;
+&lt;li&gt;Elasticsearch 由 Java 編寫，目前由 Elastic NV 公司維護，核心原始碼為 Apache 2.0 開源，平台及周邊基於 Elastic License。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;elasticsearch-features&#34;&gt;Elasticsearch Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;分散式，可擴展&lt;/li&gt;
+&lt;li&gt;多租戶&lt;/li&gt;
+&lt;li&gt;RESTful，使用 JSON 和 Java API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-does-elasticsearch-works&#34;&gt;How does Elasticsearch works&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/kafka-analysis-part-1&#34;&gt;https://www.infoq.cn/article/kafka-analysis-part-1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/96826042&#34;&gt;https://zhuanlan.zhihu.com/p/96826042&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Elasticsearch&#34;&gt;https://zh.wikipedia.org/wiki/Elasticsearch&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -715,32 +877,36 @@ RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。&
 &lt;li&gt;裝置相關的檔案或特殊的檔案&lt;/li&gt;
 &lt;li&gt;Unix 或 Linux 系統均把裝置當成是一個檔案來看待&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;etc&#34;&gt;/etc/&lt;/h2&gt;
+&lt;h2 id=&#34;etc&#34;&gt;/etc&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;/etc 存放各種 Host/系統 設定檔&lt;/li&gt;
 &lt;li&gt;裡面的檔案是 static 的&lt;/li&gt;
 &lt;li&gt;不得存放 binary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;etcinitd&#34;&gt;/etc/init.d&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;啟動腳本以及服務腳本&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;etcrcd&#34;&gt;/etc/rc.d&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;記錄一些開關機過程中的 scripts 檔案， scripts 有點像是 DOS 下的批次檔&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;etcopt&#34;&gt;/etc/opt&lt;/h3&gt;
-&lt;h2 id=&#34;root&#34;&gt;/root/&lt;/h2&gt;
+&lt;h2 id=&#34;root&#34;&gt;/root&lt;/h2&gt;
 &lt;p&gt;系統管理員的目錄&lt;/p&gt;
-&lt;h2 id=&#34;sbin&#34;&gt;/sbin/&lt;/h2&gt;
+&lt;h2 id=&#34;sbin&#34;&gt;/sbin&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;System Binaries 及執行檔&lt;/li&gt;
 &lt;li&gt;/sbin/shutdow，關機指令&lt;/li&gt;
 &lt;li&gt;/sbin/fastboot&lt;/li&gt;
 &lt;li&gt;/sbin/reboot&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;tmp&#34;&gt;/tmp/&lt;/h2&gt;
-&lt;h2 id=&#34;usr&#34;&gt;/usr/&lt;/h2&gt;
-&lt;h3 id=&#34;usrbin&#34;&gt;/usr/bin/&lt;/h3&gt;
+&lt;h2 id=&#34;tmp&#34;&gt;/tmp&lt;/h2&gt;
+&lt;h2 id=&#34;usr&#34;&gt;/usr&lt;/h2&gt;
+&lt;h3 id=&#34;usrbin&#34;&gt;/usr/bin&lt;/h3&gt;
 &lt;h3 id=&#34;usrlocal&#34;&gt;/usr/local&lt;/h3&gt;
 &lt;h3 id=&#34;usrlocalbin&#34;&gt;/usr/local/bin&lt;/h3&gt;
-&lt;h2 id=&#34;var&#34;&gt;/var/&lt;/h2&gt;
+&lt;h2 id=&#34;var&#34;&gt;/var&lt;/h2&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://linux.vbird.org/linux_basic/redhat6.1/linux_05file.php&#34;&gt;https://linux.vbird.org/linux_basic/redhat6.1/linux_05file.php&lt;/a&gt;&lt;/li&gt;
@@ -1139,6 +1305,145 @@ free -m
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;https://geekflare.com/netstat/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34;&gt;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kafka &#43; ELK</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</guid>
+      <description>&lt;h2 id=&#34;repos&#34;&gt;Repos&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/wurstmeister/kafka-dockers&#34;&gt;https://github.com/wurstmeister/kafka-dockers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Catalina 10.15.3&lt;/li&gt;
+&lt;li&gt;kafka 2.4.0 (installed by Homebrew)&lt;/li&gt;
+&lt;li&gt;Docker Desktop 2.2.0.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;準備-image&#34;&gt;準備 Image&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;wurstmeister/zookeeper&lt;/li&gt;
+&lt;li&gt;wurstmeister/kafka&lt;/li&gt;
+&lt;li&gt;sebp/elk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker pull wurstmeister/zookeeper
+docker pull wurstmeister/kafka
+docker pull sebp/elk
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;zookeeper&#34;&gt;Zookeeper&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run --name zk -p 2181:2181 -p 2888:2888 -p 3888:3888 --restart always -d zookeeper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;kafka&#34;&gt;Kafka&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+docker run -d --name kafka -p 9092:9092 --link zk --env KAFKA_ZOOKEEPER_CONNECT=zk:2181 --env KAFKA_ADVERTISED_HOST_NAME=${host_ip} --env KAFKA_ADVERTISED_PORT=9092 wurstmeister/kafka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;開個 Topics 測試一下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;host_ip=&amp;quot;HOST_IP&amp;quot;
+
+kafka-topics --create --zookeeper ${host_ip}:2181 --replication-factor 1 --partitions 1 --topic elk_test
+
+kafka-topics --describe --zookeeper ${host_ip}:2181
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不放心的話再寫個訊息&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-topics --create --zookeeper ${host_ip}:2181 --replication-factor 1 --partitions 1 --topic kfk_test
+
+kafka-console-producer --broker-list ${host_ip}:9092 --topic kfk_test
+&amp;gt;
+# 輸入
+# Control+C 關掉
+
+kafka-console-consumer --topic=kfk_test --bootstrap-server=${host_ip}:9092 --from-beginning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;elk&#34;&gt;ELK&lt;/h2&gt;
+&lt;p&gt;Elasticsearch 好像很吃 Memory&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;screen /Users/peteeelol/Library/Containers/com.docker.docker/Data//vms/0/tty
+
+sysctl -w vm.max_map_count=262144
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p 5601:5601 -p 9200:9200 -p 9300:9300 -p 5044:5044 -e ES_MIN_MEM=128m -e ES_MAX_MEM=2048m -it --name elk sebp/elk
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;檢查&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Kibana
+open http://&amp;quot;${host_ip}&amp;quot;:5601
+
+# docker
+$ docker exec elk jps
+105 Elasticsearch
+313 Logstash
+415 Jps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;設定-logstash&#34;&gt;設定 Logstash&lt;/h2&gt;
+&lt;h3 id=&#34;簡單測試&#34;&gt;簡單測試&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker exec -it elk /bin/bash
+
+service --status-all
+
+service logstash stop
+
+/opt/logstash/bin/logstash -e &#39;input { stdin { } } output { elasticsearch { hosts =&amp;gt; [&amp;quot;localhost&amp;quot;] } }&#39;
+...
+...
+...
+Hello
+# Control + C 離開stdin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後一個指令需要跑一下，接著輸入一些訊息&lt;/p&gt;
+&lt;p&gt;離開 Docker 用 Host(Mac) 打開瀏覽器&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;open http://localhost:9200/_search?pretty
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;應該要能看到剛剛 stdin 輸入的訊息&lt;/p&gt;
+&lt;h3 id=&#34;設定檔&#34;&gt;設定檔&lt;/h3&gt;
+&lt;p&gt;回到 Container elk&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/logstash/conf.d/kafka.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;input {
+    kafka {
+        bootstrap_servers =&amp;gt; [&amp;quot;HOST_IP:9092&amp;quot;]
+        group_id =&amp;gt; &amp;quot;test-consumer-group&amp;quot;
+        auto_offset_reset =&amp;gt; &amp;quot;latest&amp;quot;
+        consumer_threads =&amp;gt; 5
+        decorate_events =&amp;gt; true
+        topics =&amp;gt; [&amp;quot;elk_topics&amp;quot;]
+        type =&amp;gt; &amp;quot;bhy&amp;quot;
+    }
+}
+
+output {
+    elasticsearch {
+        hosts =&amp;gt; [&amp;quot;http://localhost:9200&amp;quot;]
+        index =&amp;gt; &amp;quot;myservice-%{+YYYY.MM.dd}&amp;quot;
+        #user =&amp;gt; &amp;quot;elastic&amp;quot;
+        #password =&amp;gt; &amp;quot;changeme&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;更改-logstash-權限&#34;&gt;更改 Logstash 權限&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/init.d/logstash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;將 LS_USER, LS_GROUP 更改為 root&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;LS_USER=root
+LS_GROUP=root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;再把 Logstash 重跑&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;service logstash restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這時候 Logstash 應該就有在接收 Kafka 的 elk_topics 這個 Topic 了，可以用 Host 發送訊息測試看看&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kafka-console-producer --broker-list ${host_ip}:9092 --topic elk_topics
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 Kibana 應該要看到 index 為 my-service 開頭的訊息，代表訊息透過 Kafka-&amp;gt; Logstash -&amp;gt; Elastic Search&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&#34;&gt;https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/wurstmeister/kafka-docker/wiki/Connectivity&#34;&gt;https://github.com/wurstmeister/kafka-docker/wiki/Connectivity&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sermilrod/kafka-elk-docker-compose&#34;&gt;https://github.com/sermilrod/kafka-elk-docker-compose&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

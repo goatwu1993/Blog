@@ -5,28 +5,12 @@
     <link>https://goatwu1993.github.io/blog/posts/hugo-section-template/</link>
       <atom:link href="https://goatwu1993.github.io/blog/posts/hugo-section-template/index.xml" rel="self" type="application/rss+xml" />
     <description>Section Title</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Section Title</title>
       <link>https://goatwu1993.github.io/blog/posts/hugo-section-template/</link>
     </image>
-    
-    <item>
-      <title>What is Kafka</title>
-      <link>https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/posts/hugo-section-template/kafka-p1/</guid>
-      <description>&lt;h2 id=&#34;what-is-kafka&#34;&gt;What is Kafka&lt;/h2&gt;
-&lt;h2 id=&#34;why-do-we-use-kafka&#34;&gt;Why do we use Kafka&lt;/h2&gt;
-&lt;h2 id=&#34;what-is-kafka-used-for&#34;&gt;What is Kafka used for&lt;/h2&gt;
-&lt;h2 id=&#34;how-does-kafka-works&#34;&gt;How does Kafka works&lt;/h2&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/kafka-analysis-part-1&#34;&gt;https://www.infoq.cn/article/kafka-analysis-part-1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
   </channel>
 </rss>

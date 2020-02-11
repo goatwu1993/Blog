@@ -572,6 +572,7 @@
                     <div class="article-style">
                         <h2 id="kafka-architecture">Kafka Architecture</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png" alt="Picture from wiki"></p>
+<hr>
 <h2 id="producers">Producers</h2>
 <ul>
 <li>負責將訊息 push 到 Kafka cluster，任何實作 Producer API 的 Client</li>
@@ -585,7 +586,7 @@
 <ul>
 <li><strong>Broker</strong>: Kafka 的單一節點稱作 Broker</li>
 <li><strong>Kafka Cluster</strong>: 多個 broker 組成 Kafka Cluster</li>
-<li>仲介處理 Consumer 以及 Producer 的訊息</li>
+<li>Broker 可以說是 Apache Kafka 的 Server 端，仲介處理 Client(Consumer 以及 Producer)的訊息</li>
 </ul>
 <h2 id="message">Message</h2>
 <ul>
@@ -614,6 +615,7 @@
 <li><strong>ISR</strong>: 成功同步的 Replica 稱作 ISR</li>
 <li>Replica 用於保證分散式系統的高可用</li>
 </ul>
+<hr>
 <h2 id="zookeeper">ZooKeeper</h2>
 <ul>
 <li>Apache 的另一個分散式專案，可管理系統配置</li>

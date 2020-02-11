@@ -21,11 +21,15 @@ summary: Linux File system
 - 裝置相關的檔案或特殊的檔案
 - Unix 或 Linux 系統均把裝置當成是一個檔案來看待
 
-## /etc/
+## /etc
 
 - /etc 存放各種 Host/系統 設定檔
 - 裡面的檔案是 static 的
 - 不得存放 binary
+
+### /etc/init.d
+
+- 啟動腳本以及服務腳本
 
 ### /etc/rc.d
 
@@ -33,28 +37,28 @@ summary: Linux File system
 
 ### /etc/opt
 
-## /root/
+## /root
 
 系統管理員的目錄
 
-## /sbin/
+## /sbin
 
 - System Binaries 及執行檔
 - /sbin/shutdow，關機指令
 - /sbin/fastboot
 - /sbin/reboot
 
-## /tmp/
+## /tmp
 
-## /usr/
+## /usr
 
-### /usr/bin/
+### /usr/bin
 
 ### /usr/local
 
 ### /usr/local/bin
 
-## /var/
+## /var
 
 ## References
 

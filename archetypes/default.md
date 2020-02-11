@@ -4,6 +4,7 @@ slug: "{{ .Name | title }}"
 summary: "{{ .Name | title }}"
 # Basic settings
 date: {{ .Date }}
+Lastmod: 2020-01-30
 draft: true
 tags: []
 # other configs

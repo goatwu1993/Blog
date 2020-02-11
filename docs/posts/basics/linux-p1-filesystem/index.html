@@ -479,23 +479,24 @@
   <ul>
     <li><a href="#bin">/bin</a></li>
     <li><a href="#dev">/dev</a></li>
-    <li><a href="#etc">/etc/</a>
+    <li><a href="#etc">/etc</a>
       <ul>
+        <li><a href="#etcinitd">/etc/init.d</a></li>
         <li><a href="#etcrcd">/etc/rc.d</a></li>
         <li><a href="#etcopt">/etc/opt</a></li>
       </ul>
     </li>
-    <li><a href="#root">/root/</a></li>
-    <li><a href="#sbin">/sbin/</a></li>
-    <li><a href="#tmp">/tmp/</a></li>
-    <li><a href="#usr">/usr/</a>
+    <li><a href="#root">/root</a></li>
+    <li><a href="#sbin">/sbin</a></li>
+    <li><a href="#tmp">/tmp</a></li>
+    <li><a href="#usr">/usr</a>
       <ul>
-        <li><a href="#usrbin">/usr/bin/</a></li>
+        <li><a href="#usrbin">/usr/bin</a></li>
         <li><a href="#usrlocal">/usr/local</a></li>
         <li><a href="#usrlocalbin">/usr/local/bin</a></li>
       </ul>
     </li>
-    <li><a href="#var">/var/</a></li>
+    <li><a href="#var">/var</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -591,32 +592,36 @@
 <li>裝置相關的檔案或特殊的檔案</li>
 <li>Unix 或 Linux 系統均把裝置當成是一個檔案來看待</li>
 </ul>
-<h2 id="etc">/etc/</h2>
+<h2 id="etc">/etc</h2>
 <ul>
 <li>/etc 存放各種 Host/系統 設定檔</li>
 <li>裡面的檔案是 static 的</li>
 <li>不得存放 binary</li>
+</ul>
+<h3 id="etcinitd">/etc/init.d</h3>
+<ul>
+<li>啟動腳本以及服務腳本</li>
 </ul>
 <h3 id="etcrcd">/etc/rc.d</h3>
 <ul>
 <li>記錄一些開關機過程中的 scripts 檔案， scripts 有點像是 DOS 下的批次檔</li>
 </ul>
 <h3 id="etcopt">/etc/opt</h3>
-<h2 id="root">/root/</h2>
+<h2 id="root">/root</h2>
 <p>系統管理員的目錄</p>
-<h2 id="sbin">/sbin/</h2>
+<h2 id="sbin">/sbin</h2>
 <ul>
 <li>System Binaries 及執行檔</li>
 <li>/sbin/shutdow，關機指令</li>
 <li>/sbin/fastboot</li>
 <li>/sbin/reboot</li>
 </ul>
-<h2 id="tmp">/tmp/</h2>
-<h2 id="usr">/usr/</h2>
-<h3 id="usrbin">/usr/bin/</h3>
+<h2 id="tmp">/tmp</h2>
+<h2 id="usr">/usr</h2>
+<h3 id="usrbin">/usr/bin</h3>
 <h3 id="usrlocal">/usr/local</h3>
 <h3 id="usrlocalbin">/usr/local/bin</h3>
-<h2 id="var">/var/</h2>
+<h2 id="var">/var</h2>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://linux.vbird.org/linux_basic/redhat6.1/linux_05file.php">https://linux.vbird.org/linux_basic/redhat6.1/linux_05file.php</a></li>

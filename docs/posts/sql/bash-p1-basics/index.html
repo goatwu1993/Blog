@@ -477,7 +477,18 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#temporary-table">Temporary Table</a></li>
+    <li><a href="#show-tables">Show tables</a></li>
+    <li><a href="#system-info">System info</a></li>
+    <li><a href="#file-managing">File managing</a></li>
+    <li><a href="#network">Network</a></li>
+    <li><a href="#cpu-memery-task--process">CPU, memery, task & process</a>
+      <ul>
+        <li><a href="#check-and-monitor-process">Check and monitor process</a></li>
+        <li><a href="#sending-signal-or-kill-process">Sending signal or kill process</a></li>
+        <li><a href="#memory-usage">Memory usage</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
             
@@ -561,7 +572,120 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="temporary-table">Temporary Table</h2>
+                        <h2 id="show-tables">Show tables</h2>
+<pre><code class="language-bash">sqlite&gt;.tables
+users
+</code></pre>
+<h2 id="system-info">System info</h2>
+<pre><code class="language-bash">#!/bin/bash
+
+# Show shell name.
+echo $SHELL
+echo $0
+# Show shell version.
+$SHELL --version
+
+# Clear terminal.
+clear
+
+# Show command history.
+history
+
+# Print working directory
+pwd
+
+# Show system info
+uname -a
+
+# uptime
+uptime
+</code></pre>
+<h2 id="file-managing">File managing</h2>
+<pre><code class="language-bash">#!/bin/bash
+
+# List the files in working directory.
+ls
+# List all files, hidden file included, with detailed information.
+ls -la
+</code></pre>
+<h2 id="network">Network</h2>
+<pre><code class="language-bash">#!/bin/bash
+
+# Show network interface config/info.
+ifconfig
+
+# get public ip
+curl icanhazip.com
+
+# Show network status
+netstat
+# Show all, include tcp/udp port.
+netstat -an
+# Show established connection
+netstat -antu | grep 'ESTABLISHED'
+# Show kernel routing information
+netstat -r
+netstat -tulnp
+
+# Check the bridge Interface
+brtcl
+brctl addbr &lt;name&gt;
+
+# ssh
+ssh
+# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+ssh-keygen
+
+# scp
+scp
+</code></pre>
+<h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
+<h3 id="check-and-monitor-process">Check and monitor process</h3>
+<pre><code class="language-bash">#!/bin/bash
+
+# List all process run by user shell
+ps
+# List all process, even by status
+ps aux
+# pstree
+pstree
+
+# Monitor the process status
+top
+# cpu
+top -o cpu
+# memery
+top -o rsize
+
+# List cronjob
+crontab
+# List all cronjob.
+crontab -l
+</code></pre>
+<h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
+<pre><code class="language-bash">#!/bin/bash
+
+# Send a signal to a process
+kill -signal PID
+# Send 15 SIGTERM to a process
+kill $pid
+
+# killall allow you to kill app with name instead of pid
+killall -9 $processname
+# Ask before terminate
+killall -i -9 $processname
+</code></pre>
+<h3 id="memory-usage">Memory usage</h3>
+<pre><code class="language-bash">#!/bin/bash
+
+# Show recent memory usage
+free -m
+</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://geekflare.com/netstat/">https://geekflare.com/netstat/</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l">http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l</a></li>
+</ul>
 
                     </div>
                     
@@ -588,10 +712,9 @@
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/blog/posts/sql/bash-p1-basics/" rel="next">SQL - basic commands</a>
+    <div class="meta-nav">Previous</div>
+    <a href="/blog/posts/sql/bash-p1-basics/" rel="prev">SQL - basic commands</a>
   </div>
-  
   
 </div>
 

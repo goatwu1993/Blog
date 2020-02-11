@@ -1,5 +1,5 @@
 ---
-title: "Title"
+title: "SQL"
 
 # View.
 #   1 = List
