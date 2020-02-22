@@ -337,27 +337,30 @@ man anything
 info anything
 anything --help
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;system-info&#34;&gt;System info&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
-
-# Show shell name.
+&lt;h2 id=&#34;system-information&#34;&gt;System information&lt;/h2&gt;
+&lt;h3 id=&#34;unix-information&#34;&gt;Unix information&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Show unix info
+# Abbreviation for Unix name
+uname
+uname -a
+uname -r
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;shell-information&#34;&gt;Shell information&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Show default shell name.
 echo $SHELL
+# Show current shell name.
 echo $0
+
 # Show shell version.
-$SHELL --version
-
-# Clear terminal.
+/bin/zsh --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;shell-commands&#34;&gt;Shell commands&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Clear terminal.
 clear
-
 # Show command history.
 history
-
 # Print working directory
 pwd
-
-# Show system info
-uname -a
-
 # uptime
 uptime
 &lt;/code&gt;&lt;/pre&gt;
@@ -446,6 +449,33 @@ free -m
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://geekflare.com/netstat/&#34;&gt;https://geekflare.com/netstat/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&#34;&gt;http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bash - basic commands</title>
+      <link>https://goatwu1993.github.io/blog/posts/basics/bash-p1-basics/</link>
+      <pubDate>Sun, 10 Jun 2018 17:20:14 +0800</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/basics/bash-p1-basics/</guid>
+      <description>&lt;h2 id=&#34;frequently-used-environment-variable&#34;&gt;Frequently used environment variable&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo $PATH
+echo $SHELL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Environment variable
+env
+# Set env variable
+env hello=&amp;quot;world&amp;quot;
+export hello=&amp;quot;world&amp;quot;
+# Append to $PATH
+export $PATH = $PATH:&amp;quot;/somedir&amp;quot;
+# Unset env
+env -u hello
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://unix.stackexchange.com/questions/368944/what-is-the-difference-between-env-setenv-export-and-when-to-use&#34;&gt;https://unix.stackexchange.com/questions/368944/what-is-the-difference-between-env-setenv-export-and-when-to-use&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

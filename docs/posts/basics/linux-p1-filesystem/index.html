@@ -478,6 +478,7 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#bin">/bin</a></li>
+    <li><a href="#home">/home</a></li>
     <li><a href="#dev">/dev</a></li>
     <li><a href="#etc">/etc</a>
       <ul>
@@ -486,9 +487,14 @@
         <li><a href="#etcopt">/etc/opt</a></li>
       </ul>
     </li>
+    <li><a href="#lib">/lib</a></li>
+    <li><a href="#lib64">/lib64</a></li>
+    <li><a href="#mnt">/mnt</a></li>
+    <li><a href="#proc">/proc</a></li>
     <li><a href="#root">/root</a></li>
     <li><a href="#sbin">/sbin</a></li>
     <li><a href="#tmp">/tmp</a></li>
+    <li><a href="#var">/var</a></li>
     <li><a href="#usr">/usr</a>
       <ul>
         <li><a href="#usrbin">/usr/bin</a></li>
@@ -496,7 +502,6 @@
         <li><a href="#usrlocalbin">/usr/local/bin</a></li>
       </ul>
     </li>
-    <li><a href="#var">/var</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -583,20 +588,22 @@
                     <div class="article-style">
                         <h2 id="bin">/bin</h2>
 <ul>
-<li>系統基礎的 Binary 檔案</li>
-<li>例如： ls, mv, rm, mkdir, rmdir 常用的執行檔</li>
+<li>系統基礎的 Binary 檔案，如: ls, mv, rm, mkdir, rmdir 常用的執行檔</li>
 <li>內容和/usr/bin 基本相同，有時候會使用連結檔</li>
+</ul>
+<h2 id="home">/home</h2>
+<ul>
+<li>Contains user's home directory</li>
 </ul>
 <h2 id="dev">/dev</h2>
 <ul>
-<li>裝置相關的檔案或特殊的檔案</li>
+<li>Devices，裝置相關的檔案或特殊的檔案</li>
 <li>Unix 或 Linux 系統均把裝置當成是一個檔案來看待</li>
 </ul>
 <h2 id="etc">/etc</h2>
 <ul>
-<li>/etc 存放各種 Host/系統 設定檔</li>
-<li>裡面的檔案是 static 的</li>
-<li>不得存放 binary</li>
+<li>存放 Host 以及系統的設定檔，通常
+是靜態的檔案，並且不會放 binary 或可執行檔</li>
 </ul>
 <h3 id="etcinitd">/etc/init.d</h3>
 <ul>
@@ -607,6 +614,22 @@
 <li>記錄一些開關機過程中的 scripts 檔案， scripts 有點像是 DOS 下的批次檔</li>
 </ul>
 <h3 id="etcopt">/etc/opt</h3>
+<h2 id="lib">/lib</h2>
+<ul>
+<li>Shared Library and kernal modules</li>
+</ul>
+<h2 id="lib64">/lib64</h2>
+<ul>
+<li>Shared Library and kernal modules(x64)</li>
+</ul>
+<h2 id="mnt">/mnt</h2>
+<ul>
+<li>Mounting point of a filesystem.</li>
+</ul>
+<h2 id="proc">/proc</h2>
+<ul>
+<li>Kernal data structure mounted as a filesystem. Only applicable to Linux based OS</li>
+</ul>
 <h2 id="root">/root</h2>
 <p>系統管理員的目錄</p>
 <h2 id="sbin">/sbin</h2>
@@ -617,11 +640,17 @@
 <li>/sbin/reboot</li>
 </ul>
 <h2 id="tmp">/tmp</h2>
+<ul>
+<li>Used for storing temporary data and files</li>
+</ul>
+<h2 id="var">/var</h2>
+<ul>
+<li>時常會更動的檔案</li>
+</ul>
 <h2 id="usr">/usr</h2>
 <h3 id="usrbin">/usr/bin</h3>
 <h3 id="usrlocal">/usr/local</h3>
 <h3 id="usrlocalbin">/usr/local/bin</h3>
-<h2 id="var">/var</h2>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://linux.vbird.org/linux_basic/redhat6.1/linux_05file.php">https://linux.vbird.org/linux_basic/redhat6.1/linux_05file.php</a></li>

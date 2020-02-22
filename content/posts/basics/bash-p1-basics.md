@@ -21,29 +21,39 @@ info anything
 anything --help
 ```
 
-## System info
+## System information
+
+### Unix information
 
 ```bash
-#!/bin/bash
+# Show unix info
+# Abbreviation for Unix name
+uname
+uname -a
+uname -r
+```
 
-# Show shell name.
+### Shell information
+
+```bash
+# Show default shell name.
 echo $SHELL
+# Show current shell name.
 echo $0
-# Show shell version.
-$SHELL --version
 
+# Show shell version.
+/bin/zsh --version
+```
+
+## Shell commands
+
+```bash
 # Clear terminal.
 clear
-
 # Show command history.
 history
-
 # Print working directory
 pwd
-
-# Show system info
-uname -a
-
 # uptime
 uptime
 ```

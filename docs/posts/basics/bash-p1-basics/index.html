@@ -478,7 +478,13 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#manual--help">Manual & help</a></li>
-    <li><a href="#system-info">System info</a></li>
+    <li><a href="#system-information">System information</a>
+      <ul>
+        <li><a href="#unix-information">Unix information</a></li>
+        <li><a href="#shell-information">Shell information</a></li>
+      </ul>
+    </li>
+    <li><a href="#shell-commands">Shell commands</a></li>
     <li><a href="#file-managing">File managing</a></li>
     <li><a href="#network">Network</a></li>
     <li><a href="#cpu-memery-task--process">CPU, memery, task & process</a>
@@ -580,27 +586,30 @@ man anything
 info anything
 anything --help
 </code></pre>
-<h2 id="system-info">System info</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show shell name.
+<h2 id="system-information">System information</h2>
+<h3 id="unix-information">Unix information</h3>
+<pre><code class="language-bash"># Show unix info
+# Abbreviation for Unix name
+uname
+uname -a
+uname -r
+</code></pre>
+<h3 id="shell-information">Shell information</h3>
+<pre><code class="language-bash"># Show default shell name.
 echo $SHELL
+# Show current shell name.
 echo $0
+
 # Show shell version.
-$SHELL --version
-
-# Clear terminal.
+/bin/zsh --version
+</code></pre>
+<h2 id="shell-commands">Shell commands</h2>
+<pre><code class="language-bash"># Clear terminal.
 clear
-
 # Show command history.
 history
-
 # Print working directory
 pwd
-
-# Show system info
-uname -a
-
 # uptime
 uptime
 </code></pre>
@@ -720,6 +729,12 @@ free -m
     <a href="/blog/posts/basics/linux-p1-filesystem/" rel="next">Linux filesystem</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/blog/posts/basics/bash-p1-basics/" rel="prev">Bash - basic commands</a>
+  </div>
   
 </div>
 

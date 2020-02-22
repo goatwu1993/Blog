@@ -12,20 +12,22 @@ summary: Linux File system
 
 ## /bin
 
-- 系統基礎的 Binary 檔案
-- 例如： ls, mv, rm, mkdir, rmdir 常用的執行檔
+- 系統基礎的 Binary 檔案，如: ls, mv, rm, mkdir, rmdir 常用的執行檔
 - 內容和/usr/bin 基本相同，有時候會使用連結檔
+
+## /home
+
+- Contains user's home directory
 
 ## /dev
 
-- 裝置相關的檔案或特殊的檔案
+- Devices，裝置相關的檔案或特殊的檔案
 - Unix 或 Linux 系統均把裝置當成是一個檔案來看待
 
 ## /etc
 
-- /etc 存放各種 Host/系統 設定檔
-- 裡面的檔案是 static 的
-- 不得存放 binary
+- 存放 Host 以及系統的設定檔，通常
+  是靜態的檔案，並且不會放 binary 或可執行檔
 
 ### /etc/init.d
 
@@ -36,6 +38,22 @@ summary: Linux File system
 - 記錄一些開關機過程中的 scripts 檔案， scripts 有點像是 DOS 下的批次檔
 
 ### /etc/opt
+
+## /lib
+
+- Shared Library and kernal modules
+
+## /lib64
+
+- Shared Library and kernal modules(x64)
+
+## /mnt
+
+- Mounting point of a filesystem.
+
+## /proc
+
+- Kernal data structure mounted as a filesystem. Only applicable to Linux based OS
 
 ## /root
 
@@ -50,6 +68,12 @@ summary: Linux File system
 
 ## /tmp
 
+- Used for storing temporary data and files
+
+## /var
+
+- 時常會更動的檔案
+
 ## /usr
 
 ### /usr/bin
@@ -57,8 +81,6 @@ summary: Linux File system
 ### /usr/local
 
 ### /usr/local/bin
-
-## /var
 
 ## References
 
