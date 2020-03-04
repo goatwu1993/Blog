@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache Hadoop | goatwu1993</title>
+    <link>https://goatwu1993.github.io/blog/posts/note-hadoop/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/posts/note-hadoop/index.xml" rel="self" type="application/rss+xml" />
+    <description>Apache Hadoop</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Apache Hadoop</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/</link>
+    </image>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p1-whatishadoop/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p1-whatishadoop/</guid>
+      <description>&lt;h2 id=&#34;what-is-hadoop&#34;&gt;What is Hadoop&lt;/h2&gt;
+&lt;p&gt;Apache Hadoop 是一款支援資料密集型分布式應用程式並以 Apache 2.0 許可協定發布的開源軟體框架。它支援在商品硬體構建的大型叢集上運行的應用程式。Hadoop 是根據 Google 公司發表的 MapReduce 和 Google 檔案系統的論文自行實作而成。所有的 Hadoop 模組都有一個基本假設，即硬體故障是常見情況，應該由框架自動處理。&lt;/p&gt;
+&lt;p&gt;Hadoop 框架透明地為應用提供可靠性和資料移動。它實現了名為 MapReduce 的編程範式：應用程式被分割成許多小部分，而每個部分都能在叢集中的任意節點上執行或重新執行。此外，Hadoop 還提供了分布式檔案系統，用以儲存所有計算節點的資料，這為整個叢集帶來了非常高的帶寬。MapReduce 和分布式檔案系統的設計，使得整個框架能夠自動處理節點故障。它使應用程式與成千上萬的獨立計算的電腦和 PB 級的資料連接起來。&lt;/p&gt;
+&lt;h2 id=&#34;how-hadoop-work&#34;&gt;How Hadoop work&lt;/h2&gt;
+&lt;p&gt;Hadoop 由四個組件組成&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hadoop Distributed File System (HDFS)&lt;/strong&gt;
+&lt;strong&gt;MapReduce&lt;/strong&gt;: 平行計算框架
+&lt;strong&gt;YARN&lt;/strong&gt;: Yet Another Resource Negotiator.
+&lt;strong&gt;Hadoop Common&lt;/strong&gt;: 基本的工具(Java)，讓使用者或 OS 可以和 HDFS 互動&lt;/p&gt;
+&lt;h3 id=&#34;hadoop-eco-system&#34;&gt;Hadoop eco-system&lt;/h3&gt;
+&lt;p&gt;Spark, HBAse, Hive, Kafka, HDFS, etc&lt;/p&gt;
+&lt;h2 id=&#34;referencce&#34;&gt;Referencce&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Apache_Hadoop&#34;&gt;https://zh.wikipedia.org/wiki/Apache_Hadoop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kknews.cc/zh-tw/code/rlyqae4.html&#34;&gt;https://kknews.cc/zh-tw/code/rlyqae4.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <description>&lt;h2 id=&#34;系統需求&#34;&gt;系統需求&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hadoop.apache.org/releases.html&#34;&gt;https://hadoop.apache.org/releases.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;referencce&#34;&gt;Referencce&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Apache_Hadoop&#34;&gt;https://zh.wikipedia.org/wiki/Apache_Hadoop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kknews.cc/zh-tw/code/rlyqae4.html&#34;&gt;https://kknews.cc/zh-tw/code/rlyqae4.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <description>&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;start-dfs.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hdfs namenode -format
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;referencce&#34;&gt;Referencce&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Apache_Hadoop&#34;&gt;https://zh.wikipedia.org/wiki/Apache_Hadoop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kknews.cc/zh-tw/code/rlyqae4.html&#34;&gt;https://kknews.cc/zh-tw/code/rlyqae4.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <description>&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;start-dfs.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hdfs namenode -format
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;referencce&#34;&gt;Referencce&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/Apache_Hadoop&#34;&gt;https://zh.wikipedia.org/wiki/Apache_Hadoop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kknews.cc/zh-tw/code/rlyqae4.html&#34;&gt;https://kknews.cc/zh-tw/code/rlyqae4.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

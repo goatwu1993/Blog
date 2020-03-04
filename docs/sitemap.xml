@@ -8,6 +8,31 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-spark/pyspark-p1-pyspark-install/</loc>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/posts/sql/bash-p1-basics/</loc>
     <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
@@ -34,6 +59,26 @@
   
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p1-whatishadoop/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -103,6 +148,11 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</loc>
+    <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
@@ -115,6 +165,41 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hive/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/bigdata/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/hive/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-spark/</loc>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/pyspark/</loc>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/tags/spark/</loc>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -133,17 +218,12 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/tags/</loc>
-    <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+    <loc>https://goatwu1993.github.io/blog/posts/note-hadoop/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/note-kafka/</loc>
-    <lastmod>2020-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/tags/bigdata/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -165,26 +245,6 @@
   <url>
     <loc>https://goatwu1993.github.io/blog/posts/basics/</loc>
     <lastmod>2020-01-20T19:09:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/note-spark/</loc>
-    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/tags/spark/</loc>
-    <lastmod>2020-01-17T20:33:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-hadoop/</loc>
-    <lastmod>2020-01-17T17:04:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/apache-hadoop/hadoop/</loc>
-    <lastmod>2020-01-17T17:04:13+08:00</lastmod>
   </url>
   
   <url>
@@ -233,17 +293,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/git/</loc>
-    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://goatwu1993.github.io/blog/tags/git/</loc>
-    <lastmod>2019-12-27T21:32:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://goatwu1993.github.io/blog/posts/git/git-commands/</loc>
     <lastmod>2019-12-27T21:32:52+08:00</lastmod>
   </url>
   
@@ -403,6 +453,15 @@
   </url>
   
   <url>
+    <loc>https://goatwu1993.github.io/blog/posts/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://goatwu1993.github.io/blog/posts/note-zookeeper/</loc>
+  </url>
+  
+  <url>
     <loc>https://goatwu1993.github.io/blog/categories/</loc>
   </url>
   
@@ -411,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://goatwu1993.github.io/blog/posts/note-data/</loc>
+    <loc>https://goatwu1993.github.io/blog/posts/note-dataengineer/</loc>
   </url>
   
   <url>

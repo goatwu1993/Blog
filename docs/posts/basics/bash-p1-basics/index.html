@@ -477,23 +477,8 @@
             </ul>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#manual--help">Manual & help</a></li>
-    <li><a href="#system-information">System information</a>
-      <ul>
-        <li><a href="#unix-information">Unix information</a></li>
-        <li><a href="#shell-information">Shell information</a></li>
-      </ul>
-    </li>
-    <li><a href="#shell-commands">Shell commands</a></li>
-    <li><a href="#file-managing">File managing</a></li>
-    <li><a href="#network">Network</a></li>
-    <li><a href="#cpu-memery-task--process">CPU, memery, task & process</a>
-      <ul>
-        <li><a href="#check-and-monitor-process">Check and monitor process</a></li>
-        <li><a href="#sending-signal-or-kill-process">Sending signal or kill process</a></li>
-        <li><a href="#memory-usage">Memory usage</a></li>
-      </ul>
-    </li>
+    <li><a href="#frequently-used-environment-variable">Frequently used environment variable</a></li>
+    <li><a href="#commands">Commands</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -578,126 +563,24 @@
 
                 <div class="article-container">
                     <div class="article-style">
-                        <h2 id="manual--help">Manual &amp; help</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# manual
-man anything
-info anything
-anything --help
-</code></pre>
-<h2 id="system-information">System information</h2>
-<h3 id="unix-information">Unix information</h3>
-<pre><code class="language-bash"># Show unix info
-# Abbreviation for Unix name
-uname
-uname -a
-uname -r
-</code></pre>
-<h3 id="shell-information">Shell information</h3>
-<pre><code class="language-bash"># Show default shell name.
+                        <h2 id="frequently-used-environment-variable">Frequently used environment variable</h2>
+<pre><code class="language-bash">echo $PATH
 echo $SHELL
-# Show current shell name.
-echo $0
-
-# Show shell version.
-/bin/zsh --version
 </code></pre>
-<h2 id="shell-commands">Shell commands</h2>
-<pre><code class="language-bash"># Clear terminal.
-clear
-# Show command history.
-history
-# Print working directory
-pwd
-# uptime
-uptime
-</code></pre>
-<h2 id="file-managing">File managing</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# List the files in working directory.
-ls
-# List all files, hidden file included, with detailed information.
-ls -la
-</code></pre>
-<h2 id="network">Network</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show network interface config/info.
-ifconfig
-
-# get public ip
-curl icanhazip.com
-
-# Show network status
-netstat
-# Show all, include tcp/udp port.
-netstat -an
-# Show established connection
-netstat -antu | grep 'ESTABLISHED'
-# Show kernel routing information
-netstat -r
-netstat -tulnp
-
-# Check the bridge Interface
-brtcl
-brctl addbr &lt;name&gt;
-
-# ssh
-ssh
-# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
-ssh-keygen
-
-# scp
-scp
-</code></pre>
-<h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
-<h3 id="check-and-monitor-process">Check and monitor process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# List all process run by user shell
-ps
-# List all process, even by status
-ps aux
-# pstree
-pstree
-
-# Monitor the process status
-top
-# cpu
-top -o cpu
-# memery
-top -o rsize
-
-# List cronjob
-crontab
-# List all cronjob.
-crontab -l
-</code></pre>
-<h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Send a signal to a process
-kill -signal PID
-# Send 15 SIGTERM to a process
-kill $pid
-
-# killall allow you to kill app with name instead of pid
-killall -9 $processname
-# Ask before terminate
-killall -i -9 $processname
-</code></pre>
-<h3 id="memory-usage">Memory usage</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show recent memory usage
-free -m
+<h2 id="commands">Commands</h2>
+<pre><code class="language-bash"># Environment variable
+env
+# Set env variable
+env hello=&quot;world&quot;
+export hello=&quot;world&quot;
+# Append to $PATH
+export $PATH = $PATH:&quot;/somedir&quot;
+# Unset env
+env -u hello
 </code></pre>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://geekflare.com/netstat/">https://geekflare.com/netstat/</a></li>
-<li><a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l">http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l</a></li>
+<li><a href="https://unix.stackexchange.com/questions/368944/what-is-the-difference-between-env-setenv-export-and-when-to-use">https://unix.stackexchange.com/questions/368944/what-is-the-difference-between-env-setenv-export-and-when-to-use</a></li>
 </ul>
 
                     </div>
@@ -726,15 +609,9 @@ free -m
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/blog/posts/basics/linux-p1-filesystem/" rel="next">Linux filesystem</a>
+    <a href="/blog/posts/basics/bash-p1-basics/" rel="next">Bash - basic commands</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/blog/posts/basics/bash-p1-basics/" rel="prev">Bash - basic commands</a>
-  </div>
   
 </div>
 

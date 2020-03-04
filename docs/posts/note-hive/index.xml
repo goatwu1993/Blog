@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache Hive | goatwu1993</title>
+    <link>https://goatwu1993.github.io/blog/posts/note-hive/</link>
+      <atom:link href="https://goatwu1993.github.io/blog/posts/note-hive/index.xml" rel="self" type="application/rss+xml" />
+    <description>Apache Hive</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Apache Hive</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hive/</link>
+    </image>
+    
+    <item>
+      <title>What is hive</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <description>&lt;h2 id=&#34;what-is-hive&#34;&gt;What is Hive&lt;/h2&gt;
+&lt;p&gt;Apache Hive 是基於 Hadoop 的 Data warehouse 軟體，最初由 Facebook 開發，當資料集很大，Hive 提供一個類似 SQL 的語言以用來讀/寫/管理大量或分散式的數據集&lt;/p&gt;
+&lt;h2 id=&#34;what-can-hive-do&#34;&gt;What can hive do&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;可用 SQL 存取數據的工具，因此可以用來做一些 Datawarehousing 常用到的工作，例如 ETL, Reporting 和資料分析&lt;/li&gt;
+&lt;li&gt;Hive 被用來 query 和管理分散式數 Hadoop，可以是 Apache HDFS 或是 Apache HBase&lt;/li&gt;
+&lt;li&gt;透過 Apache Tez, Apache Spark 或 MapReduce 進行 Query execution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.edureka.co/blog/hive-commands-with-examples&#34;&gt;https://www.edureka.co/blog/hive-commands-with-examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cwiki.apache.org/confluence/display/HIVE&#34;&gt;https://cwiki.apache.org/confluence/display/HIVE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is hive</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <description>&lt;h2 id=&#34;環境配置&#34;&gt;環境配置&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Java
+&lt;ul&gt;
+&lt;li&gt;JDK&lt;/li&gt;
+&lt;li&gt;設置 PATH 和 JAVA_HOME 變量，添加以下命令到〜/.bashrc 文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hadoop&lt;/li&gt;
+&lt;li&gt;HDFS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sciencepal/dockers/tree/master/hadoop_hive_spark_docker&#34;&gt;https://github.com/sciencepal/dockers/tree/master/hadoop_hive_spark_docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tw.gitbook.net/hive/hiveql_select_where.html&#34;&gt;http://tw.gitbook.net/hive/hiveql_select_where.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is hive</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <description>&lt;h2 id=&#34;hive-數據類型&#34;&gt;Hive 數據類型&lt;/h2&gt;
+&lt;p&gt;本章介紹 Hive 不同的數據類型，用於創建表。Hive 所有數據類型分為四種類型，給出如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Numeric Types&lt;/li&gt;
+&lt;li&gt;Date/Time Types&lt;/li&gt;
+&lt;li&gt;String Types&lt;/li&gt;
+&lt;li&gt;Misc Types&lt;/li&gt;
+&lt;li&gt;Complex Types&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types&#34;&gt;https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tw.gitbook.net/hive/hive_data_types.html&#34;&gt;http://tw.gitbook.net/hive/hive_data_types.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is hive</title>
+      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <description>&lt;h2 id=&#34;what-is-hiveql&#34;&gt;What is HiveQL&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hive&amp;gt;create schema if not exists test;
+
+hive&amp;gt;create external table if not exists test.test_data (row1 int, row2 int, row3 decimal(10,3), row4 int) row format delimited fields terminated by &#39;,&#39; stored as textfile location &#39;hdfs://172.18.1.1:9000/user/hadoop/test/&#39;;
+
+hive&amp;gt;select * from test.test_data where row3 &amp;gt; 2.499;
+SELECT * FROM test.test_data WHERE row3 &amp;gt; 2.499;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sciencepal/dockers/tree/master/hadoop_hive_spark_docker&#34;&gt;https://github.com/sciencepal/dockers/tree/master/hadoop_hive_spark_docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tw.gitbook.net/hive/hiveql_select_where.html&#34;&gt;http://tw.gitbook.net/hive/hiveql_select_where.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
