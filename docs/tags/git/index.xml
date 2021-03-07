@@ -1,46 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git | goatwu1993</title>
+    <title>git on goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/git/</link>
-      <atom:link href="https://goatwu1993.github.io/blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    <description>git</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Dec 2019 21:32:52 +0800</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>git</title>
-      <link>https://goatwu1993.github.io/blog/tags/git/</link>
-    </image>
+    <description>Recent content in git on goatwu1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Dec 2019 21:32:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://goatwu1993.github.io/blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Hugo themes</title>
       <link>https://goatwu1993.github.io/blog/posts/hugo/hugo-themes/</link>
       <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/posts/hugo/hugo-themes/</guid>
-      <description>&lt;p&gt;本篇記錄如何使用 hugo 線上的 themes&lt;/p&gt;
-&lt;h2 id=&#34;更正&#34;&gt;更正&lt;/h2&gt;
-&lt;p&gt;如果需要覆蓋 layouts 的話可以直接在根目錄下面建立一個 layouts 資料夾，裡面的內容會 override themes/name/layouts 底下的。&lt;/p&gt;
-&lt;h2 id=&#34;hugo-themes&#34;&gt;Hugo themes&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo 官方線上 themes&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;a-直接-submodule&#34;&gt;a. 直接 submodule&lt;/h3&gt;
-&lt;p&gt;&lt;del&gt;不考慮更改 themes 的 partial/layout/css 的話，直接照抄就好&lt;/del&gt;
-如果不太更動 theme 或是內容比較一般性的話，可以直接 clone。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# submodule
-cd ./themes
-git submodule add https://github.com/avianto/hugo-kiera.git kiera
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;b-fork-再-submodule&#34;&gt;b. fork 再 submodule&lt;/h3&gt;
-&lt;p&gt;如果需要更改一些比較客製化的版本的話請選擇 fork。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# fork
-cd ./themes
-git clone https://github.com/$你的Id/hugo-kiera.git kiera
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;修改-configtoml&#34;&gt;修改 config.toml&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;theme = &amp;quot;kiera&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>

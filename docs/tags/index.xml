@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | goatwu1993</title>
+    <title>Tags on goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/</link>
-      <atom:link href="https://goatwu1993.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Tags</title>
-      <link>https://goatwu1993.github.io/blog/tags/</link>
-    </image>
+    <description>Recent content in Tags on goatwu1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://goatwu1993.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>bigdata</title>
       <link>https://goatwu1993.github.io/blog/tags/bigdata/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/bigdata/</guid>
       <description></description>
     </item>
@@ -24,6 +24,7 @@
       <title>hive</title>
       <link>https://goatwu1993.github.io/blog/tags/hive/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/hive/</guid>
       <description></description>
     </item>
@@ -32,14 +33,16 @@
       <title>pyspark</title>
       <link>https://goatwu1993.github.io/blog/tags/pyspark/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/pyspark/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Spark</title>
+      <title>spark</title>
       <link>https://goatwu1993.github.io/blog/tags/spark/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/spark/</guid>
       <description></description>
     </item>
@@ -48,6 +51,7 @@
       <title>bash</title>
       <link>https://goatwu1993.github.io/blog/tags/bash/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/bash/</guid>
       <description></description>
     </item>
@@ -56,6 +60,7 @@
       <title>shell</title>
       <link>https://goatwu1993.github.io/blog/tags/shell/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/shell/</guid>
       <description></description>
     </item>
@@ -64,6 +69,7 @@
       <title>hadoop</title>
       <link>https://goatwu1993.github.io/blog/tags/hadoop/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/hadoop/</guid>
       <description></description>
     </item>
@@ -72,6 +78,7 @@
       <title>kafka</title>
       <link>https://goatwu1993.github.io/blog/tags/kafka/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/kafka/</guid>
       <description></description>
     </item>
@@ -80,6 +87,7 @@
       <title>commands</title>
       <link>https://goatwu1993.github.io/blog/tags/commands/</link>
       <pubDate>Wed, 15 Jan 2020 20:36:03 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/commands/</guid>
       <description></description>
     </item>
@@ -88,6 +96,7 @@
       <title>Docker</title>
       <link>https://goatwu1993.github.io/blog/tags/docker/</link>
       <pubDate>Wed, 15 Jan 2020 20:36:03 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/docker/</guid>
       <description></description>
     </item>
@@ -96,6 +105,7 @@
       <title>linux</title>
       <link>https://goatwu1993.github.io/blog/tags/linux/</link>
       <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/linux/</guid>
       <description></description>
     </item>
@@ -104,6 +114,7 @@
       <title>macos</title>
       <link>https://goatwu1993.github.io/blog/tags/macos/</link>
       <pubDate>Sat, 28 Dec 2019 19:17:18 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/macos/</guid>
       <description></description>
     </item>
@@ -112,6 +123,7 @@
       <title>git</title>
       <link>https://goatwu1993.github.io/blog/tags/git/</link>
       <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/git/</guid>
       <description></description>
     </item>
@@ -120,6 +132,7 @@
       <title>hugo</title>
       <link>https://goatwu1993.github.io/blog/tags/hugo/</link>
       <pubDate>Fri, 27 Dec 2019 21:32:52 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/hugo/</guid>
       <description></description>
     </item>
@@ -128,6 +141,7 @@
       <title>datastructure</title>
       <link>https://goatwu1993.github.io/blog/tags/datastructure/</link>
       <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/datastructure/</guid>
       <description></description>
     </item>
@@ -136,15 +150,8 @@
       <title>python</title>
       <link>https://goatwu1993.github.io/blog/tags/python/</link>
       <pubDate>Thu, 26 Dec 2019 19:17:18 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Source Themes</title>
-      <link>https://goatwu1993.github.io/blog/tags/source-themes/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://goatwu1993.github.io/blog/tags/source-themes/</guid>
       <description></description>
     </item>
     
@@ -152,6 +159,7 @@
       <title>networking</title>
       <link>https://goatwu1993.github.io/blog/tags/networking/</link>
       <pubDate>Fri, 11 May 2018 11:29:21 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/networking/</guid>
       <description></description>
     </item>
@@ -160,6 +168,7 @@
       <title>Deep Learning</title>
       <link>https://goatwu1993.github.io/blog/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/deep-learning/</guid>
       <description></description>
     </item>
@@ -168,6 +177,7 @@
       <title>Demo</title>
       <link>https://goatwu1993.github.io/blog/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/tags/demo/</guid>
       <description></description>
     </item>

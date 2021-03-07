@@ -1,1083 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.7.0">
-
-  
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Chao Yang Wu">
-
-  
-  
-  
-    
-  
-  <meta name="description" content="Kafka&#43;ELK">
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/">
-
-  
-
-
-  
-  
-  
-  <meta name="theme-color" content="#2962ff">
-  
-
-  
-  
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <head>
+    <title>Kafka Connect Quickstart // goatwu1993</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
 
     
-    
-    
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
-    
-
-    
-
-    
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-        
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
-  
-
-  
-  
-  
-  
-  <link rel="stylesheet" href="/blog/css/academic.css">
-
-  
-
-
-
-
-  
-
-
-  
-
-  <link rel="manifest" href="/blog/index.webmanifest">
-  <link rel="icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/blog/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
-
-  <link rel="canonical" href="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/">
-
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <meta property="twitter:card" content="summary">
-  
-  <meta property="og:site_name" content="goatwu1993">
-  <meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/">
-  <meta property="og:title" content="Kafka &#43; ELK | goatwu1993">
-  <meta property="og:description" content="Kafka&#43;ELK"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
-  
-    
-      <meta property="article:published_time" content="2020-01-30T00:00:00&#43;00:00">
-    
-    <meta property="article:modified_time" content="2020-02-12T00:00:00&#43;00:00">
-  
-
-  
-
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-
-  <title>Kafka &#43; ELK | goatwu1993</title>
-
-</head>
-
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
-
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kafka Connect Quickstart"/>
+<meta name="twitter:description" content="Kafka&#43;ELK"/>
+
+    <meta property="og:title" content="Kafka Connect Quickstart" />
+<meta property="og:description" content="Kafka&#43;ELK" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/" />
+<meta property="article:published_time" content="2020-01-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-12T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://goatwu1993.github.io/blog/"><img class="app-header-avatar" src="" alt="John Doe" /></a>
+      <h1>goatwu1993</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="#posts">Posts</a>
+             - 
+          
+          <a class="app-header-menu-item" href="#about">About</a>
+             - 
+          
+          <a class="app-header-menu-item" href="#tags">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="./posts">Categories</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
         
       </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-  
-
-
-
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
-
-    
-    <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/blog/">goatwu1993</a>
-    </div>
-    
-
-    
-    <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-bars"></i></span>
-    </button>
-    
-
-    
-    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/blog/">goatwu1993</a>
-    </div>
-    
-
-    
-    
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-
+    </header>
+    <main class="app-container">
       
-      <ul class="navbar-nav d-md-inline-flex">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog/#posts"><span>Posts</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog/#about"><span>About</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog/#tags"><span>Tags</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog/posts"><span>Categories</span></a>
-        </li>
-
-        
-        
-
-      
-
-        
-      </ul>
-    </div>
-
-    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-
-    </ul>
-
-  </div>
-</nav>
-
-
-  
-<div class="container-fluid docs">
-    <div class="row flex-xl-nowrap">
-        <div class="d-none d-xl-block col-xl-2 docs-toc">
-            <ul class="nav toc-top">
-                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-            </ul>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#repos">Repos</a></li>
-    <li><a href="#環境">環境</a></li>
-    <li><a href="#準備-image">準備 Image</a></li>
-    <li><a href="#zookeeper">Zookeeper</a></li>
-    <li><a href="#kafka">Kafka</a></li>
-    <li><a href="#elk">ELK</a></li>
-    <li><a href="#設定-logstash">設定 Logstash</a>
-      <ul>
-        <li><a href="#簡單測試">簡單測試</a></li>
-        <li><a href="#設定檔">設定檔</a></li>
-        <li><a href="#更改-logstash-權限">更改 Logstash 權限</a></li>
-      </ul>
-    </li>
-    <li><a href="#references">References</a></li>
-  </ul>
-</nav>
-            
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Kafka Connect Quickstart</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 30, 2020
         </div>
-        <main class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
-            
-            <article class="article">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-<div class="article-container pt-3">
-  <h1>Kafka &#43; ELK</h1>
-
-  
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    Feb 12, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-</div>
-
-
-                <div class="article-container">
-                    <div class="article-style">
-                        <h2 id="repos">Repos</h2>
-<p><a href="https://github.com/wurstmeister/kafka-dockers">https://github.com/wurstmeister/kafka-dockers</a></p>
-<h2 id="環境">環境</h2>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          6 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+              <a class="tag" href="https://goatwu1993.github.io/blog/tags/hadoop/">hadoop</a>
+              <a class="tag" href="https://goatwu1993.github.io/blog/tags/kafka/">kafka</a>
+              <a class="tag" href="https://goatwu1993.github.io/blog/tags/bigdata/">bigdata</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Slighty modified from Confluent&rsquo;s example. Only version is updated.</p>
 <ul>
-<li>macOS Catalina 10.15.3</li>
-<li>kafka 2.4.0 (installed by Homebrew)</li>
-<li>Docker Desktop 2.2.0.0</li>
+<li>confluent platform docker version 5.4.0</li>
+<li>mysql version 8.0.19</li>
 </ul>
-<h2 id="準備-image">準備 Image</h2>
+<p>Note that docker-compose.yml is slightly modified from <a href="https://github.com/confluentinc/cp-docker-images/blob/5.3.0-post/examples/cp-all-in-one/docker-compose.yml">cp-all-in-one</a> in order to be easily understood.</p>
+<p>The docker images is <strong>NOT Size-Mininized</strong>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>wurstmeister/zookeeper</li>
-<li>wurstmeister/kafka</li>
-<li>sebp/elk</li>
+<li>Docker</li>
+<li>Docker Compose</li>
+<li>curl</li>
+<li><strong>Docker-Machine</strong><br>
+Docker for mac is not as native as Linux. Weird network behavior may occur.<br>
+Better use docker-machine to avoid it.</li>
 </ul>
-<pre><code class="language-bash">docker pull wurstmeister/zookeeper
-docker pull wurstmeister/kafka
-docker pull sebp/elk
+<h2 id="mac-start-docker-machine">(Mac) Start Docker-Machine</h2>
+<pre><code class="language-bash"># if using docker-machine
+if [ docker-machine &gt;/dev/null 2&gt;&amp;1 ]
+then
+    docker-machine create --driver virtualbox --virtualbox-memory 6000 confluent
+else
+    echo &quot;Docker is native on your system&quot;
+fi
+echo &quot;continue&quot;
 </code></pre>
-<h2 id="zookeeper">Zookeeper</h2>
-<pre><code class="language-bash">docker run --name zk -p 2181:2181 -p 2888:2888 -p 3888:3888 --restart always -d zookeeper
+<pre><code>Docker machine &quot;confluent&quot; already exists
+continue
 </code></pre>
-<h2 id="kafka">Kafka</h2>
-<pre><code class="language-bash">
-docker run -d --name kafka -p 9092:9092 --link zk --env KAFKA_ZOOKEEPER_CONNECT=zk:2181 --env KAFKA_ADVERTISED_HOST_NAME=${host_ip} --env KAFKA_ADVERTISED_PORT=9092 wurstmeister/kafka
+<pre><code class="language-bash">docker-machine start confluent
+echo &quot;continue&quot;
 </code></pre>
-<p>開個 Topics 測試一下</p>
-<pre><code class="language-bash">host_ip=&quot;HOST_IP&quot;
+<pre><code>Starting &quot;confluent&quot;...
+Machine &quot;confluent&quot; is already running.
+continue
+</code></pre>
+<pre><code class="language-bash">if [ docker-machine &gt;/dev/null 2&gt;&amp;1 ]
+then
+    eval $(docker-machine env confluent)
+else
+    echo &quot;Docker is native on your system&quot;
+fi
+</code></pre>
+<h2 id="download-mysql-jdbc-driver">Download MySQL JDBC Driver</h2>
+<p>It is important to make sure the <strong>version of MySQL-JDBC</strong> match <strong>the version of MySQL</strong>.</p>
+<pre><code class="language-bash">docker-compose stop
+echo
+docker-compose rm -f
+</code></pre>
+<pre><code>Stopping control-center  ...
+Stopping connect         ...
+Stopping schema-registry ...
+Stopping broker          ...
+Stopping zookeeper       ...
+[1Bping zookeeper       ... [32mdone[0m
+Going to remove control-center, quickstart-mysql, connect, schema-registry, broker, zookeeper
+Removing control-center   ...
+Removing quickstart-mysql ...
+Removing connect          ...
+Removing schema-registry  ...
+Removing broker           ...
+Removing zookeeper        ...
+[6Bving control-center   ... [32mdone[0m
+</code></pre>
+<pre><code class="language-bash">docker run --rm mysql --version
+</code></pre>
+<pre><code>/usr/sbin/mysqld  Ver 8.0.19 for Linux on x86_64 (MySQL Community Server - GPL)
+</code></pre>
+<pre><code class="language-bash">if [ docker-machine &gt;/dev/null 2&gt;&amp;1 ]
+then
+    docker-machine ssh confluent -- \
+    &quot;&quot;&quot;
+    sudo mkdir -p /tmp/quickstart/jars;
+    sudo curl -k \
+        -s \
+        -SL \
+        \&quot;http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.19.tar.gz\&quot; |
+        sudo tar -xzf - -C \
+            /tmp/quickstart/jars \
+            --strip-components=1 \
+            mysql-connector-java-8.0.19/mysql-connector-java-8.0.19.jar;
+    ls -la /tmp/quickstart/jars
+    &quot;&quot;&quot;
+else
+    sudo mkdir -p /tmp/quickstart/jars;
+    sudo curl -k \
+        -s \
+        -SL \
+        \&quot;http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.19.tar.gz\&quot; |
+        sudo tar -xzf - -C \
+            /tmp/quickstart/jars \
+            --strip-components=1 \
+            mysql-connector-java-8.0.19/mysql-connector-java-8.0.19.jar;
+    ls -la /tmp/quickstart/jars
+fi
+</code></pre>
+<pre><code>total 2312
+drwxr-xr-x    2 root     root          4096 Mar  2 22:27 .
+drwxr-xr-x    4 root     root          4096 Mar  2 22:19 ..
+-rw-r--r--    1 root     root       2356711 Dec  4 11:44 mysql-connector-java-8.0.19.jar
+</code></pre>
+<h3 id="mysql-jdbc">MySQL-JDBC</h3>
+<ul>
+<li><a href="https://dev.mysql.com/downloads/connector/j/">MySQL Engineering Blogs</a></li>
+<li><a href="https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.19">mvnrepository</a></li>
+</ul>
+<h2 id="start-docker-compose">Start Docker Compose</h2>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<pre><code>Creating zookeeper ...
+[1BCreating broker    ... mdone[0m
+[1BCreating schema-registry ... [0m
+[1BCreating connect         ... mdone[0m
+[1BCreating control-center  ... mdone[0m
+Creating quickstart-mysql ...
+[1Bting quickstart-mysql ... [32mdone[0m
+</code></pre>
+<h2 id="insert-data-into-mysql">Insert data into MySQL</h2>
+<p>MySQL container may take a while until it can function.</p>
+<pre><code class="language-bash"># Nasty script to wait for mysql be ready
+while ! docker exec quickstart-mysql mysql --user=confluent --password=confluent -e &quot;SELECT 1&quot; &gt;/dev/null 2&gt;&amp;1; do
+    sleep 1
+done
+</code></pre>
+<pre><code class="language-bash">docker exec -i quickstart-mysql mysql -u confluent -pconfluent &lt;&lt;&lt; &quot;&quot;&quot;
+CREATE DATABASE IF NOT EXISTS connect_test;
+USE connect_test;
 
-kafka-topics --create --zookeeper ${host_ip}:2181 --replication-factor 1 --partitions 1 --topic elk_test
+DROP TABLE IF EXISTS test;
 
-kafka-topics --describe --zookeeper ${host_ip}:2181
-</code></pre>
-<p>不放心的話再寫個訊息</p>
-<pre><code class="language-bash">kafka-topics --create --zookeeper ${host_ip}:2181 --replication-factor 1 --partitions 1 --topic kfk_test
+CREATE TABLE IF NOT EXISTS test (
+  id serial NOT NULL PRIMARY KEY,
+  name varchar(100),
+  email varchar(200),
+  department varchar(200),
+  modified timestamp default CURRENT_TIMESTAMP NOT NULL,
+  INDEX \`modified_index\` (\`modified\`)
+);
 
-kafka-console-producer --broker-list ${host_ip}:9092 --topic kfk_test
-&gt;
-# 輸入
-# Control+C 關掉
-
-kafka-console-consumer --topic=kfk_test --bootstrap-server=${host_ip}:9092 --from-beginning
+INSERT INTO test (name, email, department) VALUES ('alice', 'alice@abc.com', 'engineering');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+INSERT INTO test (name, email, department) VALUES ('bob', 'bob@abc.com', 'sales');
+SELECT * FROM test;
+&quot;&quot;&quot;
 </code></pre>
-<h2 id="elk">ELK</h2>
-<p>Elasticsearch 好像很吃 Memory</p>
-<pre><code class="language-bash">screen /Users/peteeelol/Library/Containers/com.docker.docker/Data//vms/0/tty
-
-sysctl -w vm.max_map_count=262144
+<pre><code>mysql: [Warning] Using a password on the command line interface can be insecure.
+id	name	email	department	modified
+1	alice	alice@abc.com	engineering	2020-03-02 22:29:15
+2	bob	bob@abc.com	sales	2020-03-02 22:29:15
+3	bob	bob@abc.com	sales	2020-03-02 22:29:15
+4	bob	bob@abc.com	sales	2020-03-02 22:29:15
+5	bob	bob@abc.com	sales	2020-03-02 22:29:15
+6	bob	bob@abc.com	sales	2020-03-02 22:29:15
+7	bob	bob@abc.com	sales	2020-03-02 22:29:15
+8	bob	bob@abc.com	sales	2020-03-02 22:29:15
+9	bob	bob@abc.com	sales	2020-03-02 22:29:15
+10	bob	bob@abc.com	sales	2020-03-02 22:29:15
 </code></pre>
-<pre><code class="language-bash">docker run -d -p 5601:5601 -p 9200:9200 -p 9300:9300 -p 5044:5044 -e ES_MIN_MEM=128m -e ES_MAX_MEM=2048m -it --name elk sebp/elk
+<h2 id="source-connector">Source Connector</h2>
+<h3 id="add-source-connector">Add source connector</h3>
+<p>Either API or Web UI(Confluent Platform) will acheive the goal.</p>
+<pre><code class="language-bash">export CONNECT_NET=&quot;kafka-connect-mysql_default&quot;
 </code></pre>
-<p>檢查</p>
-<pre><code class="language-bash"># Kibana
-open http://&quot;${host_ip}&quot;:5601
-
-# docker
-$ docker exec elk jps
-105 Elasticsearch
-313 Logstash
-415 Jps
+<p>We have to wait for Kafka Connect to totally start up.</p>
+<p>To speed up the process, remove some directory from <strong>CONNECT_PLUGIN_PATH</strong></p>
+<pre><code class="language-bash">      #CONNECT_PLUGIN_PATH: &quot;/usr/share/java,/usr/share/confluent-hub-components&quot;
+      CONNECT_PLUGIN_PATH: &quot;\
+        /usr/share/java/kafka,\
+        /usr/share/confluent-hub-components,\
+        /usr/share/java/kafka-connect-jdbc,\
+        /etc/kafka-connect/jars&quot;
 </code></pre>
-<h2 id="設定-logstash">設定 Logstash</h2>
-<h3 id="簡單測試">簡單測試</h3>
-<pre><code class="language-bash">$ docker exec -it elk /bin/bash
-
-service --status-all
-
-service logstash stop
-
-/opt/logstash/bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts =&gt; [&quot;localhost&quot;] } }'
-...
-...
-...
-Hello
-# Control + C 離開stdin
+<pre><code class="language-bash">while ! docker logs connect 2&gt;&amp;1 | grep -i &quot;INFO Kafka Connect started&quot; ; do
+     sleep 1
+done
 </code></pre>
-<p>最後一個指令需要跑一下，接著輸入一些訊息</p>
-<p>離開 Docker 用 Host(Mac) 打開瀏覽器</p>
-<pre><code class="language-bash">open http://localhost:9200/_search?pretty
+<pre><code>[2020-03-02 22:32:15,768] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect)
 </code></pre>
-<p>應該要能看到剛剛 stdin 輸入的訊息</p>
-<h3 id="設定檔">設定檔</h3>
-<p>回到 Container elk</p>
-<pre><code class="language-bash">vim /etc/logstash/conf.d/kafka.conf
+<pre><code class="language-bash"># Call the API of connect
+docker run \
+    --net=&quot;${CONNECT_NET}&quot; \
+    --rm curlimages/curl:7.68.0 \
+    -X POST \
+    -s \
+    -H &quot;Content-Type: application/json&quot; \
+    --data '{ &quot;name&quot;: &quot;quickstart-jdbc-source&quot;, &quot;config&quot;: { &quot;connector.class&quot;: &quot;io.confluent.connect.jdbc.JdbcSourceConnector&quot;, &quot;tasks.max&quot;: 1, &quot;connection.url&quot;: &quot;jdbc:mysql://quickstart-mysql:3306/connect_test?user=root&amp;password=confluent&quot;, &quot;mode&quot;: &quot;incrementing&quot;, &quot;incrementing.column.name&quot;: &quot;id&quot;, &quot;timestamp.column.name&quot;: &quot;modified&quot;, &quot;topic.prefix&quot;: &quot;quickstart-jdbc-&quot;, &quot;poll.interval.ms&quot;: 1000 } }' \
+    http://connect:8083/connectors
 </code></pre>
-<pre><code class="language-bash">input {
-    kafka {
-        bootstrap_servers =&gt; [&quot;HOST_IP:9092&quot;]
-        group_id =&gt; &quot;test-consumer-group&quot;
-        auto_offset_reset =&gt; &quot;latest&quot;
-        consumer_threads =&gt; 5
-        decorate_events =&gt; true
-        topics =&gt; [&quot;elk_topics&quot;]
-        type =&gt; &quot;bhy&quot;
-    }
-}
-
-output {
-    elasticsearch {
-        hosts =&gt; [&quot;http://localhost:9200&quot;]
-        index =&gt; &quot;myservice-%{+YYYY.MM.dd}&quot;
-        #user =&gt; &quot;elastic&quot;
-        #password =&gt; &quot;changeme&quot;
-    }
-}
+<pre><code>{&quot;name&quot;:&quot;quickstart-jdbc-source&quot;,&quot;config&quot;:{&quot;connector.class&quot;:&quot;io.confluent.connect.jdbc.JdbcSourceConnector&quot;,&quot;tasks.max&quot;:&quot;1&quot;,&quot;connection.url&quot;:&quot;jdbc:mysql://quickstart-mysql:3306/connect_test?user=root&amp;password=confluent&quot;,&quot;mode&quot;:&quot;incrementing&quot;,&quot;incrementing.column.name&quot;:&quot;id&quot;,&quot;timestamp.column.name&quot;:&quot;modified&quot;,&quot;topic.prefix&quot;:&quot;quickstart-jdbc-&quot;,&quot;poll.interval.ms&quot;:&quot;1000&quot;,&quot;name&quot;:&quot;quickstart-jdbc-source&quot;},&quot;tasks&quot;:[],&quot;type&quot;:&quot;source&quot;}
 </code></pre>
-<h3 id="更改-logstash-權限">更改 Logstash 權限</h3>
-<pre><code class="language-bash">vim /etc/init.d/logstash
+<h3 id="if-error-message-is-received">If error message is received</h3>
+<p>Make sure MySQL-JDBC JAR file is correctly mounted to container.</p>
+<pre><code class="language-bash">docker exec connect env | grep -e &quot;^CONNECT_PLUGIN_PATH&quot;
 </code></pre>
-<p>將 LS_USER, LS_GROUP 更改為 root</p>
-<pre><code class="language-vim">LS_USER=root
-LS_GROUP=root
+<pre><code>CONNECT_PLUGIN_PATH=/usr/share/java/kafka,/usr/share/confluent-hub-components,/usr/share/java/kafka-connect-jdbc,/etc/kafka-connect/jars
 </code></pre>
-<p>再把 Logstash 重跑</p>
-<pre><code class="language-bash">service logstash restart
+<pre><code class="language-bash">docker exec connect ls -la /etc/kafka-connect/jars
 </code></pre>
-<p>這時候 Logstash 應該就有在接收 Kafka 的 elk_topics 這個 Topic 了，可以用 Host 發送訊息測試看看</p>
-<pre><code class="language-bash">kafka-console-producer --broker-list ${host_ip}:9092 --topic elk_topics
+<pre><code>total 2312
+drwxr-xr-x 2 root root    4096 Mar  2 22:27 .
+drwxrwxrwx 1 root root    4096 Mar  2 22:28 ..
+-rw-r--r-- 1 root root 2356711 Dec  4 11:44 mysql-connector-java-8.0.19.jar
 </code></pre>
-<p>在 Kibana 應該要看到 index 為 my-service 開頭的訊息，代表訊息透過 Kafka-&gt; Logstash -&gt; Elastic Search</p>
+<p>Higher the logging level from docker-compose.yml and run again</p>
+<pre><code class="language-bash">    #CONNECT_LOG4J_ROOT_LOGLEVEL: &quot;DEBUG&quot;
+</code></pre>
+<h3 id="status-check">Status Check</h3>
+<pre><code class="language-bash"># Check if new topic is created
+docker run \
+    --net=&quot;${CONNECT_NET}&quot; \
+    --rm \
+    confluentinc/cp-kafka:5.4.0 \
+    kafka-topics --describe \
+    --zookeeper zookeeper:2181 \
+    --topic quickstart-jdbc-test
+</code></pre>
+<pre><code>Topic: quickstart-jdbc-test	PartitionCount: 1	ReplicationFactor: 1	Configs:
+    Topic: quickstart-jdbc-test	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+</code></pre>
+<pre><code class="language-bash">docker exec schema-registry \
+    kafka-avro-console-consumer \
+    --bootstrap-server broker:29092 \
+    --topic quickstart-jdbc-test \
+    --from-beginning \
+    --property print.key=true \
+    --max-messages 10 | \
+    grep -e &quot;^null&quot;
+</code></pre>
+<pre><code>null	{&quot;id&quot;:1,&quot;name&quot;:{&quot;string&quot;:&quot;alice&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;alice@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;engineering&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:2,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:3,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:4,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:5,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:6,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:7,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:8,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:9,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+null	{&quot;id&quot;:10,&quot;name&quot;:{&quot;string&quot;:&quot;bob&quot;},&quot;email&quot;:{&quot;string&quot;:&quot;bob@abc.com&quot;},&quot;department&quot;:{&quot;string&quot;:&quot;sales&quot;},&quot;modified&quot;:1583188155000}
+Processed a total of 10 messages
+</code></pre>
+<h2 id="sink-connector">Sink Connector</h2>
+<h3 id="add-sink-connector">Add sink connector</h3>
+<pre><code class="language-bash"># Call the API of connect
+docker run \
+    --net=&quot;${CONNECT_NET}&quot; \
+    --rm \
+    curlimages/curl:7.68.0 \
+    -s -X POST \
+    -H &quot;Content-Type: application/json&quot; \
+    --data '{&quot;name&quot;: &quot;quickstart-avro-file-sink&quot;, &quot;config&quot;: {&quot;connector.class&quot;:&quot;org.apache.kafka.connect.file.FileStreamSinkConnector&quot;, &quot;tasks.max&quot;:&quot;1&quot;, &quot;topics&quot;:&quot;quickstart-jdbc-test&quot;, &quot;file&quot;: &quot;/tmp/quickstart/jdbc-output.txt&quot;}}' \
+    http://connect:8083/connectors
+</code></pre>
+<pre><code>{&quot;name&quot;:&quot;quickstart-avro-file-sink&quot;,&quot;config&quot;:{&quot;connector.class&quot;:&quot;org.apache.kafka.connect.file.FileStreamSinkConnector&quot;,&quot;tasks.max&quot;:&quot;1&quot;,&quot;topics&quot;:&quot;quickstart-jdbc-test&quot;,&quot;file&quot;:&quot;/tmp/quickstart/jdbc-output.txt&quot;,&quot;name&quot;:&quot;quickstart-avro-file-sink&quot;},&quot;tasks&quot;:[],&quot;type&quot;:&quot;sink&quot;}
+</code></pre>
+<h3 id="status-check-sink">Status check (Sink)</h3>
+<pre><code class="language-bash"># Check connector status through API
+docker run \
+    --net=&quot;${CONNECT_NET}&quot; \
+    --rm \
+    curlimages/curl:7.68.0 \
+    -s -X GET http://connect:8083/connectors/quickstart-avro-file-sink/status
+</code></pre>
+<pre><code>{&quot;name&quot;:&quot;quickstart-avro-file-sink&quot;,&quot;connector&quot;:{&quot;state&quot;:&quot;RUNNING&quot;,&quot;worker_id&quot;:&quot;connect:8083&quot;},&quot;tasks&quot;:[{&quot;id&quot;:0,&quot;state&quot;:&quot;RUNNING&quot;,&quot;worker_id&quot;:&quot;connect:8083&quot;}],&quot;type&quot;:&quot;sink&quot;}
+</code></pre>
+<h2 id="results">Results</h2>
+<pre><code class="language-bash"># if using docker-machine
+if [ docker-machine &gt;/dev/null 2&gt;&amp;1 ]
+then
+    docker-machine ssh confluent -- cat /tmp/quickstart/file/jdbc-output.txt
+else
+    cat /tmp/quickstart/file/jdbc-output.txt
+fi
+</code></pre>
+<pre><code>Struct{id=1,name=alice,email=alice@abc.com,department=engineering,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=2,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=3,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=4,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=5,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=6,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=7,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=8,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=9,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=10,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+</code></pre>
+<pre><code class="language-bash">docker-compose stop
+</code></pre>
+<pre><code>Stopping control-center   ...
+Stopping quickstart-mysql ...
+Stopping connect          ...
+Stopping schema-registry  ...
+Stopping broker           ...
+Stopping zookeeper        ...
+[1Bping zookeeper        ... [32mdone[0m
+</code></pre>
 <h2 id="references">References</h2>
 <ul>
-<li>
-<p><a href="https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab">https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab</a></p>
-</li>
-<li>
-<p><a href="https://github.com/wurstmeister/kafka-docker/wiki/Connectivity">https://github.com/wurstmeister/kafka-docker/wiki/Connectivity</a></p>
-</li>
-<li>
-<p><a href="https://github.com/sermilrod/kafka-elk-docker-compose">https://github.com/sermilrod/kafka-elk-docker-compose</a></p>
-</li>
-</ul>
-
-                    </div>
-                    
-
-
-
-
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/blog/tags/hadoop/">hadoop</a>
-  
-  <a class="badge badge-light" href="/blog/tags/kafka/">kafka</a>
-  
-  <a class="badge badge-light" href="/blog/tags/bigdata/">bigdata</a>
-  
-</div>
-
-
-
-
-<div class="article-widget">
-  
-<div class="post-nav">
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/blog/posts/note-kafka/kafka-p1/" rel="next">What is Kafka</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/blog/posts/note-kafka/kafka-elk/" rel="prev">Kafka Connect Quickstart</a>
-  </div>
-  
-</div>
-
-</div>
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;text=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;t=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=Kafka%20&#43;%20ELK&amp;body=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;title=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://web.whatsapp.com/send?text=Kafka%20&#43;%20ELK%20https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/&amp;title=Kafka%20&#43;%20ELK" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <img class="avatar mr-3 avatar-circle" src="/blog/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://goatwu1993.github.io/blog/">Chao Yang Wu</a></h5>
-      <h6 class="card-subtitle">Software Engineer</h6>
-      <p class="card-text">Former Networking R&amp;D Engineer. Self-taught backend engineer and data engineer.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:peteeelol@gmail.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/goatwu1993/" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
+<li><a href="https://docs.confluent.io/5.0.0/installation/docker/docs/installation/connect-avro-jdbc.html">https://docs.confluent.io/5.0.0/installation/docker/docs/installation/connect-avro-jdbc.html</a></li>
+<li><a href="https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found">https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/#no-suitable-driver-found</a></li>
+<li><a href="https://rmoff.net/post/kafka-connect-change-log-level-and-write-log-to-file/">https://rmoff.net/post/kafka-connect-change-log-level-and-write-log-to-file/</a></li>
+<li><a href="https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking">https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking</a></li>
 </ul>
 
     </div>
-  </div>
-
-
-
-
-
-                </div>
-            </article>
-            
-        </main>
+    <div class="post-footer">
+      
     </div>
-</div>
+  </article>
 
-
-      
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-
-      
-
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
-        
-      
-
-    
-
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
-    
-
-    
-    
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/blog/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    
-    
-    
-    <script src="/blog/js/academic.min.c4716762638572b143da1c828c87dcd8.js"></script>
-
-    
-
-
-
-
-
-
-  
-  
-  <div class="container">
-    <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-  </div>
-  
-
-  
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
+    </main>
+  </body>
 </html>

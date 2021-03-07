@@ -1,129 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spark | goatwu1993</title>
+    <title>spark on goatwu1993</title>
     <link>https://goatwu1993.github.io/blog/tags/spark/</link>
-      <atom:link href="https://goatwu1993.github.io/blog/tags/spark/index.xml" rel="self" type="application/rss+xml" />
-    <description>Spark</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Spark</title>
-      <link>https://goatwu1993.github.io/blog/tags/spark/</link>
-    </image>
+    <description>Recent content in spark on goatwu1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://goatwu1993.github.io/blog/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>pyspark install</title>
       <link>https://goatwu1993.github.io/blog/posts/note-spark/pyspark-p1-pyspark-install/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/posts/note-spark/pyspark-p1-pyspark-install/</guid>
-      <description>&lt;h2 id=&#34;pyspark&#34;&gt;pyspark&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apt-get install python3
-pip3 install pyspark
-pip3 install py4j
-pip3 install findspark
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://opensource.com/article/18/11/pyspark-jupyter-notebook&#34;&gt;https://opensource.com/article/18/11/pyspark-jupyter-notebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>pyspark quick install</description>
     </item>
     
     <item>
       <title>Apache Spark Setup</title>
       <link>https://goatwu1993.github.io/blog/posts/note-spark/spark-p2-setup/</link>
       <pubDate>Fri, 17 Jan 2020 20:33:38 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/posts/note-spark/spark-p2-setup/</guid>
-      <description>&lt;h2 id=&#34;spark-installation&#34;&gt;Spark Installation&lt;/h2&gt;
-&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;macOS
-&lt;ul&gt;
-&lt;li&gt;Homebrew&lt;/li&gt;
-&lt;li&gt;xcode-select&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Java&lt;/li&gt;
-&lt;li&gt;Scala&lt;/li&gt;
-&lt;li&gt;Apache Spark&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ spark-shell
-...
-...
-...
-scala&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/users/20103839/ironman/1210&#34;&gt;https://ithelp.ithome.com.tw/users/20103839/ironman/1210&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/&#34;&gt;https://intellipaat.com/blog/tutorial/spark-tutorial/downloading-spark-and-getting-started/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Apache prerequisite at macOS</description>
     </item>
     
     <item>
       <title>What is Apache Spark</title>
       <link>https://goatwu1993.github.io/blog/posts/note-spark/spark-p1-whatis/</link>
       <pubDate>Fri, 17 Jan 2020 17:04:13 +0800</pubDate>
+      
       <guid>https://goatwu1993.github.io/blog/posts/note-spark/spark-p1-whatis/</guid>
-      <description>&lt;h2 id=&#34;what-is-spark&#34;&gt;What is Spark&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Spark 是一個開源叢集式運算，用來替代 Hadoop Map Reduce 的部分功能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
-Spark(Spark) --&amp;gt; Core(Spark Core)
-Spark --&amp;gt; D(Spark SQL)
-Spark --&amp;gt; E(Spark Streaming)
-Spark --&amp;gt; F(MLlib)
-Spark --&amp;gt; G(GraphX)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;spark-特點&#34;&gt;Spark 特點&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Spark 允許用戶將資料載入至叢集記憶體，並多次對其進行查詢，非常適合用於機器學習演算法&lt;/li&gt;
-&lt;li&gt;提供 Java, Scala, Python 及 R 語言 API&lt;/li&gt;
-&lt;li&gt;記憶體內的快取資料集，可進行互動式資料分析(相對於 Hadoop MapReduce)&lt;/li&gt;
-&lt;li&gt;Scala 或 Python 中的互動式命令列介面可降低橫向擴展資料探索的反應時間。&lt;/li&gt;
-&lt;li&gt;Spark Streaming 對即時資料串流的處理具有可擴充性、高吞吐量、可容錯性等特點。&lt;/li&gt;
-&lt;li&gt;Spark SQL 支援結構化和關聯式查詢處理（SQL）。&lt;/li&gt;
-&lt;li&gt;MLlib 機器學習演算法和 Graphx 圖形處理演算法的高階函式庫。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;spark-特點-1&#34;&gt;Spark 特點&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;In Memory Storage&lt;/li&gt;
-&lt;li&gt;Immutability&lt;br&gt;
-通過 Spark Core RDD 的概念來儲存數據，RDD 被創建之後沒有辦法修改，Transfromation 只會產生一個新的 RDD&lt;/li&gt;
-&lt;li&gt;Lazy Evaluation&lt;br&gt;
-數值直到 Action 才會被計算出來&lt;/li&gt;
-&lt;li&gt;Partitioning&lt;br&gt;
-計算會被指派到 RDD Partition，Partition 的數目直接關係到平行運算的程度。&lt;/li&gt;
-&lt;li&gt;支援容錯機制&lt;br&gt;
-紀錄各個 RDD 的產生過程(稱為 RDD Lineage)，當節點失效時可從 Parent RDD 重新推算失效節點的 Partition。&lt;/li&gt;
-&lt;li&gt;容錯機制最佳化
-Transfromation 函數分為寬依賴及窄依賴，窄依賴的情況下可直接用 Partition 推算 Child Partition，不需整組 RDD 從新推算。&lt;/li&gt;
-&lt;li&gt;Persistence
-可以根據資料是否會重新使用，指定存放在記憶體或磁碟。&lt;/li&gt;
-&lt;li&gt;No Limitation&lt;br&gt;
-RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;spark-core&#34;&gt;Spark Core&lt;/h2&gt;
-&lt;p&gt;Spark Core 是整個專案的基礎，提供了分散式任務調度、排程及基本的 I/O，其基礎的程式抽象被稱為 Resilient Distributed Dataset (RDD)&lt;/p&gt;
-&lt;h2 id=&#34;spark-sql&#34;&gt;Spark SQL&lt;/h2&gt;
-&lt;p&gt;Spark SQL 在 Spark 核心上帶出一種名為 SchemaRDD 的資料抽象化概念，提供結構化和半結構化資料相關的支援。Spark SQL 提供了領域特定語言，可使用 Scala、Java 或 Python 來操縱 SchemaRDDs。它還支援使用使用命令行介面和 ODBC／JDBC 伺服器操作 SQL 語言。在 Spark 1.3 版本，SchemaRDD 被重新命名為 DataFrame。&lt;/p&gt;
-&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
-&lt;p&gt;Spark Streaming 充分利用 Spark 核心的快速排程能力來執行串流分析。它擷取小批次的資料並對之執行 RDD 轉換。這種設計使串流分析可在同一個引擎內使用同一組為批次分析編寫而撰寫的應用程式碼。&lt;/p&gt;
-&lt;h2 id=&#34;mllib&#34;&gt;MLlib&lt;/h2&gt;
-&lt;p&gt;MLlib 是 Spark 上分散式機器學習框架。Spark 分散式記憶體式的架構比 Hadoop 磁碟式的 Apache Mahout 快上 10 倍，擴充性甚至比 Vowpal Wabbit 要好。MLlib 可使用許多常見的機器學習和統計演算法，簡化大規模機器學習時間&lt;/p&gt;
-&lt;h2 id=&#34;graphx&#34;&gt;GraphX&lt;/h2&gt;
-&lt;p&gt;GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，可用於表達圖表計算並可以類比 Pregel 抽象化。GraphX 還對這種抽象化提供了最佳化運行。&lt;/p&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/Apache_Spark&#34;&gt;https://zh.wikipedia.org/zh-tw/Apache_Spark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.quora.com/What-are-the-advantages-of-RDD&#34;&gt;https://www.quora.com/What-are-the-advantages-of-RDD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/405603/&#34;&gt;https://codertw.com/程式語言/405603/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Apache spark base concept.</description>
     </item>
     
   </channel>
