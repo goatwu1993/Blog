@@ -2,4 +2,4 @@
 
 [![github pages](https://github.com/goatwu1993/blog/actions/workflows/main.yml/badge.svg)](https://github.com/goatwu1993/blog/actions/workflows/main.yml)
 
-Powered by the [Academic theme](https://sourcethemes.com/academic/) for [Hugo](https://gohugo.io/).
+Powered by the [m10c theme](https://themes.gohugo.io/hugo-theme-m10c/) for [Hugo](https://gohugo.io/).
