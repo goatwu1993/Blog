@@ -1,1 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Hadoop on Goatwu1993</title><link>https://goatwu1993.github.io/posts/note-hadoop/</link><description>Recent content in Apache Hadoop on Goatwu1993</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://goatwu1993.github.io/posts/note-hadoop/index.xml" rel="self" type="application/rss+xml"/><item><title>What is Hadoop</title><link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p1-whatishadoop/</link><pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate><guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p1-whatishadoop/</guid><description>Hadoop brief introduction</description></item><item><title>What is Hadoop</title><link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link><pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate><guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid><description>HDFS quick install</description></item><item><title>What is Hadoop</title><link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link><pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate><guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid><description>HDFS quick install</description></item><item><title>What is Hadoop</title><link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link><pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate><guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid><description>HDFS quick install</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache Hadoop on Goatwu1993</title>
+    <link>https://goatwu1993.github.io/posts/note-hadoop/</link>
+    <description>Recent content in Apache Hadoop on Goatwu1993</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://goatwu1993.github.io/posts/note-hadoop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p1-whatishadoop/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p1-whatishadoop/</guid>
+      <description>Hadoop brief introduction</description>
+    </item>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <description>HDFS quick install</description>
+    </item>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <description>HDFS quick install</description>
+    </item>
+    
+    <item>
+      <title>What is Hadoop</title>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <description>HDFS quick install</description>
+    </item>
+    
+  </channel>
+</rss>
