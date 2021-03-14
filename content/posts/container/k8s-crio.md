@@ -7,20 +7,26 @@ slug: "cri-o"
 summary: cri
 ---
 
-## What is CRI-O
+## What
 
-官網介紹
+cri-o是一個container engine(frontend)，由Redhat領導
+
+## Why
 
 > CRI-O is an implementation of the Kubernetes CRI (Container Runtime Interface) to enable using OCI (Open Container Initiative) compatible runtimes. It is a light
-CRI-O 是實作 Kubernetes CRI的軟體，讓Kubernetes可以使用任何符合OCI介面的container runtime，目前主要支援
+CRI-O 是實作 Kubernetes CRI的container engine，讓Kubernetes可以使用任何符合OCI介面的container runtime，目前主要支援
 
 1. kata container
 2. runc
 
 但理論上，任何符合OCI的Container Runtime都可以支援。
-Kubernetes有了CRI-O，基本可以使用任何OCI格式的Container Runtime
 
-簡單地說：CRI-O 是界接 Kubernetes 以及任何 OCI Container Runtime 的橋樑
+簡單的說，CRI-O 是
+
+1. Redhat領導的
+2. Kubernetes優先的
+
+一個CRI container engine實作
 
 ## More About
 
