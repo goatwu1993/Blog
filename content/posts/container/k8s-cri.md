@@ -2,7 +2,7 @@
 title: "cri"
 date: 2021-03-07
 draft: false
-tags: [container]
+tags: [container, kubernetes]
 slug: "cri"
 summary: cri
 ---

@@ -3,7 +3,7 @@ title: "CRI-O"
 date: 2021-03-07
 draft: false
 tags: [container, kubernetes]
-slug: "CRI-O"
+slug: "cri-o"
 summary: cri
 ---
 
