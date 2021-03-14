@@ -11,8 +11,9 @@ summary: oci
 
 OCI是一個標準，訂定了container的
 
-* Runtime (start, exec, pause)
-* Image 格式
+* Runtime 標準 (start, exec, pause)
+* Image 標準
+* Distribution 標準
 
 ## Why
 
@@ -33,4 +34,5 @@ OCI的出現，確保container的開發者可以專注在開發服務，不會�
 
 ## Ref
 
+1. [https://github.com/opencontainers](https://github.com/opencontainers)
 1. [https://opencontainers.org/faq/](https://opencontainers.org/faq/)
