@@ -34,8 +34,8 @@ OCI的出現，確保container的開發者可以專注在開發服務，不會�
 
 比較有名的是
 
-1. runc (go)
-2. crun (c)
+1. runc (go, lead by docker)
+2. crun (c, lead by Redhat)
 
 ## Ref
 

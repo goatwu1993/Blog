@@ -33,7 +33,7 @@ CRI 是一個kubernetes提供的一個**grpc**介面，用來和Container runtim
 ## 比較知名的CRI實作
 
 1. containerd (lead by docker)
-1. cri-o (lead by RedHat)
+1. cri-o (lead by Redhat)
 
 ## References
 
