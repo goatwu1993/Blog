@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Bash - basic commands // goatwu1993</title>
+    <title>Bash - basic commands // Goatwu1993</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.74.3" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
+    <meta name="author" content="Goatwu1993" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
+    <link rel="stylesheet" href="https://goatwu1993.github.io/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Bash - basic commands" />
 <meta property="og:description" content="basic bash commands" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://goatwu1993.github.io/blog/posts/basics/bash-p1-basics/" />
+<meta property="og:url" content="https://goatwu1993.github.io/posts/basics/bash-p1-basics/" />
 <meta property="article:published_time" content="2018-06-10T17:20:14+08:00" />
 <meta property="article:modified_time" content="2018-06-10T17:20:14+08:00" />
 
@@ -26,22 +26,26 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://goatwu1993.github.io/blog/"><img class="app-header-avatar" src="" alt="John Doe" /></a>
-      <h1>goatwu1993</h1>
+      <a href="https://goatwu1993.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="Goatwu1993" /></a>
+      <h1>Goatwu1993</h1>
       <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="#posts">Posts</a>
+          <a class="app-header-menu-item" href="/">Home</a>
              - 
           
-          <a class="app-header-menu-item" href="#about">About</a>
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
              - 
           
-          <a class="app-header-menu-item" href="#tags">Tags</a>
-             - 
-          
-          <a class="app-header-menu-item" href="./posts">Categories</a>
+          <a class="app-header-menu-item" href="/about/">About</a>
       </nav>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <p>A taiwanese programmer</p>
       <div class="app-header-social">
+        
+          <a href="https://github.com/goatwu1993" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
         
       </div>
     </header>
@@ -68,131 +72,122 @@
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>tag</title>
-  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
 </svg>
-              <a class="tag" href="https://goatwu1993.github.io/blog/tags/shell/">shell</a>
-              <a class="tag" href="https://goatwu1993.github.io/blog/tags/bash/">bash</a>
+              <a class="tag" href="https://goatwu1993.github.io/tags/shell/">shell</a>
+              <a class="tag" href="https://goatwu1993.github.io/tags/bash/">bash</a>
         </div>
       </div>
     </header>
     <div class="post-content">
       <h2 id="manual--help">Manual &amp; help</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# manual
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># manual</span>
 man anything
 info anything
 anything --help
-</code></pre>
-<h2 id="system-information">System information</h2>
+</code></pre></div><h2 id="system-information">System information</h2>
 <h3 id="unix-information">Unix information</h3>
-<pre><code class="language-bash"># Show unix info
-# Abbreviation for Unix name
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Show unix info</span>
+<span style="color:#75715e"># Abbreviation for Unix name</span>
 uname
 uname -a
 uname -r
-</code></pre>
-<h3 id="shell-information">Shell information</h3>
-<pre><code class="language-bash"># Show default shell name.
+</code></pre></div><h3 id="shell-information">Shell information</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Show default shell name.</span>
 echo $SHELL
-# Show current shell name.
+<span style="color:#75715e"># Show current shell name.</span>
 echo $0
 
-# Show shell version.
+<span style="color:#75715e"># Show shell version.</span>
 /bin/zsh --version
-</code></pre>
-<h2 id="shell-commands">Shell commands</h2>
-<pre><code class="language-bash"># Clear terminal.
+</code></pre></div><h2 id="shell-commands">Shell commands</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Clear terminal.</span>
 clear
-# Show command history.
+<span style="color:#75715e"># Show command history.</span>
 history
-# Print working directory
+<span style="color:#75715e"># Print working directory</span>
 pwd
-# uptime
+<span style="color:#75715e"># uptime</span>
 uptime
-</code></pre>
-<h2 id="file-managing">File managing</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# List the files in working directory.
+</code></pre></div><h2 id="file-managing">File managing</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># List the files in working directory.</span>
 ls
-# List all files, hidden file included, with detailed information.
+<span style="color:#75715e"># List all files, hidden file included, with detailed information.</span>
 ls -la
-</code></pre>
-<h2 id="network">Network</h2>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show network interface config/info.
+</code></pre></div><h2 id="network">Network</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Show network interface config/info.</span>
 ifconfig
 
-# get public ip
+<span style="color:#75715e"># get public ip</span>
 curl icanhazip.com
 
-# Show network status
+<span style="color:#75715e"># Show network status</span>
 netstat
-# Show all, include tcp/udp port.
+<span style="color:#75715e"># Show all, include tcp/udp port.</span>
 netstat -an
-# Show established connection
-netstat -antu | grep 'ESTABLISHED'
-# Show kernel routing information
+<span style="color:#75715e"># Show established connection</span>
+netstat -antu | grep <span style="color:#e6db74">&#39;ESTABLISHED&#39;</span>
+<span style="color:#75715e"># Show kernel routing information</span>
 netstat -r
 netstat -tulnp
 
-# Check the bridge Interface
+<span style="color:#75715e"># Check the bridge Interface</span>
 brtcl
 brctl addbr &lt;name&gt;
 
-# ssh
+<span style="color:#75715e"># ssh</span>
 ssh
-# Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+<span style="color:#75715e"># Generate a new ssh-key. Usually used when attempt to ssh a address which has change device/remote host. Use this when encounter error message: WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</span>
 ssh-keygen
 
-# scp
+<span style="color:#75715e"># scp</span>
 scp
-</code></pre>
-<h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
+</code></pre></div><h2 id="cpu-memery-task--process">CPU, memery, task &amp; process</h2>
 <h3 id="check-and-monitor-process">Check and monitor process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# List all process run by user shell
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># List all process run by user shell</span>
 ps
-# List all process, even by status
+<span style="color:#75715e"># List all process, even by status</span>
 ps aux
-# pstree
+<span style="color:#75715e"># pstree</span>
 pstree
 
-# Monitor the process status
+<span style="color:#75715e"># Monitor the process status</span>
 top
-# cpu
+<span style="color:#75715e"># cpu</span>
 top -o cpu
-# memery
+<span style="color:#75715e"># memery</span>
 top -o rsize
 
-# List cronjob
+<span style="color:#75715e"># List cronjob</span>
 crontab
-# List all cronjob.
+<span style="color:#75715e"># List all cronjob.</span>
 crontab -l
-</code></pre>
-<h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Send a signal to a process
+</code></pre></div><h3 id="sending-signal-or-kill-process">Sending signal or kill process</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Send a signal to a process</span>
 kill -signal PID
-# Send 15 SIGTERM to a process
+<span style="color:#75715e"># Send 15 SIGTERM to a process</span>
 kill $pid
 
-# killall allow you to kill app with name instead of pid
+<span style="color:#75715e"># killall allow you to kill app with name instead of pid</span>
 killall -9 $processname
-# Ask before terminate
+<span style="color:#75715e"># Ask before terminate</span>
 killall -i -9 $processname
-</code></pre>
-<h3 id="memory-usage">Memory usage</h3>
-<pre><code class="language-bash">#!/bin/bash
-
-# Show recent memory usage
+</code></pre></div><h3 id="memory-usage">Memory usage</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Show recent memory usage</span>
 free -m
-</code></pre>
-<h2 id="references">References</h2>
+</code></pre></div><h2 id="references">References</h2>
 <ul>
 <li><a href="https://geekflare.com/netstat/">https://geekflare.com/netstat/</a></li>
 <li><a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l">http://linux.vbird.org/linux_basic/0440processcontrol.php#ps_l</a></li>

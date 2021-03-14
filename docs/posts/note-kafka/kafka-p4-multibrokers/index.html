@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Kafka with multi brokers // goatwu1993</title>
+    <title>Kafka with multi brokers // Goatwu1993</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.74.3" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
+    <meta name="author" content="Goatwu1993" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://goatwu1993.github.io/blog/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
+    <link rel="stylesheet" href="https://goatwu1993.github.io/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Kafka with multi brokers" />
 <meta property="og:description" content="Kafka macOS hands-on, multi brokers" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/" />
+<meta property="og:url" content="https://goatwu1993.github.io/posts/note-kafka/kafka-p4-multibrokers/" />
 <meta property="article:published_time" content="2020-01-30T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-02-10T00:00:00+00:00" />
 
@@ -26,22 +26,26 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://goatwu1993.github.io/blog/"><img class="app-header-avatar" src="" alt="John Doe" /></a>
-      <h1>goatwu1993</h1>
+      <a href="https://goatwu1993.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="Goatwu1993" /></a>
+      <h1>Goatwu1993</h1>
       <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="#posts">Posts</a>
+          <a class="app-header-menu-item" href="/">Home</a>
              - 
           
-          <a class="app-header-menu-item" href="#about">About</a>
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
              - 
           
-          <a class="app-header-menu-item" href="#tags">Tags</a>
-             - 
-          
-          <a class="app-header-menu-item" href="./posts">Categories</a>
+          <a class="app-header-menu-item" href="/about/">About</a>
       </nav>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <p>A taiwanese programmer</p>
       <div class="app-header-social">
+        
+          <a href="https://github.com/goatwu1993" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
         
       </div>
     </header>
@@ -68,23 +72,21 @@
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>tag</title>
-  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
 </svg>
-              <a class="tag" href="https://goatwu1993.github.io/blog/tags/hadoop/">hadoop</a>
-              <a class="tag" href="https://goatwu1993.github.io/blog/tags/kafka/">kafka</a>
-              <a class="tag" href="https://goatwu1993.github.io/blog/tags/bigdata/">bigdata</a>
+              <a class="tag" href="https://goatwu1993.github.io/tags/hadoop/">hadoop</a>
+              <a class="tag" href="https://goatwu1993.github.io/tags/kafka/">kafka</a>
+              <a class="tag" href="https://goatwu1993.github.io/tags/bigdata/">bigdata</a>
         </div>
       </div>
     </header>
     <div class="post-content">
       <h2 id="prerequisite">Prerequisite</h2>
-<pre><code class="language-bash"># this will install java 1.8, zookeeper, and kafka
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># this will install java 1.8, zookeeper, and kafka</span>
 brew install kafka
-</code></pre>
-<h2 id="啟動-zookeeper">啟動 zookeeper</h2>
-<pre><code class="language-bash">brew services start zookeeper
-</code></pre>
-<h2 id="開啟三個-brokers">開啟三個 Brokers</h2>
+</code></pre></div><h2 id="啟動-zookeeper">啟動 zookeeper</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew services start zookeeper
+</code></pre></div><h2 id="開啟三個-brokers">開啟三個 Brokers</h2>
 <p>分别修改 server1.properties, server2.properties</p>
 <table>
 <thead>
@@ -116,14 +118,12 @@ brew install kafka
 </tr>
 </tbody>
 </table>
-<pre><code class="language-bash">kafka-server-start /usr/local/etc/kafka/server.properties &amp;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kafka-server-start /usr/local/etc/kafka/server.properties &amp;
 kafka-server-start /usr/local/etc/kafka/server1.properties &amp;
 kafka-server-start /usr/local/etc/kafka/server2.properties &amp;
-</code></pre>
-<h2 id="開啟一個兩個副本的-topic">開啟一個兩個副本的 Topic</h2>
-<pre><code class="language-bash">kafka-topics –create –zookeeper localhost:2181 –replication-factor 3 –partitions 1 –topic mytopic
-</code></pre>
-<h2 id="consumer--producer-api">Consumer &amp; Producer API</h2>
+</code></pre></div><h2 id="開啟一個兩個副本的-topic">開啟一個兩個副本的 Topic</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kafka-topics –create –zookeeper localhost:2181 –replication-factor <span style="color:#ae81ff">3</span> –partitions <span style="color:#ae81ff">1</span> –topic mytopic
+</code></pre></div><h2 id="consumer--producer-api">Consumer &amp; Producer API</h2>
 <ul>
 <li>Shell script<br>
 使用 brew kafka 提供的 shell script</li>
@@ -142,11 +142,9 @@ kafka-server-start /usr/local/etc/kafka/server2.properties &amp;
 </ul>
 <h2 id="shell-script">Shell Script</h2>
 <p>開啟兩個命令列</p>
-<pre><code class="language-bash">./bin/kafka-console-producer --broker-list localhost:9092 --topic test-kafka
-</code></pre>
-<pre><code class="language-bash">./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
-</code></pre>
-<p>應該要能看到訊息傳送過去</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./bin/kafka-console-producer --broker-list localhost:9092 --topic test-kafka
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+</code></pre></div><p>應該要能看到訊息傳送過去</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://oumuv.github.io/2018/12/06/kafka-2/">https://oumuv.github.io/2018/12/06/kafka-2/</a></li>

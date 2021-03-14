@@ -1,184 +1,183 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bigdata on goatwu1993</title>
-    <link>https://goatwu1993.github.io/blog/tags/bigdata/</link>
-    <description>Recent content in bigdata on goatwu1993</description>
+    <title>bigdata on Goatwu1993</title>
+    <link>https://goatwu1993.github.io/tags/bigdata/</link>
+    <description>Recent content in bigdata on Goatwu1993</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://goatwu1993.github.io/blog/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goatwu1993.github.io/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is hive</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <link>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</guid>
       <description>Hive brief introduction</description>
     </item>
     
     <item>
       <title>What is hive</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <link>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</guid>
       <description>Hive brief introduction</description>
     </item>
     
     <item>
       <title>What is hive</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <link>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</guid>
       <description>Hive brief introduction</description>
     </item>
     
     <item>
       <title>What is hive</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</link>
+      <link>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hive/what-is-hive/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hive/what-is-hive/</guid>
       <description>Hive brief introduction</description>
     </item>
     
     <item>
       <title>pyspark install</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-spark/pyspark-p1-pyspark-install/</link>
+      <link>https://goatwu1993.github.io/posts/note-spark/pyspark-p1-pyspark-install/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-spark/pyspark-p1-pyspark-install/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-spark/pyspark-p1-pyspark-install/</guid>
       <description>pyspark quick install</description>
     </item>
     
     <item>
       <title>Kafka mechanism</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p5-mechanism/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-p5-mechanism/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p5-mechanism/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-p5-mechanism/</guid>
       <description>Kafka mechanism</description>
     </item>
     
     <item>
       <title>Kafka with multi brokers</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-p4-multibrokers/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p4-multibrokers/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-p4-multibrokers/</guid>
       <description>Kafka macOS hands-on, multi brokers</description>
     </item>
     
     <item>
       <title>Kafka with single broker</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-p3-singlebroker/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p3-singlebroker/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-p3-singlebroker/</guid>
       <description>Kafka macOS hands-on</description>
     </item>
     
     <item>
       <title>Some of Kafka terminology</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-p2-terminology/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p2-terminology/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-p2-terminology/</guid>
       <description>Kafka terminology</description>
     </item>
     
     <item>
       <title>What is Hadoop</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p1-whatishadoop/</link>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p1-whatishadoop/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p1-whatishadoop/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p1-whatishadoop/</guid>
       <description>Hadoop brief introduction</description>
     </item>
     
     <item>
       <title>What is Hadoop</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
       <description>HDFS quick install</description>
     </item>
     
     <item>
       <title>What is Hadoop</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
       <description>HDFS quick install</description>
     </item>
     
     <item>
       <title>What is Hadoop</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
+      <link>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-hadoop/hadoop-p2-hdfs-install/</guid>
       <description>HDFS quick install</description>
     </item>
     
     <item>
       <title>What is Kafka</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-elk/kafka-p1/</link>
+      <link>https://goatwu1993.github.io/posts/note-elk/kafka-p1/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-elk/kafka-p1/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-elk/kafka-p1/</guid>
       <description>What is Apache Kafka</description>
     </item>
     
     <item>
       <title>What is Kafka</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p1/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-p1/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-p1/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-p1/</guid>
       <description>What is Apache Kafka</description>
     </item>
     
     <item>
       <title>Apache Spark Setup</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-spark/spark-p2-setup/</link>
+      <link>https://goatwu1993.github.io/posts/note-spark/spark-p2-setup/</link>
       <pubDate>Fri, 17 Jan 2020 20:33:38 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-spark/spark-p2-setup/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-spark/spark-p2-setup/</guid>
       <description>Apache prerequisite at macOS</description>
     </item>
     
     <item>
       <title>What is Apache Spark</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-spark/spark-p1-whatis/</link>
+      <link>https://goatwu1993.github.io/posts/note-spark/spark-p1-whatis/</link>
       <pubDate>Fri, 17 Jan 2020 17:04:13 +0800</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-spark/spark-p1-whatis/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-spark/spark-p1-whatis/</guid>
       <description>Apache spark base concept.</description>
     </item>
     
     <item>
       <title>Kafka &#43; ELK</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-elk/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-elk/</guid>
       <description>Kafka+ELK</description>
     </item>
     
     <item>
       <title>Kafka Connect Quickstart</title>
-      <link>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</link>
+      <link>https://goatwu1993.github.io/posts/note-kafka/kafka-elk/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://goatwu1993.github.io/blog/posts/note-kafka/kafka-elk/</guid>
+      <guid>https://goatwu1993.github.io/posts/note-kafka/kafka-elk/</guid>
       <description>Kafka+ELK</description>
     </item>
     
