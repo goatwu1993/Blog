@@ -1,282 +1,146 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <title>Python 實作 Dictionary // Goatwu1993</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.74.3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Goatwu1993" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://goatwu1993.github.io/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
+<!doctype html><html lang=en-us><head><title>Python 實作 Dictionary // Goatwu1993</title><link rel="shortcut icon" href=/favicon.ico><meta charset=utf-8><meta name=generator content="Hugo 0.79.1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Goatwu1993"><meta name=description content><link rel=stylesheet href=https://goatwu1993.github.io/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css><meta name=twitter:card content="summary"><meta name=twitter:title content="Python 實作 Dictionary"><meta name=twitter:description content="A python implemented dictionary."><meta property="og:title" content="Python 實作 Dictionary"><meta property="og:description" content="A python implemented dictionary."><meta property="og:type" content="article"><meta property="og:url" content="https://goatwu1993.github.io/posts/datastructure/dict-python-implementation/"><meta property="article:published_time" content="2019-12-26T19:17:18+08:00"><meta property="article:modified_time" content="2019-12-26T19:17:18+08:00"></head><body><header class=app-header><a href=https://goatwu1993.github.io><img class=app-header-avatar src=/avatar.jpg alt=Goatwu1993></a><h1>Goatwu1993</h1><nav class=app-header-menu><a class=app-header-menu-item href=/>Home</a>
+-
+<a class=app-header-menu-item href=/tags/>Tags</a>
+-
+<a class=app-header-menu-item href=/about/>About</a></nav><p>A taiwanese programmer</p><div class=app-header-social><a href=https://github.com/goatwu1993 target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>Github</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77a5.44 5.44.0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a></div></header><main class=app-container><article class=post><header class=post-header><h1 class=post-title>Python 實作 Dictionary</h1><div class=post-meta><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Dec 26, 2019</div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>4 min read</div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><a class=tag href=https://goatwu1993.github.io/tags/python/>python</a>
+<a class=tag href=https://goatwu1993.github.io/tags/datastructure/>datastructure</a></div></div></header><div class=post-content><h2 id=dictionary>Dictionary</h2><p>Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。</p><h2 id=瞄一下>瞄一下</h2><p>瞄一下<a href=https://github.com/python/cpython/blob/master/Objects/dictobject.c>cpython</a>怎麼寫，<a href="https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY">這邊</a>有詳細解釋。</p><h2 id=hash-table-優點>Hash table 優點</h2><ul><li>O(1) insertion</li><li>O(1) get</li><li>O(1) delete</li></ul><p>但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。</p><h2 id=load-factor--dynamic-resizing>Load Factor & dynamic resizing</h2><p><a href=https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries>https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries</a></p><p>$$Load Factor = n/k $$</p><p>$$ k : bucket 數目，也叫 table size$$
+$$ n : 資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。$$</p><p>實務上控制 Load factor 介於 0.3 至 0.7 ，時間 O(1)的同時 k 還小。</p><h2 id=dictionary-node>Dictionary Node</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DictionaryNode</span>():
+    <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>    Node of a DictionaryLinkedList.
+</span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
 
-    
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python 實作 Dictionary"/>
-<meta name="twitter:description" content="A python implemented dictionary."/>
+    <span style=color:#66d9ef>def</span> __init__(self, key, value, me_hash):
+        self<span style=color:#f92672>.</span>key <span style=color:#f92672>=</span> key
+        self<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> value
+        self<span style=color:#f92672>.</span>me_hash <span style=color:#f92672>=</span> me_hash
+        self<span style=color:#f92672>.</span>collided <span style=color:#f92672>=</span> False
 
-    <meta property="og:title" content="Python 實作 Dictionary" />
-<meta property="og:description" content="A python implemented dictionary." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://goatwu1993.github.io/posts/datastructure/dict-python-implementation/" />
-<meta property="article:published_time" content="2019-12-26T19:17:18+08:00" />
-<meta property="article:modified_time" content="2019-12-26T19:17:18+08:00" />
+    <span style=color:#66d9ef>def</span> __repr__(self):
+        <span style=color:#66d9ef>return</span> (self<span style=color:#f92672>.</span>key<span style=color:#f92672>.</span>__repr__() <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;: &#34;</span> <span style=color:#f92672>+</span> self<span style=color:#f92672>.</span>value<span style=color:#f92672>.</span>__repr__())
+</code></pre></div><h3 id=me_hash>me_hash</h3><p>key 的 hash 值，cpython get 的時候比對會用到</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>(ep<span style=color:#f92672>-&gt;</span>me_key <span style=color:#f92672>==</span> key <span style=color:#f92672>||</span>
+(ep<span style=color:#f92672>-&gt;</span>me_hash <span style=color:#f92672>==</span> hash <span style=color:#f92672>&amp;&amp;</span> unicode_eq(ep<span style=color:#f92672>-&gt;</span>me_key, key)))
+</code></pre></div><p>詳細原因可能要對編碼比較熟才看得懂，我存著 resize 就不需要重算一次。</p><h3 id=collided>collided</h3><p>判斷是否 collide 過的 flag，若 delete 時 collided 為 True，告訴大家這 node 沒有值但需要往後尋找，若沒有 collide 過則代表沒有 collide 過，返回 indexError。</p><h2 id=dictionary-class>Dictionary Class</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dictionary</span>():
+    <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>    Dictionary are implemented by HashTable
+</span><span style=color:#e6db74>    Using open addressing method.
+</span><span style=color:#e6db74>    Hash using siphash. I can not find siphash
+</span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
 
-
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://goatwu1993.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="Goatwu1993" /></a>
-      <h1>Goatwu1993</h1>
-      <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="/">Home</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/tags/">Tags</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/about/">About</a>
-      </nav>
-      <p>A taiwanese programmer</p>
-      <div class="app-header-social">
-        
-          <a href="https://github.com/goatwu1993" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
-  <title>Github</title>
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-</svg>
-          </a>
-        
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Python 實作 Dictionary</h1>
-      <div class="post-meta">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Dec 26, 2019
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          4 min read
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
-  <title>tag</title>
-  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
-</svg>
-              <a class="tag" href="https://goatwu1993.github.io/tags/python/">python</a>
-              <a class="tag" href="https://goatwu1993.github.io/tags/datastructure/">datastructure</a>
-        </div>
-      </div>
-    </header>
-    <div class="post-content">
-      <h2 id="dictionary">Dictionary</h2>
-<p>Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實作一個 Dictionary 是個複習資料結構的好方法。</p>
-<h2 id="瞄一下">瞄一下</h2>
-<p>瞄一下<a href="https://github.com/python/cpython/blob/master/Objects/dictobject.c">cpython</a>怎麼寫，<a href="https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY">這邊</a>有詳細解釋。</p>
-<h2 id="hash-table-優點">Hash table 優點</h2>
-<ul>
-<li>O(1) insertion</li>
-<li>O(1) get</li>
-<li>O(1) delete</li>
-</ul>
-<p>但是要在 laod factor 在一定範圍內才能給出時間複雜度 O(1)的但書。</p>
-<h2 id="load-factor--dynamic-resizing">Load Factor &amp; dynamic resizing</h2>
-<p><a href="https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries">https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries</a></p>
-<p>$$Load Factor = n/k $$</p>
-<p>$$ k : bucket 數目，也叫 table size$$
-$$ n : 資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。$$</p>
-<p>實務上控制 Load factor 介於 0.3 至 0.7 ，時間 O(1)的同時 k 還小。</p>
-<h2 id="dictionary-node">Dictionary Node</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DictionaryNode</span>():
-    <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">    Node of a DictionaryLinkedList.
-</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-
-    <span style="color:#66d9ef">def</span> __init__(self, key, value, me_hash):
-        self<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> key
-        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> value
-        self<span style="color:#f92672">.</span>me_hash <span style="color:#f92672">=</span> me_hash
-        self<span style="color:#f92672">.</span>collided <span style="color:#f92672">=</span> False
-
-    <span style="color:#66d9ef">def</span> __repr__(self):
-        <span style="color:#66d9ef">return</span> (self<span style="color:#f92672">.</span>key<span style="color:#f92672">.</span>__repr__() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>value<span style="color:#f92672">.</span>__repr__())
-</code></pre></div><h3 id="me_hash">me_hash</h3>
-<p>key 的 hash 值，cpython get 的時候比對會用到</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">(ep<span style="color:#f92672">-&gt;</span>me_key <span style="color:#f92672">==</span> key <span style="color:#f92672">||</span>
-(ep<span style="color:#f92672">-&gt;</span>me_hash <span style="color:#f92672">==</span> hash <span style="color:#f92672">&amp;&amp;</span> unicode_eq(ep<span style="color:#f92672">-&gt;</span>me_key, key)))
-</code></pre></div><p>詳細原因可能要對編碼比較熟才看得懂，我存著 resize 就不需要重算一次。</p>
-<h3 id="collided">collided</h3>
-<p>判斷是否 collide 過的 flag，若 delete 時 collided 為 True，告訴大家這 node 沒有值但需要往後尋找，若沒有 collide 過則代表沒有 collide 過，返回 indexError。</p>
-<h2 id="dictionary-class">Dictionary Class</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dictionary</span>():
-    <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">    Dictionary are implemented by HashTable
-</span><span style="color:#e6db74">    Using open addressing method.
-</span><span style="color:#e6db74">    Hash using siphash. I can not find siphash
-</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-
-    <span style="color:#66d9ef">def</span> __init__(self):
-        self<span style="color:#f92672">.</span>used_entry <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        self<span style="color:#f92672">.</span>buckets <span style="color:#f92672">=</span> [None <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>)]
-</code></pre></div><p>初始大小為 8 ，python 沒有辦法 override {} 的讀取， KVP 只能慢慢塞。</p>
-<p>另外存取 used_entry 以免 len()需要跑 O(n)的 loop，insert/del 要記得 maintain。</p>
-<h2 id="hash">Hash</h2>
-<p>仿照 cpython 用 siphash，據作者所述是一個快速的 hash ，用過 md5 也是可以的。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install siphash
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> siphash <span style="color:#f92672">import</span> siphash24
-</code></pre></div><h3 id="dictionary-的-me_hash">Dictionary 的 me_hash()</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">me_hash</span>(self, key):
-        <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">        hash of key
-</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
-        <span style="color:#66d9ef">return</span> siphash24(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>,(str(key)<span style="color:#f92672">.</span>encode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)))<span style="color:#f92672">.</span>hash()
-</code></pre></div><h2 id="dynamic-resizing">Dynamic Resizing</h2>
-<h3 id="bitmask--運算">bitmask (&amp;) 運算</h3>
-<p>當 k (table size) 是 2 的 m 次方，則 hash(n) mod k 可以用 hash(n) &amp; bitmask 取代，其中 bitmask 為 m 個 1 組成。</p>
-<h3 id="bitmask--in-python-terminal">bitmask (&amp;) in Python terminal</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hash</span>(key): <span style="color:#66d9ef">return</span> siphash24(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>,(str(key)<span style="color:#f92672">.</span>encode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)))<span style="color:#f92672">.</span>hash()
-<span style="color:#f92672">...</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> n <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;key_string&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># m = 3, k = 8</span>
-<span style="color:#f92672">...</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> hash(n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0b111</span> <span style="color:#f92672">==</span> hash(n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">7</span>
+    <span style=color:#66d9ef>def</span> __init__(self):
+        self<span style=color:#f92672>.</span>used_entry <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+        self<span style=color:#f92672>.</span>buckets <span style=color:#f92672>=</span> [None <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>8</span>)]
+</code></pre></div><p>初始大小為 8 ，python 沒有辦法 override {} 的讀取， KVP 只能慢慢塞。</p><p>另外存取 used_entry 以免 len()需要跑 O(n)的 loop，insert/del 要記得 maintain。</p><h2 id=hash>Hash</h2><p>仿照 cpython 用 siphash，據作者所述是一個快速的 hash ，用過 md5 也是可以的。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pip install siphash
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> siphash <span style=color:#f92672>import</span> siphash24
+</code></pre></div><h3 id=dictionary-的-me_hash>Dictionary 的 me_hash()</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>me_hash</span>(self, key):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        hash of key
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+        <span style=color:#66d9ef>return</span> siphash24(<span style=color:#e6db74>b</span><span style=color:#e6db74>&#39;0123456789ABCDEF&#39;</span>,(str(key)<span style=color:#f92672>.</span>encode(<span style=color:#e6db74>&#39;utf-8&#39;</span>)))<span style=color:#f92672>.</span>hash()
+</code></pre></div><h2 id=dynamic-resizing>Dynamic Resizing</h2><h3 id=bitmask--運算>bitmask (&) 運算</h3><p>當 k (table size) 是 2 的 m 次方，則 hash(n) mod k 可以用 hash(n) & bitmask 取代，其中 bitmask 為 m 個 1 組成。</p><h3 id=bitmask--in-python-terminal>bitmask (&) in Python terminal</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>hash</span>(key): <span style=color:#66d9ef>return</span> siphash24(<span style=color:#e6db74>b</span><span style=color:#e6db74>&#39;0123456789ABCDEF&#39;</span>,(str(key)<span style=color:#f92672>.</span>encode(<span style=color:#e6db74>&#39;utf-8&#39;</span>)))<span style=color:#f92672>.</span>hash()
+<span style=color:#f92672>...</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> n <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;key_string&#39;</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#75715e># m = 3, k = 8</span>
+<span style=color:#f92672>...</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> hash(n) <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0b111</span> <span style=color:#f92672>==</span> hash(n) <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>7</span>
 True
-<span style="color:#f92672">&gt;&gt;&gt;</span> hash(n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0b111</span> <span style="color:#f92672">==</span> hash(n) <span style="color:#f92672">%</span> <span style="color:#ae81ff">8</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> hash(n) <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0b111</span> <span style=color:#f92672>==</span> hash(n) <span style=color:#f92672>%</span> <span style=color:#ae81ff>8</span>
 True
-<span style="color:#f92672">&gt;&gt;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># m = 4, k = 16</span>
-<span style="color:#f92672">...</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> hash(n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0b1111</span> <span style="color:#f92672">==</span> hash(n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">15</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#75715e># m = 4, k = 16</span>
+<span style=color:#f92672>...</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> hash(n) <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0b1111</span> <span style=color:#f92672>==</span> hash(n) <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>15</span>
 True
-<span style="color:#f92672">&gt;&gt;&gt;</span> hash(n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0b1111</span> <span style="color:#f92672">==</span> hash(n) <span style="color:#f92672">%</span> <span style="color:#ae81ff">16</span>
+<span style=color:#f92672>&gt;&gt;&gt;</span> hash(n) <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0b1111</span> <span style=color:#f92672>==</span> hash(n) <span style=color:#f92672>%</span> <span style=color:#ae81ff>16</span>
 True
-<span style="color:#f92672">&gt;&gt;&gt;</span>
-</code></pre></div><h3 id="resizing-程式碼">Resizing 程式碼</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">resize</span>(self):
-        <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">        Should change the size if load_factor &gt; 2/3 or load_factor &lt; 2/3
-</span><span style="color:#e6db74">        Should do nothing if load_factor between 1/3 and 2/3
-</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">proper_size</span>(n, k):
-            pro_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span> <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(int(n <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.5</span>))<span style="color:#f92672">.</span>bit_length()
-            <span style="color:#66d9ef">return</span> pro_size
+<span style=color:#f92672>&gt;&gt;&gt;</span>
+</code></pre></div><h3 id=resizing-程式碼>Resizing 程式碼</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>resize</span>(self):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        Should change the size if load_factor &gt; 2/3 or load_factor &lt; 2/3
+</span><span style=color:#e6db74>        Should do nothing if load_factor between 1/3 and 2/3
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>proper_size</span>(n, k):
+            pro_size <span style=color:#f92672>=</span> <span style=color:#ae81ff>8</span> <span style=color:#66d9ef>if</span> n <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>2</span> <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>**</span>(int(n <span style=color:#f92672>*</span> <span style=color:#ae81ff>1.5</span>))<span style=color:#f92672>.</span>bit_length()
+            <span style=color:#66d9ef>return</span> pro_size
 
-        used <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>used_entry
-        old_size <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>buckets)
-        new_size <span style="color:#f92672">=</span> proper_size(used, old_size)
-        <span style="color:#66d9ef">if</span> old_size <span style="color:#f92672">==</span> new_size:
-            <span style="color:#66d9ef">return</span>
-        new_buckets <span style="color:#f92672">=</span> [None <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, new_size)]
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(old_size):
-            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>buckets[i] <span style="color:#f92672">and</span> (self<span style="color:#f92672">.</span>buckets[i]<span style="color:#f92672">.</span>key <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None):
-                key_me_hash <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>buckets[i]<span style="color:#f92672">.</span>me_hash
-                <span style="color:#75715e"># &amp; for bitwise operation (bitmask)</span>
-                entry <span style="color:#f92672">=</span> key_me_hash <span style="color:#f92672">&amp;</span> (new_size<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-                <span style="color:#66d9ef">while</span> new_buckets[entry]:
-                    new_buckets[entry]<span style="color:#f92672">.</span>collided <span style="color:#f92672">=</span> True
-                    entry <span style="color:#f92672">=</span> entry<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> entry <span style="color:#f92672">&lt;</span> (new_size<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
-                new_buckets[entry] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>buckets[i]
-                new_buckets[entry]<span style="color:#f92672">.</span>collided <span style="color:#f92672">=</span> False
-        self<span style="color:#f92672">.</span>buckets <span style="color:#f92672">=</span> new_buckets
-</code></pre></div><h2 id="magic-methods">Magic Methods</h2>
-<h3 id="實作-python-內建的-magic-methods">實作 python 內建的 Magic Methods</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># __setitem__</span>
-a[b] <span style="color:#f92672">=</span> c
-<span style="color:#75715e"># __getitem__</span>
+        used <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>used_entry
+        old_size <span style=color:#f92672>=</span> len(self<span style=color:#f92672>.</span>buckets)
+        new_size <span style=color:#f92672>=</span> proper_size(used, old_size)
+        <span style=color:#66d9ef>if</span> old_size <span style=color:#f92672>==</span> new_size:
+            <span style=color:#66d9ef>return</span>
+        new_buckets <span style=color:#f92672>=</span> [None <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>0</span>, new_size)]
+        <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(old_size):
+            <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>buckets[i] <span style=color:#f92672>and</span> (self<span style=color:#f92672>.</span>buckets[i]<span style=color:#f92672>.</span>key <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> None):
+                key_me_hash <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>buckets[i]<span style=color:#f92672>.</span>me_hash
+                <span style=color:#75715e># &amp; for bitwise operation (bitmask)</span>
+                entry <span style=color:#f92672>=</span> key_me_hash <span style=color:#f92672>&amp;</span> (new_size<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)
+                <span style=color:#66d9ef>while</span> new_buckets[entry]:
+                    new_buckets[entry]<span style=color:#f92672>.</span>collided <span style=color:#f92672>=</span> True
+                    entry <span style=color:#f92672>=</span> entry<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span> <span style=color:#66d9ef>if</span> entry <span style=color:#f92672>&lt;</span> (new_size<span style=color:#f92672>-</span><span style=color:#ae81ff>2</span>) <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>0</span>
+                new_buckets[entry] <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>buckets[i]
+                new_buckets[entry]<span style=color:#f92672>.</span>collided <span style=color:#f92672>=</span> False
+        self<span style=color:#f92672>.</span>buckets <span style=color:#f92672>=</span> new_buckets
+</code></pre></div><h2 id=magic-methods>Magic Methods</h2><h3 id=實作-python-內建的-magic-methods>實作 python 內建的 Magic Methods</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># __setitem__</span>
+a[b] <span style=color:#f92672>=</span> c
+<span style=color:#75715e># __getitem__</span>
 a[b]
-<span style="color:#75715e"># __len__</span>
+<span style=color:#75715e># __len__</span>
 len(a)
-<span style="color:#75715e"># __delitem__</span>
-<span style="color:#66d9ef">del</span> a[b]
-</code></pre></div><h3 id="open-addressing">Open Addressing</h3>
-<p>這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。</p>
-<h3 id="magic-methods-程式碼">Magic Methods 程式碼</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> __repr__(self):
-        s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(self<span style="color:#f92672">.</span>buckets)):
-            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>buckets[i]:
-                s <span style="color:#f92672">=</span> s <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>buckets[i]<span style="color:#f92672">.</span>__repr__() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;, &#39;</span>
-        <span style="color:#66d9ef">return</span> {} <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> s <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;{{{0}}}&#34;</span><span style="color:#f92672">.</span>format(s[:<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>])
+<span style=color:#75715e># __delitem__</span>
+<span style=color:#66d9ef>del</span> a[b]
+</code></pre></div><h3 id=open-addressing>Open Addressing</h3><p>這裡用的是最簡單的 open addressing，entry 被佔據就找下一個，比較簡單，但容易有連續一整攤都被 occupied 的情形發生，如果有興趣可以實作其他的 open addressing 算法。</p><h3 id=magic-methods-程式碼>Magic Methods 程式碼</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> __repr__(self):
+        s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
+        <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(self<span style=color:#f92672>.</span>buckets)):
+            <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>buckets[i]:
+                s <span style=color:#f92672>=</span> s <span style=color:#f92672>+</span> self<span style=color:#f92672>.</span>buckets[i]<span style=color:#f92672>.</span>__repr__() <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;, &#39;</span>
+        <span style=color:#66d9ef>return</span> {} <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> s <span style=color:#66d9ef>else</span> <span style=color:#e6db74>&#34;{{{0}}}&#34;</span><span style=color:#f92672>.</span>format(s[:<span style=color:#f92672>-</span><span style=color:#ae81ff>3</span>])
 
-    <span style="color:#66d9ef">def</span> __getitem__(self, key):
-        key_me_hash <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>me_hash(key)
-        l <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>buckets)
-        entry <span style="color:#f92672">=</span> key_me_hash <span style="color:#f92672">&amp;</span> (l<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>buckets[entry]:
-            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>key <span style="color:#f92672">==</span> key:
-                <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>value
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>collided:
-                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">KeyError</span>(key)
-            entry <span style="color:#f92672">=</span> entry<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> entry <span style="color:#f92672">&lt;</span> (l<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">KeyError</span>(key)
+    <span style=color:#66d9ef>def</span> __getitem__(self, key):
+        key_me_hash <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>me_hash(key)
+        l <span style=color:#f92672>=</span> len(self<span style=color:#f92672>.</span>buckets)
+        entry <span style=color:#f92672>=</span> key_me_hash <span style=color:#f92672>&amp;</span> (l<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)
+        <span style=color:#66d9ef>while</span> self<span style=color:#f92672>.</span>buckets[entry]:
+            <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>key <span style=color:#f92672>==</span> key:
+                <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>value
+            <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>collided:
+                <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>KeyError</span>(key)
+            entry <span style=color:#f92672>=</span> entry<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span> <span style=color:#66d9ef>if</span> entry <span style=color:#f92672>&lt;</span> (l<span style=color:#f92672>-</span><span style=color:#ae81ff>2</span>) <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>0</span>
+        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>KeyError</span>(key)
 
-    <span style="color:#66d9ef">def</span> __setitem__(self, key, value):
-        self<span style="color:#f92672">.</span>used_entry <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        self<span style="color:#f92672">.</span>resize()
+    <span style=color:#66d9ef>def</span> __setitem__(self, key, value):
+        self<span style=color:#f92672>.</span>used_entry <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+        self<span style=color:#f92672>.</span>resize()
 
-        l <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>buckets)
-        key_me_hash <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>me_hash(key)
-        entry <span style="color:#f92672">=</span> key_me_hash <span style="color:#f92672">&amp;</span> (l<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>buckets[entry]:
-            self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>collided <span style="color:#f92672">=</span> True
-            entry <span style="color:#f92672">=</span> entry<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> entry <span style="color:#f92672">&lt;</span> (l<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
-        self<span style="color:#f92672">.</span>buckets[entry] <span style="color:#f92672">=</span> DictionaryNode(key<span style="color:#f92672">=</span>key,
-                                             value<span style="color:#f92672">=</span>value,
-                                             me_hash<span style="color:#f92672">=</span>key_me_hash)
+        l <span style=color:#f92672>=</span> len(self<span style=color:#f92672>.</span>buckets)
+        key_me_hash <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>me_hash(key)
+        entry <span style=color:#f92672>=</span> key_me_hash <span style=color:#f92672>&amp;</span> (l<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)
+        <span style=color:#66d9ef>while</span> self<span style=color:#f92672>.</span>buckets[entry]:
+            self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>collided <span style=color:#f92672>=</span> True
+            entry <span style=color:#f92672>=</span> entry<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span> <span style=color:#66d9ef>if</span> entry <span style=color:#f92672>&lt;</span> (l<span style=color:#f92672>-</span><span style=color:#ae81ff>2</span>) <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>0</span>
+        self<span style=color:#f92672>.</span>buckets[entry] <span style=color:#f92672>=</span> DictionaryNode(key<span style=color:#f92672>=</span>key,
+                                             value<span style=color:#f92672>=</span>value,
+                                             me_hash<span style=color:#f92672>=</span>key_me_hash)
 
-    <span style="color:#66d9ef">def</span> __delitem__(self, key):
-        key_me_hash <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>me_hash(key)
-        l <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>buckets)
-        entry <span style="color:#f92672">=</span> key_me_hash <span style="color:#f92672">&amp;</span> (l<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>buckets[entry]:
-            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>key <span style="color:#f92672">==</span> key:
-                self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> None
-                self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> None
-                self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>me_hash <span style="color:#f92672">=</span> None
-                <span style="color:#66d9ef">return</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>buckets[entry]<span style="color:#f92672">.</span>collided:
-                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">KeyError</span>(key)
-            entry <span style="color:#f92672">=</span> entry<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> entry <span style="color:#f92672">&lt;</span> (l<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">KeyError</span>(key)
+    <span style=color:#66d9ef>def</span> __delitem__(self, key):
+        key_me_hash <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>me_hash(key)
+        l <span style=color:#f92672>=</span> len(self<span style=color:#f92672>.</span>buckets)
+        entry <span style=color:#f92672>=</span> key_me_hash <span style=color:#f92672>&amp;</span> (l<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>)
+        <span style=color:#66d9ef>while</span> self<span style=color:#f92672>.</span>buckets[entry]:
+            <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>key <span style=color:#f92672>==</span> key:
+                self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>key <span style=color:#f92672>=</span> None
+                self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> None
+                self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>me_hash <span style=color:#f92672>=</span> None
+                <span style=color:#66d9ef>return</span>
+            <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> self<span style=color:#f92672>.</span>buckets[entry]<span style=color:#f92672>.</span>collided:
+                <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>KeyError</span>(key)
+            entry <span style=color:#f92672>=</span> entry<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span> <span style=color:#66d9ef>if</span> entry <span style=color:#f92672>&lt;</span> (l<span style=color:#f92672>-</span><span style=color:#ae81ff>2</span>) <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>0</span>
+        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>KeyError</span>(key)
 
-    <span style="color:#66d9ef">def</span> __len__(self):
-        counter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(self<span style="color:#f92672">.</span>buckets)):
-            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>buckets[i]:
-                counter <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">return</span> counter
-</code></pre></div><h2 id="完整程式碼">完整程式碼</h2>
-<p><a href="https://github.com/goatwu1993/data_structure/blob/master/hash_table.py">Github</a></p>
-<h2 id="結論">結論</h2>
-<p>Python 自己內建的資料結構，很多都是直接用 c 寫的，速度上快很多，如果沒必要，還是直接用就好了&hellip;</p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY">大神解說</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries">wiki</a></li>
-<li><a href="https://github.com/python/cpython/blob/master/Objects/dictobject.c">cpython</a></li>
-<li><a href="https://blog.csdn.net/yuan_j_y/article/details/9317817">Magic Method</a></li>
-</ul>
-<p>$$
-$$</p>
-
-    </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
-
-    </main>
-  </body>
-</html>
+    <span style=color:#66d9ef>def</span> __len__(self):
+        counter <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+        <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(self<span style=color:#f92672>.</span>buckets)):
+            <span style=color:#66d9ef>if</span> self<span style=color:#f92672>.</span>buckets[i]:
+                counter <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+        <span style=color:#66d9ef>return</span> counter
+</code></pre></div><h2 id=完整程式碼>完整程式碼</h2><p><a href=https://github.com/goatwu1993/data_structure/blob/master/hash_table.py>Github</a></p><h2 id=結論>結論</h2><p>Python 自己內建的資料結構，很多都是直接用 c 寫的，速度上快很多，如果沒必要，還是直接用就好了&mldr;</p><h2 id=references>References</h2><ul><li><a href="https://www.data-structures-in-practice.com/hash-tables/?fbclid=IwAR351NVEsa5779Ph_8wG7Pi5U40bQlafRDuXAZxAtJO-WOpCCjEMqv7g5HY">大神解說</a></li><li><a href=https://en.wikipedia.org/wiki/Hash_table#Resizing_by_copying_all_entries>wiki</a></li><li><a href=https://github.com/python/cpython/blob/master/Objects/dictobject.c>cpython</a></li><li><a href=https://blog.csdn.net/yuan_j_y/article/details/9317817>Magic Method</a></li></ul><p>$$
+$$</p></div><div class=post-footer></div></article></main></body></html>
