@@ -9,7 +9,6 @@ tags: [hive, bigdata]
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## Hive 數據類型

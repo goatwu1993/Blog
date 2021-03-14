@@ -9,7 +9,6 @@ tags: [hadoop, kafka, bigdata]
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## Kafka Architecture

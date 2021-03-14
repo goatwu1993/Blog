@@ -6,7 +6,6 @@ diagram: false
 tags: [linux]
 slug: linux-p1-filesystem
 toc: true
-weight: 40
 summary: Linux File system
 ---
 

@@ -9,7 +9,6 @@ summary: summary
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## Implicit Conversion

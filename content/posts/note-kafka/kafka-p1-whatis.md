@@ -9,7 +9,6 @@ tags: [hadoop, kafka, bigdata]
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 Kafka 是一個分散式的訊息處理平台(message processing platform)，仲介處理端到端的實時訊息傳輸。

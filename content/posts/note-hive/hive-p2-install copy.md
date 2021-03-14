@@ -9,7 +9,6 @@ tags: [hive, bigdata]
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## 環境配置

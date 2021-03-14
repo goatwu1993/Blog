@@ -4,7 +4,6 @@ date: 2020-02-09
 draft: true
 tags: [container, docker]
 slug: "docker-p1"
-weight: 30
 summary: Basic docker concept
 ---
 

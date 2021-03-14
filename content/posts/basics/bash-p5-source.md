@@ -6,7 +6,6 @@ diagram: true
 tags: [shell, bash]
 slug: "bash-p5-source-export"
 toc: true
-weight: 40
 summary: bash source, execute and export life cycle.
 ---
 

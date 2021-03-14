@@ -6,7 +6,6 @@ diagram: false
 tags: [shell, bash]
 slug: "bash-p2-ownership"
 toc: true
-weight: 40
 ---
 
 ## Linux is a Multiuser, Multitasking Operating System

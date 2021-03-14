@@ -6,7 +6,6 @@ diagram: true
 tags: [Hadoop, Spark, BigData]
 slug: "spark-p1-whatis"
 toc: true
-weight: 40
 summary: Apache spark base concept.
 ---
 

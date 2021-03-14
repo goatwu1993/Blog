@@ -9,7 +9,6 @@ tags: [hadoop, bigdata]
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## What is Hadoop

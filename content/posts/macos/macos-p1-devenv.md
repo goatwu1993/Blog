@@ -6,7 +6,6 @@ diagram: false
 tags: [linux, macos]
 slug: linux-p1-filesystem
 toc: true
-weight: 40
 summary: macOS good tool
 ---
 

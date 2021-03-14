@@ -6,7 +6,6 @@ tags: [python, datastructure]
 slug: dict-python-implementation
 math: true
 toc: true
-weight: 40
 summary: A python implemented dictionary.
 ---
 

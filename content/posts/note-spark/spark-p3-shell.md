@@ -5,7 +5,6 @@ draft: true
 tags: [Hadoop, Spark, BigData]
 slug: "spark-p3-shell"
 toc: false
-weight: 40
 summary: 簡單測試 Spark 功能
 ---
 

@@ -10,7 +10,6 @@ tags: [data]
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## What is Data Pipeline

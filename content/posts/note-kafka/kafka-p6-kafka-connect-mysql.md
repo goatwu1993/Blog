@@ -10,7 +10,6 @@ tags: [hadoop, kafka, bigdata]
 # other configs
 diagram: false
 toc: true
-weight: 120212
 ---
 
 Slighty modified from Confluent's example. Only version is updated.

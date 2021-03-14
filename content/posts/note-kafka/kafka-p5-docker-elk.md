@@ -10,7 +10,6 @@ tags: [hadoop, kafka, bigdata]
 # other configs
 diagram: false
 toc: true
-weight: 120212
 ---
 
 ## Repos

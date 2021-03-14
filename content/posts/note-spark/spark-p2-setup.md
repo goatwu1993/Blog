@@ -6,7 +6,6 @@ diagram: true
 tags: [Hadoop, Spark, BigData]
 slug: "spark-p2-setup"
 toc: true
-weight: 40
 summary: Apache prerequisite at macOS
 ---
 

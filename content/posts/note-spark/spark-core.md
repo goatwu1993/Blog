@@ -5,7 +5,6 @@ draft: true
 tags: []
 slug: "Spark-Core"
 toc: false
-weight: 40
 ---
 
 ## Core API

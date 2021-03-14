@@ -10,7 +10,6 @@ Lastmod: 2020-02-10
 # other configs
 diagram: true
 toc: true
-weight: 40
 ---
 
 ## Prerequisite
