@@ -30,6 +30,11 @@ CRI 是一個kubernetes提供的一個**grpc**介面，用來和Container runtim
 * 當刪除Pod Sandbox時，Kubelet會先移除Pod Sandbox，再移除裡面的容器
 * 根據後端的不同，他們可以有不同的實作方式，有可能是Container，也可能是虛擬機
 
+## 比較知名的CRI實作
+
+1. containerd (lead by docker)
+1. cri-o (lead by RedHat)
+
 ## References
 
 * [https://kubernetes.io/blog/2017/11/containerd-container-runtime-options-kubernetes/](https://kubernetes.io/blog/2017/11/containerd-container-runtime-options-kubernetes/)
