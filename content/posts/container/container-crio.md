@@ -1,7 +1,7 @@
 ---
 title: "CRI-O"
 date: 2021-03-07
-draft: true
+draft: false
 tags: [container, kubernetes]
 slug: "CRI-O"
 summary: cri
