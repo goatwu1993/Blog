@@ -1,10 +1,10 @@
 ---
-title: "Bash - ownership"
+title: Bash - ownership
 date: 2020-01-19T22:11:15+08:00
 draft: true
 diagram: false
 tags: [shell, bash]
-slug: "bash-p2-ownership"
+slug: bash-p2-ownership
 toc: true
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: "Terraform resource"
+title: Terraform resource
 date: 2021-03-21
 draft: false
 tags: [terraform]
-slug: "terraform-resource"
+slug: terraform-resource
 summary: terraform-resource
 ---
 

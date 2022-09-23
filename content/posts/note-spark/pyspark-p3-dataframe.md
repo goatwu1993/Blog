@@ -1,9 +1,9 @@
 ---
-title: "Spark Rdd"
+title: Spark Rdd
 date: 2020-01-18T16:03:05+08:00
 draft: true
 tags: [Hadoop, Spark, BigData]
-slug: "Spark-Rdd"
+slug: Spark-Rdd
 toc: false
 summary: Spark RDD 簡單介紹
 ---
@@ -40,4 +40,4 @@ SparkSession available as 'spark'
 
 ## Reference
 
-- <https://codertw.com/程式語言/624829/>
+- <https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/624829/>

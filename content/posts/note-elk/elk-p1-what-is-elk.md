@@ -1,6 +1,6 @@
 ---
-title: "What is Kafka"
-slug: "kafka-p1"
+title: What is Kafka
+slug: kafka-p1
 summary: What is Apache Kafka
 # basic configs
 date: 2020-01-30

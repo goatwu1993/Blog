@@ -1,9 +1,9 @@
 ---
-title: "Terraform provider"
+title: Terraform provider
 date: 2021-03-21
 draft: false
 tags: [terraform]
-slug: "terraform-provider"
+slug: terraform-provider
 summary: terraform-provider
 ---
 

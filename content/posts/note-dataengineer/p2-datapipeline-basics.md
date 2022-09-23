@@ -1,7 +1,7 @@
 ---
-title: "Data pipeline Basics"
-slug: "p2-data-pipeline-basics"
-summary: "Data pipeline basics"
+title: Data pipeline Basics
+slug: p2-data-pipeline-basics
+summary: Data pipeline basics
 # basic configs
 date: 2020-02-12
 Lastmod: 2020-02-12

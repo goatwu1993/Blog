@@ -1,5 +1,5 @@
 ---
-title: "macOS good tool"
+title: macOS good tool
 date: 2019-12-28T19:17:18+08:00
 draft: false
 diagram: false

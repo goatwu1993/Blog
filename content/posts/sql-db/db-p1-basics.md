@@ -1,5 +1,5 @@
 ---
-title: "SQL - basic commands"
+title: SQL - basic commands
 date: 2020-02-04
 draft: false
 diagram: false
@@ -16,4 +16,4 @@ summary: basic bash commands
 
 ## References
 
-- <>
+- \<>

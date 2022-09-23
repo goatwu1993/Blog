@@ -1,7 +1,7 @@
 ---
-title: "Some of Kafka terminology"
-slug: "kafka-p2-terminology"
-summary: "Kafka terminology"
+title: Some of Kafka terminology
+slug: kafka-p2-terminology
+summary: Kafka terminology
 # basic configs
 date: 2020-01-30
 draft: false
@@ -15,7 +15,7 @@ toc: true
 
 ![Picture from wiki](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Overview_of_Apache_Kafka.svg/1920px-Overview_of_Apache_Kafka.svg.png)
 
----
+______________________________________________________________________
 
 ## Producers
 
@@ -56,7 +56,7 @@ toc: true
 - **ISR**: 成功同步的 Replica 稱作 ISR
 - Replica 用於保證分散式系統的高可用
 
----
+______________________________________________________________________
 
 ## ZooKeeper
 
@@ -71,6 +71,6 @@ toc: true
 ## References
 
 - <https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)>
-- <https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab>
+- <https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab>
 - <http://cloudurable.com/blog/kafka-architecture-topics/index.html>
 - <https://gitbook.cn/books/5ae1e77197c22f130e67ec4e/index.html>

@@ -1,7 +1,7 @@
 ---
-title: "What is hive"
-slug: "what-is-hive"
-summary: "Hive brief introduction"
+title: What is hive
+slug: what-is-hive
+summary: Hive brief introduction
 # basic configs
 date: 2020-02-27
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Python 實作 Dictionary"
+title: Python 實作 Dictionary
 date: 2019-12-26T19:17:18+08:00
 draft: false
 tags: [python, datastructure]
@@ -32,6 +32,7 @@ Python Dictionary 的好用大家都知道，反過來，我覺得用 Python 實
 $$Load Factor = n/k $$
 
 $$ k : bucket 數目，也叫 table size$$
+
 $$ n : 資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。$$
 
 實務上控制 Load factor 介於 0.3 至 0.7 ，時間 O(1)的同時 k 還小。
@@ -39,7 +40,7 @@ $$ n : 資料筆數，k 通常略大於 n，留下(k-n)筆空白欄位。$$
 ## Dictionary Node
 
 ```python
-class DictionaryNode():
+class DictionaryNode:
     """
     Node of a DictionaryLinkedList.
     """
@@ -51,7 +52,7 @@ class DictionaryNode():
         self.collided = False
 
     def __repr__(self):
-        return (self.key.__repr__() + ": " + self.value.__repr__())
+        return self.key.__repr__() + ": " + self.value.__repr__()
 ```
 
 ### me_hash
@@ -72,7 +73,7 @@ key 的 hash 值，cpython get 的時候比對會用到
 ## Dictionary Class
 
 ```python
-class Dictionary():
+class Dictionary:
     """
     Dictionary are implemented by HashTable
     Using open addressing method.
@@ -103,11 +104,11 @@ from siphash import siphash24
 ### Dictionary 的 me_hash()
 
 ```python
-    def me_hash(self, key):
-        """
-        hash of key
-        """
-        return siphash24(b'0123456789ABCDEF',(str(key).encode('utf-8'))).hash()
+def me_hash(self, key):
+    """
+    hash of key
+    """
+    return siphash24(b"0123456789ABCDEF", (str(key).encode("utf-8"))).hash()
 ```
 
 ## Dynamic Resizing
@@ -142,32 +143,33 @@ True
 ### Resizing 程式碼
 
 ```python
-    def resize(self):
-        """
-        Should change the size if load_factor > 2/3 or load_factor < 2/3
-        Should do nothing if load_factor between 1/3 and 2/3
-        """
-        def proper_size(n, k):
-            pro_size = 8 if n <= 2 else 2**(int(n * 1.5)).bit_length()
-            return pro_size
+def resize(self):
+    """
+    Should change the size if load_factor > 2/3 or load_factor < 2/3
+    Should do nothing if load_factor between 1/3 and 2/3
+    """
 
-        used = self.used_entry
-        old_size = len(self.buckets)
-        new_size = proper_size(used, old_size)
-        if old_size == new_size:
-            return
-        new_buckets = [None for x in range(0, new_size)]
-        for i in range(old_size):
-            if self.buckets[i] and (self.buckets[i].key is not None):
-                key_me_hash = self.buckets[i].me_hash
-                # & for bitwise operation (bitmask)
-                entry = key_me_hash & (new_size-1)
-                while new_buckets[entry]:
-                    new_buckets[entry].collided = True
-                    entry = entry+1 if entry < (new_size-2) else 0
-                new_buckets[entry] = self.buckets[i]
-                new_buckets[entry].collided = False
-        self.buckets = new_buckets
+    def proper_size(n, k):
+        pro_size = 8 if n <= 2 else 2 ** (int(n * 1.5)).bit_length()
+        return pro_size
+
+    used = self.used_entry
+    old_size = len(self.buckets)
+    new_size = proper_size(used, old_size)
+    if old_size == new_size:
+        return
+    new_buckets = [None for x in range(0, new_size)]
+    for i in range(old_size):
+        if self.buckets[i] and (self.buckets[i].key is not None):
+            key_me_hash = self.buckets[i].me_hash
+            # & for bitwise operation (bitmask)
+            entry = key_me_hash & (new_size - 1)
+            while new_buckets[entry]:
+                new_buckets[entry].collided = True
+                entry = entry + 1 if entry < (new_size - 2) else 0
+            new_buckets[entry] = self.buckets[i]
+            new_buckets[entry].collided = False
+    self.buckets = new_buckets
 ```
 
 ## Magic Methods

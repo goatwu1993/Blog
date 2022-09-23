@@ -1,5 +1,5 @@
 baseURL = "https://goatwu1993.github.io/blog/"
-title = "Goatwu1993"
+title = "goatwu1993"
 themesDir = "themes"
 theme = "m10c"
 paginate = 8
@@ -22,8 +22,8 @@ paginate = 8
     weight = 3
 
 [params]
-  author = "Goatwu1993"
-  description = "A taiwanese programmer"
+  author = "goatwu1993"
+  description = "Taiwan. Backend/DevOps. Python."
   menu_item_separator = " - "
   [[params.social]]
     icon = "github"

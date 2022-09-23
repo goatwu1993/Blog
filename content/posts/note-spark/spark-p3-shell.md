@@ -1,9 +1,9 @@
 ---
-title: "Spark Shell"
+title: Spark Shell
 date: 2020-01-17T22:40:05+08:00
 draft: true
 tags: [Hadoop, Spark, BigData]
-slug: "spark-p3-shell"
+slug: spark-p3-shell
 toc: false
 summary: 簡單測試 Spark 功能
 ---

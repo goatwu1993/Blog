@@ -1,7 +1,7 @@
 ---
-title: "What is Hadoop"
-slug: "hadoop-p2-hdfs-install"
-summary: "HDFS quick install"
+title: What is Hadoop
+slug: hadoop-p2-hdfs-install
+summary: HDFS quick install
 # basic configs
 date: 2020-01-30
 draft: false

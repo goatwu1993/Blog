@@ -1,10 +1,10 @@
 ---
-title: "Bash - configs"
+title: Bash - configs
 date: 2020-01-19T22:12:33+08:00
 draft: false
 diagram: true
 tags: [shell, bash]
-slug: "bash-p3-configs"
+slug: bash-p3-configs
 toc: true
 summary: profile, bash_profile and bashrc
 ---
@@ -27,9 +27,10 @@ summary: profile, bash_profile and bashrc
 全部使用者的 bash login shell 會讀取
 
 <!-- markdownlint-disable MD033 -->
+
 <h2> ~/.profile </h2>  
 <!-- markdownlint-enable MD033 -->
-  
+
 個別使用者的 login shell 會讀取，包含 sh, bash, zsh
 
 ## ~/.bash_profile

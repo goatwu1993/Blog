@@ -1,10 +1,10 @@
 ---
-title: "Apache Spark Setup"
+title: Apache Spark Setup
 date: 2020-01-17T20:33:38+08:00
 draft: false
 diagram: true
 tags: [Hadoop, Spark, BigData]
-slug: "spark-p2-setup"
+slug: spark-p2-setup
 toc: true
 summary: Apache prerequisite at macOS
 ---
@@ -16,9 +16,9 @@ summary: Apache prerequisite at macOS
 1. macOS
    - Homebrew
    - xcode-select
-2. Java
-3. Scala
-4. Apache Spark
+1. Java
+1. Scala
+1. Apache Spark
 
 ## Test
 

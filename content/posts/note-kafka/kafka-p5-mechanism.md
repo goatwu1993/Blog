@@ -1,7 +1,7 @@
 ---
-title: "Kafka mechanism"
-slug: "kafka-p5-mechanism"
-summary: "Kafka mechanism"
+title: Kafka mechanism
+slug: kafka-p5-mechanism
+summary: Kafka mechanism
 # basic configs
 date: 2020-01-30
 draft: false
@@ -29,9 +29,11 @@ toc: true
 ## Broker
 
 - Topic 被分為多個 Partition
+
 - Partition 會有多個 Replica
 
 - Broker controller
+
   - 其中一個 Broker 會被推選為 Controller
   - 負責偵測 Broker 級別的 Failure，幫忙所有受影響的 Partition 更換 Partition Leader
 
@@ -65,6 +67,7 @@ toc: true
 ### Partition Leader
 
 - Broker Controller 對每個 Partition 指定一個 Leader
+
 - Partition Leader 負責接收資料，接收並寫入後，將資料 replicate 到全部 replica/partition follower
 
 - ### Partition Follower
@@ -98,5 +101,5 @@ toc: true
 ## References
 
 - <https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)>
-- <https://medium.com/@poyu677/apache-kafka-簡易入門-db58898a3fab>
+- <https://medium.com/@poyu677/apache-kafka-%E7%B0%A1%E6%98%93%E5%85%A5%E9%96%80-db58898a3fab>
 - <http://cloudurable.com/blog/kafka-architecture-topics/index.html>

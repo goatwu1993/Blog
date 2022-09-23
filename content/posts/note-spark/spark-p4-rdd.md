@@ -1,9 +1,9 @@
 ---
-title: "Spark Rdd"
+title: Spark Rdd
 date: 2020-01-18T16:03:05+08:00
 draft: true
 tags: [Hadoop, Spark, BigData]
-slug: "Spark-Rdd"
+slug: Spark-Rdd
 toc: false
 summary: Spark RDD 簡單介紹
 ---
@@ -32,9 +32,9 @@ RDD --> RDD2(Action)
 
 ## RDD 特性
 
-1. 不可更動(Immutable)  
+1. 不可更動(Immutable)\
    要讓資料容易用於分散式系統，Immutable 是關鍵的一環。
-2. 彈性(Resilient)  
+1. 彈性(Resilient)\
    分散式環境中忽然有節點失效是正常的，配合 RDD lineage 可以做各種推算。
 
 ## RDD Lineage

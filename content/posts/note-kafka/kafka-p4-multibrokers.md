@@ -1,7 +1,7 @@
 ---
-title: "Kafka with multi brokers"
-slug: "kafka-p4-multibrokers"
-summary: "Kafka macOS hands-on, multi brokers"
+title: Kafka with multi brokers
+slug: kafka-p4-multibrokers
+summary: Kafka macOS hands-on, multi brokers
 # basic settings
 draft: false
 tags: [hadoop, kafka, bigdata]
@@ -29,7 +29,7 @@ brew services start zookeeper
 
 分别修改 server1.properties, server2.properties
 
-| 修改位置  | server.properties                       | server1.properties                      | server2.properties                      |
+|   修改位置    | server.properties                       | server1.properties                      | server2.properties                      |
 | :-------: | --------------------------------------- | --------------------------------------- | --------------------------------------- |
 | broker.id | broker.id=0                             | broker.id=1                             | broker.id=2                             |
 | listeners | listeners=PLAINTEXT://:9092             | listeners=PLAINTEXT://:9093             | listeners=PLAINTEXT://:9094             |
@@ -49,7 +49,7 @@ kafka-topics –create –zookeeper localhost:2181 –replication-factor 3 –pa
 
 ## Consumer & Producer API
 
-- Shell script  
+- Shell script\
   使用 brew kafka 提供的 shell script
 - Python
   - pykafka
@@ -75,4 +75,4 @@ kafka-topics –create –zookeeper localhost:2181 –replication-factor 3 –pa
 ## References
 
 - <https://oumuv.github.io/2018/12/06/kafka-2/>
-- <https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/>
+- <https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/>

@@ -1,5 +1,5 @@
 ---
-title: "ELK note"
+title: ELK note
 
 # View.
 #   1 = List
@@ -9,6 +9,6 @@ view: 2
 
 # Optional header image (relative to `static/img/` folder).
 header:
-  caption: ""
-  image: ""
+  caption: ''
+  image: ''
 ---

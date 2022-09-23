@@ -1,7 +1,7 @@
 ---
-title: "Kafka + ELK"
-slug: "kafka-elk"
-summary: "Kafka+ELK"
+title: Kafka + ELK
+slug: kafka-elk
+summary: Kafka+ELK
 # basic configs
 date: 2020-01-30
 Lastmod: 2020-02-12

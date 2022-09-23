@@ -1,9 +1,9 @@
 ---
-title: "OCI"
+title: OCI
 date: 2021-03-07
 draft: false
 tags: [container]
-slug: "oci"
+slug: oci
 summary: oci
 ---
 
@@ -11,9 +11,9 @@ summary: oci
 
 OCI是一個標準，訂定了container的
 
-* Runtime 標準 (start, exec, pause)
-* Image 標準
-* Distribution 標準
+- Runtime 標準 (start, exec, pause)
+- Image 標準
+- Distribution 標準
 
 ## Why
 
@@ -35,7 +35,7 @@ OCI的出現，確保container的開發者可以專注在開發服務，不會�
 比較有名的是
 
 1. runc (go, lead by docker)
-2. crun (c, lead by Redhat)
+1. crun (c, lead by Redhat)
 
 ## Ref
 

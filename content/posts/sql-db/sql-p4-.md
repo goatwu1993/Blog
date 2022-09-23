@@ -1,5 +1,5 @@
 ---
-title: "SQL - basic commands"
+title: SQL - basic commands
 date: 2020-02-04
 draft: false
 diagram: false
@@ -16,7 +16,6 @@ summary: basic bash commands
 - [表達式](#%e8%a1%a8%e9%81%94%e5%bc%8f)
 - [謂詞](#%e8%ac%82%e8%a9%9e)
 - [References](#references)
-
 
 ## 子句 (語句組成)
 

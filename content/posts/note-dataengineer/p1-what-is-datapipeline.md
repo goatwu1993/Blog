@@ -1,7 +1,7 @@
 ---
-title: "What is a Data Pipeline"
-slug: "what-is-a-data-pipeline"
-summary: "What is a Data Pipeline"
+title: What is a Data Pipeline
+slug: what-is-a-data-pipeline
+summary: What is a Data Pipeline
 # basic configs
 date: 2020-02-12
 Lastmod: 2020-02-12

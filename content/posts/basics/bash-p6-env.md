@@ -1,5 +1,5 @@
 ---
-title: "Bash - basic commands"
+title: Bash - basic commands
 date: 2018-06-10T17:20:14+08:00
 draft: false
 diagram: false

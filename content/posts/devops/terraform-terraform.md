@@ -1,14 +1,13 @@
 ---
-title: "Terraform terraform"
+title: Terraform terraform
 date: 2021-03-21
 draft: false
 tags: [terraform]
-slug: "terraform-terraform"
+slug: terraform-terraform
 summary: terraform-terraform
 ---
 
 ## Terraform Block
-
 
 ```terraform
 terraform {

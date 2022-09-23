@@ -1,7 +1,7 @@
 ---
-title: "Kafka Connect Quickstart"
-slug: "kafka-elk"
-summary: "Kafka+ELK"
+title: Kafka Connect Quickstart
+slug: kafka-elk
+summary: Kafka+ELK
 # basic configs
 date: 2020-01-30
 Lastmod: 2020-02-12
@@ -26,8 +26,8 @@ The docker images is **NOT Size-Mininized**.
 - Docker
 - Docker Compose
 - curl
-- **Docker-Machine**  
-  Docker for mac is not as native as Linux. Weird network behavior may occur.  
+- **Docker-Machine**\
+  Docker for mac is not as native as Linux. Weird network behavior may occur.\
   Better use docker-machine to avoid it.
 
 ## (Mac) Start Docker-Machine
@@ -43,17 +43,21 @@ fi
 echo "continue"
 ```
 
-    Docker machine "confluent" already exists
-    continue
+```
+Docker machine "confluent" already exists
+continue
+```
 
 ```bash
 docker-machine start confluent
 echo "continue"
 ```
 
-    Starting "confluent"...
-    Machine "confluent" is already running.
-    continue
+```
+Starting "confluent"...
+Machine "confluent" is already running.
+continue
+```
 
 ```bash
 if [ docker-machine >/dev/null 2>&1 ]
@@ -74,26 +78,30 @@ echo
 docker-compose rm -f
 ```
 
-    Stopping control-center  ...
-    Stopping connect         ...
-    Stopping schema-registry ...
-    Stopping broker          ...
-    Stopping zookeeper       ...
-    [1Bping zookeeper       ... [32mdone[0m
-    Going to remove control-center, quickstart-mysql, connect, schema-registry, broker, zookeeper
-    Removing control-center   ...
-    Removing quickstart-mysql ...
-    Removing connect          ...
-    Removing schema-registry  ...
-    Removing broker           ...
-    Removing zookeeper        ...
-    [6Bving control-center   ... [32mdone[0m
+```
+Stopping control-center  ...
+Stopping connect         ...
+Stopping schema-registry ...
+Stopping broker          ...
+Stopping zookeeper       ...
+[1Bping zookeeper       ... [32mdone[0m
+Going to remove control-center, quickstart-mysql, connect, schema-registry, broker, zookeeper
+Removing control-center   ...
+Removing quickstart-mysql ...
+Removing connect          ...
+Removing schema-registry  ...
+Removing broker           ...
+Removing zookeeper        ...
+[6Bving control-center   ... [32mdone[0m
+```
 
 ```bash
 docker run --rm mysql --version
 ```
 
-    /usr/sbin/mysqld  Ver 8.0.19 for Linux on x86_64 (MySQL Community Server - GPL)
+```
+/usr/sbin/mysqld  Ver 8.0.19 for Linux on x86_64 (MySQL Community Server - GPL)
+```
 
 ```bash
 if [ docker-machine >/dev/null 2>&1 ]
@@ -125,10 +133,12 @@ else
 fi
 ```
 
-    total 2312
-    drwxr-xr-x    2 root     root          4096 Mar  2 22:27 .
-    drwxr-xr-x    4 root     root          4096 Mar  2 22:19 ..
-    -rw-r--r--    1 root     root       2356711 Dec  4 11:44 mysql-connector-java-8.0.19.jar
+```
+total 2312
+drwxr-xr-x    2 root     root          4096 Mar  2 22:27 .
+drwxr-xr-x    4 root     root          4096 Mar  2 22:19 ..
+-rw-r--r--    1 root     root       2356711 Dec  4 11:44 mysql-connector-java-8.0.19.jar
+```
 
 ### MySQL-JDBC
 
@@ -141,13 +151,15 @@ fi
 docker-compose up -d
 ```
 
-    Creating zookeeper ...
-    [1BCreating broker    ... mdone[0m
-    [1BCreating schema-registry ... [0m
-    [1BCreating connect         ... mdone[0m
-    [1BCreating control-center  ... mdone[0m
-    Creating quickstart-mysql ...
-    [1Bting quickstart-mysql ... [32mdone[0m
+```
+Creating zookeeper ...
+[1BCreating broker    ... mdone[0m
+[1BCreating schema-registry ... [0m
+[1BCreating connect         ... mdone[0m
+[1BCreating control-center  ... mdone[0m
+Creating quickstart-mysql ...
+[1Bting quickstart-mysql ... [32mdone[0m
+```
 
 ## Insert data into MySQL
 
@@ -190,18 +202,20 @@ SELECT * FROM test;
 """
 ```
 
-    mysql: [Warning] Using a password on the command line interface can be insecure.
-    id	name	email	department	modified
-    1	alice	alice@abc.com	engineering	2020-03-02 22:29:15
-    2	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    3	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    4	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    5	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    6	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    7	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    8	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    9	bob	bob@abc.com	sales	2020-03-02 22:29:15
-    10	bob	bob@abc.com	sales	2020-03-02 22:29:15
+```
+mysql: [Warning] Using a password on the command line interface can be insecure.
+id	name	email	department	modified
+1	alice	alice@abc.com	engineering	2020-03-02 22:29:15
+2	bob	bob@abc.com	sales	2020-03-02 22:29:15
+3	bob	bob@abc.com	sales	2020-03-02 22:29:15
+4	bob	bob@abc.com	sales	2020-03-02 22:29:15
+5	bob	bob@abc.com	sales	2020-03-02 22:29:15
+6	bob	bob@abc.com	sales	2020-03-02 22:29:15
+7	bob	bob@abc.com	sales	2020-03-02 22:29:15
+8	bob	bob@abc.com	sales	2020-03-02 22:29:15
+9	bob	bob@abc.com	sales	2020-03-02 22:29:15
+10	bob	bob@abc.com	sales	2020-03-02 22:29:15
+```
 
 ## Source Connector
 
@@ -232,7 +246,9 @@ while ! docker logs connect 2>&1 | grep -i "INFO Kafka Connect started" ; do
 done
 ```
 
-    [2020-03-02 22:32:15,768] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect)
+```
+[2020-03-02 22:32:15,768] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect)
+```
 
 ```bash
 # Call the API of connect
@@ -246,7 +262,9 @@ docker run \
     http://connect:8083/connectors
 ```
 
-    {"name":"quickstart-jdbc-source","config":{"connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector","tasks.max":"1","connection.url":"jdbc:mysql://quickstart-mysql:3306/connect_test?user=root&password=confluent","mode":"incrementing","incrementing.column.name":"id","timestamp.column.name":"modified","topic.prefix":"quickstart-jdbc-","poll.interval.ms":"1000","name":"quickstart-jdbc-source"},"tasks":[],"type":"source"}
+```
+{"name":"quickstart-jdbc-source","config":{"connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector","tasks.max":"1","connection.url":"jdbc:mysql://quickstart-mysql:3306/connect_test?user=root&password=confluent","mode":"incrementing","incrementing.column.name":"id","timestamp.column.name":"modified","topic.prefix":"quickstart-jdbc-","poll.interval.ms":"1000","name":"quickstart-jdbc-source"},"tasks":[],"type":"source"}
+```
 
 ### If error message is received
 
@@ -256,16 +274,20 @@ Make sure MySQL-JDBC JAR file is correctly mounted to container.
 docker exec connect env | grep -e "^CONNECT_PLUGIN_PATH"
 ```
 
-    CONNECT_PLUGIN_PATH=/usr/share/java/kafka,/usr/share/confluent-hub-components,/usr/share/java/kafka-connect-jdbc,/etc/kafka-connect/jars
+```
+CONNECT_PLUGIN_PATH=/usr/share/java/kafka,/usr/share/confluent-hub-components,/usr/share/java/kafka-connect-jdbc,/etc/kafka-connect/jars
+```
 
 ```bash
 docker exec connect ls -la /etc/kafka-connect/jars
 ```
 
-    total 2312
-    drwxr-xr-x 2 root root    4096 Mar  2 22:27 .
-    drwxrwxrwx 1 root root    4096 Mar  2 22:28 ..
-    -rw-r--r-- 1 root root 2356711 Dec  4 11:44 mysql-connector-java-8.0.19.jar
+```
+total 2312
+drwxr-xr-x 2 root root    4096 Mar  2 22:27 .
+drwxrwxrwx 1 root root    4096 Mar  2 22:28 ..
+-rw-r--r-- 1 root root 2356711 Dec  4 11:44 mysql-connector-java-8.0.19.jar
+```
 
 Higher the logging level from docker-compose.yml and run again
 
@@ -286,8 +308,10 @@ docker run \
     --topic quickstart-jdbc-test
 ```
 
-    Topic: quickstart-jdbc-test	PartitionCount: 1	ReplicationFactor: 1	Configs:
-    	Topic: quickstart-jdbc-test	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+```
+Topic: quickstart-jdbc-test	PartitionCount: 1	ReplicationFactor: 1	Configs:
+	Topic: quickstart-jdbc-test	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+```
 
 ```bash
 docker exec schema-registry \
@@ -300,17 +324,19 @@ docker exec schema-registry \
     grep -e "^null"
 ```
 
-    null	{"id":1,"name":{"string":"alice"},"email":{"string":"alice@abc.com"},"department":{"string":"engineering"},"modified":1583188155000}
-    null	{"id":2,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":3,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":4,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":5,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":6,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":7,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":8,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":9,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    null	{"id":10,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
-    Processed a total of 10 messages
+```
+null	{"id":1,"name":{"string":"alice"},"email":{"string":"alice@abc.com"},"department":{"string":"engineering"},"modified":1583188155000}
+null	{"id":2,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":3,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":4,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":5,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":6,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":7,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":8,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":9,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+null	{"id":10,"name":{"string":"bob"},"email":{"string":"bob@abc.com"},"department":{"string":"sales"},"modified":1583188155000}
+Processed a total of 10 messages
+```
 
 ## Sink Connector
 
@@ -328,7 +354,9 @@ docker run \
     http://connect:8083/connectors
 ```
 
-    {"name":"quickstart-avro-file-sink","config":{"connector.class":"org.apache.kafka.connect.file.FileStreamSinkConnector","tasks.max":"1","topics":"quickstart-jdbc-test","file":"/tmp/quickstart/jdbc-output.txt","name":"quickstart-avro-file-sink"},"tasks":[],"type":"sink"}
+```
+{"name":"quickstart-avro-file-sink","config":{"connector.class":"org.apache.kafka.connect.file.FileStreamSinkConnector","tasks.max":"1","topics":"quickstart-jdbc-test","file":"/tmp/quickstart/jdbc-output.txt","name":"quickstart-avro-file-sink"},"tasks":[],"type":"sink"}
+```
 
 ### Status check (Sink)
 
@@ -341,7 +369,9 @@ docker run \
     -s -X GET http://connect:8083/connectors/quickstart-avro-file-sink/status
 ```
 
-    {"name":"quickstart-avro-file-sink","connector":{"state":"RUNNING","worker_id":"connect:8083"},"tasks":[{"id":0,"state":"RUNNING","worker_id":"connect:8083"}],"type":"sink"}
+```
+{"name":"quickstart-avro-file-sink","connector":{"state":"RUNNING","worker_id":"connect:8083"},"tasks":[{"id":0,"state":"RUNNING","worker_id":"connect:8083"}],"type":"sink"}
+```
 
 ## Results
 
@@ -355,28 +385,32 @@ else
 fi
 ```
 
-    Struct{id=1,name=alice,email=alice@abc.com,department=engineering,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=2,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=3,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=4,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=5,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=6,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=7,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=8,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=9,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
-    Struct{id=10,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+```
+Struct{id=1,name=alice,email=alice@abc.com,department=engineering,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=2,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=3,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=4,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=5,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=6,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=7,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=8,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=9,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+Struct{id=10,name=bob,email=bob@abc.com,department=sales,modified=Mon Mar 02 22:29:15 UTC 2020}
+```
 
 ```bash
 docker-compose stop
 ```
 
-    Stopping control-center   ...
-    Stopping quickstart-mysql ...
-    Stopping connect          ...
-    Stopping schema-registry  ...
-    Stopping broker           ...
-    Stopping zookeeper        ...
-    [1Bping zookeeper        ... [32mdone[0m
+```
+Stopping control-center   ...
+Stopping quickstart-mysql ...
+Stopping connect          ...
+Stopping schema-registry  ...
+Stopping broker           ...
+Stopping zookeeper        ...
+[1Bping zookeeper        ... [32mdone[0m
+```
 
 ## References
 

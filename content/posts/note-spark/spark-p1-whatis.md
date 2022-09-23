@@ -1,10 +1,10 @@
 ---
-title: "What is Apache Spark"
+title: What is Apache Spark
 date: 2020-01-17T17:04:13+08:00
 draft: false
 diagram: true
 tags: [Hadoop, Spark, BigData]
-slug: "spark-p1-whatis"
+slug: spark-p1-whatis
 toc: true
 summary: Apache spark base concept.
 ---
@@ -35,19 +35,19 @@ Spark --> G(GraphX)
 ## Spark 特點
 
 - In Memory Storage
-- Immutability  
+- Immutability\
   通過 Spark Core RDD 的概念來儲存數據，RDD 被創建之後沒有辦法修改，Transfromation 只會產生一個新的 RDD
-- Lazy Evaluation  
+- Lazy Evaluation\
   數值直到 Action 才會被計算出來
-- Partitioning  
+- Partitioning\
   計算會被指派到 RDD Partition，Partition 的數目直接關係到平行運算的程度。
-- 支援容錯機制  
+- 支援容錯機制\
   紀錄各個 RDD 的產生過程(稱為 RDD Lineage)，當節點失效時可從 Parent RDD 重新推算失效節點的 Partition。
 - 容錯機制最佳化
   Transfromation 函數分為寬依賴及窄依賴，窄依賴的情況下可直接用 Partition 推算 Child Partition，不需整組 RDD 從新推算。
 - Persistence
   可以根據資料是否會重新使用，指定存放在記憶體或磁碟。
-- No Limitation  
+- No Limitation\
   RDD 的數目只需要考量記憶體以及硬碟，沒有確切數目上限。
 
 ## Spark Core
@@ -74,4 +74,4 @@ GraphX 是 Spark 上的分散式圖形處理框架。它提供了一組 API，�
 
 - <https://zh.wikipedia.org/zh-tw/Apache_Spark>
 - <https://www.quora.com/What-are-the-advantages-of-RDD>
-- <https://codertw.com/程式語言/405603/>
+- <https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/405603/>

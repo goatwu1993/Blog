@@ -1,7 +1,7 @@
 ---
-title: "What is Hadoop"
-slug: "hadoop-p1-whatishadoop"
-summary: "Hadoop brief introduction"
+title: What is Hadoop
+slug: hadoop-p1-whatishadoop
+summary: Hadoop brief introduction
 # basic configs
 date: 2020-01-30
 draft: false

@@ -16,7 +16,7 @@ role: Software Engineer
 # Organizations/Affiliations
 organizations:
   - name: National Taiwan University
-    url: ""
+    url: ''
 
 # Short bio (displayed in user profile at end of posts)
 bio: Former Networking R&D Engineer. Self-taught backend engineer and data engineer.
@@ -39,7 +39,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: "mailto:peteeelol@gmail.com"
+    link: mailto:peteeelol@gmail.com
   # For a direct email link, use "mailto:test@example.org".
   #  - icon: twitter
   #    icon_pack: fab
@@ -57,7 +57,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: ''
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.

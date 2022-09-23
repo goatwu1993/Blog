@@ -1,5 +1,5 @@
 ---
-title: "macOS Configs - environments"
+title: macOS Configs - environments
 date: 2019-12-28T19:17:18+08:00
 draft: true
 tags: [linux, macos, vim, shell]

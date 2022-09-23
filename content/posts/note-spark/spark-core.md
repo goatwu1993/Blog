@@ -1,9 +1,9 @@
 ---
-title: "Spark Core"
+title: Spark Core
 date: 2020-01-18T15:50:14+08:00
 draft: true
 tags: []
-slug: "Spark-Core"
+slug: Spark-Core
 toc: false
 ---
 

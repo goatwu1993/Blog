@@ -1,9 +1,9 @@
 ---
-title: "Terraform module"
+title: Terraform module
 date: 2021-03-21
 draft: false
 tags: [terraform]
-slug: "terraform-module"
+slug: terraform-module
 summary: terraform-module
 ---
 

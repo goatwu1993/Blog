@@ -1,9 +1,9 @@
 ---
-title: "Docker commands"
+title: Docker commands
 date: 2020-01-15T20:36:03+08:00
 draft: false
 tags: [container, docker]
-slug: "docker-commands"
+slug: docker-commands
 summary: docker commands
 ---
 

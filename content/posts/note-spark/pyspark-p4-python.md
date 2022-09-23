@@ -1,9 +1,9 @@
 ---
-title: "Spark Rdd"
+title: Spark Rdd
 date: 2020-01-18T16:03:05+08:00
 draft: true
 tags: [Hadoop, Spark, BigData]
-slug: "Spark-Rdd"
+slug: Spark-Rdd
 toc: false
 summary: Spark RDD 簡單介紹
 ---
@@ -12,6 +12,7 @@ summary: Spark RDD 簡單介紹
 
 ```python
 import findspark
+
 findspark.init()
 
 from pyspark.conf import SparkConf

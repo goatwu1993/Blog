@@ -1,7 +1,7 @@
 ---
-title: "Kafka with single broker"
-slug: "kafka-p3-singlebroker"
-summary: "Kafka macOS hands-on"
+title: Kafka with single broker
+slug: kafka-p3-singlebroker
+summary: Kafka macOS hands-on
 # basic configs
 date: 2020-01-30
 draft: false
@@ -45,7 +45,7 @@ brew services start kafka
 
 ## Consumer & Producer API 選擇
 
-- Shell script  
+- Shell script\
   使用 brew kafka 提供的 shell script
 - Python
   - pykafka
@@ -75,4 +75,4 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic test-kafka --fr
 ## References
 
 - <https://oumuv.github.io/2018/12/06/kafka-2/>
-- <https://blog.v123582.tw/2019/03/27/在-mac-上建立-Python-的-Kafka-與-Spark-環境/>
+- <https://blog.v123582.tw/2019/03/27/%E5%9C%A8-mac-%E4%B8%8A%E5%BB%BA%E7%AB%8B-Python-%E7%9A%84-Kafka-%E8%88%87-Spark-%E7%92%B0%E5%A2%83/>

@@ -1,9 +1,9 @@
 ---
-title: "Docker P1"
+title: Docker P1
 date: 2020-02-09
 draft: true
 tags: [container, docker]
-slug: "docker-p1"
+slug: docker-p1
 summary: Basic docker concept
 ---
 
