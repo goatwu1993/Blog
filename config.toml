@@ -29,7 +29,7 @@ paginate = 8
     icon = "github"
     name = "Github"
     url = "https://github.com/goatwu1993"
-  [[params.cv]]
+  [[params.social]]
     icon = "ai"
     name = "cv"
     url = "https://www.cakeresume.com/peteeelol"
