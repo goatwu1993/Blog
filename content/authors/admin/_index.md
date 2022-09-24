@@ -33,7 +33,7 @@ Education:
   courses:
     - course: Bachelor, E.E
       institution: National Taiwan University
-      year: 2011-2015
+      year: 2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
