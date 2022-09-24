@@ -20,7 +20,7 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 
-Former Networking R&D Engineer. Self-taught backend engineer and data engineer.
+bio:Former Networking R&D Engineer. Self-taught backend engineer and data engineer.
 
 Interests:
   - Backend
