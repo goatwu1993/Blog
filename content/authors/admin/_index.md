@@ -19,18 +19,21 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Former Networking R&D Engineer. Self-taught backend engineer and data engineer.
 
-interests:
-  - Machine Learning
-  - Hadoop eco-system
+Former Networking R&D Engineer. Self-taught backend engineer and data engineer.
+
+Interests:
   - Backend
+  - DevOps
+  - Python/Django/Celery
+  - GitHub Actions/Typescript
+  - Conventional commits
 
-education:
+Education:
   courses:
-    - course: B.E in Electrical Engineering
+    - course: Bachelor, E.E
       institution: National Taiwan University
-      year: 2011
+      year: 2011-2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -40,24 +43,21 @@ social:
   - icon: envelope
     icon_pack: fas
     link: mailto:peteeelol@gmail.com
-  # For a direct email link, use "mailto:test@example.org".
-  #  - icon: twitter
-  #    icon_pack: fab
-  #    link: https://twitter.com/GeorgeCushen
-  #- icon: google-scholar
-  #  icon_pack: ai
-  #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  <!--- icon: twitter-->
+  <!--  icon_pack: fab-->
+  <!--  link: https://twitter.com/GeorgeCushen-->
+  <!--- icon: google-scholar-->
+  <!--  icon_pack: ai-->
+  <!--  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ-->
   - icon: github
     icon_pack: fab
     link: https://github.com/goatwu1993/
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+  - icon: cv
+    icon_pack: ai
+    link: https://www.cakeresume.com/peteeelol
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ''
+email: 'peteeelol@gmail.com'
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -66,4 +66,4 @@ user_groups:
   - Visitors
 ---
 
-Former Networking R&D Engineer. Self-taught backend engineer and data engineer.
+Backend/DevOps/AWS.
