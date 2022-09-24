@@ -25,3 +25,7 @@ KMS stands for Key Management Service
 1. Encyption
 1. Symmetrc (AES-256)
 1. Asymmtric (RSA/ECC)
+
+## Key Policy
+
+1. Specify who can access the keys. Useful for cross account architecture.
