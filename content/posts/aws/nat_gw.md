@@ -15,4 +15,5 @@ NAT Gateway is AWS managed NAT
 
 1. HA
 1. Pay per hour and bandwidth
-1. Create within AZ. ( Internet geteway is created in region)
+1. 1 NAT Gateway lives within 1 subnet. ( Internet geteway is created in VPC)
+1. NAT Gateways should be created within public subnets to leverage the public route tables.
