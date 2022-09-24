@@ -25,6 +25,10 @@ Example: For a subnet with CIDR 10.0.0.0/24
 
 Therefore, if you needs 28 IP address in a subnet, you must open a CIDR with /26, since /27 will have 32-5 = 27 max IP address available.
 
+## More Info
+
+1. Subnet can have settings of Auto Assign Public IP settings, which will apply to resouces in subnet by default.
+
 ## Tips
 
 1. For subnets with same usage, allocate to different AZ to have HA.
