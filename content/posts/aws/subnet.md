@@ -33,3 +33,5 @@ Therefore, if you needs 28 IP address in a subnet, you must open a CIDR with /26
 
 1. For subnets with same usage, allocate to different AZ to have HA.
 1. Can be associate to a route table.
+1. For public subnet to access Internet, use Internet Gateway.
+   For private subnet to access Internet, use NAT Gateway.
