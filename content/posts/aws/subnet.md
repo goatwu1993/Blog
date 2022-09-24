@@ -33,5 +33,18 @@ Therefore, if you needs 28 IP address in a subnet, you must open a CIDR with /26
 
 1. For subnets with same usage, allocate to different AZ to have HA.
 1. Can be associate to a route table.
+
+## Private Subnet vs Public Subnet
+
+### Public subnet
+
+1. Public subnet is accessible from the Internet.
+1. Public subnet attach to a public route table, usually with Internet Gateway route.
 1. For public subnet to access Internet, use Internet Gateway.
-   For private subnet to access Internet, use NAT Gateway.
+
+### Private subnet
+
+1. Private subnet is **NOT** accessible from the Internet.
+1. Private subnet attach to a private route table, **without Internet Gateway**.
+1. For private subnet to access Internet, use NAT Gateway.
+1. If really needs public accees from the Internet to private subnet, use a **Bastion Host**.
