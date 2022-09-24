@@ -32,3 +32,4 @@ Therefore, if you needs 28 IP address in a subnet, you must open a CIDR with /26
 ## Tips
 
 1. For subnets with same usage, allocate to different AZ to have HA.
+1. Can be associate to a route table.
