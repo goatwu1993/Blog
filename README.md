@@ -11,5 +11,5 @@ Link: [https://goatwu1993.github.io/blog/](https://goatwu1993.github.io/blog/)
 ## Powered By
 
 1. Static Site Generator: [Hugo](https://gohugo.io/)
-1. Theme: [m10c theme](https://themes.gohugo.io/hugo-theme-m10c/)
+1. Theme: [m10c theme](https://github.com/vaga/hugo-theme-m10c)
 1. CI: [peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo) and [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
