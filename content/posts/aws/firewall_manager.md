@@ -20,3 +20,10 @@ Firewall Manager allow you to configure all security settings in all accounts un
 1. AWS Route 53 Resolver DNS Firewall
 
 Policies are creaeted at the region level. Rules are applied to new resources by default.
+
+## Firewall Manager vs Shield vs WAF
+
+1. Firewall Manager works together with Shield and WAF
+1. Web ACL -> WAF
+1. DDoS/Fast 24/7 Response from AWS Team-> Shield
+1. Centralize Configuration -> Firewall Manager
