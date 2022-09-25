@@ -29,3 +29,9 @@ KMS stands for Key Management Service
 ## Key Policy
 
 1. Specify who can access the keys. Useful for cross account architecture.
+
+## Auto Rotation
+
+1. AWS managed keys always have auto rotate on, with 1 year interval
+1. Customer managed keys has to open auto rotation manually, with 1 year interval
+1. Customer Imported Keys/CloudHSM cannot auto rotate.
