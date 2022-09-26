@@ -29,3 +29,9 @@ Kafka 是一個分散式的訊息處理平台(message processing platform)，仲
 - Performance
 - Fault Tolerance
 - Zero downtime
+
+## Notes
+
+1. Kafka support exactly-once at 0.11.x
+1. Kafka remove zookeeper dependency at 2.8.0
+1. [Latest Release](https://kafka.apache.org/documentation/)
