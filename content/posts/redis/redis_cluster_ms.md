@@ -12,6 +12,12 @@ summary: redis-cluster-ms
 1. Each slave belongs to a Master
 1. Each master is writable for it's slot's key/value
 
+## Checking Cluster State
+
+```bash
+redis-cli --cluster check 172.22.0.3:6379 -a redisCluster
+```
+
 ## Adding Node
 
 ```bash
