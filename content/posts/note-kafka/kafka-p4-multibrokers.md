@@ -4,7 +4,7 @@ slug: kafka-p4-multibrokers
 summary: Kafka macOS hands-on, multi brokers
 # basic settings
 draft: false
-tags: [hadoop, kafka, bigdata]
+tags: [kafka]
 date: 2020-01-30
 Lastmod: 2020-02-10
 # other configs

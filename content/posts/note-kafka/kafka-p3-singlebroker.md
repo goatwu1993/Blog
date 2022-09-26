@@ -5,7 +5,7 @@ summary: Kafka macOS hands-on
 # basic configs
 date: 2020-01-30
 draft: false
-tags: [hadoop, kafka, bigdata]
+tags: [kafka]
 # other configs
 diagram: true
 toc: true
