@@ -68,6 +68,11 @@ ______________________________________________________________________
   - 當 Producer 指定 ZK(而非 bootstrap server)，ZK 負責返回 broker list
 - Kafka Improvement Proposals 已經通過，將 Zookeeper 從 Kafka 移除，使用 bootstrap server/broker controller/共識來維護 Kafka ，<https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum>
 
+## Notes
+
+1. Kafka replace zookeeper dependency at 2.8.0.
+1. Quorum: KRaft
+
 ## References
 
 - <https://github.com/abhioncbr/Kafka-Message-Server/wiki/Apache-of-Kafka-Architecture-(As-per-Apache-Kafka-0.8.0-Dcoumentation)>
