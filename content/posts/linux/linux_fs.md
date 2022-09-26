@@ -40,6 +40,8 @@ inode儲存了檔案系統物件的metadata，如
 1. inode修改時間
 1. 上次存取時間
 
+兩個檔案的inode相同，則兩個檔案互為硬連結。
+
 ## Stat
 
 ```bash
