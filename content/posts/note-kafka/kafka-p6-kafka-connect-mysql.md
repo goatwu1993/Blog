@@ -6,7 +6,7 @@ summary: Kafka+ELK
 date: 2020-01-30
 Lastmod: 2020-02-12
 draft: false
-tags: [hadoop, kafka, bigdata]
+tags: [kafka, db]
 # other configs
 diagram: false
 toc: true
