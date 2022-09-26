@@ -1,14 +1,11 @@
 ---
-title: What is Kafka
-slug: kafka-p1
-summary: What is Apache Kafka
-# basic configs
+title: What is ELK
+slug: elk-p1
+summary: What is ELK
 date: 2020-01-30
 draft: false
-tags: [hadoop, kafka, bigdata]
-# other configs
+tags: [elk]
 diagram: true
-toc: true
 ---
 
 ## What is ELK

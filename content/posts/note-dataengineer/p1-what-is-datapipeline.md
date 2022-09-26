@@ -46,10 +46,6 @@ ETL/ELT，指的是 Extract, Load, Transform，通過這三個動作將 Data 從
 
 ETL Pipeline 可以說是 Data Pipeline 的子集合，現在一般講到 ETL Pipeline，意思是資料是以批次來處理的，也就是可能每隔一段時間才會進行一次 ETL，Data Pipeline 則有可能是批次的，也有可能是 Real-Time 的(或許是通過 Streaming 的方式)
 
-## What is Kafka used for
-
-## How does Kafka works
-
 ## Reference
 
 - <https://www.alooma.com/answers/what-is-the-difference-between-a-data-pipeline-and-an-etl-pipeline>
